@@ -71,6 +71,12 @@ body:
     label: submitter name
     description: the name of the submitter of the new term request
     placeholder: full name
+- type: input
+  id: submitterURI
+  attributes: 
+    label: an identifier for the submitter (e.g. ORCID)
+    description: URI for the submitter
+    placeholder: URI
 - type: textarea
   id: comment
   attributes:
