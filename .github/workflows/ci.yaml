@@ -1,0 +1,46 @@
+
+name: FUEL CI
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    env:
+      ONTO_FILE: fuel.ttl
+      ONTO_ABBREV: fuel
+    
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+  
+    - name: Java Setup
+      uses: actions/setup-java@v4
+      with:
+        distribution: temurin
+        java-version: '17'
+    
+    - name: Install ROBOT
+      run: |
+        wget -q https://github.com/ontodev/robot/releases/download/v1.9.8/robot.jar -O robot.jar
+        curl -sL https://raw.githubusercontent.com/ontodev/robot/master/bin/robot > robot
+        chmod +x robot
+    
+    - name: Validate ontology profile
+      id: profile
+      run: |
+        # If parsing fails, this step will exit non-zero
+        ./robot validate-profile --input "$ONTO_FILE" --profile DL|| \
+        (echo "Profile check failed." && exit 1)
+  
+    - name: Reasoning and consistency check (HermiT)
+      id: reason
+      run: |
+       ./robot reason --reasoner HermiT --input "$ONTO_FILE" --output reasoned.owl \
+        > reason.stdout 2> reason.stderr \
+        && echo "REASON_RESULT=consistent" >> $GITHUB_ENV \
+        || echo "REASON_RESULT=inconstent" >> $GITHUB_ENV
+
+    
+    
