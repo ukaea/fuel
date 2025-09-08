@@ -10,6 +10,7 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix omv: <http://omv.ontoware.org/2005/05/ontology#> .
+@prefix sdo: <https://schema.org/> .
 @base <http://w3id.org/fuel#> .
 
 ### AnnotationProperties declarations
@@ -21,19 +22,29 @@ dcterms:description a owl:AnnotationProperty .
 dcterms:issued a owl:AnnotationProperty .
 dcterms:license a owl:AnnotationProperty .
 dcterms:modified a owl:AnnotationProperty .
+
 vann:preferredNamespacePrefix a owl:AnnotationProperty .
 vann:preferredNamespaceUri a owl:AnnotationProperty .
+
 dcat:version a owl:AnnotationProperty .
+
 mod:definitionProperty a owl:AnnotationProperty .
 mod:hasRepresentationLanguage a owl:AnnotationProperty .
 mod:hasSyntax a owl:AnnotationProperty .
 mod:prefLabelProperty a owl:AnnotationProperty .
 mod:status a owl:AnnotationProperty .
+
 foaf:name a owl:AnnotationProperty .
 foaf:homepage a owl:AnnotationProperty .
 
+sdo:name a owl:AnnotationProperty .
+sdo:identifier a owl:AnnotationProperty .
+sdo:affiliation a owl:AnnotationProperty .
+
 ### Class declarations
 foaf:Person a owl:Class .
+
+sdo:Person a owl:Class .
 
 
 <http://w3id.org/fuel> 
@@ -50,9 +61,15 @@ foaf:Person a owl:Class .
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:creator [
       a foaf:Person ;
+      a sdo:Person ; 
       foaf:homepage <https://agbeltran.github.io/> ;
       foaf:name "Alejandra Gonzalez Beltran" ;
+      sdo:name "Alejandra Gonzalez Beltran" ;
       rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
+      sdo:identifier <https://orcid.org/0000-0003-3499-8262> ;
+      sdo:affiliation [
+        sdo:identifier <https://ror.org/0361bwx64>
+      ]
     ];
     
     dcat:version "0.1" ;
@@ -81,7 +98,7 @@ foaf:Person a owl:Class .
 #################################################################
 
 ###  http://w3id.org/fuel#campaign
-:campaign
+fuel:campaign
     a owl:Class ;
     rdfs:comment "A set of connected experiments that are run across a time period."@en .
 

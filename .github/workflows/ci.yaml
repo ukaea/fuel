@@ -1,0 +1,153 @@
+
+name: FUEL_CI
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    env:
+      ONTO_DIR: src
+      ONTO_FILE: fuel.ttl
+      ONTO_ABBREV: fuel
+      DOCS_DIR: docs
+      RELEASES_DIR: releases
+    
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+  
+    - name: Java Setup
+      uses: actions/setup-java@v4
+      with:
+        distribution: temurin
+        java-version: '17'
+    
+    - name: Install ROBOT
+      run: |
+        wget -q https://github.com/ontodev/robot/releases/download/v1.9.8/robot.jar -O robot.jar
+        curl -sL https://raw.githubusercontent.com/ontodev/robot/master/bin/robot > robot
+        chmod +x robot
+    
+    - name: Install RDFLib/PyLode/DotEnv
+      run: |
+            python -m pip install --upgrade pip
+            pip install rdflib dotenv pylode
+
+    - name: Validate ontology profile
+      id: profile
+      run: |
+        # If parsing fails, this step will exit non-zero
+        ./robot validate-profile --input "${ONTO_DIR}/${ONTO_FILE}" --profile DL|| \
+        (echo "Profile check failed." && exit 1)
+  
+    - name: Reasoning and consistency check (HermiT)
+      id: reason
+      run: |
+       ./robot reason --reasoner HermiT --input "${ONTO_DIR}/${ONTO_FILE}" --output reasoned.owl \
+        > reason.stdout 2> reason.stderr \
+        && echo "REASON_RESULT=consistent" >> $GITHUB_ENV \
+        || echo "REASON_RESULT=inconsistent" >> $GITHUB_ENV
+
+    - name: Generate other syntaxes from turtle file
+      id: onto_syntaxes
+      run: |
+          python3 - << 'PY'
+          import os
+          from rdflib import Graph
+
+          target_dir = f"{os.environ['RELEASES_DIR']}"       
+          os.makedirs(target_dir, exist_ok=True)
+          
+          g = Graph()
+          g.parse(os.path.join(os.environ["ONTO_DIR"], os.environ["ONTO_FILE"]))          
+          target_fmts = [
+                ("ttl","turtle"),
+                ("jsonld", "json-ld"),
+                ("nt", "nt"),
+                ("owl", "xml")
+          ]
+          
+          files_to_commit = set()
+
+          for fmt in target_fmts:
+              target_file = f"{target_dir}/{os.environ['ONTO_ABBREV']}.{fmt[0]}"
+              print(f"Creating {target_file}")
+              g.serialize(destination=target_file, format=fmt[1], encoding="utf-8")
+              files_to_commit.add(target_file)
+         
+          with open(os.environ["GITHUB_ENV"], "a") as f:
+              f.write("NEW_FILES=" + " ".join(files_to_commit) + "\n")
+          PY
+
+    - name: Generate documentation with Pylode
+      id: pylode
+      run: |
+          mkdir -p "$DOCS_DIR/pylode/"
+          pylode -o "$DOCS_DIR/pylode/index" \
+            "$ONTO_DIR/$ONTO_FILE"  
+  
+       
+    - name: Download widoco
+      run: mkdir -p "$DOCS_DIR/widoco/" && wget -O "$DOCS_DIR/widoco/widoco.jar" https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-17.jar
+  
+    - name: Compile documentation
+      run: |
+        cd "$DOCS_DIR/widoco/"        
+        java -jar ./widoco.jar \
+        -ontFile "../../$ONTO_DIR/$ONTO_FILE" \
+        -oops \
+        -webVowl \
+        -includeAnnotationProperties \
+        -outFolder . \
+        -rewriteAll \
+        -includeImportedOntologies \
+        -uniteSections \
+        -excludeIntroduction
+        cd ../..
+
+
+    - name: Configure Pages
+      uses: actions/configure-pages@v5            
+
+    - name: Prepare Pages Content
+      run: |
+        echo "Creating site directories..."
+        mkdir -p site/$DOCS_DIR
+        mkdir -p site/$RELEASES_DIR
+
+        # Copy docs if they exist
+        if [ -d "$DOCS_DIR" ] && [ "$(ls -A $DOCS_DIR)" ]; then
+          cp -r $DOCS_DIR/* site/$DOCS_DIR/
+        fi
+
+        # Copy releases if they exist
+        if [ -d "$RELEASES_DIR" ] && [ "$(ls -A $RELEASES_DIR)" ]; then
+          cp -r $RELEASES_DIR/* site/$RELEASES_DIR/
+        fi        
+
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: site
+ 
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    needs: build
+    
+    runs-on: ubuntu-latest
+    
+    permissions:
+      pages: write
+      id-token: write
+    
+    name: Deploy
+    
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4.0.5

@@ -6,7 +6,8 @@ on:
         onto_uri:
             description: "ONTO_URI"
             required: true
-            default: "https://w3id.org/fuel"
+            #default: "https://w3id.org/fuel"
+            default: "https://raw.githubusercontent.com/ukaea/fuel/refs/heads/main/src/fuel.ttl"
 
 jobs:        
   foops:
