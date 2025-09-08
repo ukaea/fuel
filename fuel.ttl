@@ -8,7 +8,33 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix omv: <http://omv.ontoware.org/2005/05/ontology#> .
 @base <http://w3id.org/fuel#> .
+
+### AnnotationProperties declarations
+dcterms:title a owl:AnnotationProperty .
+dcterms:abstract a owl:AnnotationProperty .
+dcterms:created a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+dcat:version a owl:AnnotationProperty .
+mod:definitionProperty a owl:AnnotationProperty .
+mod:hasRepresentationLanguage a owl:AnnotationProperty .
+mod:hasSyntax a owl:AnnotationProperty .
+mod:prefLabelProperty a owl:AnnotationProperty .
+mod:status a owl:AnnotationProperty .
+foaf:name a owl:AnnotationProperty .
+foaf:homepage a owl:AnnotationProperty .
+
+### Class declarations
+foaf:Person a owl:Class .
+
 
 <http://w3id.org/fuel> 
     a owl:Ontology ;
@@ -32,6 +58,7 @@
     dcat:version "0.1" ;
     dcterms:created "2024-11-06"^^xsd:date ; 
     dcterms:issued "2024-11-06"^^xsd:date ;
+    dcterms:modified "2025-09-08"^^xsd:dateTime ;
     vann:preferredNamespacePrefix "fuel" ;
     vann:preferredNamespaceUri "https://w3id.org/fuel#" ;
     
@@ -56,7 +83,6 @@
 ###  http://w3id.org/fuel#campaign
 :campaign
     a owl:Class ;
-    a rdf:Class ;
     rdfs:comment "A set of connected experiments that are run across a time period."@en .
 
 
