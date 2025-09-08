@@ -1,14 +1,13 @@
-@prefix : <http://w3id.org/fuel#> .
+@prefix fuel: <http://w3id.org/fuel#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix fuel: <https://w3id.org/fuel/> .
 @base <http://w3id.org/fuel#> .
 
 <http://w3id.org/fuel> 
@@ -41,6 +40,8 @@
     mod:hasSyntax <http://www.w3.org/ns/formats/Turtle> ;
     mod:prefLabelProperty rdfs:label ;
     mod:status "active" ;
+    
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     
     ## owl:backwardCompatibleWith fuel:0.0.1 ;
     ## owl:priorVersion fuel:0.0.1 ;

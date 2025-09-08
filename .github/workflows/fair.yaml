@@ -1,0 +1,22 @@
+name: FAIR 
+
+on:
+  workflow_dispatch:
+    inputs:
+        onto_uri:
+            description: "ONTO_URI"
+            required: true
+            default: "https://w3id.org/fuel"
+
+jobs:        
+  foops:
+    runs-on: ubuntu-latest
+    steps:
+         - name: FOOPS! API
+           id: foops
+           run: |
+              curl -X POST "https://foops.linkeddata.es/assessOntology" \
+                  -H  "accept: application/json" \
+                  -H "Content-Type: application/json" \
+                  -d "{  \"ontologyUri\": \"${{ inputs.onto_URI }}\"}"                  
+       
