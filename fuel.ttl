@@ -8,16 +8,20 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
+@prefix fuel: <https://w3id.org/fuel/> .
 @base <http://w3id.org/fuel#> .
 
 <http://w3id.org/fuel> 
     a owl:Ontology ;
+    
     dcterms:title "FUsion Energy Lexicon"@en ;
+    rdfs:label "FUsion Energy Lexicon"@en ,
+               "Léxico de energía de fusión"@es ;
+          
     dcterms:abstract "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en;
     rdfs:comment "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
     dcterms:description "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
-    rdfs:label "FUsion Energy Lexicon"@en ,
-                                   "Léxico de energía de fusión"@es ;
+    
     dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:creator [
       a foaf:Person ;
@@ -25,11 +29,23 @@
       foaf:name "Alejandra Gonzalez Beltran" ;
       rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
     ];
+    
     dcat:version "0.1" ;
     dcterms:created "2024-11-06"^^xsd:date ; 
     dcterms:issued "2024-11-06"^^xsd:date ;
     vann:preferredNamespacePrefix "fuel" ;
-    vann:preferredNamespaceUri "https://w3id.org/fuel#" 
+    vann:preferredNamespaceUri "https://w3id.org/fuel#" ;
+    
+    mod:definitionProperty rdfs:comment ;
+    mod:hasRepresentationLanguage omv:OWL ;
+    mod:hasSyntax <http://www.w3.org/ns/formats/Turtle> ;
+    mod:prefLabelProperty rdfs:label ;
+    mod:status "active" ;
+    
+    ## owl:backwardCompatibleWith fuel:0.0.1 ;
+    ## owl:priorVersion fuel:0.0.1 ;
+    owl:versionIRI fuel:0.0.1 ;
+    owl:versionInfo "0.0.1"^^xsd:string 
     .
 
 #################################################################
