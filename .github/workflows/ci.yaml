@@ -8,6 +8,7 @@ jobs:
     env:
       ONTO_FILE: fuel.ttl
       ONTO_ABBREV: fuel
+      DOCS_DIR: docs
     
     runs-on: ubuntu-latest
 
@@ -27,6 +28,11 @@ jobs:
         curl -sL https://raw.githubusercontent.com/ontodev/robot/master/bin/robot > robot
         chmod +x robot
     
+    - name: Install RDFLib/PyLode/DotEnv
+      run: |
+            python -m pip install --upgrade pip
+            pip install rdflib dotenv pylode
+
     - name: Validate ontology profile
       id: profile
       run: |
@@ -42,5 +48,10 @@ jobs:
         && echo "REASON_RESULT=consistent" >> $GITHUB_ENV \
         || echo "REASON_RESULT=inconstent" >> $GITHUB_ENV
 
-    
+    - name: Generate documentation with Pylode
+      id: pylode
+      run: |
+          mkdir -p "$DOCS_DIR/docs/pylode/"
+          pylode -o "$DOCS_DIR/docs/pylode/index" \
+            "$ONTO_FILE"  
     
