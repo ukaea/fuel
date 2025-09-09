@@ -22,21 +22,28 @@ dcterms:description a owl:AnnotationProperty .
 dcterms:issued a owl:AnnotationProperty .
 dcterms:license a owl:AnnotationProperty .
 dcterms:modified a owl:AnnotationProperty .
+
 vann:preferredNamespacePrefix a owl:AnnotationProperty .
 vann:preferredNamespaceUri a owl:AnnotationProperty .
+
 dcat:version a owl:AnnotationProperty .
+
 mod:definitionProperty a owl:AnnotationProperty .
 mod:hasRepresentationLanguage a owl:AnnotationProperty .
 mod:hasSyntax a owl:AnnotationProperty .
 mod:prefLabelProperty a owl:AnnotationProperty .
 mod:status a owl:AnnotationProperty .
+
 foaf:name a owl:AnnotationProperty .
 foaf:homepage a owl:AnnotationProperty .
+
 sdo:name a owl:AnnotationProperty .
 sdo:identifier a owl:AnnotationProperty .
+sdo:affiliation a owl:AnnotationProperty .
 
 ### Class declarations
 foaf:Person a owl:Class .
+
 sdo:Person a owl:Class .
 
 
