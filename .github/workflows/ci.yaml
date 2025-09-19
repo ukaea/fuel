@@ -54,4 +54,9 @@ jobs:
           mkdir -p "$DOCS_DIR/docs/pylode/"
           pylode -o "$DOCS_DIR/docs/pylode/index" \
             "$ONTO_FILE"  
+
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ${{ env.DOCS_DIR }}
     
