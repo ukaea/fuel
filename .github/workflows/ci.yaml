@@ -51,19 +51,19 @@ jobs:
     - name: Generate documentation with Pylode
       id: pylode
       run: |
-          mkdir -p "$DOCS_DIR/docs/pylode/"
-          pylode -o "$DOCS_DIR/docs/pylode/index" \
+          mkdir -p "$DOCS_DIR/pylode/"
+          pylode -o "$DOCS_DIR/pylode/index" \
             "$ONTO_FILE"  
   
        
     - name: Download widoco
-      run: mkdir -p "$DOCS_DIR/docs/widoco/" && wget -O "$DOCS_DIR/docs/widoco/widoco.jar" https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-17.jar
+      run: mkdir -p "$DOCS_DIR/widoco/" && wget -O "$DOCS_DIR/widoco/widoco.jar" https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-17.jar
   
     - name: Compile documentation
       run: |
-        cd "$DOCS_DIR/docs/widoco/"        
+        cd "$DOCS_DIR/widoco/"        
         java -jar ./widoco.jar \
-        -ontFile "../../$ONTO_FILE" \
+        -ontFile "$ONTO_FILE" \
         -oops \
         -webVowl \
         -includeAnnotationProperties \
