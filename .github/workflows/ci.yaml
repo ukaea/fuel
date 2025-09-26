@@ -54,6 +54,26 @@ jobs:
           mkdir -p "$DOCS_DIR/docs/pylode/"
           pylode -o "$DOCS_DIR/docs/pylode/index" \
             "$ONTO_FILE"  
+  
+       
+    - name: Download widoco
+      run: mkdir -p "$DOCS_DIR/docs/widoco/" && wget -O "$DOCS_DIR/docs/widoco/widoco.jar" https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-17.jar
+  
+    - name: Compile documentation
+      run: |
+        cd "$DOCS_DIR/docs/widoco/"        
+        java -jar ./widoco.jar \
+        -ontFile "../../$ONTO_FILE" \
+        -oops \
+        -webVowl \
+        -includeAnnotationProperties \
+        -outFolder . \
+        -rewriteAll \
+        -includeImportedOntologies \
+        -uniteSections \
+        -excludeIntroduction
+        cd ../..
+
 
     - name: Configure Pages
       uses: actions/configure-pages@v5            
@@ -67,13 +87,18 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    
     needs: build
+    
     runs-on: ubuntu-latest
+    
     permissions:
       pages: write
       id-token: write
+    
     name: Deploy
+    
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4.0.5
