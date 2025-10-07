@@ -1,0 +1,175 @@
+name: FUEL_CI_Common
+
+on:
+  workflow_call:
+    inputs:
+      RELEASE_VERSION:
+        required: false
+        type: string
+      DEV_DIR:
+        required: false
+        type: string
+
+env:
+  ONTO_DIR: src
+  ONTO_FILE: fuel.ttl
+  ONTO_ABBREV: fuel
+  DOCS_DIR: docs
+  RELEASES_DIR: releases
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      DEV_DIR: ${{ inputs.DEV_DIR }}
+      RELEASE_VERSION: ${{ inputs.RELEASE_VERSION }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Java Setup
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Install ROBOT
+        run: |
+          wget -q https://github.com/ontodev/robot/releases/download/v1.9.8/robot.jar -O robot.jar
+          curl -sL https://raw.githubusercontent.com/ontodev/robot/master/bin/robot > robot
+          chmod +x robot
+
+      - name: Install Python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install rdflib dotenv pylode
+
+      - name: Validate ontology profile
+        run: |
+          ./robot validate-profile --input "${ONTO_DIR}/${ONTO_FILE}" --profile DL || \
+          (echo "Profile check failed." && exit 1)
+
+      - name: Reasoning and consistency check
+        run: |
+          if ./robot reason --reasoner HermiT --input "${ONTO_DIR}/${ONTO_FILE}" --output reasoned.owl; then
+            echo "REASON_RESULT=consistent" >> $GITHUB_ENV
+          else
+            echo "REASON_RESULT=inconsistent" >> $GITHUB_ENV
+          fi
+
+      - name: Generate ontology syntaxes and documentation
+        run: |
+          python3 - << 'PY'
+          import os
+          from rdflib import Graph
+          from shutil import rmtree, copytree
+          import subprocess
+
+          ONTO_DIR = os.environ['ONTO_DIR']
+          ONTO_FILE = os.environ['ONTO_FILE']
+          ONTO_ABBREV = os.environ['ONTO_ABBREV']
+          DOCS_DIR = os.environ['DOCS_DIR']
+          RELEASES_DIR = os.environ['RELEASES_DIR']
+
+          RELEASE_VERSION = os.environ.get('RELEASE_VERSION')
+          DEV_DIR = os.environ.get('DEV_DIR')
+
+          g = Graph()
+          g.parse(os.path.join(ONTO_DIR, ONTO_FILE))
+          target_fmts = [("ttl","turtle"),("jsonld","json-ld"),("nt","nt"),("owl","xml")]
+
+          if RELEASE_VERSION:
+          # --- release build ---
+                release_dir = os.path.join(RELEASES_DIR, RELEASE_VERSION)
+                os.makedirs(release_dir, exist_ok=True)
+
+                # Generate syntaxes
+                for fmt in target_fmts:
+                    g.serialize(destination=os.path.join(release_dir, f"{ONTO_ABBREV}.{fmt[0]}"), format=fmt[1], encoding="utf-8")
+
+                # Versioned docs
+                release_docs_dir = os.path.join(release_dir, "docs")
+                os.makedirs(release_docs_dir, exist_ok=True)
+
+                # Pylode docs
+                pylode_outdir = os.path.join(release_docs_dir, "pylode")
+                os.makedirs(pylode_outdir, exist_ok=True)
+                subprocess.run([
+                    "pylode",
+                    "-o", os.path.join(pylode_outdir, "index"),
+                    os.path.join(ONTO_DIR, ONTO_FILE)
+                ], check=True)
+
+                # Widoco docs
+                widoco_dir = os.path.join(release_docs_dir, "widoco")
+                os.makedirs(widoco_dir, exist_ok=True)
+                subprocess.run([
+                    "wget", "-O", os.path.join(widoco_dir,"widoco.jar"),
+                    "https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-17.jar"
+                ], check=True)
+                subprocess.run([
+                    "java","-jar", os.path.join(widoco_dir,"widoco.jar"),
+                    "-ontFile", os.path.join(ONTO_DIR, ONTO_FILE),
+                    "-oops","-webVowl","-includeAnnotationProperties",
+                    "-outFolder", widoco_dir,
+                    "-rewriteAll","-includeImportedOntologies","-uniteSections","-excludeIntroduction"
+                ], check=True)
+
+                # Update latest
+                latest_dir = os.path.join(RELEASES_DIR, "latest")
+                if os.path.exists(latest_dir):
+                    rmtree(latest_dir)
+                    copytree(release_dir, latest_dir)
+
+                # Generate releases index.html
+                releases_index = os.path.join(RELEASES_DIR, 'index.html')
+                release_folders = sorted([d for d in os.listdir(RELEASES_DIR) if os.path.isdir(os.path.join(RELEASES_DIR,d))])
+                with open(releases_index, 'w') as f:
+                    f.write("<html><head><title>FUEL Releases</title></head><body>\n")
+                    f.write("<h1>FUEL Ontology Releases</h1>\n<ul>\n")
+                    for r in release_folders:
+                        f.write(f'<li><a href="{r}/">{r}</a></li>\n')
+                        f.write("</ul>\n</body></html>\n")
+
+          elif DEV_DIR:
+                # --- development build ---
+                os.makedirs(DEV_DIR, exist_ok=True)
+
+                # Generate syntaxes
+                for fmt in target_fmts:
+                    g.serialize(destination=os.path.join(DEV_DIR, f"{ONTO_ABBREV}.{fmt[0]}"), format=fmt[1], encoding="utf-8")
+
+                # Development docs
+                dev_docs_dir = os.path.join(DEV_DIR, "docs")
+                os.makedirs(dev_docs_dir, exist_ok=True)
+
+                pylode_outdir = os.path.join(dev_docs_dir, "pylode")
+                os.makedirs(pylode_outdir, exist_ok=True)
+                subprocess.run([
+                    "pylode",
+                    "-o", os.path.join(pylode_outdir, "index"),
+                    os.path.join(ONTO_DIR, ONTO_FILE)
+                ], check=True)
+
+                widoco_dir = os.path.join(dev_docs_dir,"widoco")
+                os.makedirs(widoco_dir, exist_ok=True)
+                subprocess.run([
+                    "wget", "-O", os.path.join(widoco_dir,"widoco.jar"),
+                    "https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-17.jar"
+                ], check=True)
+                subprocess.run([
+                    "java","-jar", os.path.join(widoco_dir,"widoco.jar"),
+                    "-ontFile", os.path.join(ONTO_DIR, ONTO_FILE),
+                    "-oops","-webVowl","-includeAnnotationProperties",
+                    "-outFolder", widoco_dir,
+                    "-rewriteAll","-includeImportedOntologies","-uniteSections","-excludeIntroduction"
+                ], check=True)
+          PY
+
+      - name: Upload dev artifact
+        if: ${{ inputs.DEV_DIR != '' && inputs.DEV_DIR != null }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: dev
+          path: ${{ inputs.DEV_DIR }}
