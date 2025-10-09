@@ -1,106 +1,219 @@
-@prefix fuel: <http://w3id.org/fuel#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix : <http://w3id.org/fuel#> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix omv: <http://omv.ontoware.org/2005/05/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sdo: <https://schema.org/> .
-@base <http://w3id.org/fuel#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix fuel: <http://w3id.org/fuel#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://w3id.org/fuel> .
 
-### AnnotationProperties declarations
-dcterms:title a owl:AnnotationProperty .
-dcterms:abstract a owl:AnnotationProperty .
-dcterms:created a owl:AnnotationProperty .
-dcterms:creator a owl:AnnotationProperty .
-dcterms:description a owl:AnnotationProperty .
-dcterms:issued a owl:AnnotationProperty .
-dcterms:license a owl:AnnotationProperty .
-dcterms:modified a owl:AnnotationProperty .
+<http://w3id.org/fuel> rdf:type owl:Ontology ;
+                        owl:versionIRI <http://w3id.org/fuel#0.0.1> ;
+                        dcterms:abstract "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
+                        dcterms:created "2024-11-06"^^xsd:date ;
+                        dcterms:creator [ rdf:type foaf:Person ,
+                                                   sdo:Person ;
+                                          rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
+                                          foaf:homepage <https://agbeltran.github.io/> ;
+                                          foaf:name "Alejandra Gonzalez Beltran" ;
+                                          sdo:affiliation [ sdo:identifier <https://ror.org/0361bwx64>
+                                                          ] ;
+                                          sdo:identifier <https://orcid.org/0000-0003-3499-8262> ;
+                                          sdo:name "Alejandra Gonzalez Beltran"
+                                        ] ;
+                        dcterms:description "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
+                        dcterms:issued "2024-11-06"^^xsd:date ;
+                        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                        dcterms:modified "2025-09-08"^^xsd:date ;
+                        dcterms:title "FUsion Energy Lexicon"@en ;
+                        vann:preferredNamespacePrefix "fuel" ;
+                        vann:preferredNamespaceUri "https://w3id.org/fuel#" ;
+                        rdfs:comment "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
+                        rdfs:label "FUsion Energy Lexicon"@en ,
+                                   "Léxico de energía de fusión"@es ;
+                        owl:versionInfo "0.0.1" ;
+                        dcat:version "0.1" ;
+                        mod:definitionProperty rdfs:comment ;
+                        mod:hasRepresentationLanguage omv:OWL ;
+                        mod:hasSyntax <http://www.w3.org/ns/formats/Turtle> ;
+                        mod:prefLabelProperty rdfs:label ;
+                        mod:status "active" .
 
-vann:preferredNamespacePrefix a owl:AnnotationProperty .
-vann:preferredNamespaceUri a owl:AnnotationProperty .
+#################################################################
+#    Annotation properties
+#################################################################
 
-dcat:version a owl:AnnotationProperty .
-
-mod:definitionProperty a owl:AnnotationProperty .
-mod:hasRepresentationLanguage a owl:AnnotationProperty .
-mod:hasSyntax a owl:AnnotationProperty .
-mod:prefLabelProperty a owl:AnnotationProperty .
-mod:status a owl:AnnotationProperty .
-
-foaf:name a owl:AnnotationProperty .
-foaf:homepage a owl:AnnotationProperty .
-
-sdo:name a owl:AnnotationProperty .
-sdo:identifier a owl:AnnotationProperty .
-sdo:affiliation a owl:AnnotationProperty .
-
-### Class declarations
-foaf:Person a owl:Class .
-
-sdo:Person a owl:Class .
+###  http://purl.org/dc/terms/abstract
+dcterms:abstract rdf:type owl:AnnotationProperty .
 
 
-<http://w3id.org/fuel> 
-    a owl:Ontology ;
-    
-    dcterms:title "FUsion Energy Lexicon"@en ;
-    rdfs:label "FUsion Energy Lexicon"@en ,
-               "Léxico de energía de fusión"@es ;
-          
-    dcterms:abstract "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en;
-    rdfs:comment "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
-    dcterms:description "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
-    
-    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:creator [
-      a foaf:Person ;
-      a sdo:Person ; 
-      foaf:homepage <https://agbeltran.github.io/> ;
-      foaf:name "Alejandra Gonzalez Beltran" ;
-      sdo:name "Alejandra Gonzalez Beltran" ;
-      rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
-      sdo:identifier <https://orcid.org/0000-0003-3499-8262> ;
-      sdo:affiliation [
-        sdo:identifier <https://ror.org/0361bwx64>
-      ]
-    ];
-    
-    dcat:version "0.1" ;
-    dcterms:created "2024-11-06"^^xsd:date ; 
-    dcterms:issued "2024-11-06"^^xsd:date ;
-    dcterms:modified "2025-09-08"^^xsd:dateTime ;
-    vann:preferredNamespacePrefix "fuel" ;
-    vann:preferredNamespaceUri "https://w3id.org/fuel#" ;
-    
-    mod:definitionProperty rdfs:comment ;
-    mod:hasRepresentationLanguage omv:OWL ;
-    mod:hasSyntax <http://www.w3.org/ns/formats/Turtle> ;
-    mod:prefLabelProperty rdfs:label ;
-    mod:status "active" ;
-    
-    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    
-    ## owl:backwardCompatibleWith fuel:0.0.1 ;
-    ## owl:priorVersion fuel:0.0.1 ;
-    owl:versionIRI fuel:0.0.1 ;
-    owl:versionInfo "0.0.1"^^xsd:string 
-    .
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dcterms:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dcterms:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dcat#version
+dcat:version rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/homepage
+foaf:homepage rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/affiliation
+sdo:affiliation rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/identifier
+sdo:identifier rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/name
+sdo:name rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#definitionProperty
+mod:definitionProperty rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#hasRepresentationLanguage
+mod:hasRepresentationLanguage rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#hasSyntax
+mod:hasSyntax rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#prefLabelProperty
+mod:prefLabelProperty rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#status
+mod:status rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
 
 #################################################################
 #    Classes
 #################################################################
 
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class .
+
+
+###  https://schema.org/Person
+sdo:Person rdf:type owl:Class .
+
+
 ###  http://w3id.org/fuel#campaign
-fuel:campaign
-    a owl:Class ;
-    rdfs:comment "A set of connected experiments that are run across a time period."@en .
+fuel:campaign rdf:type owl:Class ;
+              rdfs:comment "A set of connected experiments that are run across a time period."@en ,
+                           "Un conjunto de experimentos conectados que se ejecutan durante un período específico de tiempo"@es ;
+              rdfs:label "campaign"@en ,
+                         "campaña"@en ;
+              <http://www.w3.org/2004/02/skos/core#altLabel> "experimental campaign"@en .
 
 
-###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
+###  http://w3id.org/fuel#fusion_reactor
+fuel:fusion_reactor rdf:type owl:Class ;
+                    rdfs:subClassOf fuel:nuclear_reactor ;
+                    dcterms:source <https://www.energyencyclopedia.com/en/glossary/fusion-reactor/> ;
+                    rdfs:comment "A device in which controlled thermonuclear fusion takes place, either for scientific purposes or for the production of energy. Since there are different ways to achieve fusion conditions, a fusion reactor can be a tokamak, a stellarator, a fusor or any other device in which the conditions for fusion can be achieved and maintained."@en ,
+                                 "Dispositivo en el que se produce la fusión termonuclear controlada, ya sea con fines científicos o para la producción de energía. Dado que existen diferentes maneras de lograr las condiciones de fusión, un reactor de fusión puede ser un tokamak, un stellarator, un fusor o cualquier otro dispositivo que permita alcanzar y mantener las condiciones para la fusión."@es ;
+                    rdfs:label "fusion reactor"@en ,
+                               "reactor de fusión"@es ;
+                    skos:altLabel "dispositivo de fusión"@es ,
+                                  "fusion device"@en ,
+                                  "nuclear fusion reactor"@en ,
+                                  "reactor de fusión nuclear"@es .
+
+
+###  http://w3id.org/fuel#nuclear_reactor
+fuel:nuclear_reactor rdf:type owl:Class ;                      
+                      dcterms:source <https://www.energyencyclopedia.com/en/glossary/nuclear-reactor> ;
+                      rdfs:comment "A device inside which a controlled chain fission reaction takes place. The reactor usually has the form of a metal pressure vessel, in the middle of which the nuclear fuel is arranged in a so-called core. A coolant, whether gas or liquid, circulates through the core to dissipate the heat generated by the fission reaction. The power of the reactor is controlled by control rods that are inserted or withdrawn from the core as necessary. If the reactor uses thermal neutrons for fission, it also includes a moderator, either in the form of a liquid or a solid, which slows down the neutrons. Heat, generated by a reactor, is most commonly used. Either directly for technological purposes (e.g., hydrogen production by steam reforming) or for electricity generation by a steam turbine. The reactor can also be used to produce nuclear fuel (breeder reactor), or the strong neutron fluxes produced by the reaction can be used for research purposes or for the production of radiopharmaceuticals. There are a number of types of nuclear reactors, with the most common types used for electricity generation being water-cooled PWRs and BWRs. In 2023, there were 436 nuclear reactors in operation in the world."@en ,
+                                    "Dispositivo en el que ocurre una reacción nuclear en cadena controlada y autosostenida. Los reactores nucleares se utilizan en las centrales nucleares para la generación de electricidad y en la propulsión de barcos. El calor de la fis nuclear se transfiere a un fluido de trabajo (agua o gas), que pasa por turbinas."@es ;
+                      rdfs:label "nuclear reactor"@en , 
+                                 "reactor nuclear"@es ;
+                      skos:altLabel "nuclear fission reactor"@en ,
+                                    "reactor de fisión nuclear"@es . 
+
+
+
+###  http://w3id.org/fuel#shot
+fuel:shot rdf:type owl:Class ;
+          dcterms:source <https://euro-fusion.org/glossary/shot/> ;
+          rdfs:comment "A “shot” is any kind of experiment conducted on a test machine following defined parameters. It could be many actual firings of the machine following a variation in the parameters. So one or more “shots” make up an experiment." ;
+          rdfs:label "shot"@en .
+
+
+###  http://w3id.org/fuel#stellarator
+fuel:stellarator rdf:type owl:Class ;
+                 rdfs:subClassOf fuel:fusion_reactor .
+
+
+###  http://w3id.org/fuel#tokamak
+fuel:tokamak rdf:type owl:Class ;
+             rdfs:subClassOf fuel:fusion_reactor .
+
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

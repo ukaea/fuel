@@ -9,9 +9,9 @@ jobs:
   dev:
     uses: ./.github/workflows/ci-common.yaml
     with:
-      DEV_DIR: dev   # build ontologies into "dev" folder
+      DEV_DIR: ./public/dev   # build ontologies into "dev" folder
 
-  dev_index_and_deploy:
+  deploy:
     needs: dev
     runs-on: ubuntu-latest
     permissions:
@@ -28,47 +28,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: dev
-          path: dev
-
-      - name: Generate dev index.html
-        run: |
-          DEV_DIR=dev
-          DEV_SITE=dev_site
-          mkdir -p $DEV_SITE/dev
-
-          # Copy all ontology outputs into /dev
-          cp -r $DEV_DIR/* $DEV_SITE/dev/ || echo "No files to copy yet"
-
-          #### Root index.html (at /dev/index.html)
-          ROOT_INDEX=$DEV_SITE/dev/index.html
-          echo "<html><head><title>FUEL Dev Build</title></head><body>" > $ROOT_INDEX
-          echo "<h1>Development Build</h1>" >> $ROOT_INDEX
-
-          # List ontology files (inside /dev)
-          for f in $DEV_SITE/dev/*; do
-            fname=$(basename $f)
-            if [ "$fname" != "index.html" ] && [ "$fname" != "docs" ]; then
-              echo "<a href=\"$fname\">$fname</a><br>" >> $ROOT_INDEX
-            fi
-          done
-
-          # Add link to docs folder
-          if [ -d "$DEV_SITE/dev/docs" ]; then
-            echo "<br><a href=\"docs/\">Documentation</a><br>" >> $ROOT_INDEX
-          fi
-          echo "</body></html>" >> $ROOT_INDEX
-
-          #### Docs index.html (at /dev/docs/index.html)
-          if [ -d "$DEV_SITE/dev/docs" ]; then
-            DOCS_INDEX=$DEV_SITE/dev/docs/index.html
-            echo "<html><head><title>FUEL Dev Docs</title></head><body>" > $DOCS_INDEX
-            echo "<h1>Ontology Documentation</h1>" >> $DOCS_INDEX
-            for d in $DEV_SITE/dev/docs/*/; do
-              dname=$(basename $d)
-              echo "<a href=\"$dname/\">$dname</a><br>" >> $DOCS_INDEX
-            done
-            echo "</body></html>" >> $DOCS_INDEX
-          fi
+          path: ./public/dev
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
@@ -76,7 +36,7 @@ jobs:
       - name: Upload dev site artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: dev_site
+          path: ./public
 
       - name: Deploy dev site
         id: deployment

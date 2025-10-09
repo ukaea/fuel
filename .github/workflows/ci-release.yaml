@@ -16,6 +16,7 @@ jobs:
     uses: ./.github/workflows/ci-common.yaml
     with:
       RELEASE_VERSION: ${{ github.event.inputs.release_version }}
+      RELEASES_DIR: ./public/releases
 
   deploy:
     needs: release
@@ -27,6 +28,23 @@ jobs:
       pages: write
       id-token: write
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download release artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: release
+          path: ./public/releases   # download into ./public/releases
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./public           # publish the full public/ tree
+      
+      - name: Deploy site
         id: deployment
-        uses: actions/deploy-pages@v4.0.5
+        uses: actions/deploy-pages@v4

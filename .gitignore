@@ -1,0 +1,20 @@
+# VSCode settings
+.vscode/
+
+# VSCode extensions
+*.code-workspace
+
+# VSCode logs
+*.log
+
+# VSCode backup files
+*.tmp
+
+# VSCode history
+.history/
+
+# VSCode crash reports
+crash-reports/
+
+# Mac system files
+.DS_Store
