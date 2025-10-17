@@ -25,8 +25,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      DEV_DIR: ${{ inputs.DEV_DIR }}
-      RELEASE_VERSION: ${{ inputs.RELEASE_VERSION }}
+      DEV_DIR: ${{ inputs.DEV_DIR || 'dev' }}
+      RELEASE_VERSION: ${{ inputs.RELEASE_VERSION || '' }}
+      GIST_ID: ${{ secrets.GIST_ID || '' }}
 
     steps:
       - name: Checkout
@@ -50,17 +51,42 @@ jobs:
           pip install rdflib dotenv pylode
 
       - name: Validate ontology profile
+        id: profile
         run: |
           ./robot validate-profile --input "${ONTO_DIR}/${ONTO_FILE}" --profile DL -vvv || \
           (echo "Profile check failed." && exit 1)
 
+      - name: Badge — Syntax
+        if: always()
+        uses: schneegans/dynamic-badges-action@v1.7.0
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gistID: ${{ env.GIST_ID }}
+          filename: fuel-ci-profile-${{ github.ref_name }}.json
+          label: OWL DL Profile (${{ github.ref_name }})
+          message: ${{ steps.profile.outcome }}
+          color: ${{ steps.profile.outcome == 'success' && 'brightgreen' || steps.profile.outcome == 'cancelled' && 'yellow' || 'red' }}
+
       - name: Reasoning and consistency check
+        id: reasoning
         run: |
           if ./robot reason --reasoner HermiT --input "${ONTO_DIR}/${ONTO_FILE}" --output reasoned.owl; then
-            echo "REASON_RESULT=consistent" >> $GITHUB_ENV
+            echo "result=consistent" >> $GITHUB_OUTPUT
           else
-            echo "REASON_RESULT=inconsistent" >> $GITHUB_ENV
+            echo "result=inconsistent" >> $GITHUB_OUTPUT
+            exit 1
           fi
+ 
+      - name: Badge — Reasoning
+        if: always()
+        uses: schneegans/dynamic-badges-action@v1.7.0
+        with:
+          auth: ${{ secrets.GIST_TOKEN }}
+          gistID: ${{ env.GIST_ID }}
+          filename: ontology-ci-reasoning-${{ github.ref_name }}.json
+          label: Reasoning (${{ github.ref_name }})
+          message: ${{ steps.reasoning.outputs.result }}
+          color: ${{ steps.reasoning.outputs.result == 'consistent' && 'brightgreen' || 'red' }}
 
       - name: Generate ontology syntaxes and documentation              
         run: |
