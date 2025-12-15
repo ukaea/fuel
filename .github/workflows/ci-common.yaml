@@ -64,7 +64,7 @@ jobs:
           gistID: ${{ env.GIST_ID }}
           filename: fuel-ci-profile-${{ github.ref_name }}.json
           label: OWL DL Profile (${{ github.ref_name }})
-          message: ${{ steps.profile.outcome }}
+          message: ${{ steps.profile.outcome || 'failed' }}
           color: ${{ steps.profile.outcome == 'success' && 'brightgreen' || steps.profile.outcome == 'cancelled' && 'yellow' || 'red' }}
 
       - name: Reasoning and consistency check
@@ -83,9 +83,9 @@ jobs:
         with:
           auth: ${{ secrets.GIST_TOKEN }}
           gistID: ${{ env.GIST_ID }}
-          filename: ontology-ci-reasoning-${{ github.ref_name }}.json
+          filename: fuel-ci-reasoning-${{ github.ref_name }}.json
           label: Reasoning (${{ github.ref_name }})
-          message: ${{ steps.reasoning.outputs.result }}
+          message: ${{ steps.reasoning.outputs.result || 'failed'}}
           color: ${{ steps.reasoning.outputs.result == 'consistent' && 'brightgreen' || 'red' }}
 
       - name: Generate ontology syntaxes and documentation              
