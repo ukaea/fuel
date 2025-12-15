@@ -61,7 +61,7 @@ jobs:
         uses: schneegans/dynamic-badges-action@v1.7.0
         with:
           auth: ${{ secrets.GIST_TOKEN }}
-          gistID: ${{ env.GIST_ID }}
+          gistID: ${{ secrets.GIST_ID }}
           filename: fuel-ci-profile-${{ github.ref_name }}.json
           label: OWL DL Profile (${{ github.ref_name }})
           message: ${{ steps.profile.outcome || 'failed' }}
@@ -82,7 +82,7 @@ jobs:
         uses: schneegans/dynamic-badges-action@v1.7.0
         with:
           auth: ${{ secrets.GIST_TOKEN }}
-          gistID: ${{ env.GIST_ID }}
+          gistID: ${{ secrets.GIST_ID }}
           filename: fuel-ci-reasoning-${{ github.ref_name }}.json
           label: Reasoning (${{ github.ref_name }})
           message: ${{ steps.reasoning.outputs.result || 'failed'}}
