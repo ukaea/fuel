@@ -1,5 +1,9 @@
 name: FUEL_CI_Dev
 
+concurrency:
+  group: fuel-gist-badges
+  cancel-in-progress: true
+
 on:
   push:
     branches:      

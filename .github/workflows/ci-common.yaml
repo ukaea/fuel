@@ -72,6 +72,7 @@ jobs:
         if: always()
         uses: schneegans/dynamic-badges-action@v1.7.0
         with:
+          forceUpdate: true
           auth: ${{ secrets.GIST_TOKEN }}
           gistID: ${{ secrets.GIST_ID }}
           filename: fuel-ci-profile-${{ github.ref_name }}.json
@@ -93,6 +94,7 @@ jobs:
         if: always()
         uses: schneegans/dynamic-badges-action@v1.7.0
         with:
+          forceUpdate: true
           auth: ${{ secrets.GIST_TOKEN }}
           gistID: ${{ secrets.GIST_ID }}
           filename: fuel-ci-reasoning-${{ github.ref_name }}.json
