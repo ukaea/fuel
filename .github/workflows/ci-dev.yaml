@@ -8,6 +8,7 @@ on:
 jobs:
   dev:
     uses: ./.github/workflows/ci-common.yaml
+    secrets: inherit
     with:
       DEV_DIR: ./public/dev   # build ontologies into "dev" folder
 

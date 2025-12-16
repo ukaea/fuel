@@ -2,6 +2,11 @@ name: FUEL_CI_Common
 
 on:
   workflow_call:
+    secrets:
+      GIST_ID:
+        required: true
+      GIST_TOKEN:
+        required: true
     inputs:
       RELEASE_VERSION:
         required: false
@@ -55,6 +60,13 @@ jobs:
         run: |
           ./robot validate-profile --input "${ONTO_DIR}/${ONTO_FILE}" --profile DL -vvv || \
           (echo "Profile check failed." && exit 1)
+      
+      - name: Check badge secrets
+        if: always()
+        run: |
+            test -n "${{ secrets.GIST_ID }}" || (echo "Missing GIST_ID secret" && exit 1)
+            test -n "${{ secrets.GIST_TOKEN }}" || (echo "Missing GIST_TOKEN secret" && exit 1)
+        
 
       - name: Badge — Syntax
         if: always()
