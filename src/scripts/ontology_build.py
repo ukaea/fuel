@@ -12,7 +12,9 @@ DOCS_DIR = os.environ['DOCS_DIR']
 RELEASES_DIR = os.environ['RELEASES_DIR']
 
 RELEASE_VERSION = os.environ.get('RELEASE_VERSION')
-DEV_DIR = os.environ.get('DEV_DIR')
+BUILD_DIR = os.environ.get('BUILD_DIR')
+IS_MAIN = os.environ.get('IS_MAIN') == 'true'
+CURRENT_VERSION = os.environ.get('CURRENT_VERSION', '')
 
 g = Graph()
 g.parse(os.path.join(ONTO_DIR, ONTO_FILE))
@@ -102,21 +104,32 @@ if RELEASE_VERSION:
             f.write(f'<li><a href="{r}/">{r}</a></li>\n')
         f.write("</ul>\n</body></html>\n")
 
-if DEV_DIR:
-    # --- development build ---
-    generate_syntaxes(DEV_DIR)
+if BUILD_DIR:
+    # --- base build ---
+    generate_syntaxes(BUILD_DIR)
 
-    dev_docs_dir = os.path.join(DEV_DIR, "docs")
-    generate_pylode_docs(dev_docs_dir)
-    generate_widoco_docs(dev_docs_dir, ONTO_DIR, ONTO_FILE)
+    build_docs_dir = os.path.join(BUILD_DIR, "docs")
+    generate_pylode_docs(build_docs_dir)
+    generate_widoco_docs(build_docs_dir, ONTO_DIR, ONTO_FILE)
 
-   # Generate dev index.html
-    dev_index = os.path.join(DEV_DIR, 'index.html')
-    with open(dev_index, 'w') as f:
-        f.write("<html><head><title>FUEL Development Build</title></head><body>\n")
-        f.write("<h1>FUEL Ontology (Development)</h1>\n<ul>\n")
+   # Generate build index.html
+    build_index = os.path.join(BUILD_DIR, 'index.html')
+    with open(build_index, 'w') as f:
+        if IS_MAIN:
+            title = f"FUEL Ontology (v{CURRENT_VERSION})" if CURRENT_VERSION else "FUEL Ontology"
+            heading = f"FUEL Ontology (Latest Release v{CURRENT_VERSION})" if CURRENT_VERSION else "FUEL Ontology (Latest Release)"
+        else:
+            title = "FUEL Development Build"
+            heading = "FUEL Ontology (Development Build)"
+            
+        f.write(f"<html><head><title>{title}</title></head><body>\n")
+        f.write(f"<h1>{heading}</h1>\n<ul>\n")
         f.write('<li><a href="docs/pylode/">Pylode Documentation</a></li>\n')
         f.write('<li><a href="docs/widoco/">Widoco Documentation</a></li>\n')
         for ext, fmt in target_fmts:
             f.write(f'<li><a href="{ONTO_ABBREV}.{ext}">{ONTO_ABBREV}.{ext}</a></li>\n')
-        f.write("</ul>\n</body></html>\n")
+        f.write("</ul>\n")
+        if IS_MAIN:
+            f.write('<h2><a href="releases/">Previous Releases</a></h2>\n')
+            f.write('<h2><a href="dev/">Development Build</a></h2>\n')
+        f.write("</body></html>\n")

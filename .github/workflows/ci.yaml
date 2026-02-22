@@ -46,8 +46,10 @@ jobs:
     needs: check-version
     runs-on: ubuntu-latest
     env:
-      DEV_DIR: ${{ github.ref_name == 'main' && './public' || './public/dev' }}
+      BUILD_DIR: ${{ github.ref_name == 'main' && './public' || './public/dev' }}
       RELEASE_VERSION: ${{ needs.check-version.outputs.is_new == 'true' && needs.check-version.outputs.version || '' }}
+      IS_MAIN: ${{ github.ref_name == 'main' && 'true' || 'false' }}
+      CURRENT_VERSION: ${{ needs.check-version.outputs.version }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -119,9 +121,9 @@ jobs:
         run: |
             python3 src/scripts/ontology_build.py
 
-      - name: Upload dev artifact
-        # if DEV_DIR is set to something non-empty, we upload the whole public struct
-        if: ${{ env.DEV_DIR != '' && env.DEV_DIR != null }}
+      - name: Upload root artifact
+        # if BUILD_DIR is set to something non-empty, we upload the whole public struct
+        if: ${{ env.BUILD_DIR != '' && env.BUILD_DIR != null }}
         uses: actions/upload-artifact@v4
         with:
           name: site
