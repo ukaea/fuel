@@ -79,6 +79,21 @@ def generate_widoco_docs(outdir, onto_dir, onto_file, version="1.4.25"):
         print("Widoco execution failed:")
         print(e)
 
+def generate_index(outdir, title, heading, is_root_main=False):
+    index_path = os.path.join(outdir, 'index.html')
+    with open(index_path, 'w') as f:
+        f.write(f"<html><head><title>{title}</title></head><body>\n")
+        f.write(f"<h1>{heading}</h1>\n<ul>\n")
+        f.write('<li><a href="docs/pylode/">Pylode Documentation</a></li>\n')
+        f.write('<li><a href="docs/widoco/">Widoco Documentation</a></li>\n')
+        for ext, fmt in target_fmts:
+            f.write(f'<li><a href="{ONTO_ABBREV}.{ext}">{ONTO_ABBREV}.{ext}</a></li>\n')
+        f.write("</ul>\n")
+        if is_root_main:
+            f.write('<h2><a href="releases/">Previous Releases</a></h2>\n')
+            f.write('<h2><a href="dev/">Development Build</a></h2>\n')
+        f.write("</body></html>\n")
+
 if RELEASE_VERSION:
 # --- release build ---
     release_dir = os.path.join(RELEASES_DIR, RELEASE_VERSION)
@@ -87,6 +102,14 @@ if RELEASE_VERSION:
     release_docs_dir = os.path.join(release_dir, "docs")
     generate_pylode_docs(release_docs_dir)
     generate_widoco_docs(release_docs_dir, ONTO_DIR, ONTO_FILE)
+
+    # Generate index for this specific release
+    generate_index(
+        release_dir,
+        title=f"FUEL Ontology Release {RELEASE_VERSION}",
+        heading=f"FUEL Ontology (Release {RELEASE_VERSION})",
+        is_root_main=False
+    )
 
     # Update latest
     latest_dir = os.path.join(RELEASES_DIR, "latest")
@@ -113,23 +136,11 @@ if BUILD_DIR:
     generate_widoco_docs(build_docs_dir, ONTO_DIR, ONTO_FILE)
 
    # Generate build index.html
-    build_index = os.path.join(BUILD_DIR, 'index.html')
-    with open(build_index, 'w') as f:
-        if IS_MAIN:
-            title = f"FUEL Ontology (v{CURRENT_VERSION})" if CURRENT_VERSION else "FUEL Ontology"
-            heading = f"FUEL Ontology (Latest Release v{CURRENT_VERSION})" if CURRENT_VERSION else "FUEL Ontology (Latest Release)"
-        else:
-            title = "FUEL Development Build"
-            heading = "FUEL Ontology (Development Build)"
-            
-        f.write(f"<html><head><title>{title}</title></head><body>\n")
-        f.write(f"<h1>{heading}</h1>\n<ul>\n")
-        f.write('<li><a href="docs/pylode/">Pylode Documentation</a></li>\n')
-        f.write('<li><a href="docs/widoco/">Widoco Documentation</a></li>\n')
-        for ext, fmt in target_fmts:
-            f.write(f'<li><a href="{ONTO_ABBREV}.{ext}">{ONTO_ABBREV}.{ext}</a></li>\n')
-        f.write("</ul>\n")
-        if IS_MAIN:
-            f.write('<h2><a href="releases/">Previous Releases</a></h2>\n')
-            f.write('<h2><a href="dev/">Development Build</a></h2>\n')
-        f.write("</body></html>\n")
+    if IS_MAIN:
+        title = f"FUEL Ontology (v{CURRENT_VERSION})" if CURRENT_VERSION else "FUEL Ontology"
+        heading = f"FUEL Ontology (Latest Release v{CURRENT_VERSION})" if CURRENT_VERSION else "FUEL Ontology (Latest Release)"
+    else:
+        title = "FUEL Development Build"
+        heading = "FUEL Ontology (Development Build)"
+        
+    generate_index(BUILD_DIR, title, heading, is_root_main=IS_MAIN)
