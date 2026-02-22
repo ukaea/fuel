@@ -117,7 +117,7 @@ jobs:
 
       - name: Generate ontology syntaxes and documentation              
         run: |
-            python3 src/scripts/onto_syntax_doc.py
+            python3 src/scripts/ontology_build.py
 
       - name: Upload dev artifact
         # if DEV_DIR is set to something non-empty, we upload the whole public struct
