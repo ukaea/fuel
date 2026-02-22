@@ -200,7 +200,7 @@
     "label" : {
       "IRI-based" : "Q1360597"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "1"
   }, {
     "iri" : "http://w3id.org/fuel#tokamak",
@@ -253,7 +253,7 @@
     "label" : {
       "IRI-based" : "Q80877"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "13"
   }, {
     "iri" : "http://w3id.org/fuel#fusion_reactor",
@@ -264,22 +264,22 @@
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "es",
+        "value" : "reactor de fusión nuclear",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "es",
         "value" : "dispositivo de fusión",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "nuclear fusion reactor",
-        "type" : "label"
-      }, {
-        "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "reactor de fusión nuclear",
+        "value" : "fusion device",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "fusion device",
+        "value" : "nuclear fusion reactor",
         "type" : "label"
       } ],
       "source" : [ {
@@ -309,7 +309,7 @@
     "label" : {
       "IRI-based" : "Q11536219"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "15"
   }, {
     "iri" : "http://www.wikidata.org/entity/Q188589",
@@ -318,7 +318,7 @@
     "label" : {
       "IRI-based" : "Q188589"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "11"
   }, {
     "iri" : "http://w3id.org/fuel#stellarator",
@@ -361,13 +361,13 @@
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "reactor de fisión nuclear",
+        "language" : "en",
+        "value" : "nuclear fission reactor",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "nuclear fission reactor",
+        "language" : "es",
+        "value" : "reactor de fisión nuclear",
         "type" : "label"
       } ],
       "source" : [ {
@@ -420,7 +420,7 @@
     "label" : {
       "IRI-based" : "Q7576717"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "18"
   }, {
     "iri" : "http://w3id.org/fuel#shot",
@@ -449,7 +449,7 @@
     "label" : {
       "IRI-based" : "Q190241"
     },
-    "attributes" : [ "equivalent", "external" ],
+    "attributes" : [ "external", "equivalent" ],
     "id" : "20"
   }, {
     "iri" : "http://w3id.org/fuel#thermocouple",
@@ -460,7 +460,7 @@
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "thermo couple",
+        "value" : "thermoelectrical thermometer",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
@@ -470,7 +470,7 @@
       }, {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "thermoelectrical thermometer",
+        "value" : "thermo couple",
         "type" : "label"
       } ],
       "source" : [ {
@@ -521,27 +521,27 @@
   "propertyAttribute" : [ {
     "range" : "4",
     "domain" : "3",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "2"
   }, {
     "range" : "7",
     "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "5"
   }, {
     "range" : "9",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "8"
   }, {
     "range" : "3",
     "domain" : "10",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "16"
   }, {
     "range" : "4",
     "domain" : "14",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "17"
   } ]
 }
