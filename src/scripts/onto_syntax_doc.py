@@ -84,7 +84,7 @@ if RELEASE_VERSION:
 
     release_docs_dir = os.path.join(release_dir, "docs")
     generate_pylode_docs(release_docs_dir)
-    generate_widoco_docs(release_docs_dir)
+    generate_widoco_docs(release_docs_dir, ONTO_DIR, ONTO_FILE)
 
     # Update latest
     latest_dir = os.path.join(RELEASES_DIR, "latest")
