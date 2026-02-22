@@ -144,11 +144,11 @@
     "id" : "11",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "7",
-    "type" : "owl:Class"
-  }, {
     "id" : "14",
     "type" : "owl:equivalentClass"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
   }, {
     "id" : "9",
     "type" : "owl:equivalentClass"
@@ -210,13 +210,13 @@
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "toroidal chamber with magnetic coils",
+        "language" : "es",
+        "value" : "cámara toroidal con bobinas magnéticas",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "cámara toroidal con bobinas magnéticas",
+        "language" : "en",
+        "value" : "toroidal chamber with magnetic coils",
         "type" : "label"
       } ],
       "source" : [ {
@@ -264,17 +264,17 @@
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "nuclear fusion reactor",
-        "type" : "label"
-      }, {
-        "identifier" : "altLabel",
-        "language" : "en",
         "value" : "fusion device",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
         "language" : "es",
         "value" : "dispositivo de fusión",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "nuclear fusion reactor",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
@@ -321,16 +321,6 @@
     "attributes" : [ "equivalent", "external" ],
     "id" : "11"
   }, {
-    "iri" : "http://www.w3.org/ns/sosa/Sensor",
-    "baseIri" : "http://www.w3.org/ns/sosa",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Sensor"
-    },
-    "subClasses" : [ "6" ],
-    "attributes" : [ "external" ],
-    "id" : "7"
-  }, {
     "iri" : "http://w3id.org/fuel#stellarator",
     "equivalent" : [ "1" ],
     "baseIri" : "http://w3id.org/fuel",
@@ -353,6 +343,16 @@
     "attributes" : [ "equivalent" ],
     "id" : "14",
     "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Sensor",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Sensor"
+    },
+    "subClasses" : [ "6" ],
+    "attributes" : [ "external" ],
+    "id" : "7"
   }, {
     "iri" : "http://w3id.org/fuel#nuclear_reactor",
     "equivalent" : [ "13" ],
@@ -460,17 +460,17 @@
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
+        "value" : "thermoelectrical thermometer",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "en",
         "value" : "thermo couple",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
         "language" : "es",
         "value" : "termocupla",
-        "type" : "label"
-      }, {
-        "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "thermoelectrical thermometer",
         "type" : "label"
       } ],
       "source" : [ {
