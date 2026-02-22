@@ -102,7 +102,7 @@ if RELEASE_VERSION:
             f.write(f'<li><a href="{r}/">{r}</a></li>\n')
         f.write("</ul>\n</body></html>\n")
 
-elif DEV_DIR:
+if DEV_DIR:
     # --- development build ---
     generate_syntaxes(DEV_DIR)
 
