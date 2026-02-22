@@ -210,13 +210,13 @@
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "toroidal chamber with magnetic coils",
+        "language" : "es",
+        "value" : "cámara toroidal con bobinas magnéticas",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "cámara toroidal con bobinas magnéticas",
+        "language" : "en",
+        "value" : "toroidal chamber with magnetic coils",
         "type" : "label"
       } ],
       "source" : [ {
@@ -263,6 +263,11 @@
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
+        "language" : "es",
+        "value" : "dispositivo de fusión",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
         "language" : "en",
         "value" : "nuclear fusion reactor",
         "type" : "label"
@@ -270,11 +275,6 @@
         "identifier" : "altLabel",
         "language" : "es",
         "value" : "reactor de fusión nuclear",
-        "type" : "label"
-      }, {
-        "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "dispositivo de fusión",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
@@ -361,13 +361,13 @@
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "nuclear fission reactor",
+        "language" : "es",
+        "value" : "reactor de fisión nuclear",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "reactor de fisión nuclear",
+        "language" : "en",
+        "value" : "nuclear fission reactor",
         "type" : "label"
       } ],
       "source" : [ {
@@ -464,13 +464,13 @@
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "thermoelectrical thermometer",
+        "language" : "es",
+        "value" : "termocupla",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "termocupla",
+        "language" : "en",
+        "value" : "thermoelectrical thermometer",
         "type" : "label"
       } ],
       "source" : [ {
