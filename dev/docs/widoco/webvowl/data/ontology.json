@@ -210,13 +210,13 @@
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "cámara toroidal con bobinas magnéticas",
+        "language" : "en",
+        "value" : "toroidal chamber with magnetic coils",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "toroidal chamber with magnetic coils",
+        "language" : "es",
+        "value" : "cámara toroidal con bobinas magnéticas",
         "type" : "label"
       } ],
       "source" : [ {
@@ -264,7 +264,12 @@
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "fusion device",
+        "value" : "nuclear fusion reactor",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "es",
+        "value" : "reactor de fusión nuclear",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
@@ -274,12 +279,7 @@
       }, {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "nuclear fusion reactor",
-        "type" : "label"
-      }, {
-        "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "reactor de fusión nuclear",
+        "value" : "fusion device",
         "type" : "label"
       } ],
       "source" : [ {
@@ -460,12 +460,12 @@
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "thermoelectrical thermometer",
+        "value" : "thermo couple",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "thermo couple",
+        "value" : "thermoelectrical thermometer",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
