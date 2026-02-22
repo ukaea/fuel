@@ -264,12 +264,12 @@
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "es",
-        "value" : "dispositivo de fusión",
+        "value" : "reactor de fusión nuclear",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
         "language" : "es",
-        "value" : "reactor de fusión nuclear",
+        "value" : "dispositivo de fusión",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
@@ -361,13 +361,13 @@
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "reactor de fisión nuclear",
+        "language" : "en",
+        "value" : "nuclear fission reactor",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "nuclear fission reactor",
+        "language" : "es",
+        "value" : "reactor de fisión nuclear",
         "type" : "label"
       } ],
       "source" : [ {
