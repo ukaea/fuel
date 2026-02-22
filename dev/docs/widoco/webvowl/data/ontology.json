@@ -200,7 +200,7 @@
     "label" : {
       "IRI-based" : "Q1360597"
     },
-    "attributes" : [ "external", "equivalent" ],
+    "attributes" : [ "equivalent", "external" ],
     "id" : "1"
   }, {
     "iri" : "http://w3id.org/fuel#tokamak",
@@ -210,13 +210,13 @@
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "cámara toroidal con bobinas magnéticas",
+        "language" : "en",
+        "value" : "toroidal chamber with magnetic coils",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "toroidal chamber with magnetic coils",
+        "language" : "es",
+        "value" : "cámara toroidal con bobinas magnéticas",
         "type" : "label"
       } ],
       "source" : [ {
@@ -253,7 +253,7 @@
     "label" : {
       "IRI-based" : "Q80877"
     },
-    "attributes" : [ "external", "equivalent" ],
+    "attributes" : [ "equivalent", "external" ],
     "id" : "13"
   }, {
     "iri" : "http://w3id.org/fuel#fusion_reactor",
@@ -263,8 +263,8 @@
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "reactor de fusión nuclear",
+        "language" : "en",
+        "value" : "nuclear fusion reactor",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
@@ -273,13 +273,13 @@
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "fusion device",
+        "language" : "es",
+        "value" : "reactor de fusión nuclear",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "nuclear fusion reactor",
+        "value" : "fusion device",
         "type" : "label"
       } ],
       "source" : [ {
@@ -309,7 +309,7 @@
     "label" : {
       "IRI-based" : "Q11536219"
     },
-    "attributes" : [ "external", "equivalent" ],
+    "attributes" : [ "equivalent", "external" ],
     "id" : "15"
   }, {
     "iri" : "http://www.wikidata.org/entity/Q188589",
@@ -318,7 +318,7 @@
     "label" : {
       "IRI-based" : "Q188589"
     },
-    "attributes" : [ "external", "equivalent" ],
+    "attributes" : [ "equivalent", "external" ],
     "id" : "11"
   }, {
     "iri" : "http://w3id.org/fuel#stellarator",
@@ -420,7 +420,7 @@
     "label" : {
       "IRI-based" : "Q7576717"
     },
-    "attributes" : [ "external", "equivalent" ],
+    "attributes" : [ "equivalent", "external" ],
     "id" : "18"
   }, {
     "iri" : "http://w3id.org/fuel#shot",
@@ -449,7 +449,7 @@
     "label" : {
       "IRI-based" : "Q190241"
     },
-    "attributes" : [ "external", "equivalent" ],
+    "attributes" : [ "equivalent", "external" ],
     "id" : "20"
   }, {
     "iri" : "http://w3id.org/fuel#thermocouple",
@@ -460,17 +460,17 @@
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
+        "value" : "thermo couple",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "en",
         "value" : "thermoelectrical thermometer",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
         "language" : "es",
         "value" : "termocupla",
-        "type" : "label"
-      }, {
-        "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "thermo couple",
         "type" : "label"
       } ],
       "source" : [ {
@@ -521,27 +521,27 @@
   "propertyAttribute" : [ {
     "range" : "4",
     "domain" : "3",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "2"
   }, {
     "range" : "7",
     "domain" : "6",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "5"
   }, {
     "range" : "9",
     "domain" : "4",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "8"
   }, {
     "range" : "3",
     "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "16"
   }, {
     "range" : "4",
     "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
+    "attributes" : [ "object", "anonymous" ],
     "id" : "17"
   } ]
 }
