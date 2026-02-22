@@ -1,0 +1,445 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://w3id.org/fuel#"
+     xml:base="http://w3id.org/fuel"
+     xmlns:mod="https://w3id.org/mod#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/">
+    <owl:Ontology rdf:about="http://w3id.org/fuel">
+        <owl:versionIRI rdf:resource="http://w3id.org/fuel#0.0.1"/>
+        <terms:abstract xml:lang="en">FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data.</terms:abstract>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-06</terms:created>
+        <terms:creator rdf:nodeID="genid1"/>
+        <terms:description xml:lang="en">FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-11-06</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-09-08</terms:modified>
+        <terms:title xml:lang="en">FUsion Energy Lexicon</terms:title>
+        <vann:preferredNamespacePrefix>fuel</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/fuel#</vann:preferredNamespaceUri>
+        <rdfs:comment xml:lang="en">FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data.</rdfs:comment>
+        <rdfs:label xml:lang="en">FUsion Energy Lexicon</rdfs:label>
+        <rdfs:label xml:lang="es">Léxico de energía de fusión</rdfs:label>
+        <owl:versionInfo>0.0.1</owl:versionInfo>
+        <dcat:version>0.0.1</dcat:version>
+        <mod:definitionProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <mod:hasRepresentationLanguage rdf:resource="http://omv.ontoware.org/2005/05/ontology#OWL"/>
+        <mod:hasSyntax rdf:resource="http://www.w3.org/ns/formats/Turtle"/>
+        <mod:prefLabelProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <mod:status>active</mod:status>
+    </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdf:type rdf:resource="https://schema.org/Person"/>
+        <rdfs:seeAlso rdf:resource="https://orcid.org/0000-0003-3499-8262"/>
+        <foaf:homepage rdf:resource="https://agbeltran.github.io/"/>
+        <foaf:name>Alejandra Gonzalez Beltran</foaf:name>
+        <schema:affiliation>
+            <rdf:Description>
+                <schema:identifier rdf:resource="https://ror.org/0361bwx64"/>
+            </rdf:Description>
+        </schema:affiliation>
+        <schema:identifier rdf:resource="https://orcid.org/0000-0003-3499-8262"/>
+        <schema:name>Alejandra Gonzalez Beltran</schema:name>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/abstract -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#version -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#version"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- https://schema.org/affiliation -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/affiliation"/>
+    
+
+
+    <!-- https://schema.org/identifier -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/identifier"/>
+    
+
+
+    <!-- https://schema.org/name -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/name"/>
+    
+
+
+    <!-- https://w3id.org/mod#definitionProperty -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/mod#definitionProperty"/>
+    
+
+
+    <!-- https://w3id.org/mod#hasRepresentationLanguage -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/mod#hasRepresentationLanguage"/>
+    
+
+
+    <!-- https://w3id.org/mod#hasSyntax -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/mod#hasSyntax"/>
+    
+
+
+    <!-- https://w3id.org/mod#prefLabelProperty -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/mod#prefLabelProperty"/>
+    
+
+
+    <!-- https://w3id.org/mod#status -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/mod#status"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/fuel#campaign -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#campaign">
+        <rdfs:comment xml:lang="en">A set of connected experiments that are run across a time period.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un conjunto de experimentos conectados que se ejecutan durante un período específico de tiempo</rdfs:comment>
+        <rdfs:label xml:lang="en">campaign</rdfs:label>
+        <rdfs:label xml:lang="es">campaña</rdfs:label>
+        <skos:altLabel xml:lang="en">experimental campaign</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel#fusion_reactor -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#fusion_reactor">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q11536219"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#nuclear_reactor"/>
+        <terms:source rdf:resource="https://www.energyencyclopedia.com/en/glossary/fusion-reactor/"/>
+        <rdfs:comment xml:lang="en">A device in which controlled thermonuclear fusion takes place, either for scientific purposes or for the production of energy. Since there are different ways to achieve fusion conditions, a fusion reactor can be a tokamak, a stellarator, a fusor or any other device in which the conditions for fusion can be achieved and maintained.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Dispositivo en el que se produce la fusión termonuclear controlada, ya sea con fines científicos o para la producción de energía. Dado que existen diferentes maneras de lograr las condiciones de fusión, un reactor de fusión puede ser un tokamak, un stellarator, un fusor o cualquier otro dispositivo que permita alcanzar y mantener las condiciones para la fusión.</rdfs:comment>
+        <rdfs:label xml:lang="en">fusion reactor</rdfs:label>
+        <rdfs:label xml:lang="es">reactor de fusión</rdfs:label>
+        <skos:altLabel xml:lang="es">dispositivo de fusión</skos:altLabel>
+        <skos:altLabel xml:lang="en">fusion device</skos:altLabel>
+        <skos:altLabel xml:lang="en">nuclear fusion reactor</skos:altLabel>
+        <skos:altLabel xml:lang="es">reactor de fusión nuclear</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel#nuclear_reactor -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#nuclear_reactor">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q80877"/>
+        <terms:source rdf:resource="https://www.energyencyclopedia.com/en/glossary/nuclear-reactor"/>
+        <rdfs:comment xml:lang="en">A device inside which a controlled chain fission reaction takes place. The reactor usually has the form of a metal pressure vessel, in the middle of which the nuclear fuel is arranged in a so-called core. A coolant, whether gas or liquid, circulates through the core to dissipate the heat generated by the fission reaction. The power of the reactor is controlled by control rods that are inserted or withdrawn from the core as necessary. If the reactor uses thermal neutrons for fission, it also includes a moderator, either in the form of a liquid or a solid, which slows down the neutrons. Heat, generated by a reactor, is most commonly used. Either directly for technological purposes (e.g., hydrogen production by steam reforming) or for electricity generation by a steam turbine. The reactor can also be used to produce nuclear fuel (breeder reactor), or the strong neutron fluxes produced by the reaction can be used for research purposes or for the production of radiopharmaceuticals. There are a number of types of nuclear reactors, with the most common types used for electricity generation being water-cooled PWRs and BWRs. In 2023, there were 436 nuclear reactors in operation in the world.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Dispositivo en el que ocurre una reacción nuclear en cadena controlada y autosostenida. Los reactores nucleares se utilizan en las centrales nucleares para la generación de electricidad y en la propulsión de barcos. El calor de la fis nuclear se transfiere a un fluido de trabajo (agua o gas), que pasa por turbinas.</rdfs:comment>
+        <rdfs:label xml:lang="en">nuclear reactor</rdfs:label>
+        <rdfs:label xml:lang="es">reactor nuclear</rdfs:label>
+        <skos:altLabel xml:lang="en">nuclear fission reactor</skos:altLabel>
+        <skos:altLabel xml:lang="es">reactor de fisión nuclear</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel#shot -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#shot">
+        <terms:source rdf:resource="https://euro-fusion.org/glossary/shot/"/>
+        <rdfs:comment>A “shot” is any kind of experiment conducted on a test machine following defined parameters. It could be many actual firings of the machine following a variation in the parameters. So one or more “shots” make up an experiment.</rdfs:comment>
+        <rdfs:label xml:lang="en">shot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel#spherical_tokamak -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#spherical_tokamak">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q7576717"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#tokamak"/>
+        <terms:source rdf:resource="https://www.energyencyclopedia.com/en/glossary/spherical-tokamak/"/>
+        <rdfs:comment xml:lang="en">Tokamak with a low aspect ratio and a round plasma in a shape resembling a cored apple. While a conventional tokamak has a more donut-like shape with a central hole, a spherical tokamak minimizes this hole to achieve a higher compactness. A single common conductor runs through the centre of the tokamak, to which toroidal magnets in the shape of semicircles are connected. Due to its more compact shape, the spherical tokamak achieves the same plasma parameters as a conventional tokamak with a lower magnetic field. This allows it to be smaller and cheaper. Typical spherical tokamaks are the Small Tight Aspect Ratio Tokamak (START) or the Mega Ampere Spherical Tokamak (MAST).</rdfs:comment>
+        <rdfs:label xml:lang="en">spherical tokamak</rdfs:label>
+        <rdfs:label xml:lang="es">tokamak esférico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel#stellarator -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#stellarator">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q1360597"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#fusion_reactor"/>
+        <terms:source rdf:resource="https://www.energyencyclopedia.com/en/glossary/stellarator"/>
+        <rdfs:comment xml:lang="en">A device for thermonuclear fusion research that uses a combination of differently shaped coils which together create a desired helical magnetic field to confine the hot plasma. To hold the particles in the donut-shaped magnetic container, they must circulate in spirals, once on the inside and once on the outside of the torus. The stellarator creates a suitable magnetic field by combining helical, toroidal and poloidal coils. There are many variations that use different combinations and shapes of coils (classical, heliac, heliotron, torsatron, and helias). In the most modern modular stellarators, an assembly of specially twisted coils creates the magnetic field.</rdfs:comment>
+        <rdfs:label xml:lang="en">stellarator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel#thermocouple -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#thermocouple">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q190241"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <terms:source rdf:resource="https://www.britannica.com/technology/thermocouple"/>
+        <rdfs:comment xml:lang="en">A thermocouple is  a temperature-measuring device consisting of two wires of different metals joined at each end. One junction is placed where the temperature is to be measured, and the other is kept at a constant lower temperature. A measuring instrument is connected in the circuit. The temperature difference causes the development of an electromotive force (known as the Seebeck effect) that is approximately proportional to the difference between the temperatures of the two junctions. Temperature can be read from standard tables, or the measuring instrument can be calibrated to read temperature directly.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un termopar es un dispositivo de medición de temperatura que consta de dos cables de diferentes metales unidos por cada extremo. Una unión se coloca donde se va a medir la temperatura y la otra se mantiene a una temperatura inferior constante. Se conecta un instrumento de medición al circuito. La diferencia de temperatura genera una fuerza electromotriz (conocida como efecto Seebeck) aproximadamente proporcional a la diferencia de temperatura entre las dos uniones. La temperatura puede leerse en tablas estándar o el instrumento de medición puede calibrarse para leerla directamente.</rdfs:comment>
+        <rdfs:label xml:lang="es">termopar</rdfs:label>
+        <rdfs:label xml:lang="en">thermocouple</rdfs:label>
+        <skos:altLabel xml:lang="es">termocupla</skos:altLabel>
+        <skos:altLabel xml:lang="en">thermo couple</skos:altLabel>
+        <skos:altLabel xml:lang="en">thermoelectrical thermometer</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel#tokamak -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#tokamak">
+        <owl:equivalentClass rdf:resource="http://www.wikidata.org/entity/Q188589"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#fusion_reactor"/>
+        <terms:source rdf:resource="https://www.energyencyclopedia.com/en/glossary/tokamak"/>
+        <rdfs:comment xml:lang="en">A device for magnetic confinement of plasma by a combination of a toroidal magnetic field and a current flowing through the plasma in which conditions for thermonuclear fusion ignition can be achieved. The word “tokamak” is of Russian origin and is an acronym for “TOroidalnaya KAmera i MAgnitnye Katushki” — toroidal chamber and magnetic coils. The magnetic field necessary to keep the hot plasma inside the toroidal chamber is generated as a combination of the field of the toroidal coils and the magnetic field generated by the current flowing through the plasma. Since the current in the plasma is induced on the transformer principle, the tokamak is a pulse device.</rdfs:comment>
+        <rdfs:label xml:lang="en">tokamak</rdfs:label>
+        <skos:altLabel xml:lang="es">cámara toroidal con bobinas magnéticas</skos:altLabel>
+        <skos:altLabel xml:lang="en">toroidal chamber with magnetic coils</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Sensor -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sensor"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q11536219 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q11536219"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q1360597 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q1360597"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q188589 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q188589"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q190241 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q190241"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q7576717 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q7576717"/>
+    
+
+
+    <!-- http://www.wikidata.org/entity/Q80877 -->
+
+
+    <owl:Class rdf:about="http://www.wikidata.org/entity/Q80877"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
+    <!-- https://schema.org/Person -->
+
+
+    <owl:Class rdf:about="https://schema.org/Person"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,547 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "es", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://w3id.org/fuel", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/ns/sosa", "http://www.wikidata.org/entity", "http://xmlns.com/foaf/0.1" ],
+    "title" : {
+      "en" : "FUsion Energy Lexicon"
+    },
+    "iri" : "http://w3id.org/fuel",
+    "version" : "0.0.1",
+    "author" : [ "_:genid2147483648" ],
+    "description" : {
+      "en" : "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."
+    },
+    "labels" : {
+      "en" : "FUsion Energy Lexicon",
+      "es" : "Léxico de energía de fusión"
+    },
+    "comments" : {
+      "en" : "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483648",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2024-11-06",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data.",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.0.1",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "FUsion Energy Lexicon",
+        "type" : "label"
+      } ],
+      "version" : [ {
+        "identifier" : "version",
+        "language" : "undefined",
+        "value" : "0.0.1",
+        "type" : "label"
+      } ],
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "prefLabelProperty" : [ {
+        "identifier" : "prefLabelProperty",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2000/01/rdf-schema#label",
+        "type" : "iri"
+      } ],
+      "definitionProperty" : [ {
+        "identifier" : "definitionProperty",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2000/01/rdf-schema#comment",
+        "type" : "iri"
+      } ],
+      "hasRepresentationLanguage" : [ {
+        "identifier" : "hasRepresentationLanguage",
+        "language" : "undefined",
+        "value" : "http://omv.ontoware.org/2005/05/ontology#OWL",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "fuel",
+        "type" : "label"
+      } ],
+      "hasSyntax" : [ {
+        "identifier" : "hasSyntax",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/formats/Turtle",
+        "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-09-08",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fuel#",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2024-11-06",
+        "type" : "label"
+      } ],
+      "status" : [ {
+        "identifier" : "status",
+        "language" : "undefined",
+        "value" : "active",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "3",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "4",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "15",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "11",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "14",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "10",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "18",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "6",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://w3id.org/fuel#campaign",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "experimental campaign",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "campaign",
+      "en" : "campaign",
+      "es" : "campaña"
+    },
+    "comment" : {
+      "en" : "A set of connected experiments that are run across a time period.",
+      "es" : "Un conjunto de experimentos conectados que se ejecutan durante un período específico de tiempo"
+    },
+    "id" : "0"
+  }, {
+    "iri" : "http://www.wikidata.org/entity/Q1360597",
+    "baseIri" : "http://www.wikidata.org/entity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Q1360597"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://w3id.org/fuel#tokamak",
+    "equivalent" : [ "11" ],
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "es",
+        "value" : "cámara toroidal con bobinas magnéticas",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "toroidal chamber with magnetic coils",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://www.energyencyclopedia.com/en/glossary/tokamak",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "tokamak",
+      "en" : "tokamak"
+    },
+    "subClasses" : [ "10" ],
+    "comment" : {
+      "en" : "A device for magnetic confinement of plasma by a combination of a toroidal magnetic field and a current flowing through the plasma in which conditions for thermonuclear fusion ignition can be achieved. The word “tokamak” is of Russian origin and is an acronym for “TOroidalnaya KAmera i MAgnitnye Katushki” — toroidal chamber and magnetic coils. The magnetic field necessary to keep the hot plasma inside the toroidal chamber is generated as a combination of the field of the toroidal coils and the magnetic field generated by the current flowing through the plasma. Since the current in the plasma is induced on the transformer principle, the tokamak is a pulse device."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://schema.org/Person",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "attributes" : [ "external" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://www.wikidata.org/entity/Q80877",
+    "baseIri" : "http://www.wikidata.org/entity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Q80877"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://w3id.org/fuel#fusion_reactor",
+    "equivalent" : [ "15" ],
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "es",
+        "value" : "dispositivo de fusión",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "es",
+        "value" : "reactor de fusión nuclear",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "fusion device",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "nuclear fusion reactor",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://www.energyencyclopedia.com/en/glossary/fusion-reactor/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "fusion_reactor",
+      "en" : "fusion reactor",
+      "es" : "reactor de fusión"
+    },
+    "subClasses" : [ "14", "3" ],
+    "comment" : {
+      "en" : "A device in which controlled thermonuclear fusion takes place, either for scientific purposes or for the production of energy. Since there are different ways to achieve fusion conditions, a fusion reactor can be a tokamak, a stellarator, a fusor or any other device in which the conditions for fusion can be achieved and maintained.",
+      "es" : "Dispositivo en el que se produce la fusión termonuclear controlada, ya sea con fines científicos o para la producción de energía. Dado que existen diferentes maneras de lograr las condiciones de fusión, un reactor de fusión puede ser un tokamak, un stellarator, un fusor o cualquier otro dispositivo que permita alcanzar y mantener las condiciones para la fusión."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "4",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.wikidata.org/entity/Q11536219",
+    "baseIri" : "http://www.wikidata.org/entity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Q11536219"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://www.wikidata.org/entity/Q188589",
+    "baseIri" : "http://www.wikidata.org/entity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Q188589"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://w3id.org/fuel#stellarator",
+    "equivalent" : [ "1" ],
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "annotations" : {
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://www.energyencyclopedia.com/en/glossary/stellarator",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "stellarator",
+      "en" : "stellarator"
+    },
+    "comment" : {
+      "en" : "A device for thermonuclear fusion research that uses a combination of differently shaped coils which together create a desired helical magnetic field to confine the hot plasma. To hold the particles in the donut-shaped magnetic container, they must circulate in spirals, once on the inside and once on the outside of the torus. The stellarator creates a suitable magnetic field by combining helical, toroidal and poloidal coils. There are many variations that use different combinations and shapes of coils (classical, heliac, heliotron, torsatron, and helias). In the most modern modular stellarators, an assembly of specially twisted coils creates the magnetic field."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "14",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/ns/sosa/Sensor",
+    "baseIri" : "http://www.w3.org/ns/sosa",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Sensor"
+    },
+    "subClasses" : [ "6" ],
+    "attributes" : [ "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://w3id.org/fuel#nuclear_reactor",
+    "equivalent" : [ "13" ],
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "es",
+        "value" : "reactor de fisión nuclear",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "nuclear fission reactor",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://www.energyencyclopedia.com/en/glossary/nuclear-reactor",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "nuclear_reactor",
+      "en" : "nuclear reactor",
+      "es" : "reactor nuclear"
+    },
+    "subClasses" : [ "4" ],
+    "comment" : {
+      "en" : "A device inside which a controlled chain fission reaction takes place. The reactor usually has the form of a metal pressure vessel, in the middle of which the nuclear fuel is arranged in a so-called core. A coolant, whether gas or liquid, circulates through the core to dissipate the heat generated by the fission reaction. The power of the reactor is controlled by control rods that are inserted or withdrawn from the core as necessary. If the reactor uses thermal neutrons for fission, it also includes a moderator, either in the form of a liquid or a solid, which slows down the neutrons. Heat, generated by a reactor, is most commonly used. Either directly for technological purposes (e.g., hydrogen production by steam reforming) or for electricity generation by a steam turbine. The reactor can also be used to produce nuclear fuel (breeder reactor), or the strong neutron fluxes produced by the reaction can be used for research purposes or for the production of radiopharmaceuticals. There are a number of types of nuclear reactors, with the most common types used for electricity generation being water-cooled PWRs and BWRs. In 2023, there were 436 nuclear reactors in operation in the world.",
+      "es" : "Dispositivo en el que ocurre una reacción nuclear en cadena controlada y autosostenida. Los reactores nucleares se utilizan en las centrales nucleares para la generación de electricidad y en la propulsión de barcos. El calor de la fis nuclear se transfiere a un fluido de trabajo (agua o gas), que pasa por turbinas."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://w3id.org/fuel#spherical_tokamak",
+    "equivalent" : [ "18" ],
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "annotations" : {
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://www.energyencyclopedia.com/en/glossary/spherical-tokamak/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "spherical_tokamak",
+      "en" : "spherical tokamak",
+      "es" : "tokamak esférico"
+    },
+    "comment" : {
+      "en" : "Tokamak with a low aspect ratio and a round plasma in a shape resembling a cored apple. While a conventional tokamak has a more donut-like shape with a central hole, a spherical tokamak minimizes this hole to achieve a higher compactness. A single common conductor runs through the centre of the tokamak, to which toroidal magnets in the shape of semicircles are connected. Due to its more compact shape, the spherical tokamak achieves the same plasma parameters as a conventional tokamak with a lower magnetic field. This allows it to be smaller and cheaper. Typical spherical tokamaks are the Small Tight Aspect Ratio Tokamak (START) or the Mega Ampere Spherical Tokamak (MAST)."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "10",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://www.wikidata.org/entity/Q7576717",
+    "baseIri" : "http://www.wikidata.org/entity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Q7576717"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://w3id.org/fuel#shot",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "annotations" : {
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://euro-fusion.org/glossary/shot/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "shot",
+      "en" : "shot"
+    },
+    "comment" : {
+      "undefined" : "A “shot” is any kind of experiment conducted on a test machine following defined parameters. It could be many actual firings of the machine following a variation in the parameters. So one or more “shots” make up an experiment."
+    },
+    "id" : "19"
+  }, {
+    "iri" : "http://www.wikidata.org/entity/Q190241",
+    "baseIri" : "http://www.wikidata.org/entity",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Q190241"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://w3id.org/fuel#thermocouple",
+    "equivalent" : [ "20" ],
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "annotations" : {
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "thermo couple",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "es",
+        "value" : "termocupla",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "thermoelectrical thermometer",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "undefined",
+        "value" : "https://www.britannica.com/technology/thermocouple",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "thermocouple",
+      "en" : "thermocouple",
+      "es" : "termopar"
+    },
+    "comment" : {
+      "en" : "A thermocouple is  a temperature-measuring device consisting of two wires of different metals joined at each end. One junction is placed where the temperature is to be measured, and the other is kept at a constant lower temperature. A measuring instrument is connected in the circuit. The temperature difference causes the development of an electromotive force (known as the Seebeck effect) that is approximately proportional to the difference between the temperatures of the two junctions. Temperature can be read from standard tables, or the measuring instrument can be calibrated to read temperature directly.",
+      "es" : "Un termopar es un dispositivo de medición de temperatura que consta de dos cables de diferentes metales unidos por cada extremo. Una unión se coloca donde se va a medir la temperatura y la otra se mantiene a una temperatura inferior constante. Se conecta un instrumento de medición al circuito. La diferencia de temperatura genera una fuerza electromotriz (conocida como efecto Seebeck) aproximadamente proporcional a la diferencia de temperatura entre las dos uniones. La temperatura puede leerse en tablas estándar o el instrumento de medición puede calibrarse para leerla directamente."
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "6",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Person",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "attributes" : [ "external" ],
+    "id" : "21"
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "2"
+  }, {
+    "range" : "7",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "5"
+  }, {
+    "range" : "9",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "8"
+  }, {
+    "range" : "3",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "16"
+  }, {
+    "range" : "4",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "17"
+  } ]
+}
