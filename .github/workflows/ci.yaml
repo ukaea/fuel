@@ -1,4 +1,4 @@
-name: FUEL_CI_Dev
+name: FUEL_CI
 
 concurrency:
   group: fuel-gist-badges
