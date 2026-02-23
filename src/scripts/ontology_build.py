@@ -18,7 +18,7 @@ CURRENT_VERSION = os.environ.get('CURRENT_VERSION', '')
 
 g = Graph()
 g.parse(os.path.join(ONTO_DIR, ONTO_FILE))
-target_fmts = [("ttl","turtle"),("jsonld","json-ld"),("nt","nt"),("owl","xml")]
+target_fmts = [("ttl","turtle"),("jsonld","json-ld"),("nt","nt"),("owl","xml"),("n3","n3"),("trig","trig"),("trix","trix"),("nquads","nquads")]
       
 # function to generate the ontology syntaxes
 def generate_syntaxes(outdir):
