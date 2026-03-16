@@ -1,0 +1,29 @@
+@prefix : <http://w3id.org/fuel/wikidata/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix fuel: <http://w3id.org/fuel#> .
+
+<http://w3id.org/fuel/wikidata> rdf:type owl:Ontology ;
+    owl:imports <http://w3id.org/fuel> ;
+    dcterms:title "FUEL Wikidata Mappings"@en ;
+    dcterms:description "Wikidata mappings for the FUsion Energy Lexicon (FUEL)."@en .
+
+### Wikidata classes
+wd:Q11536219 rdf:type owl:Class .
+wd:Q80877 rdf:type owl:Class .
+wd:Q7576717 rdf:type owl:Class .
+wd:Q1360597 rdf:type owl:Class .
+wd:Q188589 rdf:type owl:Class .
+wd:Q190241 rdf:type owl:Class .
+
+### Mappings
+fuel:fusion_reactor owl:equivalentClass wd:Q11536219 .
+fuel:nuclear_reactor owl:equivalentClass wd:Q80877 . 
+fuel:spherical_tokamak owl:equivalentClass wd:Q7576717 . 
+fuel:stellarator owl:equivalentClass wd:Q1360597 .
+fuel:tokamak owl:equivalentClass wd:Q188589 .
+fuel:thermocouple owl:equivalentClass wd:Q190241 . 
