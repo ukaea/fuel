@@ -59,6 +59,10 @@ _:genid1 rdf:type <http://xmlns.com/foaf/0.1/Person> ,
 <http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/hasPart
+<http://purl.org/dc/terms/hasPart> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/issued
 <http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
 
@@ -89,6 +93,10 @@ _:genid1 rdf:type <http://xmlns.com/foaf/0.1/Person> ,
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
 <http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/ns/dcat#version
@@ -147,6 +155,16 @@ xsd:date rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
+###  http://w3id.org/fuel#alpha_particle_population
+:alpha_particle_population rdf:type owl:Class ;
+                           rdfs:subClassOf :non_thermal_particle_population .
+
+
+###  http://w3id.org/fuel#blanket_module
+:blanket_module rdf:type owl:Class ;
+                rdfs:subClassOf :tokamak_component .
+
+
 ###  http://w3id.org/fuel#campaign
 :campaign rdf:type owl:Class ;
           rdfs:comment "A set of connected experiments that are run across a time period."@en ,
@@ -156,9 +174,93 @@ xsd:date rdf:type rdfs:Datatype .
           <http://www.w3.org/2004/02/skos/core#altLabel> "experimental campaign"@en .
 
 
+###  http://w3id.org/fuel#central_solenoid
+:central_solenoid rdf:type owl:Class ;
+                  rdfs:subClassOf :magnet_system .
+
+
+###  http://w3id.org/fuel#core_plasma
+:core_plasma rdf:type owl:Class ;
+             rdfs:subClassOf :plasma .
+
+
+###  http://w3id.org/fuel#core_region
+:core_region rdf:type owl:Class ;
+             rdfs:subClassOf :plasma_region .
+
+
+###  http://w3id.org/fuel#desorbed_gas
+:desorbed_gas rdf:type owl:Class ;
+              rdfs:subClassOf :wall_released_species .
+
+
+###  http://w3id.org/fuel#device_component
+:device_component rdf:type owl:Class ;
+                  rdfs:subClassOf :material_entity .
+
+
+###  http://w3id.org/fuel#diagnostic_port
+:diagnostic_port rdf:type owl:Class ;
+                 rdfs:subClassOf :tokamak_component .
+
+
+###  http://w3id.org/fuel#diagnostics
+:diagnostics rdf:type owl:Class ;
+             <http://purl.org/dc/terms/source> <https://www.iter.org/fusion-glossary> ;
+             rdfs:comment "Equipment for determining/monitoring the properties and behaviour of a plasma during an experiment."@en ;
+             rdfs:label "diagnostics"@en .
+
+
+###  http://w3id.org/fuel#divertor
+:divertor rdf:type owl:Class ;
+          rdfs:subClassOf :tokamak_component ;
+          <http://purl.org/dc/terms/source> <https://en.wikipedia.org/wiki/Divertor> ;
+          rdfs:comment "In magnetic confinement fusion, a divertor is a device which extracts heat and ash from fusion plasmas by averting direct contact between the confined plasma and the main chamber wall (plasma-wall interactions)."@en ;
+          rdfs:label "divertor"@en .
+
+
+###  http://w3id.org/fuel#divertor_plasma
+:divertor_plasma rdf:type owl:Class ;
+                 rdfs:subClassOf :plasma .
+
+
+###  http://w3id.org/fuel#edge_plasma
+:edge_plasma rdf:type owl:Class ;
+             rdfs:subClassOf :plasma .
+
+
+###  http://w3id.org/fuel#edge_region
+:edge_region rdf:type owl:Class ;
+             rdfs:subClassOf :plasma_region .
+
+
+###  http://w3id.org/fuel#electron_population
+:electron_population rdf:type owl:Class ;
+                     rdfs:subClassOf :thermal_particle_population .
+
+
+###  http://w3id.org/fuel#fast_ion_population
+:fast_ion_population rdf:type owl:Class ;
+                     rdfs:subClassOf :non_thermal_particle_population .
+
+
+###  http://w3id.org/fuel#first_wall
+:first_wall rdf:type owl:Class ;
+            rdfs:subClassOf :tokamak_component .
+
+
+###  http://w3id.org/fuel#fusion_facility
+:fusion_facility rdf:type owl:Class ;
+                 rdfs:comment "A facility in which fusion experiments are conducted. Examples include the Joint European Torus (JET) in the UK, the DIII-D National Fusion Facility in the US, and the Experimental Advanced Superconducting Tokamak (EAST) in China."@en ,
+                              "Una instalación en la que se llevan a cabo experimentos de fusión. Ejemplos incluyen el Joint European Torus (JET) en el Reino Unido, el DIII-D National Fusion Facility en los Estados Unidos y el Experimental Advanced Superconducting Tokamak (EAST) en China."@es ;
+                 rdfs:label "fusion facility"@en ,
+                            "instalación de fusión"@es ;
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "fusion research facility"@en ,
+                                                                "instalación de investigación de fusión"@es .
+
+
 ###  http://w3id.org/fuel#fusion_reactor
 :fusion_reactor rdf:type owl:Class ;
-                owl:equivalentClass <http://www.wikidata.org/entity/Q11536219> ;
                 rdfs:subClassOf :nuclear_reactor ;
                 <http://purl.org/dc/terms/source> <https://www.energyencyclopedia.com/en/glossary/fusion-reactor/> ;
                 rdfs:comment "A device in which controlled thermonuclear fusion takes place, either for scientific purposes or for the production of energy. Since there are different ways to achieve fusion conditions, a fusion reactor can be a tokamak, a stellarator, a fusor or any other device in which the conditions for fusion can be achieved and maintained."@en ,
@@ -171,9 +273,90 @@ xsd:date rdf:type rdfs:Datatype .
                                                                "reactor de fusión nuclear"@es .
 
 
+###  http://w3id.org/fuel#heating_system
+:heating_system rdf:type owl:Class ;
+                rdfs:subClassOf :tokamak_component .
+
+
+###  http://w3id.org/fuel#impurity_population
+:impurity_population rdf:type owl:Class ;
+                     rdfs:subClassOf :thermal_particle_population .
+
+
+###  http://w3id.org/fuel#injected_neutral_population
+:injected_neutral_population rdf:type owl:Class ;
+                             rdfs:subClassOf :neutral_population .
+
+
+###  http://w3id.org/fuel#inner_core_region
+:inner_core_region rdf:type owl:Class ;
+                   rdfs:subClassOf :core_region .
+
+
+###  http://w3id.org/fuel#ion_population
+:ion_population rdf:type owl:Class ;
+                rdfs:subClassOf :thermal_particle_population .
+
+
+###  http://w3id.org/fuel#iter_pdm
+:iter_pdm rdf:type owl:Class ;
+          <http://purl.org/dc/terms/source> <https://doi.org/10.1088/0029-5515/55/12/123006> ;
+          rdfs:comment "ITER standardized data model"@en ;
+          rdfs:label "ITER Physics Data Model"@en ;
+          <http://www.w3.org/2004/02/skos/core#altLabel> "ITER PDM"@en ,
+                                                         "PDM"@en .
+
+
+###  http://w3id.org/fuel#laser_induced_plasma
+:laser_induced_plasma rdf:type owl:Class ;
+                      rdfs:subClassOf :plasma ;
+                      <http://purl.org/dc/terms/source> <https://www.sciencedirect.com/topics/chemistry/laser-induced-plasma> ;
+                      rdfs:comment "Laser induced plasma (LIP) is defined as a product of the complex interaction between a focused, high peak power laser beam and a target material, resulting in processes such as absorption of laser energy, vaporization, and ejection of atomic and molecular species, followed by plasma expansion and shock wave production."@en ;
+                      rdfs:label "laser induced plasma"@en ;
+                      <http://www.w3.org/2004/02/skos/core#altLabel> "LIP"@en .
+
+
+###  http://w3id.org/fuel#limiter
+:limiter rdf:type owl:Class ;
+         rdfs:subClassOf :tokamak_component .
+
+
+###  http://w3id.org/fuel#magnet_system
+:magnet_system rdf:type owl:Class ;
+               rdfs:subClassOf :device_component .
+
+
+###  http://w3id.org/fuel#material_entity
+:material_entity rdf:type owl:Class ;
+                 rdfs:comment """Consider mapping to BFO:material_entity
+http://purl.obolibrary.org/obo/BFO_0000040""" .
+
+
+###  http://w3id.org/fuel#neutral_beam_system
+:neutral_beam_system rdf:type owl:Class ;
+                     rdfs:subClassOf :heating_system .
+
+
+###  http://w3id.org/fuel#neutral_population
+:neutral_population rdf:type owl:Class ;
+                    rdfs:subClassOf :particle_population .
+
+
+###  http://w3id.org/fuel#neutronics
+:neutronics rdf:type owl:Class ;
+            <http://purl.org/dc/terms/source> <https://www.cea.fr/english/Pages/resources/nuclear-energy-monographs/neutronics.aspx> ;
+            rdfs:comment "Neutronics (or neutron physics) is the study of neutron paths through matter, of conditions for a chain reaction, and of alterations in matter's composition induced by nuclear reactions."@en ;
+            rdfs:label "neutronics"@en ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "neutron physics"@en .
+
+
+###  http://w3id.org/fuel#non_thermal_particle_population
+:non_thermal_particle_population rdf:type owl:Class ;
+                                 rdfs:subClassOf :particle_population .
+
+
 ###  http://w3id.org/fuel#nuclear_reactor
 :nuclear_reactor rdf:type owl:Class ;
-                 owl:equivalentClass <http://www.wikidata.org/entity/Q80877> ;
                  <http://purl.org/dc/terms/source> <https://www.energyencyclopedia.com/en/glossary/nuclear-reactor> ;
                  rdfs:comment "A device inside which a controlled chain fission reaction takes place. The reactor usually has the form of a metal pressure vessel, in the middle of which the nuclear fuel is arranged in a so-called core. A coolant, whether gas or liquid, circulates through the core to dissipate the heat generated by the fission reaction. The power of the reactor is controlled by control rods that are inserted or withdrawn from the core as necessary. If the reactor uses thermal neutrons for fission, it also includes a moderator, either in the form of a liquid or a solid, which slows down the neutrons. Heat, generated by a reactor, is most commonly used. Either directly for technological purposes (e.g., hydrogen production by steam reforming) or for electricity generation by a steam turbine. The reactor can also be used to produce nuclear fuel (breeder reactor), or the strong neutron fluxes produced by the reaction can be used for research purposes or for the production of radiopharmaceuticals. There are a number of types of nuclear reactors, with the most common types used for electricity generation being water-cooled PWRs and BWRs. In 2023, there were 436 nuclear reactors in operation in the world."@en ,
                               "Dispositivo en el que ocurre una reacción nuclear en cadena controlada y autosostenida. Los reactores nucleares se utilizan en las centrales nucleares para la generación de electricidad y en la propulsión de barcos. El calor de la fis nuclear se transfiere a un fluido de trabajo (agua o gas), que pasa por turbinas."@es ;
@@ -181,6 +364,92 @@ xsd:date rdf:type rdfs:Datatype .
                             "reactor nuclear"@es ;
                  <http://www.w3.org/2004/02/skos/core#altLabel> "nuclear fission reactor"@en ,
                                                                 "reactor de fisión nuclear"@es .
+
+
+###  http://w3id.org/fuel#outer_core_region
+:outer_core_region rdf:type owl:Class ;
+                   rdfs:subClassOf :core_region .
+
+
+###  http://w3id.org/fuel#particle_population
+:particle_population rdf:type owl:Class ;
+                     rdfs:subClassOf :material_entity .
+
+
+###  http://w3id.org/fuel#pedestal_region
+:pedestal_region rdf:type owl:Class ;
+                 rdfs:subClassOf :plasma_region .
+
+
+###  http://w3id.org/fuel#physics_process
+:physics_process rdf:type owl:Class ;
+                 rdfs:subClassOf :process .
+
+
+###  http://w3id.org/fuel#plasma
+:plasma rdf:type owl:Class ;
+        rdfs:subClassOf :material_entity ;
+        <http://purl.org/dc/terms/source> <https://www.iter.org/fusion-glossary> ;
+        rdfs:comment "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."@en ;
+        rdfs:label "plasma"@en ,
+                   "plasma"@es ;
+        <http://www.w3.org/2004/02/skos/core#definition> "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."@en .
+
+
+###  http://w3id.org/fuel#plasma_region
+:plasma_region rdf:type owl:Class ;
+               rdfs:subClassOf :region .
+
+
+###  http://w3id.org/fuel#plasma_wall_interaction_process
+:plasma_wall_interaction_process rdf:type owl:Class ;
+                                 rdfs:subClassOf :physics_process .
+
+
+###  http://w3id.org/fuel#poloidal_field_coil
+:poloidal_field_coil rdf:type owl:Class ;
+                     rdfs:subClassOf :magnet_system .
+
+
+###  http://w3id.org/fuel#process
+:process rdf:type owl:Class ;
+         rdfs:comment "consider mapping to BFO - http://purl.obolibrary.org/obo/BFO_0000015" .
+
+
+###  http://w3id.org/fuel#quality
+:quality rdf:type owl:Class ;
+         rdfs:comment """consider mapping to BFO:quality 
+http://purl.obolibrary.org/obo/BFO_0000019""" .
+
+
+###  http://w3id.org/fuel#recycled_neutral_population
+:recycled_neutral_population rdf:type owl:Class ;
+                             rdfs:subClassOf :neutral_population .
+
+
+###  http://w3id.org/fuel#region
+:region rdf:type owl:Class ;
+        rdfs:comment "a spatial extent" .
+
+
+###  http://w3id.org/fuel#runaway_electron_population
+:runaway_electron_population rdf:type owl:Class ;
+                             rdfs:subClassOf :non_thermal_particle_population .
+
+
+###  http://w3id.org/fuel#scrape_off_layer
+:scrape_off_layer rdf:type owl:Class ;
+                  rdfs:subClassOf :plasma_region .
+
+
+###  http://w3id.org/fuel#scrape_off_layer_plasma
+:scrape_off_layer_plasma rdf:type owl:Class ;
+                         rdfs:subClassOf :plasma .
+
+
+###  http://w3id.org/fuel#separatrix_region
+:separatrix_region rdf:type owl:Class ;
+                   rdfs:subClassOf :plasma_region .
 
 
 ###  http://w3id.org/fuel#shot
@@ -192,26 +461,34 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://w3id.org/fuel#spherical_tokamak
 :spherical_tokamak rdf:type owl:Class ;
-                   owl:equivalentClass <http://www.wikidata.org/entity/Q7576717> ;
                    rdfs:subClassOf :tokamak ;
+                   <http://purl.org/dc/terms/hasPart> :divertor ;
                    <http://purl.org/dc/terms/source> <https://www.energyencyclopedia.com/en/glossary/spherical-tokamak/> ;
                    rdfs:comment "Tokamak with a low aspect ratio and a round plasma in a shape resembling a cored apple. While a conventional tokamak has a more donut-like shape with a central hole, a spherical tokamak minimizes this hole to achieve a higher compactness. A single common conductor runs through the centre of the tokamak, to which toroidal magnets in the shape of semicircles are connected. Due to its more compact shape, the spherical tokamak achieves the same plasma parameters as a conventional tokamak with a lower magnetic field. This allows it to be smaller and cheaper. Typical spherical tokamaks are the Small Tight Aspect Ratio Tokamak (START) or the Mega Ampere Spherical Tokamak (MAST)."@en ;
                    rdfs:label "spherical tokamak"@en ,
                               "tokamak esférico"@es .
 
 
+###  http://w3id.org/fuel#sputtered_impurity
+:sputtered_impurity rdf:type owl:Class ;
+                    rdfs:subClassOf :wall_released_species .
+
+
 ###  http://w3id.org/fuel#stellarator
 :stellarator rdf:type owl:Class ;
-             owl:equivalentClass <http://www.wikidata.org/entity/Q1360597> ;
              rdfs:subClassOf :fusion_reactor ;
              <http://purl.org/dc/terms/source> <https://www.energyencyclopedia.com/en/glossary/stellarator> ;
              rdfs:comment "A device for thermonuclear fusion research that uses a combination of differently shaped coils which together create a desired helical magnetic field to confine the hot plasma. To hold the particles in the donut-shaped magnetic container, they must circulate in spirals, once on the inside and once on the outside of the torus. The stellarator creates a suitable magnetic field by combining helical, toroidal and poloidal coils. There are many variations that use different combinations and shapes of coils (classical, heliac, heliotron, torsatron, and helias). In the most modern modular stellarators, an assembly of specially twisted coils creates the magnetic field."@en ;
              rdfs:label "stellarator"@en .
 
 
+###  http://w3id.org/fuel#thermal_particle_population
+:thermal_particle_population rdf:type owl:Class ;
+                             rdfs:subClassOf :particle_population .
+
+
 ###  http://w3id.org/fuel#thermocouple
 :thermocouple rdf:type owl:Class ;
-              owl:equivalentClass <http://www.wikidata.org/entity/Q190241> ;
               rdfs:subClassOf <http://www.w3.org/ns/sosa/Sensor> ;
               <http://purl.org/dc/terms/source> <https://www.britannica.com/technology/thermocouple> ;
               rdfs:comment "A thermocouple is  a temperature-measuring device consisting of two wires of different metals joined at each end. One junction is placed where the temperature is to be measured, and the other is kept at a constant lower temperature. A measuring instrument is connected in the circuit. The temperature difference causes the development of an electromotive force (known as the Seebeck effect) that is approximately proportional to the difference between the temperatures of the two junctions. Temperature can be read from standard tables, or the measuring instrument can be calibrated to read temperature directly."@en ,
@@ -225,7 +502,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://w3id.org/fuel#tokamak
 :tokamak rdf:type owl:Class ;
-         owl:equivalentClass <http://www.wikidata.org/entity/Q188589> ;
          rdfs:subClassOf :fusion_reactor ;
          <http://purl.org/dc/terms/source> <https://www.energyencyclopedia.com/en/glossary/tokamak> ;
          rdfs:comment "A device for magnetic confinement of plasma by a combination of a toroidal magnetic field and a current flowing through the plasma in which conditions for thermonuclear fusion ignition can be achieved. The word “tokamak” is of Russian origin and is an acronym for “TOroidalnaya KAmera i MAgnitnye Katushki” — toroidal chamber and magnetic coils. The magnetic field necessary to keep the hot plasma inside the toroidal chamber is generated as a combination of the field of the toroidal coils and the magnetic field generated by the current flowing through the plasma. Since the current in the plasma is induced on the transformer principle, the tokamak is a pulse device."@en ;
@@ -234,32 +510,43 @@ xsd:date rdf:type rdfs:Datatype .
                                                         "toroidal chamber with magnetic coils"@en .
 
 
+###  http://w3id.org/fuel#tokamak_component
+:tokamak_component rdf:type owl:Class ;
+                   rdfs:subClassOf :device_component .
+
+
+###  http://w3id.org/fuel#tokamak_plasma
+:tokamak_plasma rdf:type owl:Class ;
+                rdfs:subClassOf :plasma .
+
+
+###  http://w3id.org/fuel#toroidal_field_coil
+:toroidal_field_coil rdf:type owl:Class ;
+                     rdfs:subClassOf :magnet_system .
+
+
+###  http://w3id.org/fuel#transport_process
+:transport_process rdf:type owl:Class ;
+                   rdfs:subClassOf :physics_process .
+
+
+###  http://w3id.org/fuel#turbulence_process
+:turbulence_process rdf:type owl:Class ;
+                    rdfs:subClassOf :physics_process .
+
+
+###  http://w3id.org/fuel#vacuum_vessel
+:vacuum_vessel rdf:type owl:Class ;
+               rdfs:subClassOf :tokamak_component .
+
+
+###  http://w3id.org/fuel#wall_released_species
+:wall_released_species rdf:type owl:Class ;
+                       rdfs:subClassOf :material_entity .
+
+
 ###  http://www.w3.org/ns/sosa/Sensor
 <http://www.w3.org/ns/sosa/Sensor> rdf:type owl:Class .
-
-
-###  http://www.wikidata.org/entity/Q11536219
-<http://www.wikidata.org/entity/Q11536219> rdf:type owl:Class .
-
-
-###  http://www.wikidata.org/entity/Q1360597
-<http://www.wikidata.org/entity/Q1360597> rdf:type owl:Class .
-
-
-###  http://www.wikidata.org/entity/Q188589
-<http://www.wikidata.org/entity/Q188589> rdf:type owl:Class .
-
-
-###  http://www.wikidata.org/entity/Q190241
-<http://www.wikidata.org/entity/Q190241> rdf:type owl:Class .
-
-
-###  http://www.wikidata.org/entity/Q7576717
-<http://www.wikidata.org/entity/Q7576717> rdf:type owl:Class .
-
-
-###  http://www.wikidata.org/entity/Q80877
-<http://www.wikidata.org/entity/Q80877> rdf:type owl:Class .
 
 
 ###  http://xmlns.com/foaf/0.1/Person
