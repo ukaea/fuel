@@ -34,11 +34,20 @@ def generate_syntaxes(outdir):
 def generate_pylode_docs(outdir):
     pylode_outdir = os.path.join(outdir, "pylode")
     os.makedirs(pylode_outdir, exist_ok=True)
-    subprocess.run([
-        "pylode",
-        "-o", os.path.join(pylode_outdir, "index"),
-        os.path.join(ONTO_DIR, ONTO_FILE)
+    try:
+        subprocess.run([
+            "pylode",
+            "-o", os.path.join(pylode_outdir, "index"),
+            os.path.join(ONTO_DIR, ONTO_FILE)
         ], check=True)
+        print(f"Pylode documentation generated at {pylode_outdir}")
+    except FileNotFoundError:
+        print("Warning: pylode executable not found; skipping pylode docs.")
+    except subprocess.CalledProcessError as e:
+        print(f"Warning: pylode exited with code {e.returncode}; skipping pylode docs.")
+        print(str(e))
+        print("If this is pylode 3.4.x, pin pylode==3.2.1 in CI or requirements.")
+        return
         
 # function to create the documentation with widoco
 def generate_widoco_docs(outdir, onto_dir, onto_file, version="1.4.25"):
