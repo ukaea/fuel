@@ -25,11 +25,12 @@
         <terms:title xml:lang="en">FUsion Energy Lexicon</terms:title>
         <vann:preferredNamespacePrefix>fuel</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/fuel#</vann:preferredNamespaceUri>
-        <rdfs:comment xml:lang="en">FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data.</rdfs:comment>
+        <rdfs:comment xml:lang="en">FUsion Energy Lexicon (FUEL) is an OWL ontology for the interoperable description of fusion energy data, devices, plasmas, physical processes and other fusion energy concepts. FUEL provides a formal semantic framework for organizing fusion knowledge and it is intended to support consistent data annotation, integration, exchange, and reuse across fusion experiments, models, and computational workflows.</rdfs:comment>
         <rdfs:label xml:lang="en">FUsion Energy Lexicon</rdfs:label>
         <rdfs:label xml:lang="es">Léxico de energía de fusión</rdfs:label>
         <owl:versionInfo>0.0.1</owl:versionInfo>
         <dcat:version>0.0.1</dcat:version>
+        <schema:codeRepository rdf:resource="https://github.com/ukaea/fuel"/>
         <mod:definitionProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
         <mod:hasRepresentationLanguage rdf:resource="http://omv.ontoware.org/2005/05/ontology#OWL"/>
         <mod:hasSyntax rdf:resource="http://www.w3.org/ns/formats/Turtle"/>
@@ -191,6 +192,13 @@
     
 
 
+    <!-- https://schema.org/codeRepository -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/codeRepository"/>
+    
+
+
     <!-- https://schema.org/identifier -->
 
 
@@ -271,6 +279,53 @@
     
 
 
+    <!-- http://w3id.org/fuel#ECRHSystem -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#ECRHSystem">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#heating_system"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel#ICRHSystem -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#ICRHSystem">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#heating_system"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel#LowerHybridSystem -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#LowerHybridSystem">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#heating_system"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel#MHDInstabilityProcess -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#MHDInstabilityProcess">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#plasma_instability_process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel#MHDstability -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#MHDstability">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#stability"/>
+        <rdfs:label>MHD stability</rdfs:label>
+        <skos:altLabel>magnetohydrodynamic stability</skos:altLabel>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/fuel#alpha_particle_population -->
 
 
@@ -307,6 +362,8 @@
 
     <owl:Class rdf:about="http://w3id.org/fuel#central_solenoid">
         <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#magnet_system"/>
+        <rdfs:label xml:lang="en">central solenoid</rdfs:label>
+        <skos:definition></skos:definition>
     </owl:Class>
     
 
@@ -406,6 +463,15 @@
     
 
 
+    <!-- http://w3id.org/fuel#electric_field -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#electric_field">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#field"/>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/fuel#electron_population -->
 
 
@@ -421,6 +487,13 @@
     <owl:Class rdf:about="http://w3id.org/fuel#fast_ion_population">
         <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#non_thermal_particle_population"/>
     </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel#field -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#field"/>
     
 
 
@@ -474,6 +547,15 @@
     
 
 
+    <!-- http://w3id.org/fuel#ideal_kink_stability -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#ideal_kink_stability">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#MHDstability"/>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/fuel#impurity_population -->
 
 
@@ -523,6 +605,15 @@
     
 
 
+    <!-- http://w3id.org/fuel#kinetic_stability -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#kinetic_stability">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#stability"/>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/fuel#laser_induced_plasma -->
 
 
@@ -554,11 +645,28 @@
     
 
 
+    <!-- http://w3id.org/fuel#magnetic_field -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#magnetic_field">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#field"/>
+        <terms:source>https://www.energyencyclopedia.com/en/glossary/magnetic-field</terms:source>
+        <rdfs:label xml:lang="en">magnetic field</rdfs:label>
+        <rdfs:label>campo magnético</rdfs:label>
+        <skos:definition xml:lang="en">A vector field showing how magnetic forces are distributed in space. A magnetic field describes how the magnetic force at a given point in space will act on a ferromagnetic object or charged particle. In a magnetic field, the Lorentz force on a charged particle is perpendicular to both the direction of the magnetic field and its velocity. Magnetic fields surround magnetized objects, are formed around conductors through which electric current flows, or at a point with a varying electric field. It is described by the quantities B and H. B is the magnetic flux density and is given in units of tesla. A common refrigerator magnet is usually 0.001 tesla. The quantity H describes the magnetic field strength and is expressed in amperes per meter.
+
+Rotating magnetic fields are used by electrical generators in power plants.
+
+In thermonuclear fusion research, a strong magnetic field is used to confine hot plasma in tokamaks and stellarators.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/fuel#material_entity -->
 
 
     <owl:Class rdf:about="http://w3id.org/fuel#material_entity">
-        <rdfs:comment>Consider mapping to BFO:material_entity
+        <rdfs:comment>Consider reusing to BFO:material_entity
 http://purl.obolibrary.org/obo/BFO_0000040</rdfs:comment>
     </owl:Class>
     
@@ -618,6 +726,15 @@ http://purl.obolibrary.org/obo/BFO_0000040</rdfs:comment>
     
 
 
+    <!-- http://w3id.org/fuel#operational_stability -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#operational_stability">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#stability"/>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/fuel#outer_core_region -->
 
 
@@ -668,6 +785,15 @@ http://purl.obolibrary.org/obo/BFO_0000040</rdfs:comment>
     
 
 
+    <!-- http://w3id.org/fuel#plasma_instability_process -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#plasma_instability_process">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#physics_process"/>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/fuel#plasma_region -->
 
 
@@ -708,7 +834,7 @@ http://purl.obolibrary.org/obo/BFO_0000040</rdfs:comment>
 
 
     <owl:Class rdf:about="http://w3id.org/fuel#quality">
-        <rdfs:comment>consider mapping to BFO:quality 
+        <rdfs:comment>consider reusing to BFO:quality 
 http://purl.obolibrary.org/obo/BFO_0000019</rdfs:comment>
     </owl:Class>
     
@@ -755,6 +881,10 @@ http://purl.obolibrary.org/obo/BFO_0000019</rdfs:comment>
 
     <owl:Class rdf:about="http://w3id.org/fuel#scrape_off_layer_plasma">
         <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#plasma"/>
+        <terms:source xml:lang="en">https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol</terms:source>
+        <rdfs:label>scrape off layer plasma</rdfs:label>
+        <skos:altLabel xml:lang="en">SOL</skos:altLabel>
+        <skos:definition>A region at the edge of the plasma characterized by open magnetic lines that terminate at the inner parts of the chamber. In limiter tokamaks this region is located behind the last closed magnetic surface, in divertor tokamaks behind the separatrix. The particles in this region move by convection rather than diffusion and travel along the magnetic lines to the chamber walls or to the divertor, where they can be extracted by vacuum pumps.</skos:definition>
     </owl:Class>
     
 
@@ -798,6 +928,16 @@ http://purl.obolibrary.org/obo/BFO_0000019</rdfs:comment>
 
     <owl:Class rdf:about="http://w3id.org/fuel#sputtered_impurity">
         <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#wall_released_species"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel#stability -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#stability">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#quality"/>
+        <rdfs:comment>consider reusing http://purl.obolibrary.org/obo/PATO_0015026</rdfs:comment>
     </owl:Class>
     
 

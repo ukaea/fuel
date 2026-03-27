@@ -105,7 +105,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."
+    "@value" : "FUsion Energy Lexicon (FUEL) is an OWL ontology for the interoperable description of fusion energy data, devices, plasmas, physical processes and other fusion energy concepts. FUEL provides a formal semantic framework for organizing fusion knowledge and it is intended to support consistent data annotation, integration, exchange, and reuse across fusion experiments, models, and computational workflows."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -123,6 +123,9 @@
   "http://www.w3.org/ns/dcat#version" : [ {
     "@value" : "0.0.1"
   } ],
+  "https://schema.org/codeRepository" : [ {
+    "@id" : "https://github.com/ukaea/fuel"
+  } ],
   "https://w3id.org/mod#definitionProperty" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
   } ],
@@ -137,6 +140,42 @@
   } ],
   "https://w3id.org/mod#status" : [ {
     "@value" : "active"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel#ECRHSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel#heating_system"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel#ICRHSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel#heating_system"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel#LowerHybridSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel#heating_system"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel#MHDInstabilityProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel#plasma_instability_process"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel#MHDstability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MHD stability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel#stability"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "magnetohydrodynamic stability"
   } ]
 }, {
   "@id" : "http://w3id.org/fuel#alpha_particle_population",
@@ -174,8 +213,15 @@
 }, {
   "@id" : "http://w3id.org/fuel#central_solenoid",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "central solenoid"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/fuel#magnet_system"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : ""
   } ]
 }, {
   "@id" : "http://w3id.org/fuel#core_plasma",
@@ -257,6 +303,12 @@
     "@id" : "http://w3id.org/fuel#plasma_region"
   } ]
 }, {
+  "@id" : "http://w3id.org/fuel#electric_field",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel#field"
+  } ]
+}, {
   "@id" : "http://w3id.org/fuel#electron_population",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -268,6 +320,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/fuel#non_thermal_particle_population"
   } ]
+}, {
+  "@id" : "http://w3id.org/fuel#field",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://w3id.org/fuel#first_wall",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -341,6 +396,12 @@
     "@id" : "http://w3id.org/fuel#tokamak_component"
   } ]
 }, {
+  "@id" : "http://w3id.org/fuel#ideal_kink_stability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel#MHDstability"
+  } ]
+}, {
   "@id" : "http://w3id.org/fuel#impurity_population",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -386,6 +447,12 @@
     "@value" : "PDM"
   } ]
 }, {
+  "@id" : "http://w3id.org/fuel#kinetic_stability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel#stability"
+  } ]
+}, {
   "@id" : "http://w3id.org/fuel#laser_induced_plasma",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
@@ -419,10 +486,29 @@
     "@id" : "http://w3id.org/fuel#device_component"
   } ]
 }, {
+  "@id" : "http://w3id.org/fuel#magnetic_field",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@value" : "https://www.energyencyclopedia.com/en/glossary/magnetic-field"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "magnetic field"
+  }, {
+    "@value" : "campo magnético"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel#field"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A vector field showing how magnetic forces are distributed in space. A magnetic field describes how the magnetic force at a given point in space will act on a ferromagnetic object or charged particle. In a magnetic field, the Lorentz force on a charged particle is perpendicular to both the direction of the magnetic field and its velocity. Magnetic fields surround magnetized objects, are formed around conductors through which electric current flows, or at a point with a varying electric field. It is described by the quantities B and H. B is the magnetic flux density and is given in units of tesla. A common refrigerator magnet is usually 0.001 tesla. The quantity H describes the magnetic field strength and is expressed in amperes per meter.\n\nRotating magnetic fields are used by electrical generators in power plants.\n\nIn thermonuclear fusion research, a strong magnetic field is used to confine hot plasma in tokamaks and stellarators."
+  } ]
+}, {
   "@id" : "http://w3id.org/fuel#material_entity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Consider mapping to BFO:material_entity\nhttp://purl.obolibrary.org/obo/BFO_0000040"
+    "@value" : "Consider reusing to BFO:material_entity\nhttp://purl.obolibrary.org/obo/BFO_0000040"
   } ]
 }, {
   "@id" : "http://w3id.org/fuel#neutral_beam_system",
@@ -488,6 +574,12 @@
     "@value" : "reactor de fisión nuclear"
   } ]
 }, {
+  "@id" : "http://w3id.org/fuel#operational_stability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel#stability"
+  } ]
+}, {
   "@id" : "http://w3id.org/fuel#outer_core_region",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -536,6 +628,12 @@
     "@value" : "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."
   } ]
 }, {
+  "@id" : "http://w3id.org/fuel#plasma_instability_process",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel#physics_process"
+  } ]
+}, {
   "@id" : "http://w3id.org/fuel#plasma_region",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -563,7 +661,7 @@
   "@id" : "http://w3id.org/fuel#quality",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "consider mapping to BFO:quality \nhttp://purl.obolibrary.org/obo/BFO_0000019"
+    "@value" : "consider reusing to BFO:quality \nhttp://purl.obolibrary.org/obo/BFO_0000019"
   } ]
 }, {
   "@id" : "http://w3id.org/fuel#recycled_neutral_population",
@@ -592,8 +690,22 @@
 }, {
   "@id" : "http://w3id.org/fuel#scrape_off_layer_plasma",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@language" : "en",
+    "@value" : "https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "scrape off layer plasma"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/fuel#plasma"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "SOL"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "A region at the edge of the plasma characterized by open magnetic lines that terminate at the inner parts of the chamber. In limiter tokamaks this region is located behind the last closed magnetic surface, in divertor tokamaks behind the separatrix. The particles in this region move by convection rather than diffusion and travel along the magnetic lines to the chamber walls or to the divertor, where they can be extracted by vacuum pumps."
   } ]
 }, {
   "@id" : "http://w3id.org/fuel#separatrix_region",
@@ -642,6 +754,15 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/fuel#wall_released_species"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel#stability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "consider reusing http://purl.obolibrary.org/obo/PATO_0015026"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel#quality"
   } ]
 }, {
   "@id" : "http://w3id.org/fuel#stellarator",
@@ -794,6 +915,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://schema.org/affiliation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://schema.org/codeRepository",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://schema.org/identifier",

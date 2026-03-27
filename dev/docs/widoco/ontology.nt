@@ -19,11 +19,12 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 <http://w3id.org/fuel> <http://purl.org/dc/terms/title> "FUsion Energy Lexicon"@en .
 <http://w3id.org/fuel> <http://purl.org/vocab/vann/preferredNamespacePrefix> "fuel" .
 <http://w3id.org/fuel> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/fuel#" .
-<http://w3id.org/fuel> <http://www.w3.org/2000/01/rdf-schema#comment> "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en .
+<http://w3id.org/fuel> <http://www.w3.org/2000/01/rdf-schema#comment> "FUsion Energy Lexicon (FUEL) is an OWL ontology for the interoperable description of fusion energy data, devices, plasmas, physical processes and other fusion energy concepts. FUEL provides a formal semantic framework for organizing fusion knowledge and it is intended to support consistent data annotation, integration, exchange, and reuse across fusion experiments, models, and computational workflows."@en .
 <http://w3id.org/fuel> <http://www.w3.org/2000/01/rdf-schema#label> "FUsion Energy Lexicon"@en .
 <http://w3id.org/fuel> <http://www.w3.org/2000/01/rdf-schema#label> "Léxico de energía de fusión"@es .
 <http://w3id.org/fuel> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
 <http://w3id.org/fuel> <http://www.w3.org/ns/dcat#version> "0.0.1" .
+<http://w3id.org/fuel> <https://schema.org/codeRepository> <https://github.com/ukaea/fuel> .
 <http://w3id.org/fuel> <https://w3id.org/mod#definitionProperty> <http://www.w3.org/2000/01/rdf-schema#comment> .
 <http://w3id.org/fuel> <https://w3id.org/mod#hasRepresentationLanguage> <http://omv.ontoware.org/2005/05/ontology#OWL> .
 <http://w3id.org/fuel> <https://w3id.org/mod#hasSyntax> <http://www.w3.org/ns/formats/Turtle> .
@@ -92,6 +93,9 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # https://schema.org/affiliation
 <https://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# https://schema.org/codeRepository
+<https://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # https://schema.org/identifier
 <https://schema.org/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -134,6 +138,28 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # #################################################################
 # 
 # 
+# http://w3id.org/fuel#ECRHSystem
+<http://w3id.org/fuel#ECRHSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel#ECRHSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#heating_system> .
+# 
+# http://w3id.org/fuel#ICRHSystem
+<http://w3id.org/fuel#ICRHSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel#ICRHSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#heating_system> .
+# 
+# http://w3id.org/fuel#LowerHybridSystem
+<http://w3id.org/fuel#LowerHybridSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel#LowerHybridSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#heating_system> .
+# 
+# http://w3id.org/fuel#MHDInstabilityProcess
+<http://w3id.org/fuel#MHDInstabilityProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel#MHDInstabilityProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma_instability_process> .
+# 
+# http://w3id.org/fuel#MHDstability
+<http://w3id.org/fuel#MHDstability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel#MHDstability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#stability> .
+<http://w3id.org/fuel#MHDstability> <http://www.w3.org/2000/01/rdf-schema#label> "MHD stability" .
+<http://w3id.org/fuel#MHDstability> <http://www.w3.org/2004/02/skos/core#altLabel> "magnetohydrodynamic stability" .
+# 
 # http://w3id.org/fuel#alpha_particle_population
 <http://w3id.org/fuel#alpha_particle_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#alpha_particle_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#non_thermal_particle_population> .
@@ -153,6 +179,8 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # http://w3id.org/fuel#central_solenoid
 <http://w3id.org/fuel#central_solenoid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#central_solenoid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#magnet_system> .
+<http://w3id.org/fuel#central_solenoid> <http://www.w3.org/2000/01/rdf-schema#label> "central solenoid"@en .
+<http://w3id.org/fuel#central_solenoid> <http://www.w3.org/2004/02/skos/core#definition> "" .
 # 
 # http://w3id.org/fuel#core_plasma
 <http://w3id.org/fuel#core_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -199,6 +227,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 <http://w3id.org/fuel#edge_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#edge_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma_region> .
 # 
+# http://w3id.org/fuel#electric_field
+<http://w3id.org/fuel#electric_field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel#electric_field> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#field> .
+# 
 # http://w3id.org/fuel#electron_population
 <http://w3id.org/fuel#electron_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#electron_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#thermal_particle_population> .
@@ -206,6 +238,9 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # http://w3id.org/fuel#fast_ion_population
 <http://w3id.org/fuel#fast_ion_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#fast_ion_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#non_thermal_particle_population> .
+# 
+# http://w3id.org/fuel#field
+<http://w3id.org/fuel#field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://w3id.org/fuel#first_wall
 <http://w3id.org/fuel#first_wall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -237,6 +272,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 <http://w3id.org/fuel#heating_system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#heating_system> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#tokamak_component> .
 # 
+# http://w3id.org/fuel#ideal_kink_stability
+<http://w3id.org/fuel#ideal_kink_stability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel#ideal_kink_stability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#MHDstability> .
+# 
 # http://w3id.org/fuel#impurity_population
 <http://w3id.org/fuel#impurity_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#impurity_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#thermal_particle_population> .
@@ -261,6 +300,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 <http://w3id.org/fuel#iter_pdm> <http://www.w3.org/2004/02/skos/core#altLabel> "ITER PDM"@en .
 <http://w3id.org/fuel#iter_pdm> <http://www.w3.org/2004/02/skos/core#altLabel> "PDM"@en .
 # 
+# http://w3id.org/fuel#kinetic_stability
+<http://w3id.org/fuel#kinetic_stability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel#kinetic_stability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#stability> .
+# 
 # http://w3id.org/fuel#laser_induced_plasma
 <http://w3id.org/fuel#laser_induced_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#laser_induced_plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma> .
@@ -277,9 +320,17 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 <http://w3id.org/fuel#magnet_system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#magnet_system> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#device_component> .
 # 
+# http://w3id.org/fuel#magnetic_field
+<http://w3id.org/fuel#magnetic_field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel#magnetic_field> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#field> .
+<http://w3id.org/fuel#magnetic_field> <http://purl.org/dc/terms/source> "https://www.energyencyclopedia.com/en/glossary/magnetic-field" .
+<http://w3id.org/fuel#magnetic_field> <http://www.w3.org/2000/01/rdf-schema#label> "magnetic field"@en .
+<http://w3id.org/fuel#magnetic_field> <http://www.w3.org/2000/01/rdf-schema#label> "campo magnético" .
+<http://w3id.org/fuel#magnetic_field> <http://www.w3.org/2004/02/skos/core#definition> "A vector field showing how magnetic forces are distributed in space. A magnetic field describes how the magnetic force at a given point in space will act on a ferromagnetic object or charged particle. In a magnetic field, the Lorentz force on a charged particle is perpendicular to both the direction of the magnetic field and its velocity. Magnetic fields surround magnetized objects, are formed around conductors through which electric current flows, or at a point with a varying electric field. It is described by the quantities B and H. B is the magnetic flux density and is given in units of tesla. A common refrigerator magnet is usually 0.001 tesla. The quantity H describes the magnetic field strength and is expressed in amperes per meter.\n\nRotating magnetic fields are used by electrical generators in power plants.\n\nIn thermonuclear fusion research, a strong magnetic field is used to confine hot plasma in tokamaks and stellarators."@en .
+# 
 # http://w3id.org/fuel#material_entity
 <http://w3id.org/fuel#material_entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#material_entity> <http://www.w3.org/2000/01/rdf-schema#comment> "Consider mapping to BFO:material_entity\nhttp://purl.obolibrary.org/obo/BFO_0000040" .
+<http://w3id.org/fuel#material_entity> <http://www.w3.org/2000/01/rdf-schema#comment> "Consider reusing to BFO:material_entity\nhttp://purl.obolibrary.org/obo/BFO_0000040" .
 # 
 # http://w3id.org/fuel#neutral_beam_system
 <http://w3id.org/fuel#neutral_beam_system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -310,6 +361,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 <http://w3id.org/fuel#nuclear_reactor> <http://www.w3.org/2004/02/skos/core#altLabel> "nuclear fission reactor"@en .
 <http://w3id.org/fuel#nuclear_reactor> <http://www.w3.org/2004/02/skos/core#altLabel> "reactor de fisión nuclear"@es .
 # 
+# http://w3id.org/fuel#operational_stability
+<http://w3id.org/fuel#operational_stability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel#operational_stability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#stability> .
+# 
 # http://w3id.org/fuel#outer_core_region
 <http://w3id.org/fuel#outer_core_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#outer_core_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#core_region> .
@@ -335,6 +390,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 <http://w3id.org/fuel#plasma> <http://www.w3.org/2000/01/rdf-schema#label> "plasma"@es .
 <http://w3id.org/fuel#plasma> <http://www.w3.org/2004/02/skos/core#definition> "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."@en .
 # 
+# http://w3id.org/fuel#plasma_instability_process
+<http://w3id.org/fuel#plasma_instability_process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel#plasma_instability_process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#physics_process> .
+# 
 # http://w3id.org/fuel#plasma_region
 <http://w3id.org/fuel#plasma_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#plasma_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#region> .
@@ -353,7 +412,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # 
 # http://w3id.org/fuel#quality
 <http://w3id.org/fuel#quality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#quality> <http://www.w3.org/2000/01/rdf-schema#comment> "consider mapping to BFO:quality \nhttp://purl.obolibrary.org/obo/BFO_0000019" .
+<http://w3id.org/fuel#quality> <http://www.w3.org/2000/01/rdf-schema#comment> "consider reusing to BFO:quality \nhttp://purl.obolibrary.org/obo/BFO_0000019" .
 # 
 # http://w3id.org/fuel#recycled_neutral_population
 <http://w3id.org/fuel#recycled_neutral_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -374,6 +433,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # http://w3id.org/fuel#scrape_off_layer_plasma
 <http://w3id.org/fuel#scrape_off_layer_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#scrape_off_layer_plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma> .
+<http://w3id.org/fuel#scrape_off_layer_plasma> <http://purl.org/dc/terms/source> "https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol"@en .
+<http://w3id.org/fuel#scrape_off_layer_plasma> <http://www.w3.org/2000/01/rdf-schema#label> "scrape off layer plasma" .
+<http://w3id.org/fuel#scrape_off_layer_plasma> <http://www.w3.org/2004/02/skos/core#altLabel> "SOL"@en .
+<http://w3id.org/fuel#scrape_off_layer_plasma> <http://www.w3.org/2004/02/skos/core#definition> "A region at the edge of the plasma characterized by open magnetic lines that terminate at the inner parts of the chamber. In limiter tokamaks this region is located behind the last closed magnetic surface, in divertor tokamaks behind the separatrix. The particles in this region move by convection rather than diffusion and travel along the magnetic lines to the chamber walls or to the divertor, where they can be extracted by vacuum pumps." .
 # 
 # http://w3id.org/fuel#separatrix_region
 <http://w3id.org/fuel#separatrix_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -397,6 +460,11 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # http://w3id.org/fuel#sputtered_impurity
 <http://w3id.org/fuel#sputtered_impurity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#sputtered_impurity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#wall_released_species> .
+# 
+# http://w3id.org/fuel#stability
+<http://w3id.org/fuel#stability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel#stability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#quality> .
+<http://w3id.org/fuel#stability> <http://www.w3.org/2000/01/rdf-schema#comment> "consider reusing http://purl.obolibrary.org/obo/PATO_0015026" .
 # 
 # http://w3id.org/fuel#stellarator
 <http://w3id.org/fuel#stellarator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

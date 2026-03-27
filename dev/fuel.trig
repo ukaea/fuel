@@ -12,7 +12,7 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-_:N877716338a6c457e91623bb904bd161d {
+_:Nf4064970b24f4a8ab5eaeeb4ace4c26b {
     dcterms:abstract a owl:AnnotationProperty .
 
     dcterms:created a owl:AnnotationProperty .
@@ -42,7 +42,7 @@ _:N877716338a6c457e91623bb904bd161d {
             "Léxico de energía de fusión"@es ;
         dcterms:abstract "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
         dcterms:created "2024-11-06"^^xsd:date ;
-        dcterms:creator _:n5794170f5b7e4524a252dea7dc8a8049b1 ;
+        dcterms:creator _:n840cbf79a0914ee199402199b5d5fda9b1 ;
         dcterms:description "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
         dcterms:issued "2024-11-06"^^xsd:date ;
         dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
@@ -50,15 +50,28 @@ _:N877716338a6c457e91623bb904bd161d {
         dcterms:title "FUsion Energy Lexicon"@en ;
         vann:preferredNamespacePrefix "fuel" ;
         vann:preferredNamespaceUri "https://w3id.org/fuel#" ;
-        rdfs:comment "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
+        rdfs:comment "FUsion Energy Lexicon (FUEL) is an OWL ontology for the interoperable description of fusion energy data, devices, plasmas, physical processes and other fusion energy concepts. FUEL provides a formal semantic framework for organizing fusion knowledge and it is intended to support consistent data annotation, integration, exchange, and reuse across fusion experiments, models, and computational workflows."@en ;
         owl:versionIRI fuel:0.0.1 ;
         owl:versionInfo "0.0.1" ;
         dcat:version "0.0.1" ;
+        sdo:codeRepository <https://github.com/ukaea/fuel> ;
         mod:definitionProperty rdfs:comment ;
         mod:hasRepresentationLanguage omv:OWL ;
         mod:hasSyntax <http://www.w3.org/ns/formats/Turtle> ;
         mod:prefLabelProperty rdfs:label ;
         mod:status "active" .
+
+    fuel:ECRHSystem a owl:Class ;
+        rdfs:subClassOf fuel:heating_system .
+
+    fuel:ICRHSystem a owl:Class ;
+        rdfs:subClassOf fuel:heating_system .
+
+    fuel:LowerHybridSystem a owl:Class ;
+        rdfs:subClassOf fuel:heating_system .
+
+    fuel:MHDInstabilityProcess a owl:Class ;
+        rdfs:subClassOf fuel:plasma_instability_process .
 
     fuel:alpha_particle_population a owl:Class ;
         rdfs:subClassOf fuel:non_thermal_particle_population .
@@ -74,7 +87,9 @@ _:N877716338a6c457e91623bb904bd161d {
         skos:altLabel "experimental campaign"@en .
 
     fuel:central_solenoid a owl:Class ;
-        rdfs:subClassOf fuel:magnet_system .
+        rdfs:label "central solenoid"@en ;
+        rdfs:subClassOf fuel:magnet_system ;
+        skos:definition "" .
 
     fuel:core_plasma a owl:Class ;
         rdfs:subClassOf fuel:plasma .
@@ -99,6 +114,9 @@ _:N877716338a6c457e91623bb904bd161d {
     fuel:edge_region a owl:Class ;
         rdfs:subClassOf fuel:plasma_region .
 
+    fuel:electric_field a owl:Class ;
+        rdfs:subClassOf fuel:field .
+
     fuel:electron_population a owl:Class ;
         rdfs:subClassOf fuel:thermal_particle_population .
 
@@ -115,6 +133,9 @@ _:N877716338a6c457e91623bb904bd161d {
             "Una instalación en la que se llevan a cabo experimentos de fusión. Ejemplos incluyen el Joint European Torus (JET) en el Reino Unido, el DIII-D National Fusion Facility en los Estados Unidos y el Experimental Advanced Superconducting Tokamak (EAST) en China."@es ;
         skos:altLabel "fusion research facility"@en,
             "instalación de investigación de fusión"@es .
+
+    fuel:ideal_kink_stability a owl:Class ;
+        rdfs:subClassOf fuel:MHDstability .
 
     fuel:impurity_population a owl:Class ;
         rdfs:subClassOf fuel:thermal_particle_population .
@@ -135,6 +156,9 @@ _:N877716338a6c457e91623bb904bd161d {
         skos:altLabel "ITER PDM"@en,
             "PDM"@en .
 
+    fuel:kinetic_stability a owl:Class ;
+        rdfs:subClassOf fuel:stability .
+
     fuel:laser_induced_plasma a owl:Class ;
         rdfs:label "laser induced plasma"@en ;
         dcterms:source <https://www.sciencedirect.com/topics/chemistry/laser-induced-plasma> ;
@@ -145,6 +169,17 @@ _:N877716338a6c457e91623bb904bd161d {
     fuel:limiter a owl:Class ;
         rdfs:subClassOf fuel:tokamak_component .
 
+    fuel:magnetic_field a owl:Class ;
+        rdfs:label "campo magnético",
+            "magnetic field"@en ;
+        dcterms:source "https://www.energyencyclopedia.com/en/glossary/magnetic-field" ;
+        rdfs:subClassOf fuel:field ;
+        skos:definition """A vector field showing how magnetic forces are distributed in space. A magnetic field describes how the magnetic force at a given point in space will act on a ferromagnetic object or charged particle. In a magnetic field, the Lorentz force on a charged particle is perpendicular to both the direction of the magnetic field and its velocity. Magnetic fields surround magnetized objects, are formed around conductors through which electric current flows, or at a point with a varying electric field. It is described by the quantities B and H. B is the magnetic flux density and is given in units of tesla. A common refrigerator magnet is usually 0.001 tesla. The quantity H describes the magnetic field strength and is expressed in amperes per meter.
+
+Rotating magnetic fields are used by electrical generators in power plants.
+
+In thermonuclear fusion research, a strong magnetic field is used to confine hot plasma in tokamaks and stellarators."""@en .
+
     fuel:neutral_beam_system a owl:Class ;
         rdfs:subClassOf fuel:heating_system .
 
@@ -153,6 +188,9 @@ _:N877716338a6c457e91623bb904bd161d {
         dcterms:source <https://www.cea.fr/english/Pages/resources/nuclear-energy-monographs/neutronics.aspx> ;
         rdfs:comment "Neutronics (or neutron physics) is the study of neutron paths through matter, of conditions for a chain reaction, and of alterations in matter's composition induced by nuclear reactions."@en ;
         skos:altLabel "neutron physics"@en .
+
+    fuel:operational_stability a owl:Class ;
+        rdfs:subClassOf fuel:stability .
 
     fuel:outer_core_region a owl:Class ;
         rdfs:subClassOf fuel:core_region .
@@ -166,10 +204,6 @@ _:N877716338a6c457e91623bb904bd161d {
     fuel:poloidal_field_coil a owl:Class ;
         rdfs:subClassOf fuel:magnet_system .
 
-    fuel:quality a owl:Class ;
-        rdfs:comment """consider mapping to BFO:quality 
-http://purl.obolibrary.org/obo/BFO_0000019""" .
-
     fuel:recycled_neutral_population a owl:Class ;
         rdfs:subClassOf fuel:neutral_population .
 
@@ -180,7 +214,11 @@ http://purl.obolibrary.org/obo/BFO_0000019""" .
         rdfs:subClassOf fuel:plasma_region .
 
     fuel:scrape_off_layer_plasma a owl:Class ;
-        rdfs:subClassOf fuel:plasma .
+        rdfs:label "scrape off layer plasma" ;
+        dcterms:source "https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol"@en ;
+        rdfs:subClassOf fuel:plasma ;
+        skos:altLabel "SOL"@en ;
+        skos:definition "A region at the edge of the plasma characterized by open magnetic lines that terminate at the inner parts of the chamber. In limiter tokamaks this region is located behind the last closed magnetic surface, in divertor tokamaks behind the separatrix. The particles in this region move by convection rather than diffusion and travel along the magnetic lines to the chamber walls or to the divertor, where they can be extracted by vacuum pumps." .
 
     fuel:separatrix_region a owl:Class ;
         rdfs:subClassOf fuel:plasma_region .
@@ -247,6 +285,8 @@ http://purl.obolibrary.org/obo/BFO_0000019""" .
 
     sdo:affiliation a owl:AnnotationProperty .
 
+    sdo:codeRepository a owl:AnnotationProperty .
+
     sdo:identifier a owl:AnnotationProperty .
 
     sdo:name a owl:AnnotationProperty .
@@ -261,13 +301,15 @@ http://purl.obolibrary.org/obo/BFO_0000019""" .
 
     mod:status a owl:AnnotationProperty .
 
+    fuel:MHDstability a owl:Class ;
+        rdfs:label "MHD stability" ;
+        rdfs:subClassOf fuel:stability ;
+        skos:altLabel "magnetohydrodynamic stability" .
+
     fuel:divertor a owl:Class ;
         rdfs:label "divertor"@en ;
         dcterms:source <https://en.wikipedia.org/wiki/Divertor> ;
         rdfs:comment "In magnetic confinement fusion, a divertor is a device which extracts heat and ash from fusion plasmas by averting direct contact between the confined plasma and the main chamber wall (plasma-wall interactions)."@en ;
-        rdfs:subClassOf fuel:tokamak_component .
-
-    fuel:heating_system a owl:Class ;
         rdfs:subClassOf fuel:tokamak_component .
 
     fuel:nuclear_reactor a owl:Class ;
@@ -279,8 +321,15 @@ http://purl.obolibrary.org/obo/BFO_0000019""" .
         skos:altLabel "nuclear fission reactor"@en,
             "reactor de fisión nuclear"@es .
 
+    fuel:plasma_instability_process a owl:Class ;
+        rdfs:subClassOf fuel:physics_process .
+
     fuel:process a owl:Class ;
         rdfs:comment "consider mapping to BFO - http://purl.obolibrary.org/obo/BFO_0000015" .
+
+    fuel:quality a owl:Class ;
+        rdfs:comment """consider reusing to BFO:quality 
+http://purl.obolibrary.org/obo/BFO_0000019""" .
 
     fuel:region a owl:Class ;
         rdfs:comment "a spatial extent" .
@@ -304,6 +353,8 @@ http://purl.obolibrary.org/obo/BFO_0000019""" .
 
     fuel:device_component a owl:Class ;
         rdfs:subClassOf fuel:material_entity .
+
+    fuel:field a owl:Class .
 
     fuel:fusion_reactor a owl:Class ;
         rdfs:label "fusion reactor"@en,
@@ -332,15 +383,22 @@ http://purl.obolibrary.org/obo/BFO_0000019""" .
     fuel:particle_population a owl:Class ;
         rdfs:subClassOf fuel:material_entity .
 
-    fuel:physics_process a owl:Class ;
-        rdfs:subClassOf fuel:process .
+    fuel:stability a owl:Class ;
+        rdfs:comment "consider reusing http://purl.obolibrary.org/obo/PATO_0015026" ;
+        rdfs:subClassOf fuel:quality .
 
     fuel:thermal_particle_population a owl:Class ;
         rdfs:subClassOf fuel:particle_population .
 
+    fuel:heating_system a owl:Class ;
+        rdfs:subClassOf fuel:tokamak_component .
+
     fuel:material_entity a owl:Class ;
-        rdfs:comment """Consider mapping to BFO:material_entity
+        rdfs:comment """Consider reusing to BFO:material_entity
 http://purl.obolibrary.org/obo/BFO_0000040""" .
+
+    fuel:physics_process a owl:Class ;
+        rdfs:subClassOf fuel:process .
 
     fuel:plasma_region a owl:Class ;
         rdfs:subClassOf fuel:region .
@@ -356,15 +414,15 @@ http://purl.obolibrary.org/obo/BFO_0000040""" .
     fuel:tokamak_component a owl:Class ;
         rdfs:subClassOf fuel:device_component .
 
-    _:n5794170f5b7e4524a252dea7dc8a8049b1 a foaf:Person,
+    _:n840cbf79a0914ee199402199b5d5fda9b1 a foaf:Person,
             sdo:Person ;
         rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
         foaf:homepage <https://agbeltran.github.io/> ;
         foaf:name "Alejandra Gonzalez Beltran" ;
-        sdo:affiliation _:n5794170f5b7e4524a252dea7dc8a8049b2 ;
+        sdo:affiliation _:n840cbf79a0914ee199402199b5d5fda9b2 ;
         sdo:identifier <https://orcid.org/0000-0003-3499-8262> ;
         sdo:name "Alejandra Gonzalez Beltran" .
 
-    _:n5794170f5b7e4524a252dea7dc8a8049b2 sdo:identifier <https://ror.org/0361bwx64> .
+    _:n840cbf79a0914ee199402199b5d5fda9b2 sdo:identifier <https://ror.org/0361bwx64> .
 }
 
