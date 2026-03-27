@@ -49,6 +49,20 @@ def generate_pylode_docs(outdir):
         print("If this is pylode 3.4.x, pin pylode==3.2.1 in CI or requirements.")
         return
         
+# function to create the documentation with ontospy
+def generate_ontospy_docs(outdir):
+    ontospy_outdir = os.path.join(outdir, "ontospy")
+    os.makedirs(ontospy_outdir, exist_ok=True)
+    try:
+        from ontospy import Ontospy
+        o = Ontospy(os.path.join(ONTO_DIR, ONTO_FILE))
+        o.html(ontospy_outdir)
+        print(f"Ontospy documentation generated at {ontospy_outdir}")
+    except ImportError as e:
+        print(f"Warning: ontospy import failed: {e}; skipping ontospy docs.")
+    except Exception as e:
+        print(f"Warning: ontospy execution failed: {e}; skipping ontospy docs.")
+        
 # function to create the documentation with widoco
 def generate_widoco_docs(outdir, onto_dir, onto_file, version="1.4.25"):
     widoco_dir = os.path.join(outdir, "widoco")
@@ -95,6 +109,7 @@ def generate_index(outdir, title, heading, is_root_main=False):
         f.write(f"<h1>{heading}</h1>\n<ul>\n")
         f.write('<li><a href="docs/pylode/">Pylode Documentation</a></li>\n')
         f.write('<li><a href="docs/widoco/">Widoco Documentation</a></li>\n')
+        f.write('<li><a href="docs/ontospy/">Ontospy Documentation</a></li>\n')
         for ext, fmt in target_fmts:
             f.write(f'<li><a href="{ONTO_ABBREV}.{ext}">{ONTO_ABBREV}.{ext}</a></li>\n')
         f.write("</ul>\n")
@@ -111,6 +126,7 @@ if RELEASE_VERSION:
     release_docs_dir = os.path.join(release_dir, "docs")
     generate_pylode_docs(release_docs_dir)
     generate_widoco_docs(release_docs_dir, ONTO_DIR, ONTO_FILE)
+    generate_ontospy_docs(release_docs_dir)
 
     # Generate index for this specific release
     generate_index(
@@ -143,6 +159,7 @@ if BUILD_DIR:
     build_docs_dir = os.path.join(BUILD_DIR, "docs")
     generate_pylode_docs(build_docs_dir)
     generate_widoco_docs(build_docs_dir, ONTO_DIR, ONTO_FILE)
+    generate_ontospy_docs(build_docs_dir)
 
    # Generate build index.html
     if IS_MAIN:
