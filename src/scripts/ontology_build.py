@@ -53,15 +53,34 @@ def generate_pylode_docs(outdir):
 def generate_ontospy_docs(outdir):
     ontospy_outdir = os.path.join(outdir, "ontospy")
     os.makedirs(ontospy_outdir, exist_ok=True)
+    index_file = os.path.join(ontospy_outdir, "index.html")
     try:
-        from ontospy import Ontospy
-        o = Ontospy(os.path.join(ONTO_DIR, ONTO_FILE))
-        o.html(ontospy_outdir)
+        subprocess.run([
+            "ontospy",
+            "gendocs",
+            "-o", ontospy_outdir,
+            "-n",  # no-browser flag
+            os.path.join(ONTO_DIR, ONTO_FILE)
+        ], check=True, capture_output=True)
         print(f"Ontospy documentation generated at {ontospy_outdir}")
-    except ImportError as e:
-        print(f"Warning: ontospy import failed: {e}; skipping ontospy docs.")
-    except Exception as e:
-        print(f"Warning: ontospy execution failed: {e}; skipping ontospy docs.")
+    except FileNotFoundError:
+        message = "Warning: ontospy executable not found; creating fallback ontospy index."
+        print(message)
+        with open(index_file, "w", encoding="utf-8") as f:
+            f.write("<html><head><title>Ontospy docs unavailable</title></head><body>")
+            f.write("<h1>Ontospy documentation unavailable</h1>")
+            f.write(f"<p>{message}</p>")
+            f.write("<p><strong>Note:</strong> Ontospy has compatibility issues with Python 3.12+. If you need this documentation, you may need to use Python 3.11 or lower, or use the Widoco or Pylode documentation instead.</p>")
+            f.write("</body></html>")
+    except subprocess.CalledProcessError as e:
+        message = f"Warning: ontospy gendocs failed with code {e.returncode}; creating fallback ontospy index."
+        print(message)
+        with open(index_file, "w", encoding="utf-8") as f:
+            f.write("<html><head><title>Ontospy docs unavailable</title></head><body>")
+            f.write("<h1>Ontospy documentation unavailable</h1>")
+            f.write(f"<p>{message}</p>")
+            f.write("<p><strong>Note:</strong> Ontospy has compatibility issues with Python 3.12+. If you need this documentation, you may need to use Python 3.11 or lower, or use the Widoco or Pylode documentation instead.</p>")
+            f.write("</body></html>")
         
 # function to create the documentation with widoco
 def generate_widoco_docs(outdir, onto_dir, onto_file, version="1.4.25"):

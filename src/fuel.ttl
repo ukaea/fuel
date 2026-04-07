@@ -167,6 +167,14 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  http://w3id.org/fuel#hasComponent
+fuel:hasComponent rdf:type owl:ObjectProperty .
+
+
+#################################################################
 #    Classes
 #################################################################
 
@@ -204,7 +212,8 @@ fuel:alpha_particle_population rdf:type owl:Class ;
 
 ###  http://w3id.org/fuel#blanket_module
 fuel:blanket_module rdf:type owl:Class ;
-                    rdfs:subClassOf fuel:tokamak_component .
+                    rdfs:subClassOf fuel:tokamak_component ;
+                    rdfs:label "blanket module"@en .
 
 
 ###  http://w3id.org/fuel#campaign
@@ -230,7 +239,8 @@ fuel:core_plasma rdf:type owl:Class ;
 
 ###  http://w3id.org/fuel#core_region
 fuel:core_region rdf:type owl:Class ;
-                 rdfs:subClassOf fuel:plasma_region .
+                 rdfs:subClassOf fuel:plasma_region ;
+                 rdfs:label "core region"@en .
 
 
 ###  http://w3id.org/fuel#desorbed_gas
@@ -268,6 +278,19 @@ fuel:divertor_plasma rdf:type owl:Class ;
                      rdfs:subClassOf fuel:plasma .
 
 
+###  http://w3id.org/fuel#divertor_tokamak
+fuel:divertor_tokamak rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( fuel:tokamak
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty fuel:hasComponent ;
+                                                                   owl:someValuesFrom fuel:divertor
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:subClassOf fuel:tokamak .
+
+
 ###  http://w3id.org/fuel#edge_plasma
 fuel:edge_plasma rdf:type owl:Class ;
                  rdfs:subClassOf fuel:plasma .
@@ -275,7 +298,8 @@ fuel:edge_plasma rdf:type owl:Class ;
 
 ###  http://w3id.org/fuel#edge_region
 fuel:edge_region rdf:type owl:Class ;
-                 rdfs:subClassOf fuel:plasma_region .
+                 rdfs:subClassOf fuel:plasma_region ;
+                 rdfs:label "edge region"@en .
 
 
 ###  http://w3id.org/fuel#electric_field
@@ -484,7 +508,8 @@ fuel:plasma_instability_process rdf:type owl:Class ;
 
 ###  http://w3id.org/fuel#plasma_region
 fuel:plasma_region rdf:type owl:Class ;
-                   rdfs:subClassOf fuel:region .
+                   rdfs:subClassOf fuel:region ;
+                   rdfs:label "plasma region"@en .
 
 
 ###  http://w3id.org/fuel#plasma_wall_interaction_process
@@ -525,16 +550,16 @@ fuel:runaway_electron_population rdf:type owl:Class ;
 
 ###  http://w3id.org/fuel#scrape_off_layer
 fuel:scrape_off_layer rdf:type owl:Class ;
-                      rdfs:subClassOf fuel:plasma_region .
+                      rdfs:subClassOf fuel:plasma_region ;
+                      dcterms:source "https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol"@en ;
+                      rdfs:label "scrape off layer"@en ;
+                      skos:altLabel "SOL"@en ;
+                      skos:definition "A region at the edge of the plasma characterized by open magnetic lines that terminate at the inner parts of the chamber. In limiter tokamaks this region is located behind the last closed magnetic surface, in divertor tokamaks behind the separatrix. The particles in this region move by convection rather than diffusion and travel along the magnetic lines to the chamber walls or to the divertor, where they can be extracted by vacuum pumps." .
 
 
 ###  http://w3id.org/fuel#scrape_off_layer_plasma
 fuel:scrape_off_layer_plasma rdf:type owl:Class ;
-                             rdfs:subClassOf fuel:plasma ;
-                             dcterms:source "https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol"@en ;
-                             rdfs:label "scrape off layer plasma" ;
-                             skos:altLabel "SOL"@en ;
-                             skos:definition "A region at the edge of the plasma characterized by open magnetic lines that terminate at the inner parts of the chamber. In limiter tokamaks this region is located behind the last closed magnetic surface, in divertor tokamaks behind the separatrix. The particles in this region move by convection rather than diffusion and travel along the magnetic lines to the chamber walls or to the divertor, where they can be extracted by vacuum pumps." .
+                             rdfs:subClassOf fuel:plasma .
 
 
 ###  http://w3id.org/fuel#separatrix_region
@@ -598,7 +623,11 @@ fuel:thermocouple rdf:type owl:Class ;
 
 ###  http://w3id.org/fuel#tokamak
 fuel:tokamak rdf:type owl:Class ;
-             rdfs:subClassOf fuel:fusion_reactor ;
+             rdfs:subClassOf fuel:fusion_reactor ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty fuel:hasComponent ;
+                               owl:someValuesFrom fuel:tokamak_component
+                             ] ;
              dcterms:source <https://www.energyencyclopedia.com/en/glossary/tokamak> ;
              rdfs:comment "A device for magnetic confinement of plasma by a combination of a toroidal magnetic field and a current flowing through the plasma in which conditions for thermonuclear fusion ignition can be achieved. The word “tokamak” is of Russian origin and is an acronym for “TOroidalnaya KAmera i MAgnitnye Katushki” — toroidal chamber and magnetic coils. The magnetic field necessary to keep the hot plasma inside the toroidal chamber is generated as a combination of the field of the toroidal coils and the magnetic field generated by the current flowing through the plasma. Since the current in the plasma is induced on the transformer principle, the tokamak is a pulse device."@en ;
              rdfs:label "tokamak"@en ;
@@ -608,7 +637,8 @@ fuel:tokamak rdf:type owl:Class ;
 
 ###  http://w3id.org/fuel#tokamak_component
 fuel:tokamak_component rdf:type owl:Class ;
-                       rdfs:subClassOf fuel:device_component .
+                       rdfs:subClassOf fuel:device_component ;
+                       rdfs:label "tokamak component"@en .
 
 
 ###  http://w3id.org/fuel#tokamak_plasma
