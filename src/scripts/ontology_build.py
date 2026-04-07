@@ -56,11 +56,9 @@ def generate_ontospy_docs(outdir):
     index_file = os.path.join(ontospy_outdir, "index.html")
     try:
         subprocess.run([
-            "ontospy",
-            "gendocs",
-            "-o", ontospy_outdir,
-            "-n",  # no-browser flag
-            os.path.join(ONTO_DIR, ONTO_FILE)
+            "python",
+            "-c",
+            "import sys, configparser; configparser.SafeConfigParser = getattr(configparser, 'SafeConfigParser', configparser.ConfigParser); sys.argv=['ontospy','gendocs','-o','{}','--nobrowser','{}']; from ontospy.cli import main_cli; main_cli()".format(ontospy_outdir, os.path.join(ONTO_DIR, ONTO_FILE)),
         ], check=True, capture_output=True)
         print(f"Ontospy documentation generated at {ontospy_outdir}")
     except FileNotFoundError:
