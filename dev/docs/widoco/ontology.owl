@@ -270,6 +270,25 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/fuel#hasComponent -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/fuel#hasComponent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -340,6 +359,7 @@
 
     <owl:Class rdf:about="http://w3id.org/fuel#blanket_module">
         <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#tokamak_component"/>
+        <rdfs:label xml:lang="en">blanket module</rdfs:label>
     </owl:Class>
     
 
@@ -382,6 +402,7 @@
 
     <owl:Class rdf:about="http://w3id.org/fuel#core_region">
         <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#plasma_region"/>
+        <rdfs:label xml:lang="en">core region</rdfs:label>
     </owl:Class>
     
 
@@ -445,6 +466,26 @@
     
 
 
+    <!-- http://w3id.org/fuel#divertor_tokamak -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel#divertor_tokamak">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/fuel#tokamak"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/fuel#hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="http://w3id.org/fuel#divertor"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#tokamak"/>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/fuel#edge_plasma -->
 
 
@@ -459,6 +500,7 @@
 
     <owl:Class rdf:about="http://w3id.org/fuel#edge_region">
         <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#plasma_region"/>
+        <rdfs:label xml:lang="en">edge region</rdfs:label>
     </owl:Class>
     
 
@@ -799,6 +841,7 @@ http://purl.obolibrary.org/obo/BFO_0000040</rdfs:comment>
 
     <owl:Class rdf:about="http://w3id.org/fuel#plasma_region">
         <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#region"/>
+        <rdfs:label xml:lang="en">plasma region</rdfs:label>
     </owl:Class>
     
 
@@ -872,6 +915,10 @@ http://purl.obolibrary.org/obo/BFO_0000019</rdfs:comment>
 
     <owl:Class rdf:about="http://w3id.org/fuel#scrape_off_layer">
         <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#plasma_region"/>
+        <terms:source xml:lang="en">https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol</terms:source>
+        <rdfs:label xml:lang="en">scrape off layer</rdfs:label>
+        <skos:altLabel xml:lang="en">SOL</skos:altLabel>
+        <skos:definition>A region at the edge of the plasma characterized by open magnetic lines that terminate at the inner parts of the chamber. In limiter tokamaks this region is located behind the last closed magnetic surface, in divertor tokamaks behind the separatrix. The particles in this region move by convection rather than diffusion and travel along the magnetic lines to the chamber walls or to the divertor, where they can be extracted by vacuum pumps.</skos:definition>
     </owl:Class>
     
 
@@ -881,10 +928,6 @@ http://purl.obolibrary.org/obo/BFO_0000019</rdfs:comment>
 
     <owl:Class rdf:about="http://w3id.org/fuel#scrape_off_layer_plasma">
         <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#plasma"/>
-        <terms:source xml:lang="en">https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol</terms:source>
-        <rdfs:label>scrape off layer plasma</rdfs:label>
-        <skos:altLabel xml:lang="en">SOL</skos:altLabel>
-        <skos:definition>A region at the edge of the plasma characterized by open magnetic lines that terminate at the inner parts of the chamber. In limiter tokamaks this region is located behind the last closed magnetic surface, in divertor tokamaks behind the separatrix. The particles in this region move by convection rather than diffusion and travel along the magnetic lines to the chamber walls or to the divertor, where they can be extracted by vacuum pumps.</skos:definition>
     </owl:Class>
     
 
@@ -985,6 +1028,12 @@ http://purl.obolibrary.org/obo/BFO_0000019</rdfs:comment>
 
     <owl:Class rdf:about="http://w3id.org/fuel#tokamak">
         <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#fusion_reactor"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/fuel#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/fuel#tokamak_component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <terms:source rdf:resource="https://www.energyencyclopedia.com/en/glossary/tokamak"/>
         <rdfs:comment xml:lang="en">A device for magnetic confinement of plasma by a combination of a toroidal magnetic field and a current flowing through the plasma in which conditions for thermonuclear fusion ignition can be achieved. The word “tokamak” is of Russian origin and is an acronym for “TOroidalnaya KAmera i MAgnitnye Katushki” — toroidal chamber and magnetic coils. The magnetic field necessary to keep the hot plasma inside the toroidal chamber is generated as a combination of the field of the toroidal coils and the magnetic field generated by the current flowing through the plasma. Since the current in the plasma is induced on the transformer principle, the tokamak is a pulse device.</rdfs:comment>
         <rdfs:label xml:lang="en">tokamak</rdfs:label>
@@ -999,6 +1048,7 @@ http://purl.obolibrary.org/obo/BFO_0000019</rdfs:comment>
 
     <owl:Class rdf:about="http://w3id.org/fuel#tokamak_component">
         <rdfs:subClassOf rdf:resource="http://w3id.org/fuel#device_component"/>
+        <rdfs:label xml:lang="en">tokamak component</rdfs:label>
     </owl:Class>
     
 

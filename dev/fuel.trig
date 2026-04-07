@@ -5,6 +5,7 @@
 @prefix mod: <https://w3id.org/mod#> .
 @prefix omv: <http://omv.ontoware.org/2005/05/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -12,7 +13,7 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-_:Nf4064970b24f4a8ab5eaeeb4ace4c26b {
+_:N8093ef77345243198fcf9738a9c71ada {
     dcterms:abstract a owl:AnnotationProperty .
 
     dcterms:created a owl:AnnotationProperty .
@@ -42,7 +43,7 @@ _:Nf4064970b24f4a8ab5eaeeb4ace4c26b {
             "Léxico de energía de fusión"@es ;
         dcterms:abstract "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
         dcterms:created "2024-11-06"^^xsd:date ;
-        dcterms:creator _:n840cbf79a0914ee199402199b5d5fda9b1 ;
+        dcterms:creator _:n2e81bb105b25466ba5e44662f0e29211b1 ;
         dcterms:description "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
         dcterms:issued "2024-11-06"^^xsd:date ;
         dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
@@ -77,6 +78,7 @@ _:Nf4064970b24f4a8ab5eaeeb4ace4c26b {
         rdfs:subClassOf fuel:non_thermal_particle_population .
 
     fuel:blanket_module a owl:Class ;
+        rdfs:label "blanket module"@en ;
         rdfs:subClassOf fuel:tokamak_component .
 
     fuel:campaign a owl:Class ;
@@ -108,10 +110,15 @@ _:Nf4064970b24f4a8ab5eaeeb4ace4c26b {
     fuel:divertor_plasma a owl:Class ;
         rdfs:subClassOf fuel:plasma .
 
+    fuel:divertor_tokamak a owl:Class ;
+        rdfs:subClassOf fuel:tokamak ;
+        owl:equivalentClass _:n2e81bb105b25466ba5e44662f0e29211b3 .
+
     fuel:edge_plasma a owl:Class ;
         rdfs:subClassOf fuel:plasma .
 
     fuel:edge_region a owl:Class ;
+        rdfs:label "edge region"@en ;
         rdfs:subClassOf fuel:plasma_region .
 
     fuel:electric_field a owl:Class ;
@@ -211,14 +218,14 @@ In thermonuclear fusion research, a strong magnetic field is used to confine hot
         rdfs:subClassOf fuel:non_thermal_particle_population .
 
     fuel:scrape_off_layer a owl:Class ;
-        rdfs:subClassOf fuel:plasma_region .
-
-    fuel:scrape_off_layer_plasma a owl:Class ;
-        rdfs:label "scrape off layer plasma" ;
+        rdfs:label "scrape off layer"@en ;
         dcterms:source "https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol"@en ;
-        rdfs:subClassOf fuel:plasma ;
+        rdfs:subClassOf fuel:plasma_region ;
         skos:altLabel "SOL"@en ;
         skos:definition "A region at the edge of the plasma characterized by open magnetic lines that terminate at the inner parts of the chamber. In limiter tokamaks this region is located behind the last closed magnetic surface, in divertor tokamaks behind the separatrix. The particles in this region move by convection rather than diffusion and travel along the magnetic lines to the chamber walls or to the divertor, where they can be extracted by vacuum pumps." .
+
+    fuel:scrape_off_layer_plasma a owl:Class ;
+        rdfs:subClassOf fuel:plasma .
 
     fuel:separatrix_region a owl:Class ;
         rdfs:subClassOf fuel:plasma_region .
@@ -306,12 +313,6 @@ In thermonuclear fusion research, a strong magnetic field is used to confine hot
         rdfs:subClassOf fuel:stability ;
         skos:altLabel "magnetohydrodynamic stability" .
 
-    fuel:divertor a owl:Class ;
-        rdfs:label "divertor"@en ;
-        dcterms:source <https://en.wikipedia.org/wiki/Divertor> ;
-        rdfs:comment "In magnetic confinement fusion, a divertor is a device which extracts heat and ash from fusion plasmas by averting direct contact between the confined plasma and the main chamber wall (plasma-wall interactions)."@en ;
-        rdfs:subClassOf fuel:tokamak_component .
-
     fuel:nuclear_reactor a owl:Class ;
         rdfs:label "nuclear reactor"@en,
             "reactor nuclear"@es ;
@@ -334,14 +335,6 @@ http://purl.obolibrary.org/obo/BFO_0000019""" .
     fuel:region a owl:Class ;
         rdfs:comment "a spatial extent" .
 
-    fuel:tokamak a owl:Class ;
-        rdfs:label "tokamak"@en ;
-        dcterms:source <https://www.energyencyclopedia.com/en/glossary/tokamak> ;
-        rdfs:comment "A device for magnetic confinement of plasma by a combination of a toroidal magnetic field and a current flowing through the plasma in which conditions for thermonuclear fusion ignition can be achieved. The word “tokamak” is of Russian origin and is an acronym for “TOroidalnaya KAmera i MAgnitnye Katushki” — toroidal chamber and magnetic coils. The magnetic field necessary to keep the hot plasma inside the toroidal chamber is generated as a combination of the field of the toroidal coils and the magnetic field generated by the current flowing through the plasma. Since the current in the plasma is induced on the transformer principle, the tokamak is a pulse device."@en ;
-        rdfs:subClassOf fuel:fusion_reactor ;
-        skos:altLabel "toroidal chamber with magnetic coils"@en,
-            "cámara toroidal con bobinas magnéticas"@es .
-
     sosa:Sensor a owl:Class .
 
     foaf:Person a owl:Class .
@@ -349,10 +342,17 @@ http://purl.obolibrary.org/obo/BFO_0000019""" .
     sdo:Person a owl:Class .
 
     fuel:core_region a owl:Class ;
+        rdfs:label "core region"@en ;
         rdfs:subClassOf fuel:plasma_region .
 
     fuel:device_component a owl:Class ;
         rdfs:subClassOf fuel:material_entity .
+
+    fuel:divertor a owl:Class ;
+        rdfs:label "divertor"@en ;
+        dcterms:source <https://en.wikipedia.org/wiki/Divertor> ;
+        rdfs:comment "In magnetic confinement fusion, a divertor is a device which extracts heat and ash from fusion plasmas by averting direct contact between the confined plasma and the main chamber wall (plasma-wall interactions)."@en ;
+        rdfs:subClassOf fuel:tokamak_component .
 
     fuel:field a owl:Class .
 
@@ -367,6 +367,8 @@ http://purl.obolibrary.org/obo/BFO_0000019""" .
             "nuclear fusion reactor"@en,
             "dispositivo de fusión"@es,
             "reactor de fusión nuclear"@es .
+
+    fuel:hasComponent a owl:ObjectProperty .
 
     fuel:neutral_population a owl:Class ;
         rdfs:subClassOf fuel:particle_population .
@@ -390,6 +392,15 @@ http://purl.obolibrary.org/obo/BFO_0000019""" .
     fuel:thermal_particle_population a owl:Class ;
         rdfs:subClassOf fuel:particle_population .
 
+    fuel:tokamak a owl:Class ;
+        rdfs:label "tokamak"@en ;
+        dcterms:source <https://www.energyencyclopedia.com/en/glossary/tokamak> ;
+        rdfs:comment "A device for magnetic confinement of plasma by a combination of a toroidal magnetic field and a current flowing through the plasma in which conditions for thermonuclear fusion ignition can be achieved. The word “tokamak” is of Russian origin and is an acronym for “TOroidalnaya KAmera i MAgnitnye Katushki” — toroidal chamber and magnetic coils. The magnetic field necessary to keep the hot plasma inside the toroidal chamber is generated as a combination of the field of the toroidal coils and the magnetic field generated by the current flowing through the plasma. Since the current in the plasma is induced on the transformer principle, the tokamak is a pulse device."@en ;
+        rdfs:subClassOf _:n2e81bb105b25466ba5e44662f0e29211b7,
+            fuel:fusion_reactor ;
+        skos:altLabel "toroidal chamber with magnetic coils"@en,
+            "cámara toroidal con bobinas magnéticas"@es .
+
     fuel:heating_system a owl:Class ;
         rdfs:subClassOf fuel:tokamak_component .
 
@@ -401,6 +412,7 @@ http://purl.obolibrary.org/obo/BFO_0000040""" .
         rdfs:subClassOf fuel:process .
 
     fuel:plasma_region a owl:Class ;
+        rdfs:label "plasma region"@en ;
         rdfs:subClassOf fuel:region .
 
     fuel:plasma a owl:Class ;
@@ -412,17 +424,35 @@ http://purl.obolibrary.org/obo/BFO_0000040""" .
         skos:definition "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."@en .
 
     fuel:tokamak_component a owl:Class ;
+        rdfs:label "tokamak component"@en ;
         rdfs:subClassOf fuel:device_component .
 
-    _:n840cbf79a0914ee199402199b5d5fda9b1 a foaf:Person,
+    _:n2e81bb105b25466ba5e44662f0e29211b1 a foaf:Person,
             sdo:Person ;
         rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
         foaf:homepage <https://agbeltran.github.io/> ;
         foaf:name "Alejandra Gonzalez Beltran" ;
-        sdo:affiliation _:n840cbf79a0914ee199402199b5d5fda9b2 ;
+        sdo:affiliation _:n2e81bb105b25466ba5e44662f0e29211b2 ;
         sdo:identifier <https://orcid.org/0000-0003-3499-8262> ;
         sdo:name "Alejandra Gonzalez Beltran" .
 
-    _:n840cbf79a0914ee199402199b5d5fda9b2 sdo:identifier <https://ror.org/0361bwx64> .
+    _:n2e81bb105b25466ba5e44662f0e29211b2 sdo:identifier <https://ror.org/0361bwx64> .
+
+    _:n2e81bb105b25466ba5e44662f0e29211b3 a owl:Class ;
+        owl:intersectionOf _:n2e81bb105b25466ba5e44662f0e29211b5 .
+
+    _:n2e81bb105b25466ba5e44662f0e29211b4 a owl:Restriction ;
+        owl:onProperty fuel:hasComponent ;
+        owl:someValuesFrom fuel:divertor .
+
+    _:n2e81bb105b25466ba5e44662f0e29211b5 rdf:first fuel:tokamak ;
+        rdf:rest _:n2e81bb105b25466ba5e44662f0e29211b6 .
+
+    _:n2e81bb105b25466ba5e44662f0e29211b6 rdf:first _:n2e81bb105b25466ba5e44662f0e29211b4 ;
+        rdf:rest () .
+
+    _:n2e81bb105b25466ba5e44662f0e29211b7 a owl:Restriction ;
+        owl:onProperty fuel:hasComponent ;
+        owl:someValuesFrom fuel:tokamak_component .
 }
 

@@ -289,7 +289,7 @@ td {
     ],
     "https://schema.org/creator": [
       {
-        "@id": "_:n78b5ea5d7bb2484fb873de976ee42850b1"
+        "@id": "_:n9397152f668745ff9ff7ad86c6925767b1"
       }
     ],
     "https://schema.org/dateCreated": [
@@ -337,10 +337,10 @@ td {
     ]
   },
   {
-    "@id": "_:n78b5ea5d7bb2484fb873de976ee42850b1",
+    "@id": "_:n9397152f668745ff9ff7ad86c6925767b1",
     "https://schema.org/affiliation": [
       {
-        "@id": "_:n78b5ea5d7bb2484fb873de976ee42850b2"
+        "@id": "_:n9397152f668745ff9ff7ad86c6925767b2"
       }
     ],
     "https://schema.org/identifier": [
@@ -355,7 +355,7 @@ td {
     ]
   },
   {
-    "@id": "_:n78b5ea5d7bb2484fb873de976ee42850b2"
+    "@id": "_:n9397152f668745ff9ff7ad86c6925767b2"
   }
 ]
 	</script>
@@ -640,8 +640,8 @@ td {
             </tr>
           </table>
         </div>
-        <div class="property entity" id="blanket_module">
-          <h3>blanket_module
+        <div class="property entity" id="blanketmodule">
+          <h3>blanket module
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
           </h3>
           <table>
@@ -657,7 +657,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel#tokamak_component">fuel:tokamak_component</a>
+                  <a href="http://w3id.org/fuel#tokamak_component">tokamak component</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -742,8 +742,8 @@ td {
             </tr>
           </table>
         </div>
-        <div class="property entity" id="core_region">
-          <h3>core_region
+        <div class="property entity" id="coreregion">
+          <h3>core region
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
           </h3>
           <table>
@@ -759,7 +759,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel#plasma_region">fuel:plasma_region</a>
+                  <a href="http://w3id.org/fuel#plasma_region">plasma region</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -847,7 +847,7 @@ td {
                   </li>
                   <li>
                     <span>
-                      <a href="http://w3id.org/fuel#tokamak_component">fuel:tokamak_component</a>
+                      <a href="http://w3id.org/fuel#tokamak_component">tokamak component</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -873,7 +873,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel#tokamak_component">fuel:tokamak_component</a>
+                  <a href="http://w3id.org/fuel#tokamak_component">tokamak component</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -938,7 +938,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel#tokamak_component">fuel:tokamak_component</a>
+                  <a href="http://w3id.org/fuel#tokamak_component">tokamak component</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -969,6 +969,59 @@ td {
             </tr>
           </table>
         </div>
+        <div class="property entity" id="divertor_tokamak">
+          <h3>divertor_tokamak
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/fuel#divertor_tokamak</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://w3id.org/fuel#tokamak">tokamak</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2002/07/owl#equivalentClass" title="The property that determines that two given classes are equivalent, and that is used to specify datatype definitions. Defined in The OWL 2 Schema vocabulary (OWL 2)">Equivalentclass</a>
+              </th>
+              <td>
+                <span>
+                  <span>
+                    <span>
+                      <a href="http://w3id.org/fuel#hasComponent">fuel:hasComponent</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                    <span>
+                      <span class="cardinality">some</span>
+                      <span>
+                        <span>
+                          <a href="http://w3id.org/fuel#divertor">divertor</a>
+                          <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                        </span>
+                      </span>
+                    </span><br>
+                  </span>
+                </span>
+                <span class="cardinality">and</span>
+                <span>
+                  <a href="http://w3id.org/fuel#tokamak">tokamak</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="edge_plasma">
           <h3>edge_plasma
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -993,8 +1046,8 @@ td {
             </tr>
           </table>
         </div>
-        <div class="property entity" id="edge_region">
-          <h3>edge_region
+        <div class="property entity" id="edgeregion">
+          <h3>edge region
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
           </h3>
           <table>
@@ -1010,7 +1063,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel#plasma_region">fuel:plasma_region</a>
+                  <a href="http://w3id.org/fuel#plasma_region">plasma region</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1140,7 +1193,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel#tokamak_component">fuel:tokamak_component</a>
+                  <a href="http://w3id.org/fuel#tokamak_component">tokamak component</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1252,7 +1305,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel#tokamak_component">fuel:tokamak_component</a>
+                  <a href="http://w3id.org/fuel#tokamak_component">tokamak component</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1381,7 +1434,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel#core_region">fuel:core_region</a>
+                  <a href="http://w3id.org/fuel#core_region">core region</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1518,7 +1571,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel#tokamak_component">fuel:tokamak_component</a>
+                  <a href="http://w3id.org/fuel#tokamak_component">tokamak component</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1900,7 +1953,7 @@ http://purl.obolibrary.org/obo/BFO_0000040</p></td>
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel#core_region">fuel:core_region</a>
+                  <a href="http://w3id.org/fuel#core_region">core region</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1975,7 +2028,7 @@ http://purl.obolibrary.org/obo/BFO_0000040</p></td>
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel#plasma_region">fuel:plasma_region</a>
+                  <a href="http://w3id.org/fuel#plasma_region">plasma region</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2107,7 +2160,7 @@ http://purl.obolibrary.org/obo/BFO_0000040</p></td>
                   </li>
                   <li>
                     <span>
-                      <a href="http://w3id.org/fuel#scrape_off_layer_plasma">scrape off layer plasma</a>
+                      <a href="http://w3id.org/fuel#scrape_off_layer_plasma">fuel:scrape_off_layer_plasma</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -2157,8 +2210,8 @@ http://purl.obolibrary.org/obo/BFO_0000040</p></td>
             </tr>
           </table>
         </div>
-        <div class="property entity" id="plasma_region">
-          <h3>plasma_region
+        <div class="property entity" id="plasmaregion">
+          <h3>plasma region
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
           </h3>
           <table>
@@ -2187,13 +2240,13 @@ http://purl.obolibrary.org/obo/BFO_0000040</p></td>
                 <ul>
                   <li>
                     <span>
-                      <a href="http://w3id.org/fuel#core_region">fuel:core_region</a>
+                      <a href="http://w3id.org/fuel#core_region">core region</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
                   <li>
                     <span>
-                      <a href="http://w3id.org/fuel#edge_region">fuel:edge_region</a>
+                      <a href="http://w3id.org/fuel#edge_region">edge region</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -2205,7 +2258,7 @@ http://purl.obolibrary.org/obo/BFO_0000040</p></td>
                   </li>
                   <li>
                     <span>
-                      <a href="http://w3id.org/fuel#scrape_off_layer">fuel:scrape_off_layer</a>
+                      <a href="http://w3id.org/fuel#scrape_off_layer">scrape off layer</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -2376,7 +2429,7 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel#plasma_region">fuel:plasma_region</a>
+                  <a href="http://w3id.org/fuel#plasma_region">plasma region</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2407,8 +2460,8 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
             </tr>
           </table>
         </div>
-        <div class="property entity" id="scrape_off_layer">
-          <h3>scrape_off_layer
+        <div class="property entity" id="scrapeofflayer">
+          <h3>scrape off layer
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
           </h3>
           <table>
@@ -2416,30 +2469,6 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
               <th>IRI</th>
               <td>
                 <code>http://w3id.org/fuel#scrape_off_layer</code>
-              </td>
-            </tr>
-            <tr>
-              <th>
-                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
-              </th>
-              <td>
-                <span>
-                  <a href="http://w3id.org/fuel#plasma_region">fuel:plasma_region</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="property entity" id="scrapeofflayerplasma">
-          <h3>scrape off layer plasma
-            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-          </h3>
-          <table>
-            <tr>
-              <th>IRI</th>
-              <td>
-                <code>http://w3id.org/fuel#scrape_off_layer_plasma</code>
               </td>
             </tr>
             <tr>
@@ -2454,6 +2483,30 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
               </th>
               <td>
                 <a href="https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol">https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://w3id.org/fuel#plasma_region">plasma region</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="scrape_off_layer_plasma">
+          <h3>scrape_off_layer_plasma
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/fuel#scrape_off_layer_plasma</code>
               </td>
             </tr>
             <tr>
@@ -2486,7 +2539,7 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel#plasma_region">fuel:plasma_region</a>
+                  <a href="http://w3id.org/fuel#plasma_region">plasma region</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2809,19 +2862,53 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
             </tr>
             <tr>
               <th>
-                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/restriction" title="Convenience property for things that subclass owl:Restriction. Defined in Ontology Documentation Profile">Restriction</a>
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel#spherical_tokamak">spherical tokamak</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                  <span>
+                    <span>
+                      <a href="http://w3id.org/fuel#hasComponent">fuel:hasComponent</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                    <span>
+                      <span class="cardinality">some</span>
+                      <span>
+                        <span>
+                          <a href="http://w3id.org/fuel#tokamak_component">tokamak component</a>
+                          <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                        </span>
+                      </span>
+                    </span><br>
+                  </span>
                 </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="http://w3id.org/fuel#divertor_tokamak">fuel:divertor_tokamak</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="http://w3id.org/fuel#spherical_tokamak">spherical tokamak</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                </ul>
               </td>
             </tr>
           </table>
         </div>
-        <div class="property entity" id="tokamak_component">
-          <h3>tokamak_component
+        <div class="property entity" id="tokamakcomponent">
+          <h3>tokamak component
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
           </h3>
           <table>
@@ -2850,7 +2937,7 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
                 <ul>
                   <li>
                     <span>
-                      <a href="http://w3id.org/fuel#blanket_module">fuel:blanket_module</a>
+                      <a href="http://w3id.org/fuel#blanket_module">blanket module</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -3008,7 +3095,7 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel#tokamak_component">fuel:tokamak_component</a>
+                  <a href="http://w3id.org/fuel#tokamak_component">tokamak component</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -3106,6 +3193,22 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
               <th>IRI</th>
               <td>
                 <code>https://schema.org/Person</code>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="section" id="objectproperties">
+        <h2>Object Properties</h2>
+        <div class="property entity" id="hasComponent">
+          <h3>has component
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/fuel#hasComponent</code>
               </td>
             </tr>
           </table>
@@ -3524,6 +3627,12 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
           </tr>
           <tr>
             <td>
+              <sup class="sup-op" title="OWL Object Property">op</sup>
+            </td>
+            <td>Object Properties</td>
+          </tr>
+          <tr>
+            <td>
               <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
             </td>
             <td>Annotation Properties</td>
@@ -3576,7 +3685,7 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
               <a href="#alpha_particle_population">alpha_particle_population</a>
             </li>
             <li>
-              <a href="#blanket_module">blanket_module</a>
+              <a href="#blanketmodule">blanket module</a>
             </li>
             <li>
               <a href="#campaign">campaigncampaña</a>
@@ -3588,7 +3697,7 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
               <a href="#core_plasma">core_plasma</a>
             </li>
             <li>
-              <a href="#core_region">core_region</a>
+              <a href="#coreregion">core region</a>
             </li>
             <li>
               <a href="#desorbed_gas">desorbed_gas</a>
@@ -3609,10 +3718,13 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
               <a href="#divertor_plasma">divertor_plasma</a>
             </li>
             <li>
+              <a href="#divertor_tokamak">divertor_tokamak</a>
+            </li>
+            <li>
               <a href="#edge_plasma">edge_plasma</a>
             </li>
             <li>
-              <a href="#edge_region">edge_region</a>
+              <a href="#edgeregion">edge region</a>
             </li>
             <li>
               <a href="#electric_field">electric_field</a>
@@ -3711,7 +3823,7 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
               <a href="#plasma_instability_process">plasma_instability_process</a>
             </li>
             <li>
-              <a href="#plasma_region">plasma_region</a>
+              <a href="#plasmaregion">plasma region</a>
             </li>
             <li>
               <a href="#plasma_wall_interaction_process">plasma_wall_interaction_process</a>
@@ -3735,10 +3847,10 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
               <a href="#runaway_electron_population">runaway_electron_population</a>
             </li>
             <li>
-              <a href="#scrape_off_layer">scrape_off_layer</a>
+              <a href="#scrapeofflayer">scrape off layer</a>
             </li>
             <li>
-              <a href="#scrapeofflayerplasma">scrape off layer plasma</a>
+              <a href="#scrape_off_layer_plasma">scrape_off_layer_plasma</a>
             </li>
             <li>
               <a href="#separatrix_region">separatrix_region</a>
@@ -3768,7 +3880,7 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
               <a href="#tokamak">tokamak</a>
             </li>
             <li>
-              <a href="#tokamak_component">tokamak_component</a>
+              <a href="#tokamakcomponent">tokamak component</a>
             </li>
             <li>
               <a href="#tokamak_plasma">tokamak_plasma</a>
@@ -3796,6 +3908,16 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
             </li>
             <li>
               <a href="#Person1">Person</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4>
+            <a href="#objectproperties">Object Properties</a>
+          </h4>
+          <ul class="second">
+            <li>
+              <a href="#hasComponent">has component</a>
             </li>
           </ul>
         </li>

@@ -133,6 +133,18 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # 
 # #################################################################
 # #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/fuel#hasComponent
+<http://w3id.org/fuel#hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
 # #    Classes
 # #
 # #################################################################
@@ -167,6 +179,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # http://w3id.org/fuel#blanket_module
 <http://w3id.org/fuel#blanket_module> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#blanket_module> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#tokamak_component> .
+<http://w3id.org/fuel#blanket_module> <http://www.w3.org/2000/01/rdf-schema#label> "blanket module"@en .
 # 
 # http://w3id.org/fuel#campaign
 <http://w3id.org/fuel#campaign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -189,6 +202,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # http://w3id.org/fuel#core_region
 <http://w3id.org/fuel#core_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#core_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma_region> .
+<http://w3id.org/fuel#core_region> <http://www.w3.org/2000/01/rdf-schema#label> "core region"@en .
 # 
 # http://w3id.org/fuel#desorbed_gas
 <http://w3id.org/fuel#desorbed_gas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -219,6 +233,22 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 <http://w3id.org/fuel#divertor_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#divertor_plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma> .
 # 
+# http://w3id.org/fuel#divertor_tokamak
+<http://w3id.org/fuel#divertor_tokamak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel#divertor_tokamak> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid3 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/fuel#divertor> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/fuel#hasComponent> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/fuel#tokamak> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://w3id.org/fuel#divertor_tokamak> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#tokamak> .
+# 
 # http://w3id.org/fuel#edge_plasma
 <http://w3id.org/fuel#edge_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#edge_plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma> .
@@ -226,6 +256,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # http://w3id.org/fuel#edge_region
 <http://w3id.org/fuel#edge_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#edge_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma_region> .
+<http://w3id.org/fuel#edge_region> <http://www.w3.org/2000/01/rdf-schema#label> "edge region"@en .
 # 
 # http://w3id.org/fuel#electric_field
 <http://w3id.org/fuel#electric_field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -397,6 +428,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # http://w3id.org/fuel#plasma_region
 <http://w3id.org/fuel#plasma_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#plasma_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#region> .
+<http://w3id.org/fuel#plasma_region> <http://www.w3.org/2000/01/rdf-schema#label> "plasma region"@en .
 # 
 # http://w3id.org/fuel#plasma_wall_interaction_process
 <http://w3id.org/fuel#plasma_wall_interaction_process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -429,14 +461,14 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # http://w3id.org/fuel#scrape_off_layer
 <http://w3id.org/fuel#scrape_off_layer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#scrape_off_layer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma_region> .
+<http://w3id.org/fuel#scrape_off_layer> <http://purl.org/dc/terms/source> "https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol"@en .
+<http://w3id.org/fuel#scrape_off_layer> <http://www.w3.org/2000/01/rdf-schema#label> "scrape off layer"@en .
+<http://w3id.org/fuel#scrape_off_layer> <http://www.w3.org/2004/02/skos/core#altLabel> "SOL"@en .
+<http://w3id.org/fuel#scrape_off_layer> <http://www.w3.org/2004/02/skos/core#definition> "A region at the edge of the plasma characterized by open magnetic lines that terminate at the inner parts of the chamber. In limiter tokamaks this region is located behind the last closed magnetic surface, in divertor tokamaks behind the separatrix. The particles in this region move by convection rather than diffusion and travel along the magnetic lines to the chamber walls or to the divertor, where they can be extracted by vacuum pumps." .
 # 
 # http://w3id.org/fuel#scrape_off_layer_plasma
 <http://w3id.org/fuel#scrape_off_layer_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#scrape_off_layer_plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma> .
-<http://w3id.org/fuel#scrape_off_layer_plasma> <http://purl.org/dc/terms/source> "https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol"@en .
-<http://w3id.org/fuel#scrape_off_layer_plasma> <http://www.w3.org/2000/01/rdf-schema#label> "scrape off layer plasma" .
-<http://w3id.org/fuel#scrape_off_layer_plasma> <http://www.w3.org/2004/02/skos/core#altLabel> "SOL"@en .
-<http://w3id.org/fuel#scrape_off_layer_plasma> <http://www.w3.org/2004/02/skos/core#definition> "A region at the edge of the plasma characterized by open magnetic lines that terminate at the inner parts of the chamber. In limiter tokamaks this region is located behind the last closed magnetic surface, in divertor tokamaks behind the separatrix. The particles in this region move by convection rather than diffusion and travel along the magnetic lines to the chamber walls or to the divertor, where they can be extracted by vacuum pumps." .
 # 
 # http://w3id.org/fuel#separatrix_region
 <http://w3id.org/fuel#separatrix_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -492,6 +524,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # http://w3id.org/fuel#tokamak
 <http://w3id.org/fuel#tokamak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#tokamak> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#fusion_reactor> .
+<http://w3id.org/fuel#tokamak> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/fuel#tokamak_component> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/fuel#hasComponent> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <http://w3id.org/fuel#tokamak> <http://purl.org/dc/terms/source> <https://www.energyencyclopedia.com/en/glossary/tokamak> .
 <http://w3id.org/fuel#tokamak> <http://www.w3.org/2000/01/rdf-schema#comment> "A device for magnetic confinement of plasma by a combination of a toroidal magnetic field and a current flowing through the plasma in which conditions for thermonuclear fusion ignition can be achieved. The word “tokamak” is of Russian origin and is an acronym for “TOroidalnaya KAmera i MAgnitnye Katushki” — toroidal chamber and magnetic coils. The magnetic field necessary to keep the hot plasma inside the toroidal chamber is generated as a combination of the field of the toroidal coils and the magnetic field generated by the current flowing through the plasma. Since the current in the plasma is induced on the transformer principle, the tokamak is a pulse device."@en .
 <http://w3id.org/fuel#tokamak> <http://www.w3.org/2000/01/rdf-schema#label> "tokamak"@en .
@@ -501,6 +537,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # http://w3id.org/fuel#tokamak_component
 <http://w3id.org/fuel#tokamak_component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel#tokamak_component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#device_component> .
+<http://w3id.org/fuel#tokamak_component> <http://www.w3.org/2000/01/rdf-schema#label> "tokamak component"@en .
 # 
 # http://w3id.org/fuel#tokamak_plasma
 <http://w3id.org/fuel#tokamak_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

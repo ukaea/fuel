@@ -29,6 +29,34 @@
     "@id" : "https://ror.org/0361bwx64"
   } ]
 }, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://w3id.org/fuel#tokamak"
+    }, {
+      "@id" : "_:genid5"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/fuel#hasComponent"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/fuel#divertor"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://w3id.org/fuel#hasComponent"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://w3id.org/fuel#tokamak_component"
+  } ]
+}, {
   "@id" : "http://purl.org/dc/terms/abstract",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -186,6 +214,10 @@
 }, {
   "@id" : "http://w3id.org/fuel#blanket_module",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "blanket module"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/fuel#tokamak_component"
   } ]
@@ -232,6 +264,10 @@
 }, {
   "@id" : "http://w3id.org/fuel#core_region",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "core region"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/fuel#plasma_region"
   } ]
@@ -291,6 +327,15 @@
     "@id" : "http://w3id.org/fuel#plasma"
   } ]
 }, {
+  "@id" : "http://w3id.org/fuel#divertor_tokamak",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel#tokamak"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid3"
+  } ]
+}, {
   "@id" : "http://w3id.org/fuel#edge_plasma",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -299,6 +344,10 @@
 }, {
   "@id" : "http://w3id.org/fuel#edge_region",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "edge region"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/fuel#plasma_region"
   } ]
@@ -389,6 +438,9 @@
     "@language" : "es",
     "@value" : "reactor de fusión nuclear"
   } ]
+}, {
+  "@id" : "http://w3id.org/fuel#hasComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://w3id.org/fuel#heating_system",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -636,6 +688,10 @@
 }, {
   "@id" : "http://w3id.org/fuel#plasma_region",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "plasma region"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/fuel#region"
   } ]
@@ -684,21 +740,16 @@
 }, {
   "@id" : "http://w3id.org/fuel#scrape_off_layer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/fuel#plasma_region"
-  } ]
-}, {
-  "@id" : "http://w3id.org/fuel#scrape_off_layer_plasma",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/source" : [ {
     "@language" : "en",
     "@value" : "https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "scrape off layer plasma"
+    "@language" : "en",
+    "@value" : "scrape off layer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/fuel#plasma"
+    "@id" : "http://w3id.org/fuel#plasma_region"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "en",
@@ -706,6 +757,12 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A region at the edge of the plasma characterized by open magnetic lines that terminate at the inner parts of the chamber. In limiter tokamaks this region is located behind the last closed magnetic surface, in divertor tokamaks behind the separatrix. The particles in this region move by convection rather than diffusion and travel along the magnetic lines to the chamber walls or to the divertor, where they can be extracted by vacuum pumps."
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel#scrape_off_layer_plasma",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel#plasma"
   } ]
 }, {
   "@id" : "http://w3id.org/fuel#separatrix_region",
@@ -836,6 +893,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/fuel#fusion_reactor"
+  }, {
+    "@id" : "_:genid7"
   } ],
   "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
     "@language" : "es",
@@ -847,6 +906,10 @@
 }, {
   "@id" : "http://w3id.org/fuel#tokamak_component",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "tokamak component"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/fuel#device_component"
   } ]
