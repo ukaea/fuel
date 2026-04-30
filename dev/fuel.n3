@@ -80,38 +80,48 @@ fuel:LowerHybridSystem a owl:Class ;
 fuel:MHDInstabilityProcess a owl:Class ;
     rdfs:subClassOf fuel:plasma_instability_process .
 
+fuel:MHD_instability a owl:Class ;
+    rdfs:label "MHD instability"@en ;
+    rdfs:subClassOf fuel:stability ;
+    skos:definition "Instabilities driven by the energy of the magnetic field and by the momentum of charged particles in the plasma. Small displacements of plasma density from the equilibrium position can reinforce that displacement until a further compensating force counteracts that reinforcement or the plasma equilibrium configuration is disrupted. Various modes of such displacement in the toroidal and poloidal planes can be stabilised so that the bulk plasma remains in position."@en .
+
+fuel:Thomson_Scattering_system a owl:Class ;
+    rdfs:subClassOf fuel:diagnostics .
+
 fuel:alpha_particle_population a owl:Class ;
     rdfs:subClassOf fuel:non_thermal_particle_population .
 
-fuel:blanket_module a owl:Class ;
-    rdfs:label "blanket module"@en ;
-    rdfs:subClassOf fuel:tokamak_component .
+fuel:blanket a owl:Class ;
+    rdfs:label "blanket"@en ;
+    dcterms:source "https://www.energyencyclopedia.com/en/glossary/blanket"@en ;
+    rdfs:subClassOf fuel:tokamak_component ;
+    skos:definition "The lining of the inner wall of the tokamak vessel that will be in direct contact with the hot plasma. The blanket is usually made of modules (from stainless steel, or copper), on which can be mounted replaceable first-wall panels (made from beryllium, tungsten, molybdenum, or carbon in case of older tokamaks), able to withstand high temperatures. The blanket protects the chamber wall and the magnetic coils from high-energy neutrons. These slowdown in the blanket material and transform their energy into thermal energy."@en .
+
+fuel:bolometer a owl:Class ;
+    rdfs:subClassOf fuel:diagnostics .
 
 fuel:campaign a owl:Class ;
     rdfs:label "campaign"@en,
         "campaña"@es ;
     rdfs:comment "A set of connected experiments that are run across a time period."@en,
         "Un conjunto de experimentos conectados que se ejecutan durante un período específico de tiempo"@es ;
+    rdfs:subClassOf fuel:process ;
     skos:altLabel "experimental campaign"@en .
 
 fuel:central_solenoid a owl:Class ;
     rdfs:label "central solenoid"@en ;
+    dcterms:source "https://www.jt60sa.org/wp/glossary/"@en ;
     rdfs:subClassOf fuel:magnet_system ;
-    skos:definition "" .
+    skos:definition "The tokamak component that produces and sustains the plasma current which heats and shapes the plasma." .
 
 fuel:core_plasma a owl:Class ;
-    rdfs:subClassOf fuel:plasma .
+    rdfs:subClassOf fuel:tokamak_plasma .
 
 fuel:desorbed_gas a owl:Class ;
     rdfs:subClassOf fuel:wall_released_species .
 
 fuel:diagnostic_port a owl:Class ;
     rdfs:subClassOf fuel:tokamak_component .
-
-fuel:diagnostics a owl:Class ;
-    rdfs:label "diagnostics"@en ;
-    dcterms:source <https://www.iter.org/fusion-glossary> ;
-    rdfs:comment "Equipment for determining/monitoring the properties and behaviour of a plasma during an experiment."@en .
 
 fuel:divertor_plasma a owl:Class ;
     rdfs:subClassOf fuel:plasma .
@@ -124,7 +134,7 @@ fuel:divertor_tokamak a owl:Class ;
                         owl:someValuesFrom fuel:divertor ] ) ] .
 
 fuel:edge_plasma a owl:Class ;
-    rdfs:subClassOf fuel:plasma .
+    rdfs:subClassOf fuel:tokamak_plasma .
 
 fuel:edge_region a owl:Class ;
     rdfs:label "edge region"@en ;
@@ -140,13 +150,17 @@ fuel:fast_ion_population a owl:Class ;
     rdfs:subClassOf fuel:non_thermal_particle_population .
 
 fuel:first_wall a owl:Class ;
-    rdfs:subClassOf fuel:tokamak_component .
+    rdfs:label "first wall"@en ;
+    dcterms:source "https://www.jt60sa.org/wp/glossary/"@en ;
+    rdfs:subClassOf fuel:tokamak_component ;
+    skos:definition "The interior surface of a tokamak closest to the plasma"@en .
 
 fuel:fusion_facility a owl:Class ;
     rdfs:label "fusion facility"@en,
         "instalación de fusión"@es ;
     rdfs:comment "A facility in which fusion experiments are conducted. Examples include the Joint European Torus (JET) in the UK, the DIII-D National Fusion Facility in the US, and the Experimental Advanced Superconducting Tokamak (EAST) in China."@en,
         "Una instalación en la que se llevan a cabo experimentos de fusión. Ejemplos incluyen el Joint European Torus (JET) en el Reino Unido, el DIII-D National Fusion Facility en los Estados Unidos y el Experimental Advanced Superconducting Tokamak (EAST) en China."@es ;
+    rdfs:subClassOf fuel:material_entity ;
     skos:altLabel "fusion research facility"@en,
         "instalación de investigación de fusión"@es .
 
@@ -156,11 +170,11 @@ fuel:ideal_kink_stability a owl:Class ;
 fuel:impurity_population a owl:Class ;
     rdfs:subClassOf fuel:thermal_particle_population .
 
-fuel:injected_neutral_population a owl:Class ;
-    rdfs:subClassOf fuel:neutral_population .
-
 fuel:inner_core_region a owl:Class ;
     rdfs:subClassOf fuel:core_region .
+
+fuel:interferometer a owl:Class ;
+    rdfs:subClassOf fuel:diagnostics .
 
 fuel:ion_population a owl:Class ;
     rdfs:subClassOf fuel:thermal_particle_population .
@@ -180,7 +194,8 @@ fuel:laser_induced_plasma a owl:Class ;
     dcterms:source <https://www.sciencedirect.com/topics/chemistry/laser-induced-plasma> ;
     rdfs:comment "Laser induced plasma (LIP) is defined as a product of the complex interaction between a focused, high peak power laser beam and a target material, resulting in processes such as absorption of laser energy, vaporization, and ejection of atomic and molecular species, followed by plasma expansion and shock wave production."@en ;
     rdfs:subClassOf fuel:plasma ;
-    skos:altLabel "LIP"@en .
+    skos:altLabel "LIP"@en ;
+    skos:editorialNote "industrial plasma - not a tokamak plasma"@en .
 
 fuel:limiter a owl:Class ;
     rdfs:subClassOf fuel:tokamak_component .
@@ -196,8 +211,22 @@ Rotating magnetic fields are used by electrical generators in power plants.
 
 In thermonuclear fusion research, a strong magnetic field is used to confine hot plasma in tokamaks and stellarators."""@en .
 
+fuel:magnetic_field_density a owl:Class ;
+    rdfs:label "magnetic field density"@en ;
+    rdfs:subClassOf fuel:quality .
+
+fuel:magnetic_probe a owl:Class ;
+    rdfs:subClassOf fuel:diagnostics .
+
+fuel:neutral_beam a owl:Class ;
+    rdfs:subClassOf fuel:injected_neutral_particle_population ;
+    skos:editorialNote "is this a subclass of injected neutral particle population?" .
+
 fuel:neutral_beam_system a owl:Class ;
     rdfs:subClassOf fuel:heating_system .
+
+fuel:neutron_diagnostics a owl:Class ;
+    rdfs:subClassOf fuel:diagnostics .
 
 fuel:neutronics a owl:Class ;
     rdfs:label "neutronics"@en ;
@@ -208,6 +237,9 @@ fuel:neutronics a owl:Class ;
 fuel:operational_stability a owl:Class ;
     rdfs:subClassOf fuel:stability .
 
+fuel:optical_diagnostic_system a owl:Class ;
+    rdfs:subClassOf fuel:diagnostics .
+
 fuel:outer_core_region a owl:Class ;
     rdfs:subClassOf fuel:core_region .
 
@@ -215,13 +247,15 @@ fuel:pedestal_region a owl:Class ;
     rdfs:subClassOf fuel:plasma_region .
 
 fuel:plasma_wall_interaction_process a owl:Class ;
+    rdfs:label "plasma wall interaction process"@en ;
     rdfs:subClassOf fuel:physics_process .
 
 fuel:poloidal_field_coil a owl:Class ;
+    rdfs:label "poloidal field coil"@en ;
     rdfs:subClassOf fuel:magnet_system .
 
 fuel:recycled_neutral_population a owl:Class ;
-    rdfs:subClassOf fuel:neutral_population .
+    rdfs:subClassOf fuel:neutral_particule_population .
 
 fuel:runaway_electron_population a owl:Class ;
     rdfs:subClassOf fuel:non_thermal_particle_population .
@@ -243,6 +277,9 @@ fuel:shot a owl:Class ;
     rdfs:label "shot"@en ;
     dcterms:source <https://euro-fusion.org/glossary/shot/> ;
     rdfs:comment "A “shot” is any kind of experiment conducted on a test machine following defined parameters. It could be many actual firings of the machine following a variation in the parameters. So one or more “shots” make up an experiment." .
+
+fuel:spectrometer a owl:Class ;
+    rdfs:subClassOf fuel:diagnostics .
 
 fuel:spherical_tokamak a owl:Class ;
     rdfs:label "spherical tokamak"@en,
@@ -272,10 +309,8 @@ fuel:thermocouple a owl:Class ;
         "thermoelectrical thermometer"@en,
         "termocupla"@es .
 
-fuel:tokamak_plasma a owl:Class ;
-    rdfs:subClassOf fuel:plasma .
-
 fuel:toroidal_field_coil a owl:Class ;
+    rdfs:label "toroidal field coil"@en ;
     rdfs:subClassOf fuel:magnet_system .
 
 fuel:transport_process a owl:Class ;
@@ -285,13 +320,17 @@ fuel:turbulence_process a owl:Class ;
     rdfs:subClassOf fuel:physics_process .
 
 fuel:vacuum_vessel a owl:Class ;
-    rdfs:subClassOf fuel:tokamak_component .
+    dcterms:source "https://www.iter.org/machine/vacuum-vessel" ;
+    rdfs:subClassOf fuel:tokamak_component ;
+    skos:definition "A hermetically sealed, double-walled steel container that houses the fusion reactions and acts as a first safety containment barrier"@en .
 
 xsd:date a rdfs:Datatype .
 
 skos:altLabel a owl:AnnotationProperty .
 
 skos:definition a owl:AnnotationProperty .
+
+skos:editorialNote a owl:AnnotationProperty .
 
 dcat:version a owl:AnnotationProperty .
 
@@ -322,24 +361,27 @@ fuel:MHDstability a owl:Class ;
     rdfs:subClassOf fuel:stability ;
     skos:altLabel "magnetohydrodynamic stability" .
 
+fuel:device_component a owl:Class ;
+    rdfs:label "device component"@en ;
+    rdfs:subClassOf fuel:material_entity ;
+    skos:definition "A material entity that is a proper part of some device."@en .
+
+fuel:injected_neutral_particle_population a owl:Class ;
+    rdfs:subClassOf fuel:neutral_particule_population .
+
 fuel:nuclear_reactor a owl:Class ;
     rdfs:label "nuclear reactor"@en,
         "reactor nuclear"@es ;
     dcterms:source <https://www.energyencyclopedia.com/en/glossary/nuclear-reactor> ;
     rdfs:comment "A device inside which a controlled chain fission reaction takes place. The reactor usually has the form of a metal pressure vessel, in the middle of which the nuclear fuel is arranged in a so-called core. A coolant, whether gas or liquid, circulates through the core to dissipate the heat generated by the fission reaction. The power of the reactor is controlled by control rods that are inserted or withdrawn from the core as necessary. If the reactor uses thermal neutrons for fission, it also includes a moderator, either in the form of a liquid or a solid, which slows down the neutrons. Heat, generated by a reactor, is most commonly used. Either directly for technological purposes (e.g., hydrogen production by steam reforming) or for electricity generation by a steam turbine. The reactor can also be used to produce nuclear fuel (breeder reactor), or the strong neutron fluxes produced by the reaction can be used for research purposes or for the production of radiopharmaceuticals. There are a number of types of nuclear reactors, with the most common types used for electricity generation being water-cooled PWRs and BWRs. In 2023, there were 436 nuclear reactors in operation in the world."@en,
         "Dispositivo en el que ocurre una reacción nuclear en cadena controlada y autosostenida. Los reactores nucleares se utilizan en las centrales nucleares para la generación de electricidad y en la propulsión de barcos. El calor de la fis nuclear se transfiere a un fluido de trabajo (agua o gas), que pasa por turbinas."@es ;
+    rdfs:subClassOf fuel:material_entity ;
     skos:altLabel "nuclear fission reactor"@en,
         "reactor de fisión nuclear"@es .
 
 fuel:plasma_instability_process a owl:Class ;
+    rdfs:label "plasma instability process"@en ;
     rdfs:subClassOf fuel:physics_process .
-
-fuel:process a owl:Class ;
-    rdfs:comment "consider mapping to BFO - http://purl.obolibrary.org/obo/BFO_0000015" .
-
-fuel:quality a owl:Class ;
-    rdfs:comment """consider reusing to BFO:quality 
-http://purl.obolibrary.org/obo/BFO_0000019""" .
 
 fuel:region a owl:Class ;
     rdfs:comment "a spatial extent" .
@@ -348,14 +390,12 @@ sosa:Sensor a owl:Class .
 
 foaf:Person a owl:Class .
 
-sdo:Person a owl:Class .
+sdo:Person a owl:Class ;
+    rdfs:subClassOf fuel:material_entity .
 
 fuel:core_region a owl:Class ;
     rdfs:label "core region"@en ;
     rdfs:subClassOf fuel:plasma_region .
-
-fuel:device_component a owl:Class ;
-    rdfs:subClassOf fuel:material_entity .
 
 fuel:divertor a owl:Class ;
     rdfs:label "divertor"@en ;
@@ -379,24 +419,36 @@ fuel:fusion_reactor a owl:Class ;
 
 fuel:hasComponent a owl:ObjectProperty .
 
-fuel:neutral_population a owl:Class ;
+fuel:neutral_particule_population a owl:Class ;
+    rdfs:label "neutral particle population"@en ;
     rdfs:subClassOf fuel:particle_population .
+
+fuel:process a owl:Class ;
+    rdfs:comment "consider mapping to BFO - http://purl.obolibrary.org/obo/BFO_0000015" .
+
+fuel:quality a owl:Class ;
+    rdfs:comment """consider reusing to BFO:quality 
+http://purl.obolibrary.org/obo/BFO_0000019""" .
+
+fuel:tokamak_plasma a owl:Class ;
+    rdfs:subClassOf fuel:plasma .
 
 fuel:wall_released_species a owl:Class ;
     rdfs:subClassOf fuel:material_entity .
 
-fuel:magnet_system a owl:Class ;
+fuel:fusion_device_component a owl:Class ;
+    rdfs:label "fusion device component"@en ;
     rdfs:subClassOf fuel:device_component .
+
+fuel:magnet_system a owl:Class ;
+    rdfs:label "magnetic system"@en ;
+    rdfs:subClassOf fuel:fusion_device_component .
 
 fuel:non_thermal_particle_population a owl:Class ;
     rdfs:subClassOf fuel:particle_population .
 
 fuel:particle_population a owl:Class ;
     rdfs:subClassOf fuel:material_entity .
-
-fuel:stability a owl:Class ;
-    rdfs:comment "consider reusing http://purl.obolibrary.org/obo/PATO_0015026" ;
-    rdfs:subClassOf fuel:quality .
 
 fuel:thermal_particle_population a owl:Class ;
     rdfs:subClassOf fuel:particle_population .
@@ -413,18 +465,12 @@ fuel:tokamak a owl:Class ;
         "cámara toroidal con bobinas magnéticas"@es .
 
 fuel:heating_system a owl:Class ;
+    rdfs:label "heating system"@en ;
     rdfs:subClassOf fuel:tokamak_component .
 
-fuel:material_entity a owl:Class ;
-    rdfs:comment """Consider reusing to BFO:material_entity
-http://purl.obolibrary.org/obo/BFO_0000040""" .
-
 fuel:physics_process a owl:Class ;
+    rdfs:label "physics process" ;
     rdfs:subClassOf fuel:process .
-
-fuel:plasma_region a owl:Class ;
-    rdfs:label "plasma region"@en ;
-    rdfs:subClassOf fuel:region .
 
 fuel:plasma a owl:Class ;
     rdfs:label "plasma"@en,
@@ -434,7 +480,26 @@ fuel:plasma a owl:Class ;
     rdfs:subClassOf fuel:material_entity ;
     skos:definition "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."@en .
 
+fuel:stability a owl:Class ;
+    rdfs:comment "consider reusing http://purl.obolibrary.org/obo/PATO_0015026" ;
+    rdfs:subClassOf fuel:quality .
+
+fuel:plasma_region a owl:Class ;
+    rdfs:label "plasma region"@en ;
+    rdfs:subClassOf fuel:region .
+
+fuel:diagnostics a owl:Class ;
+    rdfs:label "diagnostic system"@en ;
+    dcterms:source <https://www.iter.org/fusion-glossary> ;
+    rdfs:comment "Equipment for determining/monitoring the properties and behaviour of a plasma during an experiment."@en ;
+    rdfs:subClassOf fuel:fusion_device_component ;
+    skos:altLabel "diagnostics" .
+
+fuel:material_entity a owl:Class ;
+    rdfs:comment """Consider reusing to BFO:material_entity
+http://purl.obolibrary.org/obo/BFO_0000040""" .
+
 fuel:tokamak_component a owl:Class ;
     rdfs:label "tokamak component"@en ;
-    rdfs:subClassOf fuel:device_component .
+    rdfs:subClassOf fuel:fusion_device_component .
 
