@@ -83,6 +83,8 @@ def generate_ontospy_docs(outdir):
 # function to create the documentation with widoco
 def generate_widoco_docs(outdir, onto_dir, onto_file, version="1.4.25"):
     widoco_dir = os.path.join(outdir, "widoco")
+    if os.path.exists(widoco_dir):
+        rmtree(widoco_dir)
     os.makedirs(widoco_dir, exist_ok=True)
     widoco_jar = os.path.join(widoco_dir, "widoco.jar")
 

@@ -5,7 +5,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix wd: <http://www.wikidata.org/entity/> .
-@prefix fuel: <http://w3id.org/fuel#> .
+@prefix fuel: <http://w3id.org/fuel/> .
 
 <http://w3id.org/fuel/wikidata> rdf:type owl:Ontology ;
     owl:imports <http://w3id.org/fuel> ;
