@@ -1,0 +1,11 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<http://w3id.org/fuel/0.0.1> a prov:Entity;
+	 dc:title "FUsion Energy Lexicon";
+	 prov:wasAttributedTo <https://agbeltran.github.io/>;
+	 dc:creator <https://agbeltran.github.io/>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasGeneratedAt "2024-11-06";
+.

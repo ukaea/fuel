@@ -1,7 +1,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix fuel: <http://w3id.org/fuel#> .
+@prefix fuel: <http://w3id.org/fuel/> .
 @prefix mod: <https://w3id.org/mod#> .
 @prefix omv: <http://omv.ontoware.org/2005/05/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -37,7 +37,7 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
 
 vann:preferredNamespaceUri a owl:AnnotationProperty .
 
-<http://w3id.org/fuel> a owl:Ontology ;
+fuel: a owl:Ontology ;
     rdfs:label "FUsion Energy Lexicon"@en,
         "Léxico de energía de fusión"@es ;
     dcterms:abstract "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
@@ -56,7 +56,7 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
     dcterms:modified "2025-09-08"^^xsd:date ;
     dcterms:title "FUsion Energy Lexicon"@en ;
     vann:preferredNamespacePrefix "fuel" ;
-    vann:preferredNamespaceUri "https://w3id.org/fuel#" ;
+    vann:preferredNamespaceUri "https://w3id.org/fuel/" ;
     rdfs:comment "FUsion Energy Lexicon (FUEL) is an OWL ontology for the interoperable description of fusion energy data, devices, plasmas, physical processes and other fusion energy concepts. FUEL provides a formal semantic framework for organizing fusion knowledge and it is intended to support consistent data annotation, integration, exchange, and reuse across fusion experiments, models, and computational workflows."@en ;
     owl:versionIRI fuel:0.0.1 ;
     owl:versionInfo "0.0.1" ;

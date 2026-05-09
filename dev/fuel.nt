@@ -1,371 +1,371 @@
-<http://w3id.org/fuel#interferometer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#divertor_plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma> .
-<http://w3id.org/fuel#magnetic_field> <http://www.w3.org/2000/01/rdf-schema#label> "campo magnético" .
-<http://w3id.org/fuel#neutronics> <http://www.w3.org/2004/02/skos/core#altLabel> "neutron physics"@en .
-<http://w3id.org/fuel#edge_plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#tokamak_plasma> .
-<http://w3id.org/fuel#MHDstability> <http://www.w3.org/2000/01/rdf-schema#label> "MHD stability" .
-<http://w3id.org/fuel#operational_stability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#stability> .
-<http://w3id.org/fuel#process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:n6857527f1cac40bfae7e1332a0fec254b3 <http://www.w3.org/2002/07/owl#intersectionOf> _:n6857527f1cac40bfae7e1332a0fec254b5 .
-<http://w3id.org/fuel#edge_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#MHDstability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#thermocouple> <http://www.w3.org/2000/01/rdf-schema#comment> "Un termopar es un dispositivo de medición de temperatura que consta de dos cables de diferentes metales unidos por cada extremo. Una unión se coloca donde se va a medir la temperatura y la otra se mantiene a una temperatura inferior constante. Se conecta un instrumento de medición al circuito. La diferencia de temperatura genera una fuerza electromotriz (conocida como efecto Seebeck) aproximadamente proporcional a la diferencia de temperatura entre las dos uniones. La temperatura puede leerse en tablas estándar o el instrumento de medición puede calibrarse para leerla directamente."@es .
-<http://w3id.org/fuel#ion_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#kinetic_stability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#ICRHSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel> <http://purl.org/dc/terms/abstract> "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en .
-<http://w3id.org/fuel> <http://www.w3.org/2000/01/rdf-schema#label> "FUsion Energy Lexicon"@en .
-<http://w3id.org/fuel#tokamak_plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma> .
-<http://w3id.org/fuel#plasma_instability_process> <http://www.w3.org/2000/01/rdf-schema#label> "plasma instability process"@en .
-<http://w3id.org/fuel#neutral_beam_system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel> <http://purl.org/dc/terms/created> "2024-11-06"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://w3id.org/fuel#divertor_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#neutronics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#blanket> <http://www.w3.org/2000/01/rdf-schema#label> "blanket"@en .
-<http://w3id.org/fuel#diagnostics> <http://www.w3.org/2000/01/rdf-schema#comment> "Equipment for determining/monitoring the properties and behaviour of a plasma during an experiment."@en .
-<http://w3id.org/fuel> <https://schema.org/codeRepository> <https://github.com/ukaea/fuel> .
-<http://w3id.org/fuel#toroidal_field_coil> <http://www.w3.org/2000/01/rdf-schema#label> "toroidal field coil"@en .
-<http://w3id.org/fuel#fusion_reactor> <http://www.w3.org/2004/02/skos/core#altLabel> "reactor de fusión nuclear"@es .
-<http://w3id.org/fuel#heating_system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:n6857527f1cac40bfae7e1332a0fec254b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n6857527f1cac40bfae7e1332a0fec254b6 .
-<http://w3id.org/fuel> <http://purl.org/dc/terms/creator> _:n6857527f1cac40bfae7e1332a0fec254b1 .
-_:n6857527f1cac40bfae7e1332a0fec254b1 <https://schema.org/name> "Alejandra Gonzalez Beltran" .
-<http://w3id.org/fuel#laser_induced_plasma> <http://www.w3.org/2004/02/skos/core#editorialNote> "industrial plasma - not a tokamak plasma"@en .
-<http://w3id.org/fuel#MHD_instability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#central_solenoid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#magnet_system> .
-<http://w3id.org/fuel#stability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#plasma_instability_process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#stellarator> <http://purl.org/dc/terms/source> <https://www.energyencyclopedia.com/en/glossary/stellarator> .
-<https://w3id.org/mod#prefLabelProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#runaway_electron_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#non_thermal_particle_population> .
-<http://w3id.org/fuel#MHDstability> <http://www.w3.org/2004/02/skos/core#altLabel> "magnetohydrodynamic stability" .
-<http://w3id.org/fuel#recycled_neutral_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#neutral_particule_population> .
-<http://w3id.org/fuel#tokamak_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#pedestal_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#physics_process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#process> .
-<http://w3id.org/fuel#neutron_diagnostics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#diagnostics> .
-<http://w3id.org/fuel#bolometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#diagnostics> .
-<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
-<http://w3id.org/fuel#first_wall> <http://purl.org/dc/terms/source> "https://www.jt60sa.org/wp/glossary/"@en .
-<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://w3id.org/fuel#fast_ion_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#non_thermal_particle_population> .
-<http://w3id.org/fuel#hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://w3id.org/fuel#device_component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#tokamak_component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#fusion_device_component> .
-<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/mod#definitionProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:n6857527f1cac40bfae7e1332a0fec254b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n6857527f1cac40bfae7e1332a0fec254b4 .
-<http://w3id.org/fuel#MHD_instability> <http://www.w3.org/2004/02/skos/core#definition> "Instabilities driven by the energy of the magnetic field and by the momentum of charged particles in the plasma. Small displacements of plasma density from the equilibrium position can reinforce that displacement until a further compensating force counteracts that reinforcement or the plasma equilibrium configuration is disrupted. Various modes of such displacement in the toroidal and poloidal planes can be stabilised so that the bulk plasma remains in position."@en .
-<http://w3id.org/fuel#alpha_particle_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#non_thermal_particle_population> .
-<http://w3id.org/fuel#divertor> <http://www.w3.org/2000/01/rdf-schema#comment> "In magnetic confinement fusion, a divertor is a device which extracts heat and ash from fusion plasmas by averting direct contact between the confined plasma and the main chamber wall (plasma-wall interactions)."@en .
-<http://w3id.org/fuel#core_region> <http://www.w3.org/2000/01/rdf-schema#label> "core region"@en .
-<http://w3id.org/fuel#desorbed_gas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#wall_released_species> .
-<http://w3id.org/fuel> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
-<http://w3id.org/fuel#blanket> <http://purl.org/dc/terms/source> "https://www.energyencyclopedia.com/en/glossary/blanket"@en .
-<http://w3id.org/fuel#scrape_off_layer> <http://www.w3.org/2004/02/skos/core#altLabel> "SOL"@en .
-<http://w3id.org/fuel#nuclear_reactor> <http://www.w3.org/2000/01/rdf-schema#comment> "A device inside which a controlled chain fission reaction takes place. The reactor usually has the form of a metal pressure vessel, in the middle of which the nuclear fuel is arranged in a so-called core. A coolant, whether gas or liquid, circulates through the core to dissipate the heat generated by the fission reaction. The power of the reactor is controlled by control rods that are inserted or withdrawn from the core as necessary. If the reactor uses thermal neutrons for fission, it also includes a moderator, either in the form of a liquid or a solid, which slows down the neutrons. Heat, generated by a reactor, is most commonly used. Either directly for technological purposes (e.g., hydrogen production by steam reforming) or for electricity generation by a steam turbine. The reactor can also be used to produce nuclear fuel (breeder reactor), or the strong neutron fluxes produced by the reaction can be used for research purposes or for the production of radiopharmaceuticals. There are a number of types of nuclear reactors, with the most common types used for electricity generation being water-cooled PWRs and BWRs. In 2023, there were 436 nuclear reactors in operation in the world."@en .
-<http://w3id.org/fuel#central_solenoid> <http://www.w3.org/2000/01/rdf-schema#label> "central solenoid"@en .
-<http://w3id.org/fuel#plasma_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#divertor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#impurity_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#stellarator> <http://www.w3.org/2000/01/rdf-schema#label> "stellarator"@en .
-<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#shot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#vacuum_vessel> <http://purl.org/dc/terms/source> "https://www.iter.org/machine/vacuum-vessel" .
-_:n6857527f1cac40bfae7e1332a0fec254b4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/fuel#divertor> .
-<http://w3id.org/fuel#spectrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#diagnostics> .
-<http://w3id.org/fuel#MHD_instability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#stability> .
-<http://w3id.org/fuel#divertor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#tokamak_component> .
-<http://w3id.org/fuel#thermocouple> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sensor> .
-<http://w3id.org/fuel#campaign> <http://www.w3.org/2000/01/rdf-schema#comment> "Un conjunto de experimentos conectados que se ejecutan durante un período específico de tiempo"@es .
-<http://w3id.org/fuel#iter_pdm> <http://www.w3.org/2004/02/skos/core#altLabel> "PDM"@en .
-<http://w3id.org/fuel#iter_pdm> <http://purl.org/dc/terms/source> <https://doi.org/10.1088/0029-5515/55/12/123006> .
-<http://w3id.org/fuel#thermocouple> <http://www.w3.org/2000/01/rdf-schema#label> "termopar"@es .
-<http://w3id.org/fuel#fusion_reactor> <http://www.w3.org/2000/01/rdf-schema#label> "reactor de fusión"@es .
-<http://w3id.org/fuel#spherical_tokamak> <http://www.w3.org/2000/01/rdf-schema#label> "spherical tokamak"@en .
-_:n6857527f1cac40bfae7e1332a0fec254b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-<http://w3id.org/fuel#campaign> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of connected experiments that are run across a time period."@en .
-<http://w3id.org/fuel#scrape_off_layer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#LowerHybridSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#tokamak> <http://www.w3.org/2000/01/rdf-schema#comment> "A device for magnetic confinement of plasma by a combination of a toroidal magnetic field and a current flowing through the plasma in which conditions for thermonuclear fusion ignition can be achieved. The word “tokamak” is of Russian origin and is an acronym for “TOroidalnaya KAmera i MAgnitnye Katushki” — toroidal chamber and magnetic coils. The magnetic field necessary to keep the hot plasma inside the toroidal chamber is generated as a combination of the field of the toroidal coils and the magnetic field generated by the current flowing through the plasma. Since the current in the plasma is induced on the transformer principle, the tokamak is a pulse device."@en .
-<http://w3id.org/fuel#magnetic_probe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#diagnostics> .
-<http://w3id.org/fuel#scrape_off_layer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma_region> .
-<http://w3id.org/fuel#diagnostics> <http://purl.org/dc/terms/source> <https://www.iter.org/fusion-glossary> .
-<http://w3id.org/fuel#magnetic_field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#diagnostic_port> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel> <http://purl.org/dc/terms/title> "FUsion Energy Lexicon"@en .
-<http://w3id.org/fuel#shot> <http://www.w3.org/2000/01/rdf-schema#label> "shot"@en .
-<http://w3id.org/fuel#neutronics> <http://purl.org/dc/terms/source> <https://www.cea.fr/english/Pages/resources/nuclear-energy-monographs/neutronics.aspx> .
-<http://w3id.org/fuel#campaign> <http://www.w3.org/2000/01/rdf-schema#label> "campaign"@en .
-<http://w3id.org/fuel#tokamak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#fusion_reactor> <http://www.w3.org/2004/02/skos/core#altLabel> "fusion device"@en .
-<http://w3id.org/fuel> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/fuel#" .
-<http://w3id.org/fuel#nuclear_reactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel> <http://purl.org/dc/terms/issued> "2024-11-06"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://w3id.org/fuel#thermal_particle_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#particle_population> .
-<http://w3id.org/fuel#divertor_tokamak> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#tokamak> .
-<http://w3id.org/fuel#quality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#fusion_facility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#core_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma_region> .
-<http://w3id.org/fuel#optical_diagnostic_system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#stability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#quality> .
-<http://w3id.org/fuel#divertor_tokamak> <http://www.w3.org/2002/07/owl#equivalentClass> _:n6857527f1cac40bfae7e1332a0fec254b3 .
-<http://w3id.org/fuel#device_component> <http://www.w3.org/2004/02/skos/core#definition> "A material entity that is a proper part of some device."@en .
-<http://w3id.org/fuel#first_wall> <http://www.w3.org/2004/02/skos/core#definition> "The interior surface of a tokamak closest to the plasma"@en .
-<http://w3id.org/fuel#fusion_facility> <http://www.w3.org/2000/01/rdf-schema#comment> "Una instalación en la que se llevan a cabo experimentos de fusión. Ejemplos incluyen el Joint European Torus (JET) en el Reino Unido, el DIII-D National Fusion Facility en los Estados Unidos y el Experimental Advanced Superconducting Tokamak (EAST) en China."@es .
-<http://w3id.org/fuel#thermal_particle_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#tokamak> <http://www.w3.org/2000/01/rdf-schema#label> "tokamak"@en .
-<http://w3id.org/fuel#turbulence_process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#magnetic_field> <http://purl.org/dc/terms/source> "https://www.energyencyclopedia.com/en/glossary/magnetic-field" .
-<http://w3id.org/fuel#region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#plasma_wall_interaction_process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#physics_process> .
-<http://w3id.org/fuel#nuclear_reactor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#material_entity> .
-<http://w3id.org/fuel#neutral_beam> <http://www.w3.org/2004/02/skos/core#editorialNote> "is this a subclass of injected neutral particle population?" .
-<http://w3id.org/fuel#laser_induced_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#heating_system> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#tokamak_component> .
-<http://w3id.org/fuel#physics_process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#blanket> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#tokamak_component> .
-<http://w3id.org/fuel#plasma> <http://www.w3.org/2000/01/rdf-schema#comment> "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."@en .
-<http://w3id.org/fuel#plasma> <http://purl.org/dc/terms/source> <https://www.iter.org/fusion-glossary> .
-<http://w3id.org/fuel#nuclear_reactor> <http://www.w3.org/2004/02/skos/core#altLabel> "reactor de fisión nuclear"@es .
-<http://w3id.org/fuel#plasma> <http://www.w3.org/2000/01/rdf-schema#label> "plasma"@en .
-<http://w3id.org/fuel#iter_pdm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#divertor_tokamak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#sputtered_impurity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#fusion_facility> <http://www.w3.org/2000/01/rdf-schema#comment> "A facility in which fusion experiments are conducted. Examples include the Joint European Torus (JET) in the UK, the DIII-D National Fusion Facility in the US, and the Experimental Advanced Superconducting Tokamak (EAST) in China."@en .
-<https://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:n6857527f1cac40bfae7e1332a0fec254b4 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/fuel#hasComponent> .
-<http://w3id.org/fuel#fast_ion_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#pedestal_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma_region> .
-<http://w3id.org/fuel#spherical_tokamak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#ideal_kink_stability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#MHDstability> .
-<http://w3id.org/fuel#spherical_tokamak> <http://purl.org/dc/terms/hasPart> <http://w3id.org/fuel#divertor> .
-<http://w3id.org/fuel#toroidal_field_coil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#blanket> <http://www.w3.org/2004/02/skos/core#definition> "The lining of the inner wall of the tokamak vessel that will be in direct contact with the hot plasma. The blanket is usually made of modules (from stainless steel, or copper), on which can be mounted replaceable first-wall panels (made from beryllium, tungsten, molybdenum, or carbon in case of older tokamaks), able to withstand high temperatures. The blanket protects the chamber wall and the magnetic coils from high-energy neutrons. These slowdown in the blanket material and transform their energy into thermal energy."@en .
-<http://w3id.org/fuel#limiter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:n6857527f1cac40bfae7e1332a0fec254b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
-<http://w3id.org/fuel#tokamak> <http://purl.org/dc/terms/source> <https://www.energyencyclopedia.com/en/glossary/tokamak> .
-<http://w3id.org/fuel#laser_induced_plasma> <http://www.w3.org/2004/02/skos/core#altLabel> "LIP"@en .
-<http://w3id.org/fuel#plasma_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#region> .
-<http://w3id.org/fuel#fusion_reactor> <http://www.w3.org/2000/01/rdf-schema#comment> "A device in which controlled thermonuclear fusion takes place, either for scientific purposes or for the production of energy. Since there are different ways to achieve fusion conditions, a fusion reactor can be a tokamak, a stellarator, a fusor or any other device in which the conditions for fusion can be achieved and maintained."@en .
-<http://www.w3.org/2004/02/skos/core#editorialNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#limiter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#tokamak_component> .
-<http://w3id.org/fuel#Thomson_Scattering_system> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#diagnostics> .
-<http://w3id.org/fuel#core_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#first_wall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#tokamak_component> .
-_:n6857527f1cac40bfae7e1332a0fec254b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://schema.org/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#material_entity> .
-<http://w3id.org/fuel#fusion_reactor> <http://www.w3.org/2000/01/rdf-schema#label> "fusion reactor"@en .
-<http://w3id.org/fuel#first_wall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#neutral_beam> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#injected_neutral_particle_population> .
-<http://w3id.org/fuel#thermocouple> <http://www.w3.org/2004/02/skos/core#altLabel> "termocupla"@es .
-<http://w3id.org/fuel#fusion_device_component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#device_component> .
-<http://w3id.org/fuel#diagnostics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#fusion_device_component> .
-_:n6857527f1cac40bfae7e1332a0fec254b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://w3id.org/fuel#stellarator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#magnet_system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#central_solenoid> <http://purl.org/dc/terms/source> "https://www.jt60sa.org/wp/glossary/"@en .
-<http://w3id.org/fuel#region> <http://www.w3.org/2000/01/rdf-schema#comment> "a spatial extent" .
-<http://w3id.org/fuel#edge_region> <http://www.w3.org/2000/01/rdf-schema#label> "edge region"@en .
-<http://w3id.org/fuel> <http://www.w3.org/ns/dcat#version> "0.0.1" .
-<http://w3id.org/fuel#inner_core_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#core_region> .
-<http://w3id.org/fuel#fusion_facility> <http://www.w3.org/2000/01/rdf-schema#label> "instalación de fusión"@es .
-<http://w3id.org/fuel#magnetic_field> <http://www.w3.org/2000/01/rdf-schema#label> "magnetic field"@en .
-<http://w3id.org/fuel#stellarator> <http://www.w3.org/2000/01/rdf-schema#comment> "A device for thermonuclear fusion research that uses a combination of differently shaped coils which together create a desired helical magnetic field to confine the hot plasma. To hold the particles in the donut-shaped magnetic container, they must circulate in spirals, once on the inside and once on the outside of the torus. The stellarator creates a suitable magnetic field by combining helical, toroidal and poloidal coils. There are many variations that use different combinations and shapes of coils (classical, heliac, heliotron, torsatron, and helias). In the most modern modular stellarators, an assembly of specially twisted coils creates the magnetic field."@en .
-<http://w3id.org/fuel#magnetic_field> <http://www.w3.org/2004/02/skos/core#definition> "A vector field showing how magnetic forces are distributed in space. A magnetic field describes how the magnetic force at a given point in space will act on a ferromagnetic object or charged particle. In a magnetic field, the Lorentz force on a charged particle is perpendicular to both the direction of the magnetic field and its velocity. Magnetic fields surround magnetized objects, are formed around conductors through which electric current flows, or at a point with a varying electric field. It is described by the quantities B and H. B is the magnetic flux density and is given in units of tesla. A common refrigerator magnet is usually 0.001 tesla. The quantity H describes the magnetic field strength and is expressed in amperes per meter.\n\nRotating magnetic fields are used by electrical generators in power plants.\n\nIn thermonuclear fusion research, a strong magnetic field is used to confine hot plasma in tokamaks and stellarators."@en .
-<http://w3id.org/fuel#interferometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#diagnostics> .
-<http://w3id.org/fuel#central_solenoid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#thermocouple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#magnetic_probe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#MHDstability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#stability> .
-<http://w3id.org/fuel#kinetic_stability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#stability> .
-<http://w3id.org/fuel> <http://purl.org/dc/terms/description> "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en .
-<http://w3id.org/fuel#magnetic_field_density> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#first_wall> <http://www.w3.org/2000/01/rdf-schema#label> "first wall"@en .
-<http://w3id.org/fuel#fusion_facility> <http://www.w3.org/2004/02/skos/core#altLabel> "fusion research facility"@en .
-<http://w3id.org/fuel#electric_field> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#field> .
-<http://w3id.org/fuel#nuclear_reactor> <http://www.w3.org/2000/01/rdf-schema#comment> "Dispositivo en el que ocurre una reacción nuclear en cadena controlada y autosostenida. Los reactores nucleares se utilizan en las centrales nucleares para la generación de electricidad y en la propulsión de barcos. El calor de la fis nuclear se transfiere a un fluido de trabajo (agua o gas), que pasa por turbinas."@es .
-<http://w3id.org/fuel#thermocouple> <http://www.w3.org/2000/01/rdf-schema#comment> "A thermocouple is  a temperature-measuring device consisting of two wires of different metals joined at each end. One junction is placed where the temperature is to be measured, and the other is kept at a constant lower temperature. A measuring instrument is connected in the circuit. The temperature difference causes the development of an electromotive force (known as the Seebeck effect) that is approximately proportional to the difference between the temperatures of the two junctions. Temperature can be read from standard tables, or the measuring instrument can be calibrated to read temperature directly."@en .
-<http://w3id.org/fuel#fusion_facility> <http://www.w3.org/2000/01/rdf-schema#label> "fusion facility"@en .
-<http://w3id.org/fuel#divertor> <http://purl.org/dc/terms/source> <https://en.wikipedia.org/wiki/Divertor> .
-<http://w3id.org/fuel#plasma_wall_interaction_process> <http://www.w3.org/2000/01/rdf-schema#label> "plasma wall interaction process"@en .
-<http://w3id.org/fuel#fusion_reactor> <http://www.w3.org/2000/01/rdf-schema#comment> "Dispositivo en el que se produce la fusión termonuclear controlada, ya sea con fines científicos o para la producción de energía. Dado que existen diferentes maneras de lograr las condiciones de fusión, un reactor de fusión puede ser un tokamak, un stellarator, un fusor o cualquier otro dispositivo que permita alcanzar y mantener las condiciones para la fusión."@es .
-<http://w3id.org/fuel#scrape_off_layer> <http://purl.org/dc/terms/source> "https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol"@en .
-<http://w3id.org/fuel#MHD_instability> <http://www.w3.org/2000/01/rdf-schema#label> "MHD instability"@en .
-<http://w3id.org/fuel#inner_core_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#process> <http://www.w3.org/2000/01/rdf-schema#comment> "consider mapping to BFO - http://purl.obolibrary.org/obo/BFO_0000015" .
-<http://w3id.org/fuel#laser_induced_plasma> <http://www.w3.org/2000/01/rdf-schema#label> "laser induced plasma"@en .
-<https://w3id.org/mod#hasSyntax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#fusion_device_component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-_:n6857527f1cac40bfae7e1332a0fec254b2 <https://schema.org/identifier> <https://ror.org/0361bwx64> .
-<http://w3id.org/fuel#runaway_electron_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel> <https://w3id.org/mod#prefLabelProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
-_:n6857527f1cac40bfae7e1332a0fec254b7 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/fuel#hasComponent> .
-_:n6857527f1cac40bfae7e1332a0fec254b7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/fuel#tokamak_component> .
-<http://w3id.org/fuel#outer_core_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#neutral_particule_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#non_thermal_particle_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#stellarator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#fusion_reactor> .
-<http://w3id.org/fuel#spectrometer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel> <http://www.w3.org/2000/01/rdf-schema#label> "Léxico de energía de fusión"@es .
-<http://w3id.org/fuel#nuclear_reactor> <http://www.w3.org/2000/01/rdf-schema#label> "nuclear reactor"@en .
-<http://w3id.org/fuel#shot> <http://purl.org/dc/terms/source> <https://euro-fusion.org/glossary/shot/> .
-<http://w3id.org/fuel#electron_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#thermal_particle_population> .
-<http://w3id.org/fuel> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<http://purl.org/dc/terms/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#plasma> <http://www.w3.org/2000/01/rdf-schema#label> "plasma"@es .
-<http://w3id.org/fuel#alpha_particle_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#thermocouple> <http://www.w3.org/2000/01/rdf-schema#label> "thermocouple"@en .
-<http://w3id.org/fuel#poloidal_field_coil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#toroidal_field_coil> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#magnet_system> .
-<http://w3id.org/fuel#neutronics> <http://www.w3.org/2000/01/rdf-schema#label> "neutronics"@en .
-<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<https://w3id.org/mod#hasRepresentationLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#tokamak> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#fusion_reactor> .
-<http://w3id.org/fuel#laser_induced_plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma> .
-<http://w3id.org/fuel#campaign> <http://www.w3.org/2000/01/rdf-schema#label> "campaña"@es .
-<http://w3id.org/fuel#injected_neutral_particle_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#neutral_particule_population> .
-<http://w3id.org/fuel#laser_induced_plasma> <http://purl.org/dc/terms/source> <https://www.sciencedirect.com/topics/chemistry/laser-induced-plasma> .
-<http://w3id.org/fuel#nuclear_reactor> <http://purl.org/dc/terms/source> <https://www.energyencyclopedia.com/en/glossary/nuclear-reactor> .
-<http://w3id.org/fuel#tokamak> <http://www.w3.org/2004/02/skos/core#altLabel> "toroidal chamber with magnetic coils"@en .
-<http://w3id.org/fuel#recycled_neutral_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#thermocouple> <http://purl.org/dc/terms/source> <https://www.britannica.com/technology/thermocouple> .
-<http://w3id.org/fuel#sputtered_impurity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#wall_released_species> .
-<http://w3id.org/fuel#campaign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#process> .
-<http://w3id.org/fuel#diagnostic_port> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#tokamak_component> .
-<http://w3id.org/fuel#nuclear_reactor> <http://www.w3.org/2004/02/skos/core#altLabel> "nuclear fission reactor"@en .
-<http://w3id.org/fuel#optical_diagnostic_system> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#diagnostics> .
-<http://w3id.org/fuel#tokamak_component> <http://www.w3.org/2000/01/rdf-schema#label> "tokamak component"@en .
-<http://w3id.org/fuel#scrape_off_layer> <http://www.w3.org/2000/01/rdf-schema#label> "scrape off layer"@en .
-<http://w3id.org/fuel#fusion_reactor> <http://purl.org/dc/terms/source> <https://www.energyencyclopedia.com/en/glossary/fusion-reactor/> .
-<http://w3id.org/fuel#particle_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#material_entity> .
-<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#fusion_reactor> <http://www.w3.org/2004/02/skos/core#altLabel> "nuclear fusion reactor"@en .
-<http://w3id.org/fuel#injected_neutral_particle_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#physics_process> <http://www.w3.org/2000/01/rdf-schema#label> "physics process" .
-<http://w3id.org/fuel#device_component> <http://www.w3.org/2000/01/rdf-schema#label> "device component"@en .
-<http://w3id.org/fuel#tokamak_component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#neutral_particule_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#particle_population> .
-<http://w3id.org/fuel#non_thermal_particle_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#particle_population> .
-<http://w3id.org/fuel#transport_process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#physics_process> .
-<http://w3id.org/fuel#diagnostics> <http://www.w3.org/2004/02/skos/core#altLabel> "diagnostics" .
-<http://w3id.org/fuel#turbulence_process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#physics_process> .
-<http://w3id.org/fuel#neutronics> <http://www.w3.org/2000/01/rdf-schema#comment> "Neutronics (or neutron physics) is the study of neutron paths through matter, of conditions for a chain reaction, and of alterations in matter's composition induced by nuclear reactions."@en .
-<http://w3id.org/fuel#operational_stability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#spherical_tokamak> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#tokamak> .
-<http://w3id.org/fuel#MHDInstabilityProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma_instability_process> .
-<http://w3id.org/fuel#device_component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#material_entity> .
-<http://w3id.org/fuel#plasma_instability_process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#physics_process> .
-<http://w3id.org/fuel#poloidal_field_coil> <http://www.w3.org/2000/01/rdf-schema#label> "poloidal field coil"@en .
-<http://w3id.org/fuel#campaign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#plasma_wall_interaction_process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#ideal_kink_stability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#fusion_device_component> <http://www.w3.org/2000/01/rdf-schema#label> "fusion device component"@en .
-<http://w3id.org/fuel#magnetic_field_density> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#quality> .
-<http://w3id.org/fuel#neutral_beam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#edge_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#particle_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#spherical_tokamak> <http://www.w3.org/2000/01/rdf-schema#comment> "Tokamak with a low aspect ratio and a round plasma in a shape resembling a cored apple. While a conventional tokamak has a more donut-like shape with a central hole, a spherical tokamak minimizes this hole to achieve a higher compactness. A single common conductor runs through the centre of the tokamak, to which toroidal magnets in the shape of semicircles are connected. Due to its more compact shape, the spherical tokamak achieves the same plasma parameters as a conventional tokamak with a lower magnetic field. This allows it to be smaller and cheaper. Typical spherical tokamaks are the Small Tight Aspect Ratio Tokamak (START) or the Mega Ampere Spherical Tokamak (MAST)."@en .
-<http://w3id.org/fuel#field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#material_entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:n6857527f1cac40bfae7e1332a0fec254b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://w3id.org/fuel#iter_pdm> <http://www.w3.org/2004/02/skos/core#altLabel> "ITER PDM"@en .
-<http://w3id.org/fuel#laser_induced_plasma> <http://www.w3.org/2000/01/rdf-schema#comment> "Laser induced plasma (LIP) is defined as a product of the complex interaction between a focused, high peak power laser beam and a target material, resulting in processes such as absorption of laser energy, vaporization, and ejection of atomic and molecular species, followed by plasma expansion and shock wave production."@en .
-_:n6857527f1cac40bfae7e1332a0fec254b1 <http://xmlns.com/foaf/0.1/homepage> <https://agbeltran.github.io/> .
-<http://w3id.org/fuel#edge_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma_region> .
-<http://w3id.org/fuel#tokamak> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:n6857527f1cac40bfae7e1332a0fec254b7 .
-<https://schema.org/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/fuel#0.0.1> .
-<http://w3id.org/fuel#scrape_off_layer_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#spherical_tokamak> <http://www.w3.org/2000/01/rdf-schema#label> "tokamak esférico"@es .
-<http://w3id.org/fuel#neutron_diagnostics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel> <http://www.w3.org/2000/01/rdf-schema#comment> "FUsion Energy Lexicon (FUEL) is an OWL ontology for the interoperable description of fusion energy data, devices, plasmas, physical processes and other fusion energy concepts. FUEL provides a formal semantic framework for organizing fusion knowledge and it is intended to support consistent data annotation, integration, exchange, and reuse across fusion experiments, models, and computational workflows."@en .
-<http://w3id.org/fuel#tokamak> <http://www.w3.org/2004/02/skos/core#altLabel> "cámara toroidal con bobinas magnéticas"@es .
-<http://w3id.org/fuel#scrape_off_layer> <http://www.w3.org/2004/02/skos/core#definition> "A region at the edge of the plasma characterized by open magnetic lines that terminate at the inner parts of the chamber. In limiter tokamaks this region is located behind the last closed magnetic surface, in divertor tokamaks behind the separatrix. The particles in this region move by convection rather than diffusion and travel along the magnetic lines to the chamber walls or to the divertor, where they can be extracted by vacuum pumps." .
-<http://w3id.org/fuel#stability> <http://www.w3.org/2000/01/rdf-schema#comment> "consider reusing http://purl.obolibrary.org/obo/PATO_0015026" .
-_:n6857527f1cac40bfae7e1332a0fec254b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/fuel#tokamak> .
-<http://w3id.org/fuel#ion_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#thermal_particle_population> .
-<http://w3id.org/fuel#shot> <http://www.w3.org/2000/01/rdf-schema#comment> "A “shot” is any kind of experiment conducted on a test machine following defined parameters. It could be many actual firings of the machine following a variation in the parameters. So one or more “shots” make up an experiment." .
-<http://w3id.org/fuel#vacuum_vessel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#vacuum_vessel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#tokamak_component> .
-<http://w3id.org/fuel#fusion_reactor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#nuclear_reactor> .
-<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#ECRHSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#heating_system> .
-_:n6857527f1cac40bfae7e1332a0fec254b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#separatrix_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma_region> .
+<http://w3id.org/fuel/thermocouple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/injected_neutral_particle_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/neutral_particule_population> .
+<http://w3id.org/fuel/interferometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/diagnostics> .
+<http://w3id.org/fuel/core_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma_region> .
+<http://w3id.org/fuel/edge_region> <http://www.w3.org/2000/01/rdf-schema#label> "edge region"@en .
+<http://w3id.org/fuel/tokamak> <http://purl.org/dc/terms/source> <https://www.energyencyclopedia.com/en/glossary/tokamak> .
 <http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#diagnostics> <http://www.w3.org/2000/01/rdf-schema#label> "diagnostic system"@en .
-_:n6857527f1cac40bfae7e1332a0fec254b1 <https://schema.org/affiliation> _:n6857527f1cac40bfae7e1332a0fec254b2 .
-<http://w3id.org/fuel> <http://purl.org/dc/terms/modified> "2025-09-08"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://w3id.org/fuel> <https://w3id.org/mod#hasRepresentationLanguage> <http://omv.ontoware.org/2005/05/ontology#OWL> .
-<http://w3id.org/fuel#poloidal_field_coil> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#magnet_system> .
-<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#diagnostics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#fusion_facility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#material_entity> .
-<http://w3id.org/fuel#divertor> <http://www.w3.org/2000/01/rdf-schema#label> "divertor"@en .
-<http://w3id.org/fuel#thermocouple> <http://www.w3.org/2004/02/skos/core#altLabel> "thermoelectrical thermometer"@en .
-<http://w3id.org/fuel#electron_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:n6857527f1cac40bfae7e1332a0fec254b1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://orcid.org/0000-0003-3499-8262> .
-<https://schema.org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#neutral_particule_population> <http://www.w3.org/2000/01/rdf-schema#label> "neutral particle population"@en .
-<http://w3id.org/fuel#campaign> <http://www.w3.org/2004/02/skos/core#altLabel> "experimental campaign"@en .
-<http://www.w3.org/ns/dcat#version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#desorbed_gas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#central_solenoid> <http://www.w3.org/2004/02/skos/core#definition> "The tokamak component that produces and sustains the plasma current which heats and shapes the plasma." .
-<http://w3id.org/fuel#heating_system> <http://www.w3.org/2000/01/rdf-schema#label> "heating system"@en .
-<https://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#quality> <http://www.w3.org/2000/01/rdf-schema#comment> "consider reusing to BFO:quality \nhttp://purl.obolibrary.org/obo/BFO_0000019" .
-<http://w3id.org/fuel> <https://w3id.org/mod#definitionProperty> <http://www.w3.org/2000/01/rdf-schema#comment> .
-<http://w3id.org/fuel#fusion_facility> <http://www.w3.org/2004/02/skos/core#altLabel> "instalación de investigación de fusión"@es .
-<http://w3id.org/fuel#magnetic_field_density> <http://www.w3.org/2000/01/rdf-schema#label> "magnetic field density"@en .
-<http://w3id.org/fuel#plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#material_entity> .
-<http://w3id.org/fuel#MHDInstabilityProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#iter_pdm> <http://www.w3.org/2000/01/rdf-schema#comment> "ITER standardized data model"@en .
-<http://w3id.org/fuel#Thomson_Scattering_system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#spherical_tokamak> <http://purl.org/dc/terms/source> <https://www.energyencyclopedia.com/en/glossary/spherical-tokamak/> .
-<http://w3id.org/fuel#magnet_system> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#fusion_device_component> .
-<http://w3id.org/fuel#plasma> <http://www.w3.org/2004/02/skos/core#definition> "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."@en .
-<http://w3id.org/fuel#iter_pdm> <http://www.w3.org/2000/01/rdf-schema#label> "ITER Physics Data Model"@en .
-<http://w3id.org/fuel#magnetic_field> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#field> .
-<http://w3id.org/fuel#ICRHSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#heating_system> .
-<http://w3id.org/fuel#scrape_off_layer_plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#plasma> .
-<http://w3id.org/fuel#impurity_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#thermal_particle_population> .
-_:n6857527f1cac40bfae7e1332a0fec254b1 <http://xmlns.com/foaf/0.1/name> "Alejandra Gonzalez Beltran" .
-<http://w3id.org/fuel#wall_released_species> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#fusion_reactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#neutral_beam_system> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#heating_system> .
-<http://w3id.org/fuel#transport_process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#material_entity> <http://www.w3.org/2000/01/rdf-schema#comment> "Consider reusing to BFO:material_entity\nhttp://purl.obolibrary.org/obo/BFO_0000040" .
-<http://w3id.org/fuel#ECRHSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#separatrix_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#core_plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#tokamak_plasma> .
-<http://w3id.org/fuel#blanket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#fusion_reactor> <http://www.w3.org/2004/02/skos/core#altLabel> "dispositivo de fusión"@es .
-<http://w3id.org/fuel#nuclear_reactor> <http://www.w3.org/2000/01/rdf-schema#label> "reactor nuclear"@es .
-<http://w3id.org/fuel#plasma_region> <http://www.w3.org/2000/01/rdf-schema#label> "plasma region"@en .
-_:n6857527f1cac40bfae7e1332a0fec254b1 <https://schema.org/identifier> <https://orcid.org/0000-0003-3499-8262> .
-<http://w3id.org/fuel#plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#core_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#vacuum_vessel> <http://www.w3.org/2004/02/skos/core#definition> "A hermetically sealed, double-walled steel container that houses the fusion reactions and acts as a first safety containment barrier"@en .
-<http://w3id.org/fuel#LowerHybridSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#heating_system> .
-<http://w3id.org/fuel#wall_released_species> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#material_entity> .
-<http://w3id.org/fuel#electric_field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel> <https://w3id.org/mod#status> "active" .
-<http://w3id.org/fuel#outer_core_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel#core_region> .
-<http://w3id.org/fuel#magnet_system> <http://www.w3.org/2000/01/rdf-schema#label> "magnetic system"@en .
-<http://w3id.org/fuel> <https://w3id.org/mod#hasSyntax> <http://www.w3.org/ns/formats/Turtle> .
-<http://w3id.org/fuel> <http://purl.org/vocab/vann/preferredNamespacePrefix> "fuel" .
+<http://w3id.org/fuel/laser_induced_plasma> <http://www.w3.org/2000/01/rdf-schema#comment> "Laser induced plasma (LIP) is defined as a product of the complex interaction between a focused, high peak power laser beam and a target material, resulting in processes such as absorption of laser energy, vaporization, and ejection of atomic and molecular species, followed by plasma expansion and shock wave production."@en .
+<http://w3id.org/fuel/neutronics> <http://www.w3.org/2000/01/rdf-schema#comment> "Neutronics (or neutron physics) is the study of neutron paths through matter, of conditions for a chain reaction, and of alterations in matter's composition induced by nuclear reactions."@en .
+<http://w3id.org/fuel/thermocouple> <http://www.w3.org/2000/01/rdf-schema#label> "thermocouple"@en .
+<http://w3id.org/fuel/nuclear_reactor> <http://www.w3.org/2004/02/skos/core#altLabel> "reactor de fisión nuclear"@es .
+<http://w3id.org/fuel/non_thermal_particle_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/particle_population> .
+<http://w3id.org/fuel/diagnostic_port> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/tokamak_component> .
+_:ne75a013ef0fd4f27b3444b51505c9943b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:ne75a013ef0fd4f27b3444b51505c9943b6 .
+<http://w3id.org/fuel/spherical_tokamak> <http://www.w3.org/2000/01/rdf-schema#label> "spherical tokamak"@en .
+<http://w3id.org/fuel/wall_released_species> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ne75a013ef0fd4f27b3444b51505c9943b7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/fuel/tokamak_component> .
+<http://w3id.org/fuel/impurity_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/central_solenoid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/magnet_system> .
+<http://w3id.org/fuel/divertor> <http://www.w3.org/2000/01/rdf-schema#label> "divertor"@en .
+<http://w3id.org/fuel/neutronics> <http://purl.org/dc/terms/source> <https://www.cea.fr/english/Pages/resources/nuclear-energy-monographs/neutronics.aspx> .
+<http://w3id.org/fuel/turbulence_process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/physics_process> .
+<http://w3id.org/fuel/spherical_tokamak> <http://purl.org/dc/terms/hasPart> <http://w3id.org/fuel/divertor> .
+<http://w3id.org/fuel/magnetic_field> <http://www.w3.org/2000/01/rdf-schema#label> "campo magnético" .
+<http://w3id.org/fuel/thermocouple> <http://www.w3.org/2004/02/skos/core#altLabel> "termocupla"@es .
+<http://w3id.org/fuel/spectrometer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/tokamak_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/blanket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/runaway_electron_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/non_thermal_particle_population> .
+<http://w3id.org/fuel/fusion_facility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/material_entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/toroidal_field_coil> <http://www.w3.org/2000/01/rdf-schema#label> "toroidal field coil"@en .
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+<http://w3id.org/fuel/> <http://purl.org/dc/terms/issued> "2024-11-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/central_solenoid> <http://www.w3.org/2000/01/rdf-schema#label> "central solenoid"@en .
+<http://w3id.org/fuel/thermocouple> <http://www.w3.org/2004/02/skos/core#altLabel> "thermo couple"@en .
+<http://w3id.org/fuel/thermocouple> <http://www.w3.org/2000/01/rdf-schema#comment> "Un termopar es un dispositivo de medición de temperatura que consta de dos cables de diferentes metales unidos por cada extremo. Una unión se coloca donde se va a medir la temperatura y la otra se mantiene a una temperatura inferior constante. Se conecta un instrumento de medición al circuito. La diferencia de temperatura genera una fuerza electromotriz (conocida como efecto Seebeck) aproximadamente proporcional a la diferencia de temperatura entre las dos uniones. La temperatura puede leerse en tablas estándar o el instrumento de medición puede calibrarse para leerla directamente."@es .
+<http://w3id.org/fuel/> <http://www.w3.org/2000/01/rdf-schema#comment> "FUsion Energy Lexicon (FUEL) is an OWL ontology for the interoperable description of fusion energy data, devices, plasmas, physical processes and other fusion energy concepts. FUEL provides a formal semantic framework for organizing fusion knowledge and it is intended to support consistent data annotation, integration, exchange, and reuse across fusion experiments, models, and computational workflows."@en .
+<http://w3id.org/fuel/transport_process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/physics_process> .
+<http://w3id.org/fuel/> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<http://w3id.org/fuel/LowerHybridSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/heating_system> .
+<http://w3id.org/fuel/core_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/separatrix_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ne75a013ef0fd4f27b3444b51505c9943b4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://w3id.org/fuel/divertor> .
+<http://w3id.org/fuel/fusion_device_component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/device_component> .
+<http://w3id.org/fuel/magnet_system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/ideal_kink_stability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/nuclear_reactor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/material_entity> .
+<http://w3id.org/fuel/nuclear_reactor> <http://www.w3.org/2000/01/rdf-schema#label> "reactor nuclear"@es .
+<http://w3id.org/fuel/divertor_tokamak> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/tokamak> .
+<http://w3id.org/fuel/stellarator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/fusion_reactor> .
+<http://w3id.org/fuel/thermocouple> <http://www.w3.org/2004/02/skos/core#altLabel> "thermoelectrical thermometer"@en .
+<http://w3id.org/fuel/tokamak> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ne75a013ef0fd4f27b3444b51505c9943b7 .
+<http://w3id.org/fuel/limiter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/tokamak_component> .
+<http://w3id.org/fuel/stellarator> <http://purl.org/dc/terms/source> <https://www.energyencyclopedia.com/en/glossary/stellarator> .
+<http://w3id.org/fuel/plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/material_entity> .
+<http://w3id.org/fuel/central_solenoid> <http://www.w3.org/2004/02/skos/core#definition> "The tokamak component that produces and sustains the plasma current which heats and shapes the plasma." .
+<http://w3id.org/fuel/core_region> <http://www.w3.org/2000/01/rdf-schema#label> "core region"@en .
+<http://w3id.org/fuel/divertor> <http://purl.org/dc/terms/source> <https://en.wikipedia.org/wiki/Divertor> .
+<http://w3id.org/fuel/divertor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/fusion_reactor> <http://www.w3.org/2000/01/rdf-schema#comment> "Dispositivo en el que se produce la fusión termonuclear controlada, ya sea con fines científicos o para la producción de energía. Dado que existen diferentes maneras de lograr las condiciones de fusión, un reactor de fusión puede ser un tokamak, un stellarator, un fusor o cualquier otro dispositivo que permita alcanzar y mantener las condiciones para la fusión."@es .
+<http://w3id.org/fuel/electric_field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/MHD_instability> <http://www.w3.org/2000/01/rdf-schema#label> "MHD instability"@en .
+<http://w3id.org/fuel/ion_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/thermal_particle_population> .
+<http://w3id.org/fuel/ion_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/diagnostics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/fusion_device_component> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/process> <http://www.w3.org/2000/01/rdf-schema#comment> "consider mapping to BFO - http://purl.obolibrary.org/obo/BFO_0000015" .
+<http://w3id.org/fuel/fusion_facility> <http://www.w3.org/2004/02/skos/core#altLabel> "instalación de investigación de fusión"@es .
+<http://w3id.org/fuel/stellarator> <http://www.w3.org/2000/01/rdf-schema#label> "stellarator"@en .
+<http://w3id.org/fuel/operational_stability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/core_plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/tokamak_plasma> .
+<http://w3id.org/fuel/impurity_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/thermal_particle_population> .
+_:ne75a013ef0fd4f27b3444b51505c9943b1 <http://xmlns.com/foaf/0.1/name> "Alejandra Gonzalez Beltran" .
+<http://w3id.org/fuel/thermocouple> <http://purl.org/dc/terms/source> <https://www.britannica.com/technology/thermocouple> .
+<http://w3id.org/fuel/fusion_reactor> <http://www.w3.org/2004/02/skos/core#altLabel> "reactor de fusión nuclear"@es .
+<http://w3id.org/fuel/campaign> <http://www.w3.org/2000/01/rdf-schema#label> "campaign"@en .
+<http://w3id.org/fuel/nuclear_reactor> <http://www.w3.org/2000/01/rdf-schema#comment> "A device inside which a controlled chain fission reaction takes place. The reactor usually has the form of a metal pressure vessel, in the middle of which the nuclear fuel is arranged in a so-called core. A coolant, whether gas or liquid, circulates through the core to dissipate the heat generated by the fission reaction. The power of the reactor is controlled by control rods that are inserted or withdrawn from the core as necessary. If the reactor uses thermal neutrons for fission, it also includes a moderator, either in the form of a liquid or a solid, which slows down the neutrons. Heat, generated by a reactor, is most commonly used. Either directly for technological purposes (e.g., hydrogen production by steam reforming) or for electricity generation by a steam turbine. The reactor can also be used to produce nuclear fuel (breeder reactor), or the strong neutron fluxes produced by the reaction can be used for research purposes or for the production of radiopharmaceuticals. There are a number of types of nuclear reactors, with the most common types used for electricity generation being water-cooled PWRs and BWRs. In 2023, there were 436 nuclear reactors in operation in the world."@en .
+<http://w3id.org/fuel/MHDInstabilityProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma_instability_process> .
+<http://w3id.org/fuel/MHDstability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/Thomson_Scattering_system> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/diagnostics> .
+_:ne75a013ef0fd4f27b3444b51505c9943b2 <https://schema.org/identifier> <https://ror.org/0361bwx64> .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/MHD_instability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.org/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/material_entity> .
+<http://w3id.org/fuel/MHDstability> <http://www.w3.org/2004/02/skos/core#altLabel> "magnetohydrodynamic stability" .
+<http://w3id.org/fuel/tokamak_component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/neutral_beam_system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/MHDstability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/stability> .
+<http://w3id.org/fuel/fusion_facility> <http://www.w3.org/2000/01/rdf-schema#comment> "A facility in which fusion experiments are conducted. Examples include the Joint European Torus (JET) in the UK, the DIII-D National Fusion Facility in the US, and the Experimental Advanced Superconducting Tokamak (EAST) in China."@en .
+<http://w3id.org/fuel/fusion_facility> <http://www.w3.org/2000/01/rdf-schema#comment> "Una instalación en la que se llevan a cabo experimentos de fusión. Ejemplos incluyen el Joint European Torus (JET) en el Reino Unido, el DIII-D National Fusion Facility en los Estados Unidos y el Experimental Advanced Superconducting Tokamak (EAST) en China."@es .
+<http://w3id.org/fuel/magnetic_probe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/diagnostics> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/spherical_tokamak> <http://purl.org/dc/terms/source> <https://www.energyencyclopedia.com/en/glossary/spherical-tokamak/> .
+<http://w3id.org/fuel/fusion_reactor> <http://www.w3.org/2000/01/rdf-schema#comment> "A device in which controlled thermonuclear fusion takes place, either for scientific purposes or for the production of energy. Since there are different ways to achieve fusion conditions, a fusion reactor can be a tokamak, a stellarator, a fusor or any other device in which the conditions for fusion can be achieved and maintained."@en .
+<http://w3id.org/fuel/scrape_off_layer_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ne75a013ef0fd4f27b3444b51505c9943b1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://orcid.org/0000-0003-3499-8262> .
+<http://w3id.org/fuel/stability> <http://www.w3.org/2000/01/rdf-schema#comment> "consider reusing http://purl.obolibrary.org/obo/PATO_0015026" .
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/> <https://w3id.org/mod#definitionProperty> <http://www.w3.org/2000/01/rdf-schema#comment> .
+<http://w3id.org/fuel/central_solenoid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/iter_pdm> <http://www.w3.org/2000/01/rdf-schema#label> "ITER Physics Data Model"@en .
+<http://w3id.org/fuel/> <https://w3id.org/mod#prefLabelProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+<http://w3id.org/fuel/plasma_instability_process> <http://www.w3.org/2000/01/rdf-schema#label> "plasma instability process"@en .
+<http://w3id.org/fuel/sputtered_impurity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/wall_released_species> .
+<http://w3id.org/fuel/iter_pdm> <http://www.w3.org/2000/01/rdf-schema#comment> "ITER standardized data model"@en .
+<http://w3id.org/fuel/spherical_tokamak> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/tokamak> .
+<http://w3id.org/fuel/ECRHSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/heating_system> .
+<http://w3id.org/fuel/> <https://w3id.org/mod#hasSyntax> <http://www.w3.org/ns/formats/Turtle> .
+<http://w3id.org/fuel/fusion_reactor> <http://purl.org/dc/terms/source> <https://www.energyencyclopedia.com/en/glossary/fusion-reactor/> .
+<http://w3id.org/fuel/MHD_instability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/stability> .
+<http://w3id.org/fuel/campaign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/process> .
+<http://w3id.org/fuel/first_wall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/tokamak_component> .
+<http://w3id.org/fuel/tokamak_component> <http://www.w3.org/2000/01/rdf-schema#label> "tokamak component"@en .
+_:ne75a013ef0fd4f27b3444b51505c9943b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://w3id.org/fuel/tokamak> .
+<http://w3id.org/fuel/device_component> <http://www.w3.org/2004/02/skos/core#definition> "A material entity that is a proper part of some device."@en .
+<http://w3id.org/fuel/diagnostic_port> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/magnetic_field> <http://www.w3.org/2000/01/rdf-schema#label> "magnetic field"@en .
+<http://w3id.org/fuel/neutral_particule_population> <http://www.w3.org/2000/01/rdf-schema#label> "neutral particle population"@en .
+<http://w3id.org/fuel/plasma_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/region> .
+<https://w3id.org/mod#hasSyntax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/fuel/> <http://purl.org/dc/terms/modified> "2025-09-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/fuel/tokamak> <http://www.w3.org/2000/01/rdf-schema#comment> "A device for magnetic confinement of plasma by a combination of a toroidal magnetic field and a current flowing through the plasma in which conditions for thermonuclear fusion ignition can be achieved. The word “tokamak” is of Russian origin and is an acronym for “TOroidalnaya KAmera i MAgnitnye Katushki” — toroidal chamber and magnetic coils. The magnetic field necessary to keep the hot plasma inside the toroidal chamber is generated as a combination of the field of the toroidal coils and the magnetic field generated by the current flowing through the plasma. Since the current in the plasma is induced on the transformer principle, the tokamak is a pulse device."@en .
+<http://w3id.org/fuel/vacuum_vessel> <http://purl.org/dc/terms/source> "https://www.iter.org/machine/vacuum-vessel" .
+<http://w3id.org/fuel/iter_pdm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/magnetic_field> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/field> .
+<http://w3id.org/fuel/laser_induced_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/divertor_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/mod#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://w3id.org/fuel#bolometer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel#thermocouple> <http://www.w3.org/2004/02/skos/core#altLabel> "thermo couple"@en .
+<http://w3id.org/fuel/iter_pdm> <http://purl.org/dc/terms/source> <https://doi.org/10.1088/0029-5515/55/12/123006> .
+_:ne75a013ef0fd4f27b3444b51505c9943b1 <http://xmlns.com/foaf/0.1/homepage> <https://agbeltran.github.io/> .
+<http://w3id.org/fuel/sputtered_impurity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/laser_induced_plasma> <http://www.w3.org/2004/02/skos/core#altLabel> "LIP"@en .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/particle_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://schema.org/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/> <http://purl.org/dc/terms/abstract> "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en .
+<http://w3id.org/fuel/vacuum_vessel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/core_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/shot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/poloidal_field_coil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/MHD_instability> <http://www.w3.org/2004/02/skos/core#definition> "Instabilities driven by the energy of the magnetic field and by the momentum of charged particles in the plasma. Small displacements of plasma density from the equilibrium position can reinforce that displacement until a further compensating force counteracts that reinforcement or the plasma equilibrium configuration is disrupted. Various modes of such displacement in the toroidal and poloidal planes can be stabilised so that the bulk plasma remains in position."@en .
+<http://w3id.org/fuel/spherical_tokamak> <http://www.w3.org/2000/01/rdf-schema#label> "tokamak esférico"@es .
+<http://w3id.org/fuel/> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+<http://w3id.org/fuel/Thomson_Scattering_system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/neutral_beam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/plasma_instability_process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/fusion_device_component> <http://www.w3.org/2000/01/rdf-schema#label> "fusion device component"@en .
+<http://w3id.org/fuel/blanket> <http://www.w3.org/2000/01/rdf-schema#label> "blanket"@en .
+<http://w3id.org/fuel/recycled_neutral_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/fusion_reactor> <http://www.w3.org/2004/02/skos/core#altLabel> "fusion device"@en .
+_:ne75a013ef0fd4f27b3444b51505c9943b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<http://w3id.org/fuel/device_component> <http://www.w3.org/2000/01/rdf-schema#label> "device component"@en .
+<http://w3id.org/fuel/laser_induced_plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma> .
+<http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/divertor_plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma> .
+<http://w3id.org/fuel/> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/fuel/" .
+<http://w3id.org/fuel/ideal_kink_stability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/MHDstability> .
+_:ne75a013ef0fd4f27b3444b51505c9943b4 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/fuel/hasComponent> .
+<http://w3id.org/fuel/plasma_region> <http://www.w3.org/2000/01/rdf-schema#label> "plasma region"@en .
+<http://w3id.org/fuel/plasma_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/fusion_device_component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/fusion_reactor> <http://www.w3.org/2004/02/skos/core#altLabel> "nuclear fusion reactor"@en .
+<http://w3id.org/fuel/quality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/stability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/quality> <http://www.w3.org/2000/01/rdf-schema#comment> "consider reusing to BFO:quality \nhttp://purl.obolibrary.org/obo/BFO_0000019" .
+<http://w3id.org/fuel/neutron_diagnostics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/diagnostics> .
+<http://w3id.org/fuel/magnetic_field> <http://purl.org/dc/terms/source> "https://www.energyencyclopedia.com/en/glossary/magnetic-field" .
+<http://w3id.org/fuel/divertor_tokamak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/> <http://www.w3.org/ns/dcat#version> "0.0.1" .
+<https://w3id.org/mod#prefLabelProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/thermal_particle_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/heating_system> <http://www.w3.org/2000/01/rdf-schema#label> "heating system"@en .
+<http://w3id.org/fuel/nuclear_reactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/fuel/scrape_off_layer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/vacuum_vessel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/tokamak_component> .
+<https://w3id.org/mod#hasRepresentationLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/stellarator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/desorbed_gas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/wall_released_species> .
+<http://w3id.org/fuel/heating_system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/toroidal_field_coil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/fusion_facility> <http://www.w3.org/2004/02/skos/core#altLabel> "fusion research facility"@en .
+<http://w3id.org/fuel/fusion_reactor> <http://www.w3.org/2000/01/rdf-schema#label> "reactor de fusión"@es .
+<http://w3id.org/fuel/edge_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/physics_process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/MHDInstabilityProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/edge_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma_region> .
+<http://w3id.org/fuel/thermal_particle_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/particle_population> .
+<http://www.w3.org/ns/dcat#version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/neutron_diagnostics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/> <https://w3id.org/mod#status> "active" .
+<http://w3id.org/fuel/fusion_facility> <http://www.w3.org/2000/01/rdf-schema#label> "instalación de fusión"@es .
+<http://w3id.org/fuel/device_component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/neutronics> <http://www.w3.org/2000/01/rdf-schema#label> "neutronics"@en .
+<http://w3id.org/fuel/plasma> <http://www.w3.org/2000/01/rdf-schema#comment> "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."@en .
+<http://w3id.org/fuel/thermocouple> <http://www.w3.org/2000/01/rdf-schema#label> "termopar"@es .
+<http://w3id.org/fuel/tokamak> <http://www.w3.org/2000/01/rdf-schema#label> "tokamak"@en .
+<https://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:ne75a013ef0fd4f27b3444b51505c9943b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://w3id.org/fuel/magnetic_field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/scrape_off_layer> <http://www.w3.org/2004/02/skos/core#altLabel> "SOL"@en .
+<http://w3id.org/fuel/first_wall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/scrape_off_layer> <http://www.w3.org/2004/02/skos/core#definition> "A region at the edge of the plasma characterized by open magnetic lines that terminate at the inner parts of the chamber. In limiter tokamaks this region is located behind the last closed magnetic surface, in divertor tokamaks behind the separatrix. The particles in this region move by convection rather than diffusion and travel along the magnetic lines to the chamber walls or to the divertor, where they can be extracted by vacuum pumps." .
+<http://w3id.org/fuel/limiter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ne75a013ef0fd4f27b3444b51505c9943b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://w3id.org/fuel/heating_system> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/tokamak_component> .
+<http://w3id.org/fuel/stability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/quality> .
+<http://w3id.org/fuel/fusion_facility> <http://www.w3.org/2000/01/rdf-schema#label> "fusion facility"@en .
+<http://w3id.org/fuel/> <http://purl.org/dc/terms/title> "FUsion Energy Lexicon"@en .
+<http://w3id.org/fuel/> <https://schema.org/codeRepository> <https://github.com/ukaea/fuel> .
+<http://w3id.org/fuel/injected_neutral_particle_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/plasma> <http://purl.org/dc/terms/source> <https://www.iter.org/fusion-glossary> .
+<http://w3id.org/fuel/campaign> <http://www.w3.org/2000/01/rdf-schema#label> "campaña"@es .
+<http://w3id.org/fuel/alpha_particle_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/material_entity> <http://www.w3.org/2000/01/rdf-schema#comment> "Consider reusing to BFO:material_entity\nhttp://purl.obolibrary.org/obo/BFO_0000040" .
+<http://w3id.org/fuel/neutronics> <http://www.w3.org/2004/02/skos/core#altLabel> "neutron physics"@en .
+<http://www.w3.org/2004/02/skos/core#editorialNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/inner_core_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/neutral_particule_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/particle_population> .
+<http://w3id.org/fuel/magnet_system> <http://www.w3.org/2000/01/rdf-schema#label> "magnetic system"@en .
+<http://w3id.org/fuel/thermocouple> <http://www.w3.org/2000/01/rdf-schema#comment> "A thermocouple is  a temperature-measuring device consisting of two wires of different metals joined at each end. One junction is placed where the temperature is to be measured, and the other is kept at a constant lower temperature. A measuring instrument is connected in the circuit. The temperature difference causes the development of an electromotive force (known as the Seebeck effect) that is approximately proportional to the difference between the temperatures of the two junctions. Temperature can be read from standard tables, or the measuring instrument can be calibrated to read temperature directly."@en .
+<http://w3id.org/fuel/alpha_particle_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/non_thermal_particle_population> .
+<http://w3id.org/fuel/> <http://www.w3.org/2000/01/rdf-schema#label> "FUsion Energy Lexicon"@en .
+<http://w3id.org/fuel/first_wall> <http://purl.org/dc/terms/source> "https://www.jt60sa.org/wp/glossary/"@en .
+<http://w3id.org/fuel/kinetic_stability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/fast_ion_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/non_thermal_particle_population> .
+<http://w3id.org/fuel/field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mod#definitionProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/fast_ion_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/iter_pdm> <http://www.w3.org/2004/02/skos/core#altLabel> "ITER PDM"@en .
+<http://w3id.org/fuel/campaign> <http://www.w3.org/2004/02/skos/core#altLabel> "experimental campaign"@en .
+<http://w3id.org/fuel/physics_process> <http://www.w3.org/2000/01/rdf-schema#label> "physics process" .
+_:ne75a013ef0fd4f27b3444b51505c9943b1 <https://schema.org/name> "Alejandra Gonzalez Beltran" .
+_:ne75a013ef0fd4f27b3444b51505c9943b1 <https://schema.org/affiliation> _:ne75a013ef0fd4f27b3444b51505c9943b2 .
+<http://w3id.org/fuel/blanket> <http://purl.org/dc/terms/source> "https://www.energyencyclopedia.com/en/glossary/blanket"@en .
+_:ne75a013ef0fd4f27b3444b51505c9943b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/kinetic_stability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/stability> .
+<http://w3id.org/fuel/region> <http://www.w3.org/2000/01/rdf-schema#comment> "a spatial extent" .
+<https://schema.org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/tokamak> <http://www.w3.org/2004/02/skos/core#altLabel> "toroidal chamber with magnetic coils"@en .
+<http://w3id.org/fuel/fusion_reactor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/nuclear_reactor> .
+<http://w3id.org/fuel/laser_induced_plasma> <http://purl.org/dc/terms/source> <https://www.sciencedirect.com/topics/chemistry/laser-induced-plasma> .
+<http://w3id.org/fuel/turbulence_process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/central_solenoid> <http://purl.org/dc/terms/source> "https://www.jt60sa.org/wp/glossary/"@en .
+<http://w3id.org/fuel/> <http://www.w3.org/2000/01/rdf-schema#label> "Léxico de energía de fusión"@es .
+<http://w3id.org/fuel/magnetic_field_density> <http://www.w3.org/2000/01/rdf-schema#label> "magnetic field density"@en .
+<http://w3id.org/fuel/optical_diagnostic_system> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/diagnostics> .
+<http://w3id.org/fuel/> <http://purl.org/dc/terms/creator> _:ne75a013ef0fd4f27b3444b51505c9943b1 .
+<http://w3id.org/fuel/campaign> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of connected experiments that are run across a time period."@en .
+<http://w3id.org/fuel/plasma_wall_interaction_process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ne75a013ef0fd4f27b3444b51505c9943b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:ne75a013ef0fd4f27b3444b51505c9943b4 .
+<http://w3id.org/fuel/MHDstability> <http://www.w3.org/2000/01/rdf-schema#label> "MHD stability" .
+<http://w3id.org/fuel/electron_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/thermal_particle_population> .
+<http://w3id.org/fuel/electron_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/plasma_instability_process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/physics_process> .
+<http://w3id.org/fuel/scrape_off_layer> <http://purl.org/dc/terms/source> "https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol"@en .
+<http://w3id.org/fuel/desorbed_gas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/plasma> <http://www.w3.org/2004/02/skos/core#definition> "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."@en .
+<http://w3id.org/fuel/magnet_system> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/fusion_device_component> .
+<http://w3id.org/fuel/transport_process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/interferometer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/neutral_beam_system> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/heating_system> .
+<http://w3id.org/fuel/shot> <http://www.w3.org/2000/01/rdf-schema#label> "shot"@en .
+<http://w3id.org/fuel/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "fuel" .
+<http://w3id.org/fuel/tokamak_component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/fusion_device_component> .
+<http://w3id.org/fuel/spherical_tokamak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/magnetic_field> <http://www.w3.org/2004/02/skos/core#definition> "A vector field showing how magnetic forces are distributed in space. A magnetic field describes how the magnetic force at a given point in space will act on a ferromagnetic object or charged particle. In a magnetic field, the Lorentz force on a charged particle is perpendicular to both the direction of the magnetic field and its velocity. Magnetic fields surround magnetized objects, are formed around conductors through which electric current flows, or at a point with a varying electric field. It is described by the quantities B and H. B is the magnetic flux density and is given in units of tesla. A common refrigerator magnet is usually 0.001 tesla. The quantity H describes the magnetic field strength and is expressed in amperes per meter.\n\nRotating magnetic fields are used by electrical generators in power plants.\n\nIn thermonuclear fusion research, a strong magnetic field is used to confine hot plasma in tokamaks and stellarators."@en .
+<http://w3id.org/fuel/physics_process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/process> .
+<http://w3id.org/fuel/device_component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/material_entity> .
+<http://w3id.org/fuel/electric_field> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/field> .
+<http://w3id.org/fuel/fusion_reactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/nuclear_reactor> <http://www.w3.org/2004/02/skos/core#altLabel> "nuclear fission reactor"@en .
+<http://w3id.org/fuel/magnetic_field_density> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/quality> .
+<http://w3id.org/fuel/plasma> <http://www.w3.org/2000/01/rdf-schema#label> "plasma"@es .
+<http://w3id.org/fuel/> <http://www.w3.org/2002/07/owl#versionIRI> <http://w3id.org/fuel/0.0.1> .
+<http://w3id.org/fuel/wall_released_species> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/material_entity> .
+<http://w3id.org/fuel/neutral_beam> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/injected_neutral_particle_population> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/separatrix_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma_region> .
+<https://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/first_wall> <http://www.w3.org/2000/01/rdf-schema#label> "first wall"@en .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/ICRHSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/plasma> <http://www.w3.org/2000/01/rdf-schema#label> "plasma"@en .
+<http://w3id.org/fuel/diagnostics> <http://www.w3.org/2000/01/rdf-schema#label> "diagnostic system"@en .
+<http://w3id.org/fuel/bolometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/diagnostics> .
+<http://w3id.org/fuel/diagnostics> <http://www.w3.org/2004/02/skos/core#altLabel> "diagnostics" .
+<http://w3id.org/fuel/spherical_tokamak> <http://www.w3.org/2000/01/rdf-schema#comment> "Tokamak with a low aspect ratio and a round plasma in a shape resembling a cored apple. While a conventional tokamak has a more donut-like shape with a central hole, a spherical tokamak minimizes this hole to achieve a higher compactness. A single common conductor runs through the centre of the tokamak, to which toroidal magnets in the shape of semicircles are connected. Due to its more compact shape, the spherical tokamak achieves the same plasma parameters as a conventional tokamak with a lower magnetic field. This allows it to be smaller and cheaper. Typical spherical tokamaks are the Small Tight Aspect Ratio Tokamak (START) or the Mega Ampere Spherical Tokamak (MAST)."@en .
+<http://w3id.org/fuel/fusion_facility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/material_entity> .
+<http://w3id.org/fuel/tokamak_plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma> .
+<http://w3id.org/fuel/neutral_beam> <http://www.w3.org/2004/02/skos/core#editorialNote> "is this a subclass of injected neutral particle population?" .
+<http://w3id.org/fuel/diagnostics> <http://purl.org/dc/terms/source> <https://www.iter.org/fusion-glossary> .
+<https://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/laser_induced_plasma> <http://www.w3.org/2004/02/skos/core#editorialNote> "industrial plasma - not a tokamak plasma"@en .
+<http://w3id.org/fuel/campaign> <http://www.w3.org/2000/01/rdf-schema#comment> "Un conjunto de experimentos conectados que se ejecutan durante un período específico de tiempo"@es .
+<http://w3id.org/fuel/shot> <http://www.w3.org/2000/01/rdf-schema#comment> "A “shot” is any kind of experiment conducted on a test machine following defined parameters. It could be many actual firings of the machine following a variation in the parameters. So one or more “shots” make up an experiment." .
+<http://w3id.org/fuel/LowerHybridSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/divertor_tokamak> <http://www.w3.org/2002/07/owl#equivalentClass> _:ne75a013ef0fd4f27b3444b51505c9943b3 .
+<http://w3id.org/fuel/inner_core_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/core_region> .
+<http://w3id.org/fuel/blanket> <http://www.w3.org/2004/02/skos/core#definition> "The lining of the inner wall of the tokamak vessel that will be in direct contact with the hot plasma. The blanket is usually made of modules (from stainless steel, or copper), on which can be mounted replaceable first-wall panels (made from beryllium, tungsten, molybdenum, or carbon in case of older tokamaks), able to withstand high temperatures. The blanket protects the chamber wall and the magnetic coils from high-energy neutrons. These slowdown in the blanket material and transform their energy into thermal energy."@en .
+_:ne75a013ef0fd4f27b3444b51505c9943b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/fuel/tokamak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/tokamak> <http://www.w3.org/2004/02/skos/core#altLabel> "cámara toroidal con bobinas magnéticas"@es .
+<http://w3id.org/fuel/ECRHSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/blanket> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/tokamak_component> .
+<http://w3id.org/fuel/campaign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/fusion_reactor> <http://www.w3.org/2004/02/skos/core#altLabel> "dispositivo de fusión"@es .
+<http://w3id.org/fuel/poloidal_field_coil> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/magnet_system> .
+<http://w3id.org/fuel/outer_core_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/nuclear_reactor> <http://www.w3.org/2000/01/rdf-schema#comment> "Dispositivo en el que ocurre una reacción nuclear en cadena controlada y autosostenida. Los reactores nucleares se utilizan en las centrales nucleares para la generación de electricidad y en la propulsión de barcos. El calor de la fis nuclear se transfiere a un fluido de trabajo (agua o gas), que pasa por turbinas."@es .
+<http://w3id.org/fuel/magnetic_field_density> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/recycled_neutral_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/neutral_particule_population> .
+<http://w3id.org/fuel/thermocouple> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sensor> .
+<http://w3id.org/fuel/vacuum_vessel> <http://www.w3.org/2004/02/skos/core#definition> "A hermetically sealed, double-walled steel container that houses the fusion reactions and acts as a first safety containment barrier"@en .
+<http://w3id.org/fuel/first_wall> <http://www.w3.org/2004/02/skos/core#definition> "The interior surface of a tokamak closest to the plasma"@en .
+<http://w3id.org/fuel/shot> <http://purl.org/dc/terms/source> <https://euro-fusion.org/glossary/shot/> .
+<http://w3id.org/fuel/> <https://w3id.org/mod#hasRepresentationLanguage> <http://omv.ontoware.org/2005/05/ontology#OWL> .
+<http://w3id.org/fuel/ICRHSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/heating_system> .
+<http://w3id.org/fuel/edge_plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/tokamak_plasma> .
+<http://w3id.org/fuel/pedestal_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/neutronics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/nuclear_reactor> <http://purl.org/dc/terms/source> <https://www.energyencyclopedia.com/en/glossary/nuclear-reactor> .
+<http://w3id.org/fuel/> <http://purl.org/dc/terms/description> "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en .
+_:ne75a013ef0fd4f27b3444b51505c9943b1 <https://schema.org/identifier> <https://orcid.org/0000-0003-3499-8262> .
+_:ne75a013ef0fd4f27b3444b51505c9943b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://w3id.org/fuel/fusion_reactor> <http://www.w3.org/2000/01/rdf-schema#label> "fusion reactor"@en .
+<http://w3id.org/fuel/spectrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/diagnostics> .
+<http://w3id.org/fuel/divertor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/tokamak_component> .
+<http://w3id.org/fuel/laser_induced_plasma> <http://www.w3.org/2000/01/rdf-schema#label> "laser induced plasma"@en .
+<http://w3id.org/fuel/outer_core_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/core_region> .
+<http://w3id.org/fuel/toroidal_field_coil> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/magnet_system> .
+<http://w3id.org/fuel/edge_plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/diagnostics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/nuclear_reactor> <http://www.w3.org/2000/01/rdf-schema#label> "nuclear reactor"@en .
+<http://purl.org/dc/terms/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+_:ne75a013ef0fd4f27b3444b51505c9943b3 <http://www.w3.org/2002/07/owl#intersectionOf> _:ne75a013ef0fd4f27b3444b51505c9943b5 .
+<http://w3id.org/fuel/bolometer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/divertor> <http://www.w3.org/2000/01/rdf-schema#comment> "In magnetic confinement fusion, a divertor is a device which extracts heat and ash from fusion plasmas by averting direct contact between the confined plasma and the main chamber wall (plasma-wall interactions)."@en .
+<http://w3id.org/fuel/plasma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/scrape_off_layer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma_region> .
+<http://w3id.org/fuel/particle_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/material_entity> .
+<http://w3id.org/fuel/runaway_electron_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/plasma_wall_interaction_process> <http://www.w3.org/2000/01/rdf-schema#label> "plasma wall interaction process"@en .
+<http://w3id.org/fuel/magnetic_probe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/poloidal_field_coil> <http://www.w3.org/2000/01/rdf-schema#label> "poloidal field coil"@en .
+<http://w3id.org/fuel/scrape_off_layer_plasma> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma> .
+<http://w3id.org/fuel/diagnostics> <http://www.w3.org/2000/01/rdf-schema#comment> "Equipment for determining/monitoring the properties and behaviour of a plasma during an experiment."@en .
+<http://w3id.org/fuel/tokamak> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/fusion_reactor> .
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://w3id.org/fuel/plasma_wall_interaction_process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/physics_process> .
+<http://w3id.org/fuel/scrape_off_layer> <http://www.w3.org/2000/01/rdf-schema#label> "scrape off layer"@en .
+<http://w3id.org/fuel/non_thermal_particle_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/pedestal_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma_region> .
+<http://w3id.org/fuel/optical_diagnostic_system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ne75a013ef0fd4f27b3444b51505c9943b7 <http://www.w3.org/2002/07/owl#onProperty> <http://w3id.org/fuel/hasComponent> .
+<http://w3id.org/fuel/iter_pdm> <http://www.w3.org/2004/02/skos/core#altLabel> "PDM"@en .
+<http://w3id.org/fuel/> <http://purl.org/dc/terms/created> "2024-11-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://w3id.org/fuel/stellarator> <http://www.w3.org/2000/01/rdf-schema#comment> "A device for thermonuclear fusion research that uses a combination of differently shaped coils which together create a desired helical magnetic field to confine the hot plasma. To hold the particles in the donut-shaped magnetic container, they must circulate in spirals, once on the inside and once on the outside of the torus. The stellarator creates a suitable magnetic field by combining helical, toroidal and poloidal coils. There are many variations that use different combinations and shapes of coils (classical, heliac, heliotron, torsatron, and helias). In the most modern modular stellarators, an assembly of specially twisted coils creates the magnetic field."@en .
+<http://w3id.org/fuel/neutral_particule_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/operational_stability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/stability> .

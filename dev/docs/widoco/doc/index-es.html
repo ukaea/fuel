@@ -1,0 +1,2337 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>FUsion Energy Lexicon</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/fuel/","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/fuel/","name":"FUsion Energy Lexicon", "headline":"FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data.", "dateReleased":"2024-11-06", "dateModified":"2025-09-08", "version":"0.0.1", "license":"https://creativecommons.org/licenses/by/4.0/", "codeRepository":"https://github.com/ukaea/fuel", "author":[{"@type":"Person","name":"Alejandra Gonzalez Beltran","url":"https://agbeltran.github.io/"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Tabla de contenidos</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> <a href="index-es.html"><b>es</b></a> </div>
+<h1>FUsion Energy Lexicon</h1>
+<h2>Fecha de creaci&oacute;n: 2024-11-06</h2>
+
+
+<dl>
+<dt>Fecha de modificaci&oacute;n: 2025-09-08</dt>
+<dt>Versi&oacute;n:</dt>
+<dd><a href="http://w3id.org/fuel/0.0.1">http://w3id.org/fuel/0.0.1</a></dd>
+<dt>Revisi&oacute;n n&uacute;mero:</dt>
+<dd>0.0.1</dd>
+<dt>Fecha de emisi&oacute;n</dt>
+<dd>2024-11-06</dd>
+<dt>Autores:</dt>
+<dd><a href="https://agbeltran.github.io/">Alejandra Gonzalez Beltran</a></dd>
+
+<dt>Descargar serializaci&oacute;n:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>Licencia:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/licenses/by/4.0/-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+</dd><dt>Visualizaci&oacute;n:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd><dt>Citar como:</dt>
+<dd>Alejandra Gonzalez Beltran. FUsion Energy Lexicon. Revision: 0.0.1. Retrieved from: http://w3id.org/fuel/0.0.1</dd>
+<dt>Vocabulario mantenido en:</dt>
+<dd><a href="https://github.com/ukaea/fuel">https://github.com/ukaea/fuel</a></dd>
+</dl>
+
+<a href="provenance/provenance-es.html" target="_blank">Provenance de esta p&aacute;gina</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>active</span>
+</div>
+</div>     <div id="abstract"><h2>S&iacute;ntesis</h2><span class="markdown">
+FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data.</span>
+</div>
+<div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Léxico de energía de fusión: Resumen <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<span class="markdown">La ontolog&iacute;a se compone de las siguientes clases y propiedades:</span>
+<h4>Clases</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://w3id.org/fuel/alpha_particle_population" title="http://w3id.org/fuel/alpha_particle_population">
+         <span>alpha particle population</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/blanket" title="http://w3id.org/fuel/blanket">blanket</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/bolometer" title="http://w3id.org/fuel/bolometer">
+         <span>bolometer</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/campaign" title="http://w3id.org/fuel/campaign">campaña</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/central_solenoid" title="http://w3id.org/fuel/central_solenoid">central solenoid</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/core_plasma" title="http://w3id.org/fuel/core_plasma">
+         <span>core plasma</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/core_region" title="http://w3id.org/fuel/core_region">core region</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/desorbed_gas" title="http://w3id.org/fuel/desorbed_gas">
+         <span>desorbed gas</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/device_component" title="http://w3id.org/fuel/device_component">device component</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/diagnostic_port" title="http://w3id.org/fuel/diagnostic_port">
+         <span>diagnostic port</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/diagnostics" title="http://w3id.org/fuel/diagnostics">diagnostic system</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/divertor" title="http://w3id.org/fuel/divertor">divertor</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/divertor_plasma" title="http://w3id.org/fuel/divertor_plasma">
+         <span>divertor plasma</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/divertor_tokamak" title="http://w3id.org/fuel/divertor_tokamak">
+         <span>divertor tokamak</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/ECRHSystem" title="http://w3id.org/fuel/ECRHSystem">
+         <span>E C R H System</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/edge_plasma" title="http://w3id.org/fuel/edge_plasma">
+         <span>edge plasma</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/edge_region" title="http://w3id.org/fuel/edge_region">edge region</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/electric_field" title="http://w3id.org/fuel/electric_field">
+         <span>electric field</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/electron_population" title="http://w3id.org/fuel/electron_population">
+         <span>electron population</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/fast_ion_population" title="http://w3id.org/fuel/fast_ion_population">
+         <span>fast ion population</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/first_wall" title="http://w3id.org/fuel/first_wall">first wall</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/fusion_device_component" title="http://w3id.org/fuel/fusion_device_component">fusion device component</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/heating_system" title="http://w3id.org/fuel/heating_system">heating system</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/ICRHSystem" title="http://w3id.org/fuel/ICRHSystem">
+         <span>I C R H System</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/ideal_kink_stability" title="http://w3id.org/fuel/ideal_kink_stability">
+         <span>ideal kink stability</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/impurity_population" title="http://w3id.org/fuel/impurity_population">
+         <span>impurity population</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/injected_neutral_particle_population"
+         title="http://w3id.org/fuel/injected_neutral_particle_population">
+         <span>injected neutral particle population</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/inner_core_region" title="http://w3id.org/fuel/inner_core_region">
+         <span>inner core region</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/fusion_facility" title="http://w3id.org/fuel/fusion_facility">instalación de fusión</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/interferometer" title="http://w3id.org/fuel/interferometer">
+         <span>interferometer</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/ion_population" title="http://w3id.org/fuel/ion_population">
+         <span>ion population</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/iter_pdm" title="http://w3id.org/fuel/iter_pdm">ITER Physics Data Model</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/kinetic_stability" title="http://w3id.org/fuel/kinetic_stability">
+         <span>kinetic stability</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/laser_induced_plasma" title="http://w3id.org/fuel/laser_induced_plasma">laser induced plasma</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/limiter" title="http://w3id.org/fuel/limiter">
+         <span>limiter</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/LowerHybridSystem" title="http://w3id.org/fuel/LowerHybridSystem">
+         <span>Lower Hybrid System</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/MHDInstabilityProcess" title="http://w3id.org/fuel/MHDInstabilityProcess">
+         <span>M H D Instability Process</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/magnetic_field" title="http://w3id.org/fuel/magnetic_field">magnetic field</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/magnetic_field_density" title="http://w3id.org/fuel/magnetic_field_density">magnetic field density</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/magnetic_probe" title="http://w3id.org/fuel/magnetic_probe">
+         <span>magnetic probe</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/magnet_system" title="http://w3id.org/fuel/magnet_system">magnetic system</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/material_entity" title="http://w3id.org/fuel/material_entity">
+         <span>material entity</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/MHD_instability" title="http://w3id.org/fuel/MHD_instability">MHD instability</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/MHDstability" title="http://w3id.org/fuel/MHDstability">MHD stability</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/neutral_beam" title="http://w3id.org/fuel/neutral_beam">
+         <span>neutral beam</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/neutral_beam_system" title="http://w3id.org/fuel/neutral_beam_system">
+         <span>neutral beam system</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/neutral_particule_population"
+         title="http://w3id.org/fuel/neutral_particule_population">neutral particle population</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/neutron_diagnostics" title="http://w3id.org/fuel/neutron_diagnostics">
+         <span>neutron diagnostics</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/neutronics" title="http://w3id.org/fuel/neutronics">neutronics</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/non_thermal_particle_population"
+         title="http://w3id.org/fuel/non_thermal_particle_population">
+         <span>non thermal particle population</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/operational_stability" title="http://w3id.org/fuel/operational_stability">
+         <span>operational stability</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/optical_diagnostic_system" title="http://w3id.org/fuel/optical_diagnostic_system">
+         <span>optical diagnostic system</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/outer_core_region" title="http://w3id.org/fuel/outer_core_region">
+         <span>outer core region</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/particle_population" title="http://w3id.org/fuel/particle_population">
+         <span>particle population</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/pedestal_region" title="http://w3id.org/fuel/pedestal_region">
+         <span>pedestal region</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://schema.org/Person" title="https://schema.org/Person">
+         <span>Person</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/physics_process" title="http://w3id.org/fuel/physics_process">physics process</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/plasma" title="http://w3id.org/fuel/plasma">plasma</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/plasma_instability_process" title="http://w3id.org/fuel/plasma_instability_process">plasma instability process</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/plasma_region" title="http://w3id.org/fuel/plasma_region">plasma region</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/plasma_wall_interaction_process"
+         title="http://w3id.org/fuel/plasma_wall_interaction_process">plasma wall interaction process</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/poloidal_field_coil" title="http://w3id.org/fuel/poloidal_field_coil">poloidal field coil</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/process" title="http://w3id.org/fuel/process">
+         <span>process</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/quality" title="http://w3id.org/fuel/quality">
+         <span>quality</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/fusion_reactor" title="http://w3id.org/fuel/fusion_reactor">reactor de fusión</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/nuclear_reactor" title="http://w3id.org/fuel/nuclear_reactor">reactor nuclear</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/recycled_neutral_population" title="http://w3id.org/fuel/recycled_neutral_population">
+         <span>recycled neutral population</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/region" title="http://w3id.org/fuel/region">
+         <span>region</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/runaway_electron_population"
+         title="http://w3id.org/fuel/runaway_electron_population">
+         <span>runaway electron population</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/scrape_off_layer" title="http://w3id.org/fuel/scrape_off_layer">scrape off layer</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/scrape_off_layer_plasma" title="http://w3id.org/fuel/scrape_off_layer_plasma">
+         <span>scrape off layer plasma</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/separatrix_region" title="http://w3id.org/fuel/separatrix_region">
+         <span>separatrix region</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/shot" title="http://w3id.org/fuel/shot">shot</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/spectrometer" title="http://w3id.org/fuel/spectrometer">
+         <span>spectrometer</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/sputtered_impurity" title="http://w3id.org/fuel/sputtered_impurity">
+         <span>sputtered impurity</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/stability" title="http://w3id.org/fuel/stability">
+         <span>stability</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/stellarator" title="http://w3id.org/fuel/stellarator">stellarator</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/thermocouple" title="http://w3id.org/fuel/thermocouple">termopar</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/thermal_particle_population"
+         title="http://w3id.org/fuel/thermal_particle_population">
+         <span>thermal particle population</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/Thomson_Scattering_system" title="http://w3id.org/fuel/Thomson_Scattering_system">
+         <span>Thomson Scattering system</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/tokamak" title="http://w3id.org/fuel/tokamak">tokamak</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/tokamak_component" title="http://w3id.org/fuel/tokamak_component">tokamak component</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/spherical_tokamak" title="http://w3id.org/fuel/spherical_tokamak">tokamak esférico</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/tokamak_plasma" title="http://w3id.org/fuel/tokamak_plasma">
+         <span>tokamak plasma</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/toroidal_field_coil" title="http://w3id.org/fuel/toroidal_field_coil">toroidal field coil</a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/transport_process" title="http://w3id.org/fuel/transport_process">
+         <span>transport process</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/turbulence_process" title="http://w3id.org/fuel/turbulence_process">
+         <span>turbulence process</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/vacuum_vessel" title="http://w3id.org/fuel/vacuum_vessel">
+         <span>vacuum vessel</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://w3id.org/fuel/wall_released_species" title="http://w3id.org/fuel/wall_released_species">
+         <span>wall released species</span>
+      </a>
+   </li>
+</ul><h4>Propiedades usadas para anotaci&oacute;n</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract">
+         <span>abstract</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://schema.org/affiliation" title="https://schema.org/affiliation">
+         <span>affiliation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#altLabel" title="http://www.w3.org/2004/02/skos/core#altLabel">
+         <span>alt Label</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://schema.org/codeRepository" title="https://schema.org/codeRepository">
+         <span>code Repository</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition">
+         <span>definition</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/mod#definitionProperty" title="https://w3id.org/mod#definitionProperty">
+         <span>definition Property</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#editorialNote"
+         title="http://www.w3.org/2004/02/skos/core#editorialNote">
+         <span>editorial Note</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/hasPart" title="http://purl.org/dc/terms/hasPart">
+         <span>has Part</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/mod#hasRepresentationLanguage" title="https://w3id.org/mod#hasRepresentationLanguage">
+         <span>has Representation Language</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/mod#hasSyntax" title="https://w3id.org/mod#hasSyntax">
+         <span>has Syntax</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/homepage" title="http://xmlns.com/foaf/0.1/homepage">
+         <span>homepage</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://schema.org/identifier" title="https://schema.org/identifier">
+         <span>identifier</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
+         <span>issued</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
+         <span>modified</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">
+         <span>name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://schema.org/name" title="https://schema.org/name">
+         <span>name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/mod#prefLabelProperty" title="https://w3id.org/mod#prefLabelProperty">
+         <span>pref Label Property</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred Namespace Prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred Namespace Uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source">
+         <span>source</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/mod#status" title="https://w3id.org/mod#status">
+         <span>status</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version">
+         <span>version</span>
+      </a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Léxico de energía de fusión: Descripci&oacute;n <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+
+<span class="markdown">FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">T&eacute;rminos de Léxico de energía de fusión para clases, propiedades de objeto y propiedades de datos <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+Esta secci&oacute;n introduce m&aacute;s detalles sobre cada clase y propiedad definida por Léxico de energía de fusión.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Clases</h3>
+ <ul class="hlist">
+  <li><a href="#http://w3id.org/fuel/alpha_particle_population" title="http://w3id.org/fuel/alpha_particle_population"> <span>alpha particle population</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/blanket" title="http://w3id.org/fuel/blanket">blanket</a></li>
+  <li><a href="#http://w3id.org/fuel/bolometer" title="http://w3id.org/fuel/bolometer"> <span>bolometer</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/campaign" title="http://w3id.org/fuel/campaign">campaña</a></li>
+  <li><a href="#http://w3id.org/fuel/central_solenoid" title="http://w3id.org/fuel/central_solenoid">central solenoid</a></li>
+  <li><a href="#http://w3id.org/fuel/core_plasma" title="http://w3id.org/fuel/core_plasma"> <span>core plasma</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/core_region" title="http://w3id.org/fuel/core_region">core region</a></li>
+  <li><a href="#http://w3id.org/fuel/desorbed_gas" title="http://w3id.org/fuel/desorbed_gas"> <span>desorbed gas</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/device_component" title="http://w3id.org/fuel/device_component">device component</a></li>
+  <li><a href="#http://w3id.org/fuel/diagnostic_port" title="http://w3id.org/fuel/diagnostic_port"> <span>diagnostic port</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/diagnostics" title="http://w3id.org/fuel/diagnostics">diagnostic system</a></li>
+  <li><a href="#http://w3id.org/fuel/divertor" title="http://w3id.org/fuel/divertor">divertor</a></li>
+  <li><a href="#http://w3id.org/fuel/divertor_plasma" title="http://w3id.org/fuel/divertor_plasma"> <span>divertor plasma</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/divertor_tokamak" title="http://w3id.org/fuel/divertor_tokamak"> <span>divertor tokamak</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/ECRHSystem" title="http://w3id.org/fuel/ECRHSystem"> <span>E C R H System</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/edge_plasma" title="http://w3id.org/fuel/edge_plasma"> <span>edge plasma</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/edge_region" title="http://w3id.org/fuel/edge_region">edge region</a></li>
+  <li><a href="#http://w3id.org/fuel/electric_field" title="http://w3id.org/fuel/electric_field"> <span>electric field</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/electron_population" title="http://w3id.org/fuel/electron_population"> <span>electron population</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/fast_ion_population" title="http://w3id.org/fuel/fast_ion_population"> <span>fast ion population</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/first_wall" title="http://w3id.org/fuel/first_wall">first wall</a></li>
+  <li><a href="#http://w3id.org/fuel/fusion_device_component" title="http://w3id.org/fuel/fusion_device_component">fusion device component</a></li>
+  <li><a href="#http://w3id.org/fuel/heating_system" title="http://w3id.org/fuel/heating_system">heating system</a></li>
+  <li><a href="#http://w3id.org/fuel/ICRHSystem" title="http://w3id.org/fuel/ICRHSystem"> <span>I C R H System</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/ideal_kink_stability" title="http://w3id.org/fuel/ideal_kink_stability"> <span>ideal kink stability</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/impurity_population" title="http://w3id.org/fuel/impurity_population"> <span>impurity population</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/injected_neutral_particle_population" title="http://w3id.org/fuel/injected_neutral_particle_population"> <span>injected neutral particle population</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/inner_core_region" title="http://w3id.org/fuel/inner_core_region"> <span>inner core region</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/fusion_facility" title="http://w3id.org/fuel/fusion_facility">instalación de fusión</a></li>
+  <li><a href="#http://w3id.org/fuel/interferometer" title="http://w3id.org/fuel/interferometer"> <span>interferometer</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/ion_population" title="http://w3id.org/fuel/ion_population"> <span>ion population</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/iter_pdm" title="http://w3id.org/fuel/iter_pdm">ITER Physics Data Model</a></li>
+  <li><a href="#http://w3id.org/fuel/kinetic_stability" title="http://w3id.org/fuel/kinetic_stability"> <span>kinetic stability</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/laser_induced_plasma" title="http://w3id.org/fuel/laser_induced_plasma">laser induced plasma</a></li>
+  <li><a href="#http://w3id.org/fuel/limiter" title="http://w3id.org/fuel/limiter"> <span>limiter</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/LowerHybridSystem" title="http://w3id.org/fuel/LowerHybridSystem"> <span>Lower Hybrid System</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/MHDInstabilityProcess" title="http://w3id.org/fuel/MHDInstabilityProcess"> <span>M H D Instability Process</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/magnetic_field" title="http://w3id.org/fuel/magnetic_field">magnetic field</a></li>
+  <li><a href="#http://w3id.org/fuel/magnetic_field_density" title="http://w3id.org/fuel/magnetic_field_density">magnetic field density</a></li>
+  <li><a href="#http://w3id.org/fuel/magnetic_probe" title="http://w3id.org/fuel/magnetic_probe"> <span>magnetic probe</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/magnet_system" title="http://w3id.org/fuel/magnet_system">magnetic system</a></li>
+  <li><a href="#http://w3id.org/fuel/material_entity" title="http://w3id.org/fuel/material_entity"> <span>material entity</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/MHD_instability" title="http://w3id.org/fuel/MHD_instability">MHD instability</a></li>
+  <li><a href="#http://w3id.org/fuel/MHDstability" title="http://w3id.org/fuel/MHDstability">MHD stability</a></li>
+  <li><a href="#http://w3id.org/fuel/neutral_beam" title="http://w3id.org/fuel/neutral_beam"> <span>neutral beam</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/neutral_beam_system" title="http://w3id.org/fuel/neutral_beam_system"> <span>neutral beam system</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/neutral_particule_population" title="http://w3id.org/fuel/neutral_particule_population">neutral particle population</a></li>
+  <li><a href="#http://w3id.org/fuel/neutron_diagnostics" title="http://w3id.org/fuel/neutron_diagnostics"> <span>neutron diagnostics</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/neutronics" title="http://w3id.org/fuel/neutronics">neutronics</a></li>
+  <li><a href="#http://w3id.org/fuel/non_thermal_particle_population" title="http://w3id.org/fuel/non_thermal_particle_population"> <span>non thermal particle population</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/operational_stability" title="http://w3id.org/fuel/operational_stability"> <span>operational stability</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/optical_diagnostic_system" title="http://w3id.org/fuel/optical_diagnostic_system"> <span>optical diagnostic system</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/outer_core_region" title="http://w3id.org/fuel/outer_core_region"> <span>outer core region</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/particle_population" title="http://w3id.org/fuel/particle_population"> <span>particle population</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/pedestal_region" title="http://w3id.org/fuel/pedestal_region"> <span>pedestal region</span> </a></li>
+  <li><a href="#https://schema.org/Person" title="https://schema.org/Person"> <span>Person</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/physics_process" title="http://w3id.org/fuel/physics_process">physics process</a></li>
+  <li><a href="#http://w3id.org/fuel/plasma" title="http://w3id.org/fuel/plasma">plasma</a></li>
+  <li><a href="#http://w3id.org/fuel/plasma_instability_process" title="http://w3id.org/fuel/plasma_instability_process">plasma instability process</a></li>
+  <li><a href="#http://w3id.org/fuel/plasma_region" title="http://w3id.org/fuel/plasma_region">plasma region</a></li>
+  <li><a href="#http://w3id.org/fuel/plasma_wall_interaction_process" title="http://w3id.org/fuel/plasma_wall_interaction_process">plasma wall interaction process</a></li>
+  <li><a href="#http://w3id.org/fuel/poloidal_field_coil" title="http://w3id.org/fuel/poloidal_field_coil">poloidal field coil</a></li>
+  <li><a href="#http://w3id.org/fuel/process" title="http://w3id.org/fuel/process"> <span>process</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/quality" title="http://w3id.org/fuel/quality"> <span>quality</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/fusion_reactor" title="http://w3id.org/fuel/fusion_reactor">reactor de fusión</a></li>
+  <li><a href="#http://w3id.org/fuel/nuclear_reactor" title="http://w3id.org/fuel/nuclear_reactor">reactor nuclear</a></li>
+  <li><a href="#http://w3id.org/fuel/recycled_neutral_population" title="http://w3id.org/fuel/recycled_neutral_population"> <span>recycled neutral population</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/region" title="http://w3id.org/fuel/region"> <span>region</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/runaway_electron_population" title="http://w3id.org/fuel/runaway_electron_population"> <span>runaway electron population</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/scrape_off_layer" title="http://w3id.org/fuel/scrape_off_layer">scrape off layer</a></li>
+  <li><a href="#http://w3id.org/fuel/scrape_off_layer_plasma" title="http://w3id.org/fuel/scrape_off_layer_plasma"> <span>scrape off layer plasma</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/separatrix_region" title="http://w3id.org/fuel/separatrix_region"> <span>separatrix region</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/shot" title="http://w3id.org/fuel/shot">shot</a></li>
+  <li><a href="#http://w3id.org/fuel/spectrometer" title="http://w3id.org/fuel/spectrometer"> <span>spectrometer</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/sputtered_impurity" title="http://w3id.org/fuel/sputtered_impurity"> <span>sputtered impurity</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/stability" title="http://w3id.org/fuel/stability"> <span>stability</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/stellarator" title="http://w3id.org/fuel/stellarator">stellarator</a></li>
+  <li><a href="#http://w3id.org/fuel/thermocouple" title="http://w3id.org/fuel/thermocouple">termopar</a></li>
+  <li><a href="#http://w3id.org/fuel/thermal_particle_population" title="http://w3id.org/fuel/thermal_particle_population"> <span>thermal particle population</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/Thomson_Scattering_system" title="http://w3id.org/fuel/Thomson_Scattering_system"> <span>Thomson Scattering system</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/tokamak" title="http://w3id.org/fuel/tokamak">tokamak</a></li>
+  <li><a href="#http://w3id.org/fuel/tokamak_component" title="http://w3id.org/fuel/tokamak_component">tokamak component</a></li>
+  <li><a href="#http://w3id.org/fuel/spherical_tokamak" title="http://w3id.org/fuel/spherical_tokamak">tokamak esférico</a></li>
+  <li><a href="#http://w3id.org/fuel/tokamak_plasma" title="http://w3id.org/fuel/tokamak_plasma"> <span>tokamak plasma</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/toroidal_field_coil" title="http://w3id.org/fuel/toroidal_field_coil">toroidal field coil</a></li>
+  <li><a href="#http://w3id.org/fuel/transport_process" title="http://w3id.org/fuel/transport_process"> <span>transport process</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/turbulence_process" title="http://w3id.org/fuel/turbulence_process"> <span>turbulence process</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/vacuum_vessel" title="http://w3id.org/fuel/vacuum_vessel"> <span>vacuum vessel</span> </a></li>
+  <li><a href="#http://w3id.org/fuel/wall_released_species" title="http://w3id.org/fuel/wall_released_species"> <span>wall released species</span> </a></li>
+ </ul>
+ <div class="entity" id="http://w3id.org/fuel/alpha_particle_population">
+  <h3>alpha particle population<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/alpha_particle_population</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/non_thermal_particle_population" title="http://w3id.org/fuel/non_thermal_particle_population">non thermal particle population</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/blanket">
+  <h3>blanket<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/blanket</p>
+  <div class="comment">
+   <span class="markdown">The lining of the inner wall of the tokamak vessel that will be in direct contact with the hot plasma. The blanket is usually made of modules (from stainless steel, or copper), on which can be mounted replaceable first-wall panels (made from beryllium, tungsten, molybdenum, or carbon in case of older tokamaks), able to withstand high temperatures. The blanket protects the chamber wall and the magnetic coils from high-energy neutrons. These slowdown in the blanket material and transform their energy into thermal energy.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    https://www.energyencyclopedia.com/en/glossary/blanket
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/tokamak_component" title="http://w3id.org/fuel/tokamak_component">tokamak component</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/bolometer">
+  <h3>bolometer<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/bolometer</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/diagnostics" title="http://w3id.org/fuel/diagnostics">diagnostic system</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/campaign">
+  <h3>campaña<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/campaign</p>
+  <div class="comment">
+   <span class="markdown">Un conjunto de experimentos conectados que se ejecutan durante un período específico de tiempo</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/process" title="http://w3id.org/fuel/process">process</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/central_solenoid">
+  <h3>central solenoid<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/central_solenoid</p>
+  <div class="comment">
+   <span class="markdown">The tokamak component that produces and sustains the plasma current which heats and shapes the plasma.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    https://www.jt60sa.org/wp/glossary/
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/magnet_system" title="http://w3id.org/fuel/magnet_system">magnetic system</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/core_plasma">
+  <h3>core plasma<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/core_plasma</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/tokamak_plasma" title="http://w3id.org/fuel/tokamak_plasma">tokamak plasma</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/core_region">
+  <h3>core region<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/core_region</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/plasma_region" title="http://w3id.org/fuel/plasma_region">plasma region</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/inner_core_region" title="http://w3id.org/fuel/inner_core_region">inner core region</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/outer_core_region" title="http://w3id.org/fuel/outer_core_region">outer core region</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/desorbed_gas">
+  <h3>desorbed gas<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/desorbed_gas</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/wall_released_species" title="http://w3id.org/fuel/wall_released_species">wall released species</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/device_component">
+  <h3>device component<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/device_component</p>
+  <div class="comment">
+   <span class="markdown">A material entity that is a proper part of some device.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/material_entity" title="http://w3id.org/fuel/material_entity">material entity</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/fusion_device_component" title="http://w3id.org/fuel/fusion_device_component">fusion device component</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/diagnostic_port">
+  <h3>diagnostic port<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/diagnostic_port</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/tokamak_component" title="http://w3id.org/fuel/tokamak_component">tokamak component</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/diagnostics">
+  <h3>diagnostic system<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/diagnostics</p>
+  <div class="comment">
+   <span class="markdown">Equipment for determining/monitoring the properties and behaviour of a plasma during an experiment.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    <a href="https://www.iter.org/fusion-glossary">https://www.iter.org/fusion-glossary</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/fusion_device_component" title="http://w3id.org/fuel/fusion_device_component">fusion device component</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/Thomson_Scattering_system" title="http://w3id.org/fuel/Thomson_Scattering_system">Thomson Scattering system</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/bolometer" title="http://w3id.org/fuel/bolometer">bolometer</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/interferometer" title="http://w3id.org/fuel/interferometer">interferometer</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/magnetic_probe" title="http://w3id.org/fuel/magnetic_probe">magnetic probe</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/neutron_diagnostics" title="http://w3id.org/fuel/neutron_diagnostics">neutron diagnostics</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/optical_diagnostic_system" title="http://w3id.org/fuel/optical_diagnostic_system">optical diagnostic system</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/spectrometer" title="http://w3id.org/fuel/spectrometer">spectrometer</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/divertor">
+  <h3>divertor<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/divertor</p>
+  <div class="comment">
+   <span class="markdown">In magnetic confinement fusion, a divertor is a device which extracts heat and ash from fusion plasmas by averting direct contact between the confined plasma and the main chamber wall (plasma-wall interactions).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    <a href="https://en.wikipedia.org/wiki/Divertor">https://en.wikipedia.org/wiki/Divertor</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/tokamak_component" title="http://w3id.org/fuel/tokamak_component">tokamak component</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/divertor_plasma">
+  <h3>divertor plasma<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/divertor_plasma</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/plasma" title="http://w3id.org/fuel/plasma">plasma</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/divertor_tokamak">
+  <h3>divertor tokamak<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/divertor_tokamak</p>
+  <dl class="description">
+   <dt>
+    equivalente a
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/tokamak" title="http://w3id.org/fuel/tokamak">tokamak</a> <sup class="type-c" title="clase">c</sup> <span class="logic">and</span> (<a href="http://w3id.org/fuel/hasComponent" target="_blank" title="http://w3id.org/fuel/hasComponent">has Component</a> <sup class="type-op" title="Propiedad entre objetos">op</sup> <span class="logic">some</span> <a href="#http://w3id.org/fuel/divertor" title="http://w3id.org/fuel/divertor">divertor</a> <sup class="type-c" title="clase">c</sup>)
+   </dd>
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/tokamak" title="http://w3id.org/fuel/tokamak">tokamak</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/ECRHSystem">
+  <h3>E C R H System<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/ECRHSystem</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/heating_system" title="http://w3id.org/fuel/heating_system">heating system</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/edge_plasma">
+  <h3>edge plasma<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/edge_plasma</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/tokamak_plasma" title="http://w3id.org/fuel/tokamak_plasma">tokamak plasma</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/edge_region">
+  <h3>edge region<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/edge_region</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/plasma_region" title="http://w3id.org/fuel/plasma_region">plasma region</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/electric_field">
+  <h3>electric field<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/electric_field</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="http://w3id.org/fuel/field" target="_blank" title="http://w3id.org/fuel/field">field</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/electron_population">
+  <h3>electron population<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/electron_population</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/thermal_particle_population" title="http://w3id.org/fuel/thermal_particle_population">thermal particle population</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/fast_ion_population">
+  <h3>fast ion population<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/fast_ion_population</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/non_thermal_particle_population" title="http://w3id.org/fuel/non_thermal_particle_population">non thermal particle population</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/first_wall">
+  <h3>first wall<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/first_wall</p>
+  <div class="comment">
+   <span class="markdown">The interior surface of a tokamak closest to the plasma</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    https://www.jt60sa.org/wp/glossary/
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/tokamak_component" title="http://w3id.org/fuel/tokamak_component">tokamak component</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/fusion_device_component">
+  <h3>fusion device component<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/fusion_device_component</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/device_component" title="http://w3id.org/fuel/device_component">device component</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/diagnostics" title="http://w3id.org/fuel/diagnostics">diagnostic system</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/magnet_system" title="http://w3id.org/fuel/magnet_system">magnetic system</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/tokamak_component" title="http://w3id.org/fuel/tokamak_component">tokamak component</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/heating_system">
+  <h3>heating system<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/heating_system</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/tokamak_component" title="http://w3id.org/fuel/tokamak_component">tokamak component</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/ECRHSystem" title="http://w3id.org/fuel/ECRHSystem">E C R H System</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/ICRHSystem" title="http://w3id.org/fuel/ICRHSystem">I C R H System</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/LowerHybridSystem" title="http://w3id.org/fuel/LowerHybridSystem">Lower Hybrid System</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/neutral_beam_system" title="http://w3id.org/fuel/neutral_beam_system">neutral beam system</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/ICRHSystem">
+  <h3>I C R H System<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/ICRHSystem</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/heating_system" title="http://w3id.org/fuel/heating_system">heating system</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/ideal_kink_stability">
+  <h3>ideal kink stability<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/ideal_kink_stability</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/MHDstability" title="http://w3id.org/fuel/MHDstability">MHD stability</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/impurity_population">
+  <h3>impurity population<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/impurity_population</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/thermal_particle_population" title="http://w3id.org/fuel/thermal_particle_population">thermal particle population</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/injected_neutral_particle_population">
+  <h3>injected neutral particle population<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/injected_neutral_particle_population</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/neutral_particule_population" title="http://w3id.org/fuel/neutral_particule_population">neutral particle population</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/neutral_beam" title="http://w3id.org/fuel/neutral_beam">neutral beam</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/inner_core_region">
+  <h3>inner core region<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/inner_core_region</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/core_region" title="http://w3id.org/fuel/core_region">core region</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/fusion_facility">
+  <h3>instalación de fusión<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/fusion_facility</p>
+  <div class="comment">
+   <span class="markdown">Una instalación en la que se llevan a cabo experimentos de fusión. Ejemplos incluyen el Joint European Torus (JET) en el Reino Unido, el DIII-D National Fusion Facility en los Estados Unidos y el Experimental Advanced Superconducting Tokamak (EAST) en China.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/material_entity" title="http://w3id.org/fuel/material_entity">material entity</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/interferometer">
+  <h3>interferometer<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/interferometer</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/diagnostics" title="http://w3id.org/fuel/diagnostics">diagnostic system</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/ion_population">
+  <h3>ion population<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/ion_population</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/thermal_particle_population" title="http://w3id.org/fuel/thermal_particle_population">thermal particle population</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/iter_pdm">
+  <h3>ITER Physics Data Model<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/iter_pdm</p>
+  <div class="comment">
+   <span class="markdown">ITER standardized data model</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    <a href="https://doi.org/10.1088/0029-5515/55/12/123006">https://doi.org/10.1088/0029-5515/55/12/123006</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/kinetic_stability">
+  <h3>kinetic stability<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/kinetic_stability</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/stability" title="http://w3id.org/fuel/stability">stability</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/laser_induced_plasma">
+  <h3>laser induced plasma<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/laser_induced_plasma</p>
+  <div class="comment">
+   <span class="markdown">Laser induced plasma (LIP) is defined as a product of the complex interaction between a focused, high peak power laser beam and a target material, resulting in processes such as absorption of laser energy, vaporization, and ejection of atomic and molecular species, followed by plasma expansion and shock wave production.</span>
+  </div>
+  <dl>
+   <dt>
+    nota editorial
+   </dt>
+   <dd>
+    industrial plasma - not a tokamak plasma
+   </dd>
+  </dl>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    <a href="https://www.sciencedirect.com/topics/chemistry/laser-induced-plasma">https://www.sciencedirect.com/topics/chemistry/laser-induced-plasma</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/plasma" title="http://w3id.org/fuel/plasma">plasma</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/limiter">
+  <h3>limiter<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/limiter</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/tokamak_component" title="http://w3id.org/fuel/tokamak_component">tokamak component</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/LowerHybridSystem">
+  <h3>Lower Hybrid System<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/LowerHybridSystem</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/heating_system" title="http://w3id.org/fuel/heating_system">heating system</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/MHDInstabilityProcess">
+  <h3>M H D Instability Process<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/MHDInstabilityProcess</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/plasma_instability_process" title="http://w3id.org/fuel/plasma_instability_process">plasma instability process</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/magnetic_field">
+  <h3>magnetic field<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/magnetic_field</p>
+  <div class="comment">
+   <span class="markdown">A vector field showing how magnetic forces are distributed in space. A magnetic field describes how the magnetic force at a given point in space will act on a ferromagnetic object or charged particle. In a magnetic field, the Lorentz force on a charged particle is perpendicular to both the direction of the magnetic field and its velocity. Magnetic fields surround magnetized objects, are formed around conductors through which electric current flows, or at a point with a varying electric field. It is described by the quantities B and H. B is the magnetic flux density and is given in units of tesla. A common refrigerator magnet is usually 0.001 tesla. The quantity H describes the magnetic field strength and is expressed in amperes per meter. Rotating magnetic fields are used by electrical generators in power plants. In thermonuclear fusion research, a strong magnetic field is used to confine hot plasma in tokamaks and stellarators.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    https://www.energyencyclopedia.com/en/glossary/magnetic-field
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="http://w3id.org/fuel/field" target="_blank" title="http://w3id.org/fuel/field">field</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/magnetic_field_density">
+  <h3>magnetic field density<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/magnetic_field_density</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/quality" title="http://w3id.org/fuel/quality">quality</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/magnetic_probe">
+  <h3>magnetic probe<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/magnetic_probe</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/diagnostics" title="http://w3id.org/fuel/diagnostics">diagnostic system</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/magnet_system">
+  <h3>magnetic system<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/magnet_system</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/fusion_device_component" title="http://w3id.org/fuel/fusion_device_component">fusion device component</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/central_solenoid" title="http://w3id.org/fuel/central_solenoid">central solenoid</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/poloidal_field_coil" title="http://w3id.org/fuel/poloidal_field_coil">poloidal field coil</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/toroidal_field_coil" title="http://w3id.org/fuel/toroidal_field_coil">toroidal field coil</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/material_entity">
+  <h3>material entity<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/material_entity</p>
+  <div class="comment">
+   <span class="markdown">Consider reusing to BFO:material_entity http://purl.obolibrary.org/obo/BFO_0000040</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#https://schema.org/Person" title="https://schema.org/Person">Person</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/device_component" title="http://w3id.org/fuel/device_component">device component</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/fusion_facility" title="http://w3id.org/fuel/fusion_facility">instalación de fusión</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/particle_population" title="http://w3id.org/fuel/particle_population">particle population</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/plasma" title="http://w3id.org/fuel/plasma">plasma</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/nuclear_reactor" title="http://w3id.org/fuel/nuclear_reactor">reactor nuclear</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/wall_released_species" title="http://w3id.org/fuel/wall_released_species">wall released species</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/MHD_instability">
+  <h3>MHD instability<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/MHD_instability</p>
+  <div class="comment">
+   <span class="markdown">Instabilities driven by the energy of the magnetic field and by the momentum of charged particles in the plasma. Small displacements of plasma density from the equilibrium position can reinforce that displacement until a further compensating force counteracts that reinforcement or the plasma equilibrium configuration is disrupted. Various modes of such displacement in the toroidal and poloidal planes can be stabilised so that the bulk plasma remains in position.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/stability" title="http://w3id.org/fuel/stability">stability</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/MHDstability">
+  <h3>MHD stability<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/MHDstability</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/stability" title="http://w3id.org/fuel/stability">stability</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/ideal_kink_stability" title="http://w3id.org/fuel/ideal_kink_stability">ideal kink stability</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/neutral_beam">
+  <h3>neutral beam<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/neutral_beam</p>
+  <dl>
+   <dt>
+    nota editorial
+   </dt>
+   <dd>
+    is this a subclass of injected neutral particle population?
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/injected_neutral_particle_population" title="http://w3id.org/fuel/injected_neutral_particle_population">injected neutral particle population</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/neutral_beam_system">
+  <h3>neutral beam system<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/neutral_beam_system</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/heating_system" title="http://w3id.org/fuel/heating_system">heating system</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/neutral_particule_population">
+  <h3>neutral particle population<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/neutral_particule_population</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/particle_population" title="http://w3id.org/fuel/particle_population">particle population</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/injected_neutral_particle_population" title="http://w3id.org/fuel/injected_neutral_particle_population">injected neutral particle population</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/recycled_neutral_population" title="http://w3id.org/fuel/recycled_neutral_population">recycled neutral population</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/neutron_diagnostics">
+  <h3>neutron diagnostics<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/neutron_diagnostics</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/diagnostics" title="http://w3id.org/fuel/diagnostics">diagnostic system</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/neutronics">
+  <h3>neutronics<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/neutronics</p>
+  <div class="comment">
+   <span class="markdown">Neutronics (or neutron physics) is the study of neutron paths through matter, of conditions for a chain reaction, and of alterations in matter's composition induced by nuclear reactions.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    <a href="https://www.cea.fr/english/Pages/resources/nuclear-energy-monographs/neutronics.aspx">https://www.cea.fr/english/Pages/resources/nuclear-energy-monographs/neutronics.aspx</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/non_thermal_particle_population">
+  <h3>non thermal particle population<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/non_thermal_particle_population</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/particle_population" title="http://w3id.org/fuel/particle_population">particle population</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/alpha_particle_population" title="http://w3id.org/fuel/alpha_particle_population">alpha particle population</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/fast_ion_population" title="http://w3id.org/fuel/fast_ion_population">fast ion population</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/runaway_electron_population" title="http://w3id.org/fuel/runaway_electron_population">runaway electron population</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/operational_stability">
+  <h3>operational stability<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/operational_stability</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/stability" title="http://w3id.org/fuel/stability">stability</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/optical_diagnostic_system">
+  <h3>optical diagnostic system<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/optical_diagnostic_system</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/diagnostics" title="http://w3id.org/fuel/diagnostics">diagnostic system</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/outer_core_region">
+  <h3>outer core region<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/outer_core_region</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/core_region" title="http://w3id.org/fuel/core_region">core region</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/particle_population">
+  <h3>particle population<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/particle_population</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/material_entity" title="http://w3id.org/fuel/material_entity">material entity</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/neutral_particule_population" title="http://w3id.org/fuel/neutral_particule_population">neutral particle population</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/non_thermal_particle_population" title="http://w3id.org/fuel/non_thermal_particle_population">non thermal particle population</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/thermal_particle_population" title="http://w3id.org/fuel/thermal_particle_population">thermal particle population</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/pedestal_region">
+  <h3>pedestal region<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/pedestal_region</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/plasma_region" title="http://w3id.org/fuel/plasma_region">plasma region</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="https://schema.org/Person">
+  <h3>Person<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/Person</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/material_entity" title="http://w3id.org/fuel/material_entity">material entity</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/physics_process">
+  <h3>physics process<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/physics_process</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/process" title="http://w3id.org/fuel/process">process</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/plasma_instability_process" title="http://w3id.org/fuel/plasma_instability_process">plasma instability process</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/plasma_wall_interaction_process" title="http://w3id.org/fuel/plasma_wall_interaction_process">plasma wall interaction process</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/transport_process" title="http://w3id.org/fuel/transport_process">transport process</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/turbulence_process" title="http://w3id.org/fuel/turbulence_process">turbulence process</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/plasma">
+  <h3>plasma<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/plasma</p>
+  <div class="comment">
+   <span class="markdown">The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    <a href="https://www.iter.org/fusion-glossary">https://www.iter.org/fusion-glossary</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/material_entity" title="http://w3id.org/fuel/material_entity">material entity</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/divertor_plasma" title="http://w3id.org/fuel/divertor_plasma">divertor plasma</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/laser_induced_plasma" title="http://w3id.org/fuel/laser_induced_plasma">laser induced plasma</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/scrape_off_layer_plasma" title="http://w3id.org/fuel/scrape_off_layer_plasma">scrape off layer plasma</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/tokamak_plasma" title="http://w3id.org/fuel/tokamak_plasma">tokamak plasma</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/plasma_instability_process">
+  <h3>plasma instability process<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/plasma_instability_process</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/physics_process" title="http://w3id.org/fuel/physics_process">physics process</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/MHDInstabilityProcess" title="http://w3id.org/fuel/MHDInstabilityProcess">M H D Instability Process</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/plasma_region">
+  <h3>plasma region<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/plasma_region</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/region" title="http://w3id.org/fuel/region">region</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/core_region" title="http://w3id.org/fuel/core_region">core region</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/edge_region" title="http://w3id.org/fuel/edge_region">edge region</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/pedestal_region" title="http://w3id.org/fuel/pedestal_region">pedestal region</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/scrape_off_layer" title="http://w3id.org/fuel/scrape_off_layer">scrape off layer</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/separatrix_region" title="http://w3id.org/fuel/separatrix_region">separatrix region</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/plasma_wall_interaction_process">
+  <h3>plasma wall interaction process<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/plasma_wall_interaction_process</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/physics_process" title="http://w3id.org/fuel/physics_process">physics process</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/poloidal_field_coil">
+  <h3>poloidal field coil<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/poloidal_field_coil</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/magnet_system" title="http://w3id.org/fuel/magnet_system">magnetic system</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/process">
+  <h3>process<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/process</p>
+  <div class="comment">
+   <span class="markdown">consider mapping to BFO - http://purl.obolibrary.org/obo/BFO_0000015</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/campaign" title="http://w3id.org/fuel/campaign">campaña</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/physics_process" title="http://w3id.org/fuel/physics_process">physics process</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/quality">
+  <h3>quality<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/quality</p>
+  <div class="comment">
+   <span class="markdown">consider reusing to BFO:quality http://purl.obolibrary.org/obo/BFO_0000019</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/magnetic_field_density" title="http://w3id.org/fuel/magnetic_field_density">magnetic field density</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/stability" title="http://w3id.org/fuel/stability">stability</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/fusion_reactor">
+  <h3>reactor de fusión<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/fusion_reactor</p>
+  <div class="comment">
+   <span class="markdown">Dispositivo en el que se produce la fusión termonuclear controlada, ya sea con fines científicos o para la producción de energía. Dado que existen diferentes maneras de lograr las condiciones de fusión, un reactor de fusión puede ser un tokamak, un stellarator, un fusor o cualquier otro dispositivo que permita alcanzar y mantener las condiciones para la fusión.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    <a href="https://www.energyencyclopedia.com/en/glossary/fusion-reactor/">https://www.energyencyclopedia.com/en/glossary/fusion-reactor/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/nuclear_reactor" title="http://w3id.org/fuel/nuclear_reactor">reactor nuclear</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/stellarator" title="http://w3id.org/fuel/stellarator">stellarator</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/tokamak" title="http://w3id.org/fuel/tokamak">tokamak</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/nuclear_reactor">
+  <h3>reactor nuclear<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/nuclear_reactor</p>
+  <div class="comment">
+   <span class="markdown">Dispositivo en el que ocurre una reacción nuclear en cadena controlada y autosostenida. Los reactores nucleares se utilizan en las centrales nucleares para la generación de electricidad y en la propulsión de barcos. El calor de la fis nuclear se transfiere a un fluido de trabajo (agua o gas), que pasa por turbinas.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    <a href="https://www.energyencyclopedia.com/en/glossary/nuclear-reactor">https://www.energyencyclopedia.com/en/glossary/nuclear-reactor</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/material_entity" title="http://w3id.org/fuel/material_entity">material entity</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/fusion_reactor" title="http://w3id.org/fuel/fusion_reactor">reactor de fusión</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/recycled_neutral_population">
+  <h3>recycled neutral population<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/recycled_neutral_population</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/neutral_particule_population" title="http://w3id.org/fuel/neutral_particule_population">neutral particle population</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/region">
+  <h3>region<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/region</p>
+  <div class="comment">
+   <span class="markdown">a spatial extent</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/plasma_region" title="http://w3id.org/fuel/plasma_region">plasma region</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/runaway_electron_population">
+  <h3>runaway electron population<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/runaway_electron_population</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/non_thermal_particle_population" title="http://w3id.org/fuel/non_thermal_particle_population">non thermal particle population</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/scrape_off_layer">
+  <h3>scrape off layer<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/scrape_off_layer</p>
+  <div class="comment">
+   <span class="markdown">A region at the edge of the plasma characterized by open magnetic lines that terminate at the inner parts of the chamber. In limiter tokamaks this region is located behind the last closed magnetic surface, in divertor tokamaks behind the separatrix. The particles in this region move by convection rather than diffusion and travel along the magnetic lines to the chamber walls or to the divertor, where they can be extracted by vacuum pumps.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/plasma_region" title="http://w3id.org/fuel/plasma_region">plasma region</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/scrape_off_layer_plasma">
+  <h3>scrape off layer plasma<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/scrape_off_layer_plasma</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/plasma" title="http://w3id.org/fuel/plasma">plasma</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/separatrix_region">
+  <h3>separatrix region<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/separatrix_region</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/plasma_region" title="http://w3id.org/fuel/plasma_region">plasma region</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/shot">
+  <h3>shot<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/shot</p>
+  <div class="comment">
+   <span class="markdown">A “shot” is any kind of experiment conducted on a test machine following defined parameters. It could be many actual firings of the machine following a variation in the parameters. So one or more “shots” make up an experiment.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    <a href="https://euro-fusion.org/glossary/shot/">https://euro-fusion.org/glossary/shot/</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/spectrometer">
+  <h3>spectrometer<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/spectrometer</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/diagnostics" title="http://w3id.org/fuel/diagnostics">diagnostic system</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/sputtered_impurity">
+  <h3>sputtered impurity<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/sputtered_impurity</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/wall_released_species" title="http://w3id.org/fuel/wall_released_species">wall released species</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/stability">
+  <h3>stability<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/stability</p>
+  <div class="comment">
+   <span class="markdown">consider reusing http://purl.obolibrary.org/obo/PATO_0015026</span>
+  </div>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/quality" title="http://w3id.org/fuel/quality">quality</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/MHD_instability" title="http://w3id.org/fuel/MHD_instability">MHD instability</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/MHDstability" title="http://w3id.org/fuel/MHDstability">MHD stability</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/kinetic_stability" title="http://w3id.org/fuel/kinetic_stability">kinetic stability</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/operational_stability" title="http://w3id.org/fuel/operational_stability">operational stability</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/stellarator">
+  <h3>stellarator<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/stellarator</p>
+  <div class="comment">
+   <span class="markdown">A device for thermonuclear fusion research that uses a combination of differently shaped coils which together create a desired helical magnetic field to confine the hot plasma. To hold the particles in the donut-shaped magnetic container, they must circulate in spirals, once on the inside and once on the outside of the torus. The stellarator creates a suitable magnetic field by combining helical, toroidal and poloidal coils. There are many variations that use different combinations and shapes of coils (classical, heliac, heliotron, torsatron, and helias). In the most modern modular stellarators, an assembly of specially twisted coils creates the magnetic field.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    <a href="https://www.energyencyclopedia.com/en/glossary/stellarator">https://www.energyencyclopedia.com/en/glossary/stellarator</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/fusion_reactor" title="http://w3id.org/fuel/fusion_reactor">reactor de fusión</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/thermocouple">
+  <h3>termopar<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/thermocouple</p>
+  <div class="comment">
+   <span class="markdown">Un termopar es un dispositivo de medición de temperatura que consta de dos cables de diferentes metales unidos por cada extremo. Una unión se coloca donde se va a medir la temperatura y la otra se mantiene a una temperatura inferior constante. Se conecta un instrumento de medición al circuito. La diferencia de temperatura genera una fuerza electromotriz (conocida como efecto Seebeck) aproximadamente proporcional a la diferencia de temperatura entre las dos uniones. La temperatura puede leerse en tablas estándar o el instrumento de medición puede calibrarse para leerla directamente.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    <a href="https://www.britannica.com/technology/thermocouple">https://www.britannica.com/technology/thermocouple</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/ns/sosa/Sensor" target="_blank" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/thermal_particle_population">
+  <h3>thermal particle population<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/thermal_particle_population</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/particle_population" title="http://w3id.org/fuel/particle_population">particle population</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/electron_population" title="http://w3id.org/fuel/electron_population">electron population</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/impurity_population" title="http://w3id.org/fuel/impurity_population">impurity population</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/ion_population" title="http://w3id.org/fuel/ion_population">ion population</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/Thomson_Scattering_system">
+  <h3>Thomson Scattering system<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/Thomson_Scattering_system</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/diagnostics" title="http://w3id.org/fuel/diagnostics">diagnostic system</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/tokamak">
+  <h3>tokamak<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/tokamak</p>
+  <div class="comment">
+   <span class="markdown">A device for magnetic confinement of plasma by a combination of a toroidal magnetic field and a current flowing through the plasma in which conditions for thermonuclear fusion ignition can be achieved. The word “tokamak” is of Russian origin and is an acronym for “TOroidalnaya KAmera i MAgnitnye Katushki” — toroidal chamber and magnetic coils. The magnetic field necessary to keep the hot plasma inside the toroidal chamber is generated as a combination of the field of the toroidal coils and the magnetic field generated by the current flowing through the plasma. Since the current in the plasma is induced on the transformer principle, the tokamak is a pulse device.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    <a href="https://www.energyencyclopedia.com/en/glossary/tokamak">https://www.energyencyclopedia.com/en/glossary/tokamak</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/fusion_reactor" title="http://w3id.org/fuel/fusion_reactor">reactor de fusión</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/divertor_tokamak" title="http://w3id.org/fuel/divertor_tokamak">divertor tokamak</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/spherical_tokamak" title="http://w3id.org/fuel/spherical_tokamak">tokamak esférico</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/tokamak_component">
+  <h3>tokamak component<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/tokamak_component</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/fusion_device_component" title="http://w3id.org/fuel/fusion_device_component">fusion device component</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/blanket" title="http://w3id.org/fuel/blanket">blanket</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/diagnostic_port" title="http://w3id.org/fuel/diagnostic_port">diagnostic port</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/divertor" title="http://w3id.org/fuel/divertor">divertor</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/first_wall" title="http://w3id.org/fuel/first_wall">first wall</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/heating_system" title="http://w3id.org/fuel/heating_system">heating system</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/limiter" title="http://w3id.org/fuel/limiter">limiter</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/vacuum_vessel" title="http://w3id.org/fuel/vacuum_vessel">vacuum vessel</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/spherical_tokamak">
+  <h3>tokamak esférico<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/spherical_tokamak</p>
+  <div class="comment">
+   <span class="markdown">Tokamak with a low aspect ratio and a round plasma in a shape resembling a cored apple. While a conventional tokamak has a more donut-like shape with a central hole, a spherical tokamak minimizes this hole to achieve a higher compactness. A single common conductor runs through the centre of the tokamak, to which toroidal magnets in the shape of semicircles are connected. Due to its more compact shape, the spherical tokamak achieves the same plasma parameters as a conventional tokamak with a lower magnetic field. This allows it to be smaller and cheaper. Typical spherical tokamaks are the Small Tight Aspect Ratio Tokamak (START) or the Mega Ampere Spherical Tokamak (MAST).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    <a href="https://www.energyencyclopedia.com/en/glossary/spherical-tokamak/">https://www.energyencyclopedia.com/en/glossary/spherical-tokamak/</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/tokamak" title="http://w3id.org/fuel/tokamak">tokamak</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/tokamak_plasma">
+  <h3>tokamak plasma<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/tokamak_plasma</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/plasma" title="http://w3id.org/fuel/plasma">plasma</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/core_plasma" title="http://w3id.org/fuel/core_plasma">core plasma</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/edge_plasma" title="http://w3id.org/fuel/edge_plasma">edge plasma</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/toroidal_field_coil">
+  <h3>toroidal field coil<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/toroidal_field_coil</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/magnet_system" title="http://w3id.org/fuel/magnet_system">magnetic system</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/transport_process">
+  <h3>transport process<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/transport_process</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/physics_process" title="http://w3id.org/fuel/physics_process">physics process</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/turbulence_process">
+  <h3>turbulence process<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/turbulence_process</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/physics_process" title="http://w3id.org/fuel/physics_process">physics process</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/vacuum_vessel">
+  <h3>vacuum vessel<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/vacuum_vessel</p>
+  <div class="comment">
+   <span class="markdown">A hermetically sealed, double-walled steel container that houses the fusion reactions and acts as a first safety containment barrier</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Fuente
+   </dt>
+   <dd>
+    https://www.iter.org/machine/vacuum-vessel
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/tokamak_component" title="http://w3id.org/fuel/tokamak_component">tokamak component</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="http://w3id.org/fuel/wall_released_species">
+  <h3>wall released species<sup class="type-c" title="clase">c</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#classes">Índice de clases</a> </span></h3>
+  <p><strong>IRI:</strong> http://w3id.org/fuel/wall_released_species</p>
+  <dl class="description">
+   <dt>
+    tiene superclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/material_entity" title="http://w3id.org/fuel/material_entity">material entity</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+   <dt>
+    tiene subclases
+   </dt>
+   <dd>
+    <a href="#http://w3id.org/fuel/desorbed_gas" title="http://w3id.org/fuel/desorbed_gas">desorbed gas</a> <sup class="type-c" title="clase">c</sup>, <a href="#http://w3id.org/fuel/sputtered_impurity" title="http://w3id.org/fuel/sputtered_impurity">sputtered impurity</a> <sup class="type-c" title="clase">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h2>Propiedades de anotación</h2>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract"> <span>abstract</span> </a></li>
+  <li><a href="#https://schema.org/affiliation" title="https://schema.org/affiliation"> <span>affiliation</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#altLabel" title="http://www.w3.org/2004/02/skos/core#altLabel"> <span>alt Label</span> </a></li>
+  <li><a href="#https://schema.org/codeRepository" title="https://schema.org/codeRepository"> <span>code Repository</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created"> <span>created</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#definition" title="http://www.w3.org/2004/02/skos/core#definition"> <span>definition</span> </a></li>
+  <li><a href="#https://w3id.org/mod#definitionProperty" title="https://w3id.org/mod#definitionProperty"> <span>definition Property</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description"> <span>description</span> </a></li>
+  <li><a href="#http://www.w3.org/2004/02/skos/core#editorialNote" title="http://www.w3.org/2004/02/skos/core#editorialNote"> <span>editorial Note</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/hasPart" title="http://purl.org/dc/terms/hasPart"> <span>has Part</span> </a></li>
+  <li><a href="#https://w3id.org/mod#hasRepresentationLanguage" title="https://w3id.org/mod#hasRepresentationLanguage"> <span>has Representation Language</span> </a></li>
+  <li><a href="#https://w3id.org/mod#hasSyntax" title="https://w3id.org/mod#hasSyntax"> <span>has Syntax</span> </a></li>
+  <li><a href="#http://xmlns.com/foaf/0.1/homepage" title="http://xmlns.com/foaf/0.1/homepage"> <span>homepage</span> </a></li>
+  <li><a href="#https://schema.org/identifier" title="https://schema.org/identifier"> <span>identifier</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued"> <span>issued</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified"> <span>modified</span> </a></li>
+  <li><a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name"> <span>name</span> </a></li>
+  <li><a href="#https://schema.org/name" title="https://schema.org/name"> <span>name</span> </a></li>
+  <li><a href="#https://w3id.org/mod#prefLabelProperty" title="https://w3id.org/mod#prefLabelProperty"> <span>pref Label Property</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespacePrefix" title="http://purl.org/vocab/vann/preferredNamespacePrefix"> <span>preferred Namespace Prefix</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri"> <span>preferred Namespace Uri</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/source" title="http://purl.org/dc/terms/source"> <span>source</span> </a></li>
+  <li><a href="#https://w3id.org/mod#status" title="https://w3id.org/mod#status"> <span>status</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title"> <span>title</span> </a></li>
+  <li><a href="#http://www.w3.org/ns/dcat#version" title="http://www.w3.org/ns/dcat#version"> <span>version</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/abstract">
+  <h3>abstract<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/abstract</p>
+ </div>
+ <div class="entity" id="https://schema.org/affiliation">
+  <h3>affiliation<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/affiliation</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#altLabel">
+  <h3>alt Label<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#altLabel</p>
+ </div>
+ <div class="entity" id="https://schema.org/codeRepository">
+  <h3>code Repository<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/codeRepository</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/created">
+  <h3>created<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/creator">
+  <h3>creator<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#definition">
+  <h3>definition<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#definition</p>
+ </div>
+ <div class="entity" id="https://w3id.org/mod#definitionProperty">
+  <h3>definition Property<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/mod#definitionProperty</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/description">
+  <h3>description<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/2004/02/skos/core#editorialNote">
+  <h3>editorial Note<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#editorialNote</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/hasPart">
+  <h3>has Part<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/hasPart</p>
+ </div>
+ <div class="entity" id="https://w3id.org/mod#hasRepresentationLanguage">
+  <h3>has Representation Language<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/mod#hasRepresentationLanguage</p>
+ </div>
+ <div class="entity" id="https://w3id.org/mod#hasSyntax">
+  <h3>has Syntax<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/mod#hasSyntax</p>
+ </div>
+ <div class="entity" id="http://xmlns.com/foaf/0.1/homepage">
+  <h3>homepage<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://xmlns.com/foaf/0.1/homepage</p>
+ </div>
+ <div class="entity" id="https://schema.org/identifier">
+  <h3>identifier<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/identifier</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/issued">
+  <h3>issued<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/modified">
+  <h3>modified<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
+ </div>
+ <div class="entity" id="http://xmlns.com/foaf/0.1/name">
+  <h3>name<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://xmlns.com/foaf/0.1/name</p>
+ </div>
+ <div class="entity" id="https://schema.org/name">
+  <h3>name<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> https://schema.org/name</p>
+ </div>
+ <div class="entity" id="https://w3id.org/mod#prefLabelProperty">
+  <h3>pref Label Property<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/mod#prefLabelProperty</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <h3>preferred Namespace Prefix<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
+  <h3>preferred Namespace Uri<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/source">
+  <h3>source<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/source</p>
+ </div>
+ <div class="entity" id="https://w3id.org/mod#status">
+  <h3>status<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/mod#status</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/title">
+  <h3>title<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/dcat#version">
+  <h3>version<sup class="type-ap" title="propiedad de anotación">ap</sup> <span class="backlink"> Volver a <a href="#toc">índice</a> o <a href="#annotationproperties">Índice de propiedades de anotación</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/dcat#version</p>
+ </div>
+</div><div id="legend">
+<h2>Leyenda <span class="backlink"> volver a <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Clases">c</sup>: Clases <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">Referencias <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<span class="markdown">A&ntilde;ade aqu&iacute; tus referencias, a ser posible en una lista.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Agradecimientos <span class="backlink"> volver a <a href="#toc">&iacute;ndice</a></span></h2>
+<p>Los autores agradecen a <a href="http://www.essepuntato.it/">Silvio Peroni</a> el desarrollo de <a href="http://www.essepuntato.it/lode">LODE</a>, un entorno de documentaci&oacute;n para OWL que es usado para generar la descripci&oacute;n de t&eacute;rminos de la ontolog&iacute;a de este documento; y a  <a href="http://purl.org/net/dgarijo">Daniel Garijo</a> por desarrollar <a href="https://github.com/dgarijo/Widoco">Widoco</a>, el programa utilizado para producir la plantilla en la que se basa este documento.</p>
+</div>
+
+
+</div>
+</body>
+</html>
