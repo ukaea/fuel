@@ -115,8 +115,8 @@ def generate_widoco_docs(outdir, onto_dir, onto_file, version="1.4.25"):
         print(f"Widoco documentation generated at {widoco_dir}")
 
         # Copy index-en.html to index.html if it exists
-        index_en = os.path.join(widoco_dir, "index-en.html")
-        index_default = os.path.join(widoco_dir, "index.html")
+        index_en = os.path.join(widoco_dir, "doc", "index-en.html")
+        index_default = os.path.join(widoco_dir, "doc", "index.html")
         if os.path.exists(index_en):
             shutil.copy(index_en, index_default)
             print("Copied index-en.html → index.html")
@@ -133,7 +133,7 @@ def generate_index(outdir, title, heading, is_root_main=False):
         f.write(f"<html><head><title>{title}</title></head><body>\n")
         f.write(f"<h1>{heading}</h1>\n<ul>\n")
         f.write('<li><a href="docs/pylode/">Pylode Documentation</a></li>\n')
-        f.write('<li><a href="docs/widoco/">Widoco Documentation</a></li>\n')
+        f.write('<li><a href="docs/widoco/doc/">Widoco Documentation</a></li>\n')
         f.write('<li><a href="docs/ontospy/">Ontospy Documentation</a></li>\n')
         for ext, fmt in target_fmts:
             f.write(f'<li><a href="{ONTO_ABBREV}.{ext}">{ONTO_ABBREV}.{ext}</a></li>\n')
