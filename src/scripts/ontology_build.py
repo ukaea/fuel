@@ -22,6 +22,7 @@ target_fmts = [("ttl","turtle"),("jsonld","json-ld"),("nt","nt"),("owl","xml"),(
       
 # function to generate the ontology syntaxes
 def generate_syntaxes(outdir):
+    g.bind("fuel", "http://w3id.org/fuel/")
     os.makedirs(outdir, exist_ok=True)
     for ext, fmt in target_fmts:
         g.serialize(
