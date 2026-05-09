@@ -1,181 +1,12 @@
 [
   {
-    "@id": "http://w3id.org/fuel/bolometer",
+    "@id": "http://w3id.org/fuel/electric_field",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/fuel/diagnostics"
-      }
-    ]
-  },
-  {
-    "@id": "http://xmlns.com/foaf/0.1/name",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/inner_core_region",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/core_region"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/magnetic_probe",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/diagnostics"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/magnetic_field_density",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "magnetic field density"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/quality"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/core_region",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "core region"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/plasma_region"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/hasPart",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/scrape_off_layer",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@language": "en",
-        "@value": "https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "scrape off layer"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/plasma_region"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@language": "en",
-        "@value": "SOL"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@value": "A region at the edge of the plasma characterized by open magnetic lines that terminate at the inner parts of the chamber. In limiter tokamaks this region is located behind the last closed magnetic surface, in divertor tokamaks behind the separatrix. The particles in this region move by convection rather than diffusion and travel along the magnetic lines to the chamber walls or to the divertor, where they can be extracted by vacuum pumps."
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/stellarator",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://www.energyencyclopedia.com/en/glossary/stellarator"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A device for thermonuclear fusion research that uses a combination of differently shaped coils which together create a desired helical magnetic field to confine the hot plasma. To hold the particles in the donut-shaped magnetic container, they must circulate in spirals, once on the inside and once on the outside of the torus. The stellarator creates a suitable magnetic field by combining helical, toroidal and poloidal coils. There are many variations that use different combinations and shapes of coils (classical, heliac, heliotron, torsatron, and helias). In the most modern modular stellarators, an assembly of specially twisted coils creates the magnetic field."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "stellarator"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/fusion_reactor"
-      }
-    ]
-  },
-  {
-    "@id": "https://w3id.org/mod#prefLabelProperty",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/recycled_neutral_population",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/neutral_particule_population"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/sputtered_impurity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/wall_released_species"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/process",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "consider mapping to BFO - http://purl.obolibrary.org/obo/BFO_0000015"
+        "@id": "http://w3id.org/fuel/field"
       }
     ]
   },
@@ -187,195 +18,6 @@
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
         "@value": "Consider reusing to BFO:material_entity\nhttp://purl.obolibrary.org/obo/BFO_0000040"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/central_solenoid",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@language": "en",
-        "@value": "https://www.jt60sa.org/wp/glossary/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "central solenoid"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/magnet_system"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@value": "The tokamak component that produces and sustains the plasma current which heats and shapes the plasma."
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/region",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "a spatial extent"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/laser_induced_plasma",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://www.sciencedirect.com/topics/chemistry/laser-induced-plasma"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Laser induced plasma (LIP) is defined as a product of the complex interaction between a focused, high peak power laser beam and a target material, resulting in processes such as absorption of laser energy, vaporization, and ejection of atomic and molecular species, followed by plasma expansion and shock wave production."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "laser induced plasma"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/plasma"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@language": "en",
-        "@value": "LIP"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#editorialNote": [
-      {
-        "@language": "en",
-        "@value": "industrial plasma - not a tokamak plasma"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/physics_process",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "physics process"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/process"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/blanket",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@language": "en",
-        "@value": "https://www.energyencyclopedia.com/en/glossary/blanket"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "blanket"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/tokamak_component"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The lining of the inner wall of the tokamak vessel that will be in direct contact with the hot plasma. The blanket is usually made of modules (from stainless steel, or copper), on which can be mounted replaceable first-wall panels (made from beryllium, tungsten, molybdenum, or carbon in case of older tokamaks), able to withstand high temperatures. The blanket protects the chamber wall and the magnetic coils from high-energy neutrons. These slowdown in the blanket material and transform their energy into thermal energy."
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/fusion_reactor",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://www.energyencyclopedia.com/en/glossary/fusion-reactor/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A device in which controlled thermonuclear fusion takes place, either for scientific purposes or for the production of energy. Since there are different ways to achieve fusion conditions, a fusion reactor can be a tokamak, a stellarator, a fusor or any other device in which the conditions for fusion can be achieved and maintained."
-      },
-      {
-        "@language": "es",
-        "@value": "Dispositivo en el que se produce la fusión termonuclear controlada, ya sea con fines científicos o para la producción de energía. Dado que existen diferentes maneras de lograr las condiciones de fusión, un reactor de fusión puede ser un tokamak, un stellarator, un fusor o cualquier otro dispositivo que permita alcanzar y mantener las condiciones para la fusión."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "fusion reactor"
-      },
-      {
-        "@language": "es",
-        "@value": "reactor de fusión"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/nuclear_reactor"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@language": "es",
-        "@value": "dispositivo de fusión"
-      },
-      {
-        "@language": "en",
-        "@value": "fusion device"
-      },
-      {
-        "@language": "en",
-        "@value": "nuclear fusion reactor"
-      },
-      {
-        "@language": "es",
-        "@value": "reactor de fusión nuclear"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/Thomson_Scattering_system",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/diagnostics"
       }
     ]
   },
@@ -421,20 +63,189 @@
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/kinetic_stability",
+    "@id": "http://w3id.org/fuel/stability",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "consider reusing http://purl.obolibrary.org/obo/PATO_0015026"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/quality"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/central_solenoid",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@language": "en",
+        "@value": "https://www.jt60sa.org/wp/glossary/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "central solenoid"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/magnet_system"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "The tokamak component that produces and sustains the plasma current which heats and shapes the plasma."
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/scrape_off_layer",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@language": "en",
+        "@value": "https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "scrape off layer"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/plasma_region"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "SOL"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "A region at the edge of the plasma characterized by open magnetic lines that terminate at the inner parts of the chamber. In limiter tokamaks this region is located behind the last closed magnetic surface, in divertor tokamaks behind the separatrix. The particles in this region move by convection rather than diffusion and travel along the magnetic lines to the chamber walls or to the divertor, where they can be extracted by vacuum pumps."
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/abstract",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://schema.org/codeRepository",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/recycled_neutral_population",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/fuel/stability"
+        "@id": "http://w3id.org/fuel/neutral_particule_population"
       }
     ]
   },
   {
-    "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
+    "@id": "http://w3id.org/fuel/alpha_particle_population",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/non_thermal_particle_population"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/homepage",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/field",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/electron_population",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/thermal_particle_population"
+      }
+    ]
+  },
+  {
+    "@id": "https://schema.org/name",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/MHDInstabilityProcess",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/plasma_instability_process"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/toroidal_field_coil",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "toroidal field coil"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/magnet_system"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/fusion_device_component",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "fusion device component"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/device_component"
+      }
     ]
   },
   {
@@ -469,35 +280,190 @@
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/impurity_population",
+    "@id": "http://w3id.org/fuel/core_plasma",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/fuel/thermal_particle_population"
+        "@id": "http://w3id.org/fuel/tokamak_plasma"
       }
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/neutron_diagnostics",
+    "@id": "http://w3id.org/fuel/MHDstability",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "MHD stability"
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/fuel/diagnostics"
+        "@id": "http://w3id.org/fuel/stability"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "magnetohydrodynamic stability"
       }
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/spectrometer",
+    "@id": "http://w3id.org/fuel/neutral_beam_system",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/fuel/diagnostics"
+        "@id": "http://w3id.org/fuel/heating_system"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/created",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/divertor_tokamak",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/tokamak"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n32ecb31fcca84199bb45758540c97ebbb3"
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ecb31fcca84199bb45758540c97ebbb3",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#intersectionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://w3id.org/fuel/tokamak"
+          },
+          {
+            "@id": "_:n32ecb31fcca84199bb45758540c97ebbb4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:n32ecb31fcca84199bb45758540c97ebbb4",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://w3id.org/fuel/hasComponent"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://w3id.org/fuel/divertor"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/sputtered_impurity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/wall_released_species"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/thermocouple",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://www.britannica.com/technology/thermocouple"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A thermocouple is  a temperature-measuring device consisting of two wires of different metals joined at each end. One junction is placed where the temperature is to be measured, and the other is kept at a constant lower temperature. A measuring instrument is connected in the circuit. The temperature difference causes the development of an electromotive force (known as the Seebeck effect) that is approximately proportional to the difference between the temperatures of the two junctions. Temperature can be read from standard tables, or the measuring instrument can be calibrated to read temperature directly."
+      },
+      {
+        "@language": "es",
+        "@value": "Un termopar es un dispositivo de medición de temperatura que consta de dos cables de diferentes metales unidos por cada extremo. Una unión se coloca donde se va a medir la temperatura y la otra se mantiene a una temperatura inferior constante. Se conecta un instrumento de medición al circuito. La diferencia de temperatura genera una fuerza electromotriz (conocida como efecto Seebeck) aproximadamente proporcional a la diferencia de temperatura entre las dos uniones. La temperatura puede leerse en tablas estándar o el instrumento de medición puede calibrarse para leerla directamente."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "es",
+        "@value": "termopar"
+      },
+      {
+        "@language": "en",
+        "@value": "thermocouple"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sensor"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "es",
+        "@value": "termocupla"
+      },
+      {
+        "@language": "en",
+        "@value": "thermo couple"
+      },
+      {
+        "@language": "en",
+        "@value": "thermoelectrical thermometer"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mod#prefLabelProperty",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/process",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "consider mapping to BFO - http://purl.obolibrary.org/obo/BFO_0000015"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/operational_stability",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/stability"
       }
     ]
   },
@@ -508,13 +474,41 @@
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/tokamak_plasma",
+    "@id": "http://w3id.org/fuel/desorbed_gas",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/fuel/plasma"
+        "@id": "http://w3id.org/fuel/wall_released_species"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/fast_ion_population",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/non_thermal_particle_population"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/edge_region",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "edge region"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/plasma_region"
       }
     ]
   },
@@ -557,94 +551,127 @@
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/divertor_tokamak",
+    "@id": "http://w3id.org/fuel/core_region",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "core region"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/plasma_region"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2001/XMLSchema#date",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Datatype"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/magnetic_probe",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/fuel/tokamak"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#equivalentClass": [
-      {
-        "@id": "_:n3e57bc4131bb4cf784717d3397ed2c46b3"
+        "@id": "http://w3id.org/fuel/diagnostics"
       }
     ]
   },
   {
-    "@id": "_:n3e57bc4131bb4cf784717d3397ed2c46b3",
+    "@id": "http://w3id.org/fuel/scrape_off_layer_plasma",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/2002/07/owl#intersectionOf": [
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@list": [
-          {
-            "@id": "http://w3id.org/fuel/tokamak"
-          },
-          {
-            "@id": "_:n3e57bc4131bb4cf784717d3397ed2c46b4"
-          }
-        ]
+        "@id": "http://w3id.org/fuel/plasma"
       }
     ]
   },
   {
-    "@id": "_:n3e57bc4131bb4cf784717d3397ed2c46b4",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://w3id.org/fuel/hasComponent"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://w3id.org/fuel/divertor"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/ns/dcat#version",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/title",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/description",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/ns/sosa/Sensor",
+    "@id": "http://w3id.org/fuel/stellarator",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://www.energyencyclopedia.com/en/glossary/stellarator"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A device for thermonuclear fusion research that uses a combination of differently shaped coils which together create a desired helical magnetic field to confine the hot plasma. To hold the particles in the donut-shaped magnetic container, they must circulate in spirals, once on the inside and once on the outside of the torus. The stellarator creates a suitable magnetic field by combining helical, toroidal and poloidal coils. There are many variations that use different combinations and shapes of coils (classical, heliac, heliotron, torsatron, and helias). In the most modern modular stellarators, an assembly of specially twisted coils creates the magnetic field."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "stellarator"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/fusion_reactor"
+      }
     ]
   },
   {
-    "@id": "https://schema.org/codeRepository",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/wall_released_species",
+    "@id": "http://w3id.org/fuel/shot",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://euro-fusion.org/glossary/shot/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A “shot” is any kind of experiment conducted on a test machine following defined parameters. It could be many actual firings of the machine following a variation in the parameters. So one or more “shots” make up an experiment."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "shot"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/device_component",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "device component"
+      }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
         "@id": "http://w3id.org/fuel/material_entity"
       }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A material entity that is a proper part of some device."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mod#hasSyntax",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
@@ -676,7 +703,141 @@
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/optical_diagnostic_system",
+    "@id": "https://w3id.org/mod#status",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/blanket",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@language": "en",
+        "@value": "https://www.energyencyclopedia.com/en/glossary/blanket"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "blanket"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/tokamak_component"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The lining of the inner wall of the tokamak vessel that will be in direct contact with the hot plasma. The blanket is usually made of modules (from stainless steel, or copper), on which can be mounted replaceable first-wall panels (made from beryllium, tungsten, molybdenum, or carbon in case of older tokamaks), able to withstand high temperatures. The blanket protects the chamber wall and the magnetic coils from high-energy neutrons. These slowdown in the blanket material and transform their energy into thermal energy."
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/kinetic_stability",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/stability"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/campaign",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A set of connected experiments that are run across a time period."
+      },
+      {
+        "@language": "es",
+        "@value": "Un conjunto de experimentos conectados que se ejecutan durante un período específico de tiempo"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "campaign"
+      },
+      {
+        "@language": "es",
+        "@value": "campaña"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/process"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "experimental campaign"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/vocab/vann/preferredNamespaceUri",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/ECRHSystem",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/heating_system"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/quality",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "consider reusing to BFO:quality \nhttp://purl.obolibrary.org/obo/BFO_0000019"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/Person",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/plasma_region",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "plasma region"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/region"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/spectrometer",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -687,74 +848,146 @@
     ]
   },
   {
-    "@id": "http://purl.org/dc/terms/creator",
+    "@id": "http://purl.org/dc/terms/hasPart",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/pedestal_region",
+    "@id": "http://purl.org/dc/terms/issued",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/license",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/hasComponent",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/plasma_instability_process",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "plasma instability process"
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/fuel/plasma_region"
+        "@id": "http://w3id.org/fuel/physics_process"
       }
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/iter_pdm",
+    "@id": "http://w3id.org/fuel/first_wall",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://purl.org/dc/terms/source": [
       {
-        "@id": "https://doi.org/10.1088/0029-5515/55/12/123006"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
         "@language": "en",
-        "@value": "ITER standardized data model"
+        "@value": "https://www.jt60sa.org/wp/glossary/"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "ITER Physics Data Model"
+        "@value": "first wall"
       }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@language": "en",
-        "@value": "ITER PDM"
-      },
-      {
-        "@language": "en",
-        "@value": "PDM"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/limiter",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
         "@id": "http://w3id.org/fuel/tokamak_component"
       }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "The interior surface of a tokamak closest to the plasma"
+      }
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/alpha_particle_population",
+    "@id": "http://w3id.org/fuel/neutronics",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://www.cea.fr/english/Pages/resources/nuclear-energy-monographs/neutronics.aspx"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Neutronics (or neutron physics) is the study of neutron paths through matter, of conditions for a chain reaction, and of alterations in matter's composition induced by nuclear reactions."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "neutronics"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "neutron physics"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/vacuum_vessel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@value": "https://www.iter.org/machine/vacuum-vessel"
+      }
+    ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/fuel/non_thermal_particle_population"
+        "@id": "http://w3id.org/fuel/tokamak_component"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A hermetically sealed, double-walled steel container that houses the fusion reactions and acts as a first safety containment barrier"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/magnetic_field_density",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "magnetic field density"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/quality"
       }
     ]
   },
@@ -770,9 +1003,26 @@
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/field",
+    "@id": "http://w3id.org/fuel/limiter",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/tokamak_component"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2004/02/skos/core#altLabel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mod#definitionProperty",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
@@ -787,46 +1037,19 @@
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/runaway_electron_population",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/non_thermal_particle_population"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/LowerHybridSystem",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/heating_system"
-      }
-    ]
-  },
-  {
-    "@id": "http://xmlns.com/foaf/0.1/Person",
+    "@id": "http://www.w3.org/ns/sosa/Sensor",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/neutral_beam",
+    "@id": "http://w3id.org/fuel/impurity_population",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/fuel/injected_neutral_particle_population"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#editorialNote": [
-      {
-        "@value": "is this a subclass of injected neutral particle population?"
+        "@id": "http://w3id.org/fuel/thermal_particle_population"
       }
     ]
   },
@@ -857,7 +1080,7 @@
         "@id": "http://w3id.org/fuel/fusion_reactor"
       },
       {
-        "@id": "_:n3e57bc4131bb4cf784717d3397ed2c46b7"
+        "@id": "_:n32ecb31fcca84199bb45758540c97ebbb7"
       }
     ],
     "http://www.w3.org/2004/02/skos/core#altLabel": [
@@ -872,7 +1095,7 @@
     ]
   },
   {
-    "@id": "_:n3e57bc4131bb4cf784717d3397ed2c46b7",
+    "@id": "_:n32ecb31fcca84199bb45758540c97ebbb7",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -888,92 +1111,52 @@
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/shot",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://euro-fusion.org/glossary/shot/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A “shot” is any kind of experiment conducted on a test machine following defined parameters. It could be many actual firings of the machine following a variation in the parameters. So one or more “shots” make up an experiment."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "shot"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/fusion_device_component",
+    "@id": "http://w3id.org/fuel/plasma_wall_interaction_process",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
         "@language": "en",
-        "@value": "fusion device component"
+        "@value": "plasma wall interaction process"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/fuel/device_component"
+        "@id": "http://w3id.org/fuel/physics_process"
       }
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/device_component",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "device component"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/material_entity"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "A material entity that is a proper part of some device."
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/created",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/quality",
+    "@id": "http://w3id.org/fuel/region",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "consider reusing to BFO:quality \nhttp://purl.obolibrary.org/obo/BFO_0000019"
+        "@value": "a spatial extent"
       }
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/fast_ion_population",
+    "@id": "http://w3id.org/fuel/divertor_plasma",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/fuel/non_thermal_particle_population"
+        "@id": "http://w3id.org/fuel/plasma"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/bolometer",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/diagnostics"
       }
     ]
   },
@@ -985,6 +1168,23 @@
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
         "@id": "http://w3id.org/fuel/particle_population"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/modified",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/ideal_kink_stability",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/MHDstability"
       }
     ]
   },
@@ -1006,69 +1206,18 @@
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/toroidal_field_coil",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "toroidal field coil"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/magnet_system"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/vocab/vann/preferredNamespaceUri",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/ECRHSystem",
+    "@id": "http://w3id.org/fuel/inner_core_region",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/fuel/heating_system"
+        "@id": "http://w3id.org/fuel/core_region"
       }
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/heating_system",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "heating system"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/tokamak_component"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/edge_plasma",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/tokamak_plasma"
-      }
-    ]
-  },
-  {
-    "@id": "https://schema.org/Person",
+    "@id": "http://w3id.org/fuel/particle_population",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1076,6 +1225,40 @@
       {
         "@id": "http://w3id.org/fuel/material_entity"
       }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/description",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/ion_population",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/thermal_particle_population"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/runaway_electron_population",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/non_thermal_particle_population"
+      }
+    ]
+  },
+  {
+    "@id": "https://schema.org/identifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
@@ -1097,7 +1280,7 @@
     ],
     "http://purl.org/dc/terms/creator": [
       {
-        "@id": "_:n3e57bc4131bb4cf784717d3397ed2c46b1"
+        "@id": "_:n32ecb31fcca84199bb45758540c97ebbb1"
       }
     ],
     "http://purl.org/dc/terms/description": [
@@ -1202,7 +1385,7 @@
     ]
   },
   {
-    "@id": "_:n3e57bc4131bb4cf784717d3397ed2c46b1",
+    "@id": "_:n32ecb31fcca84199bb45758540c97ebbb1",
     "@type": [
       "http://xmlns.com/foaf/0.1/Person",
       "https://schema.org/Person"
@@ -1224,7 +1407,7 @@
     ],
     "https://schema.org/affiliation": [
       {
-        "@id": "_:n3e57bc4131bb4cf784717d3397ed2c46b2"
+        "@id": "_:n32ecb31fcca84199bb45758540c97ebbb2"
       }
     ],
     "https://schema.org/identifier": [
@@ -1239,163 +1422,10 @@
     ]
   },
   {
-    "@id": "_:n3e57bc4131bb4cf784717d3397ed2c46b2",
+    "@id": "_:n32ecb31fcca84199bb45758540c97ebbb2",
     "https://schema.org/identifier": [
       {
         "@id": "https://ror.org/0361bwx64"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/tokamak_component",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "tokamak component"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/fusion_device_component"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/MHD_instability",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "MHD instability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/stability"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "Instabilities driven by the energy of the magnetic field and by the momentum of charged particles in the plasma. Small displacements of plasma density from the equilibrium position can reinforce that displacement until a further compensating force counteracts that reinforcement or the plasma equilibrium configuration is disrupted. Various modes of such displacement in the toroidal and poloidal planes can be stabilised so that the bulk plasma remains in position."
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/thermal_particle_population",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/particle_population"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/MHDInstabilityProcess",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/plasma_instability_process"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/particle_population",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/material_entity"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/first_wall",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@language": "en",
-        "@value": "https://www.jt60sa.org/wp/glossary/"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "first wall"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/tokamak_component"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "The interior surface of a tokamak closest to the plasma"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2004/02/skos/core#editorialNote",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/issued",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/plasma_wall_interaction_process",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "plasma wall interaction process"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/physics_process"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/electric_field",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/field"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/turbulence_process",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/physics_process"
       }
     ]
   },
@@ -1446,29 +1476,227 @@
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/stability",
+    "@id": "http://www.w3.org/2004/02/skos/core#editorialNote",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/dcat#version",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/thermal_particle_population",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "consider reusing http://purl.obolibrary.org/obo/PATO_0015026"
-      }
-    ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/fuel/quality"
+        "@id": "http://w3id.org/fuel/particle_population"
       }
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/operational_stability",
+    "@id": "http://w3id.org/fuel/laser_induced_plasma",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://www.sciencedirect.com/topics/chemistry/laser-induced-plasma"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "Laser induced plasma (LIP) is defined as a product of the complex interaction between a focused, high peak power laser beam and a target material, resulting in processes such as absorption of laser energy, vaporization, and ejection of atomic and molecular species, followed by plasma expansion and shock wave production."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "laser induced plasma"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/plasma"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "LIP"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#editorialNote": [
+      {
+        "@language": "en",
+        "@value": "industrial plasma - not a tokamak plasma"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/interferometer",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
+        "@id": "http://w3id.org/fuel/diagnostics"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/title",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/separatrix_region",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/plasma_region"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/injected_neutral_particle_population",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/neutral_particule_population"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/physics_process",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "physics process"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/process"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/neutron_diagnostics",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/diagnostics"
+      }
+    ]
+  },
+  {
+    "@id": "http://xmlns.com/foaf/0.1/name",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/tokamak_component",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "tokamak component"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/fusion_device_component"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/pedestal_region",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/plasma_region"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/Thomson_Scattering_system",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/diagnostics"
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.org/dc/terms/creator",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/MHD_instability",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "MHD instability"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
         "@id": "http://w3id.org/fuel/stability"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Instabilities driven by the energy of the magnetic field and by the momentum of charged particles in the plasma. Small displacements of plasma density from the equilibrium position can reinforce that displacement until a further compensating force counteracts that reinforcement or the plasma equilibrium configuration is disrupted. Various modes of such displacement in the toroidal and poloidal planes can be stabilised so that the bulk plasma remains in position."
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/tokamak_plasma",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/plasma"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/transport_process",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/physics_process"
       }
     ]
   },
@@ -1510,9 +1738,14 @@
     ]
   },
   {
-    "@id": "https://schema.org/affiliation",
+    "@id": "http://w3id.org/fuel/optical_diagnostic_system",
     "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/diagnostics"
+      }
     ]
   },
   {
@@ -1522,65 +1755,218 @@
     ]
   },
   {
-    "@id": "https://w3id.org/mod#hasRepresentationLanguage",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/edge_region",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "edge region"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/plasma_region"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/vacuum_vessel",
+    "@id": "http://w3id.org/fuel/iter_pdm",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://purl.org/dc/terms/source": [
       {
-        "@value": "https://www.iter.org/machine/vacuum-vessel"
+        "@id": "https://doi.org/10.1088/0029-5515/55/12/123006"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "ITER standardized data model"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "ITER Physics Data Model"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "ITER PDM"
+      },
+      {
+        "@language": "en",
+        "@value": "PDM"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/edge_plasma",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/tokamak_plasma"
+      }
+    ]
+  },
+  {
+    "@id": "https://schema.org/Person",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/material_entity"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/turbulence_process",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/physics_process"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/divertor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://en.wikipedia.org/wiki/Divertor"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "In magnetic confinement fusion, a divertor is a device which extracts heat and ash from fusion plasmas by averting direct contact between the confined plasma and the main chamber wall (plasma-wall interactions)."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "divertor"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
         "@id": "http://w3id.org/fuel/tokamak_component"
       }
-    ],
-    "http://www.w3.org/2004/02/skos/core#definition": [
-      {
-        "@language": "en",
-        "@value": "A hermetically sealed, double-walled steel container that houses the fusion reactions and acts as a first safety containment barrier"
-      }
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/scrape_off_layer_plasma",
+    "@id": "http://w3id.org/fuel/LowerHybridSystem",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/fuel/plasma"
+        "@id": "http://w3id.org/fuel/heating_system"
       }
     ]
   },
   {
-    "@id": "http://www.w3.org/2001/XMLSchema#date",
+    "@id": "http://w3id.org/fuel/fusion_reactor",
     "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Datatype"
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://www.energyencyclopedia.com/en/glossary/fusion-reactor/"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@language": "en",
+        "@value": "A device in which controlled thermonuclear fusion takes place, either for scientific purposes or for the production of energy. Since there are different ways to achieve fusion conditions, a fusion reactor can be a tokamak, a stellarator, a fusor or any other device in which the conditions for fusion can be achieved and maintained."
+      },
+      {
+        "@language": "es",
+        "@value": "Dispositivo en el que se produce la fusión termonuclear controlada, ya sea con fines científicos o para la producción de energía. Dado que existen diferentes maneras de lograr las condiciones de fusión, un reactor de fusión puede ser un tokamak, un stellarator, un fusor o cualquier otro dispositivo que permita alcanzar y mantener las condiciones para la fusión."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "fusion reactor"
+      },
+      {
+        "@language": "es",
+        "@value": "reactor de fusión"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/nuclear_reactor"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "es",
+        "@value": "dispositivo de fusión"
+      },
+      {
+        "@language": "en",
+        "@value": "fusion device"
+      },
+      {
+        "@language": "en",
+        "@value": "nuclear fusion reactor"
+      },
+      {
+        "@language": "es",
+        "@value": "reactor de fusión nuclear"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/neutral_beam",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/injected_neutral_particle_population"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#editorialNote": [
+      {
+        "@value": "is this a subclass of injected neutral particle population?"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/poloidal_field_coil",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "poloidal field coil"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/magnet_system"
+      }
+    ]
+  },
+  {
+    "@id": "http://w3id.org/fuel/heating_system",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "heating system"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://w3id.org/fuel/tokamak_component"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/mod#hasRepresentationLanguage",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
@@ -1617,406 +2003,20 @@
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/neutral_beam_system",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/heating_system"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/desorbed_gas",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/wall_released_species"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/interferometer",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/diagnostics"
-      }
-    ]
-  },
-  {
-    "@id": "http://xmlns.com/foaf/0.1/homepage",
+    "@id": "https://schema.org/affiliation",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   },
   {
-    "@id": "http://w3id.org/fuel/hasComponent",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/electron_population",
+    "@id": "http://w3id.org/fuel/wall_released_species",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://w3id.org/fuel/thermal_particle_population"
+        "@id": "http://w3id.org/fuel/material_entity"
       }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/thermocouple",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://www.britannica.com/technology/thermocouple"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A thermocouple is  a temperature-measuring device consisting of two wires of different metals joined at each end. One junction is placed where the temperature is to be measured, and the other is kept at a constant lower temperature. A measuring instrument is connected in the circuit. The temperature difference causes the development of an electromotive force (known as the Seebeck effect) that is approximately proportional to the difference between the temperatures of the two junctions. Temperature can be read from standard tables, or the measuring instrument can be calibrated to read temperature directly."
-      },
-      {
-        "@language": "es",
-        "@value": "Un termopar es un dispositivo de medición de temperatura que consta de dos cables de diferentes metales unidos por cada extremo. Una unión se coloca donde se va a medir la temperatura y la otra se mantiene a una temperatura inferior constante. Se conecta un instrumento de medición al circuito. La diferencia de temperatura genera una fuerza electromotriz (conocida como efecto Seebeck) aproximadamente proporcional a la diferencia de temperatura entre las dos uniones. La temperatura puede leerse en tablas estándar o el instrumento de medición puede calibrarse para leerla directamente."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "es",
-        "@value": "termopar"
-      },
-      {
-        "@language": "en",
-        "@value": "thermocouple"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.w3.org/ns/sosa/Sensor"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@language": "es",
-        "@value": "termocupla"
-      },
-      {
-        "@language": "en",
-        "@value": "thermo couple"
-      },
-      {
-        "@language": "en",
-        "@value": "thermoelectrical thermometer"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/divertor_plasma",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/plasma"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/ion_population",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/thermal_particle_population"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/plasma_region",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "plasma region"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/region"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/divertor",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://en.wikipedia.org/wiki/Divertor"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "In magnetic confinement fusion, a divertor is a device which extracts heat and ash from fusion plasmas by averting direct contact between the confined plasma and the main chamber wall (plasma-wall interactions)."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "divertor"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/tokamak_component"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/vocab/vann/preferredNamespacePrefix",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://w3id.org/mod#status",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://schema.org/identifier",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://w3id.org/mod#hasSyntax",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/injected_neutral_particle_population",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/neutral_particule_population"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/core_plasma",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/tokamak_plasma"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/ideal_kink_stability",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/MHDstability"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/separatrix_region",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/plasma_region"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/transport_process",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/physics_process"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/abstract",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/campaign",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "A set of connected experiments that are run across a time period."
-      },
-      {
-        "@language": "es",
-        "@value": "Un conjunto de experimentos conectados que se ejecutan durante un período específico de tiempo"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "campaign"
-      },
-      {
-        "@language": "es",
-        "@value": "campaña"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/process"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@language": "en",
-        "@value": "experimental campaign"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/neutronics",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://purl.org/dc/terms/source": [
-      {
-        "@id": "https://www.cea.fr/english/Pages/resources/nuclear-energy-monographs/neutronics.aspx"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "Neutronics (or neutron physics) is the study of neutron paths through matter, of conditions for a chain reaction, and of alterations in matter's composition induced by nuclear reactions."
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "neutronics"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@language": "en",
-        "@value": "neutron physics"
-      }
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/poloidal_field_coil",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "poloidal field coil"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/magnet_system"
-      }
-    ]
-  },
-  {
-    "@id": "https://schema.org/name",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/MHDstability",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "MHD stability"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/stability"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#altLabel": [
-      {
-        "@value": "magnetohydrodynamic stability"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/modified",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "https://w3id.org/mod#definitionProperty",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
-    ]
-  },
-  {
-    "@id": "http://w3id.org/fuel/plasma_instability_process",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@language": "en",
-        "@value": "plasma instability process"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://w3id.org/fuel/physics_process"
-      }
-    ]
-  },
-  {
-    "@id": "http://purl.org/dc/terms/license",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
   }
 ]
