@@ -41,16 +41,21 @@ The ontology itself is licensed under the [Creative Commons Attribution 4.0 Inte
 
 ### Content Negotiation
 
-The FUEL ontology supports content negotiation. You can retrieve the ontology in different formats by using the base URI `https://ukaea.github.io/fuel/` and specifying the `Accept` header:
+The FUEL ontology supports content negotiation. You can retrieve the ontology in different formats by using the base URI `https://w3id.org/fuel/` and specifying the `Accept` header:
 
 - **RDF/XML**: `application/rdf+xml`
 - **Turtle**: `text/turtle`
 - **JSON-LD**: `application/ld+json`
+- **HTML**: `text/html`
 
 For example, you can retrieve using the 'curl' commdand:
 
-curl -L -H "Accept: applicatoin/rdf+xml" https://w3id.org/fuel
+```
+curl -L -H "Accept: application/rdf+xml" https://w3id.org/fuel
+
 curl -L -H "Accept: text/turtle" https://w3id.org/fuel
 
+curl -L -H "Accept: text/html" http://w3id.org/fuel
+```
 
 

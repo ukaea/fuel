@@ -11,7 +11,7 @@ on:
       - main     
 
 env:
-  ONTO_DIR: src
+  ONTO_DIR: src/ontology
   ONTO_FILE: fuel.ttl
   ONTO_ABBREV: fuel
   DOCS_DIR: docs
@@ -30,7 +30,7 @@ jobs:
       - name: Check version
         id: check
         run: |
-          VERSION=$(grep -oP 'owl:versionInfo\s+"\K[^"]+' src/fuel.ttl || echo "")
+          VERSION=$(grep -oP 'owl:versionInfo\s+"\K[^"]+' src/ontology/fuel.ttl || echo "")
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           if [ "${{ github.ref_name }}" != "main" ] || [ -z "$VERSION" ]; then
             echo "is_new=false" >> $GITHUB_OUTPUT
