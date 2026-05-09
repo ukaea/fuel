@@ -141,7 +141,7 @@
     "id" : "12",
     "type" : "owl:Class"
   }, {
-    "id" : "14",
+    "id" : "21",
     "type" : "owl:Class"
   }, {
     "id" : "23",
@@ -153,19 +153,19 @@
     "id" : "26",
     "type" : "owl:Class"
   }, {
-    "id" : "29",
+    "id" : "28",
     "type" : "owl:Class"
   }, {
     "id" : "31",
     "type" : "owl:Class"
   }, {
-    "id" : "33",
+    "id" : "34",
     "type" : "owl:Class"
   }, {
     "id" : "38",
     "type" : "owl:Class"
   }, {
-    "id" : "39",
+    "id" : "41",
     "type" : "owl:Class"
   }, {
     "id" : "44",
@@ -174,13 +174,13 @@
     "id" : "60",
     "type" : "owl:Class"
   }, {
-    "id" : "21",
-    "type" : "owl:Class"
-  }, {
-    "id" : "61",
+    "id" : "19",
     "type" : "owl:Class"
   }, {
     "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
     "type" : "owl:Class"
   }, {
     "id" : "66",
@@ -198,7 +198,7 @@
     "id" : "73",
     "type" : "owl:Class"
   }, {
-    "id" : "27",
+    "id" : "29",
     "type" : "owl:Class"
   }, {
     "id" : "79",
@@ -222,7 +222,7 @@
     "id" : "49",
     "type" : "owl:Class"
   }, {
-    "id" : "35",
+    "id" : "33",
     "type" : "owl:Class"
   }, {
     "id" : "89",
@@ -234,13 +234,13 @@
     "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "65",
+    "id" : "63",
     "type" : "owl:Class"
   }, {
     "id" : "98",
     "type" : "owl:Class"
   }, {
-    "id" : "99",
+    "id" : "100",
     "type" : "owl:Class"
   }, {
     "id" : "102",
@@ -255,10 +255,10 @@
     "id" : "109",
     "type" : "owl:Class"
   }, {
-    "id" : "70",
+    "id" : "65",
     "type" : "owl:Class"
   }, {
-    "id" : "62",
+    "id" : "70",
     "type" : "owl:Class"
   }, {
     "id" : "110",
@@ -267,7 +267,7 @@
     "id" : "78",
     "type" : "owl:Class"
   }, {
-    "id" : "13",
+    "id" : "22",
     "type" : "owl:Class"
   }, {
     "id" : "117",
@@ -288,31 +288,31 @@
     "id" : "131",
     "type" : "owl:Class"
   }, {
-    "id" : "11",
+    "id" : "13",
     "type" : "owl:Class"
   }, {
-    "id" : "15",
+    "id" : "11",
     "type" : "owl:Class"
   }, {
     "id" : "91",
     "type" : "owl:Class"
   }, {
-    "id" : "32",
+    "id" : "35",
     "type" : "owl:Class"
   }, {
-    "id" : "40",
+    "id" : "39",
     "type" : "owl:Class"
   }, {
     "id" : "43",
     "type" : "owl:Class"
   }, {
-    "id" : "18",
-    "type" : "owl:Class"
-  }, {
-    "id" : "3",
+    "id" : "16",
     "type" : "owl:Class"
   }, {
     "id" : "133",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
     "type" : "owl:Class"
   }, {
     "id" : "139",
@@ -321,25 +321,25 @@
     "id" : "45",
     "type" : "owl:Class"
   }, {
-    "id" : "22",
+    "id" : "20",
     "type" : "owl:Class"
   }, {
     "id" : "142",
     "type" : "owl:Class"
   }, {
-    "id" : "28",
+    "id" : "30",
     "type" : "owl:Class"
   }, {
     "id" : "37",
     "type" : "owl:Class"
   }, {
-    "id" : "63",
+    "id" : "61",
     "type" : "owl:Class"
   }, {
-    "id" : "41",
+    "id" : "40",
     "type" : "owl:Class"
   }, {
-    "id" : "34",
+    "id" : "32",
     "type" : "owl:Class"
   }, {
     "id" : "149",
@@ -357,22 +357,22 @@
     "id" : "56",
     "type" : "owl:Class"
   }, {
-    "id" : "30",
-    "type" : "owl:Class"
-  }, {
-    "id" : "24",
+    "id" : "27",
     "type" : "owl:Class"
   }, {
     "id" : "145",
     "type" : "owl:Class"
   }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
     "id" : "118",
     "type" : "owl:Class"
   }, {
-    "id" : "17",
+    "id" : "15",
     "type" : "owl:Class"
   }, {
-    "id" : "19",
+    "id" : "17",
     "type" : "owl:Class"
   }, {
     "id" : "126",
@@ -384,22 +384,22 @@
     "id" : "59",
     "type" : "owl:Class"
   }, {
-    "id" : "16",
+    "id" : "14",
     "type" : "owl:Class"
   }, {
-    "id" : "64",
+    "id" : "62",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
     "type" : "owl:Class"
   }, {
     "id" : "132",
     "type" : "owl:Class"
   }, {
-    "id" : "20",
-    "type" : "owl:Class"
-  }, {
     "id" : "4",
     "type" : "owl:intersectionOf"
   }, {
-    "id" : "100",
+    "id" : "99",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -493,16 +493,6 @@
     "id" : "10",
     "superClasses" : [ "11" ]
   }, {
-    "iri" : "http://w3id.org/fuel/magnetic_field_density",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "magnetic_field_density",
-      "en" : "magnetic field density"
-    },
-    "id" : "12",
-    "superClasses" : [ "13" ]
-  }, {
     "iri" : "http://w3id.org/fuel/diagnostics",
     "baseIri" : "http://w3id.org/fuel",
     "instances" : 0,
@@ -524,12 +514,22 @@
       "IRI-based" : "diagnostics",
       "en" : "diagnostic system"
     },
-    "subClasses" : [ "16", "17", "18", "19", "20", "21", "22" ],
+    "subClasses" : [ "14", "15", "16", "17", "18", "19", "20" ],
     "comment" : {
       "en" : "Equipment for determining/monitoring the properties and behaviour of a plasma during an experiment."
     },
-    "id" : "14",
-    "superClasses" : [ "15" ]
+    "id" : "12",
+    "superClasses" : [ "13" ]
+  }, {
+    "iri" : "http://w3id.org/fuel/magnetic_field_density",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "magnetic_field_density",
+      "en" : "magnetic field density"
+    },
+    "id" : "21",
+    "superClasses" : [ "22" ]
   }, {
     "iri" : "http://w3id.org/fuel/fast_ion_population",
     "baseIri" : "http://w3id.org/fuel",
@@ -548,17 +548,6 @@
     },
     "id" : "25",
     "superClasses" : [ "24" ]
-  }, {
-    "iri" : "http://w3id.org/fuel/neutral_particule_population",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "neutral_particule_population",
-      "en" : "neutral particle population"
-    },
-    "subClasses" : [ "28", "11" ],
-    "id" : "26",
-    "superClasses" : [ "27" ]
   }, {
     "iri" : "http://w3id.org/fuel/laser_induced_plasma",
     "baseIri" : "http://w3id.org/fuel",
@@ -590,8 +579,29 @@
     "comment" : {
       "en" : "Laser induced plasma (LIP) is defined as a product of the complex interaction between a focused, high peak power laser beam and a target material, resulting in processes such as absorption of laser energy, vaporization, and ejection of atomic and molecular species, followed by plasma expansion and shock wave production."
     },
-    "id" : "29",
-    "superClasses" : [ "30" ]
+    "id" : "26",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://w3id.org/fuel/neutral_particule_population",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "neutral_particule_population",
+      "en" : "neutral particle population"
+    },
+    "subClasses" : [ "30", "11" ],
+    "id" : "28",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "http://w3id.org/fuel/tokamak_plasma",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "tokamak_plasma"
+    },
+    "subClasses" : [ "32", "33" ],
+    "id" : "31",
+    "superClasses" : [ "27" ]
   }, {
     "iri" : "http://w3id.org/fuel/poloidal_field_coil",
     "baseIri" : "http://w3id.org/fuel",
@@ -600,18 +610,20 @@
       "IRI-based" : "poloidal_field_coil",
       "en" : "poloidal field coil"
     },
-    "id" : "31",
-    "superClasses" : [ "32" ]
+    "id" : "34",
+    "superClasses" : [ "35" ]
   }, {
-    "iri" : "http://w3id.org/fuel/tokamak_plasma",
+    "iri" : "http://w3id.org/fuel/process",
     "baseIri" : "http://w3id.org/fuel",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "tokamak_plasma"
+      "IRI-based" : "process"
     },
-    "subClasses" : [ "34", "35" ],
-    "id" : "33",
-    "superClasses" : [ "30" ]
+    "subClasses" : [ "39", "40" ],
+    "comment" : {
+      "undefined" : "consider mapping to BFO - http://purl.obolibrary.org/obo/BFO_0000015"
+    },
+    "id" : "38"
   }, {
     "iri" : "http://w3id.org/fuel/shot",
     "baseIri" : "http://w3id.org/fuel",
@@ -631,19 +643,7 @@
     "comment" : {
       "undefined" : "A “shot” is any kind of experiment conducted on a test machine following defined parameters. It could be many actual firings of the machine following a variation in the parameters. So one or more “shots” make up an experiment."
     },
-    "id" : "38"
-  }, {
-    "iri" : "http://w3id.org/fuel/process",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "process"
-    },
-    "subClasses" : [ "40", "41" ],
-    "comment" : {
-      "undefined" : "consider mapping to BFO - http://purl.obolibrary.org/obo/BFO_0000015"
-    },
-    "id" : "39"
+    "id" : "41"
   }, {
     "iri" : "http://w3id.org/fuel/pedestal_region",
     "baseIri" : "http://w3id.org/fuel",
@@ -669,17 +669,8 @@
     "label" : {
       "IRI-based" : "spectrometer"
     },
-    "id" : "21",
-    "superClasses" : [ "14" ]
-  }, {
-    "iri" : "http://w3id.org/fuel/outer_core_region",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "outer_core_region"
-    },
-    "id" : "61",
-    "superClasses" : [ "62" ]
+    "id" : "19",
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "http://w3id.org/fuel/heating_system",
     "baseIri" : "http://w3id.org/fuel",
@@ -688,9 +679,18 @@
       "IRI-based" : "heating_system",
       "en" : "heating system"
     },
-    "subClasses" : [ "5", "60", "64", "65" ],
+    "subClasses" : [ "5", "60", "62", "63" ],
     "id" : "6",
-    "superClasses" : [ "63" ]
+    "superClasses" : [ "61" ]
+  }, {
+    "iri" : "http://w3id.org/fuel/outer_core_region",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "outer_core_region"
+    },
+    "id" : "64",
+    "superClasses" : [ "65" ]
   }, {
     "iri" : "http://w3id.org/fuel/kinetic_stability",
     "baseIri" : "http://w3id.org/fuel",
@@ -709,7 +709,7 @@
     },
     "subClasses" : [ "56", "53", "59" ],
     "id" : "54",
-    "superClasses" : [ "27" ]
+    "superClasses" : [ "29" ]
   }, {
     "iri" : "http://w3id.org/fuel/electron_population",
     "baseIri" : "http://w3id.org/fuel",
@@ -752,7 +752,7 @@
       "IRI-based" : "divertor_plasma"
     },
     "id" : "73",
-    "superClasses" : [ "30" ]
+    "superClasses" : [ "27" ]
   }, {
     "iri" : "http://w3id.org/fuel/particle_population",
     "baseIri" : "http://w3id.org/fuel",
@@ -760,8 +760,8 @@
     "label" : {
       "IRI-based" : "particle_population"
     },
-    "subClasses" : [ "54", "24", "26" ],
-    "id" : "27",
+    "subClasses" : [ "54", "24", "28" ],
+    "id" : "29",
     "superClasses" : [ "78" ]
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Person",
@@ -788,7 +788,7 @@
       "IRI-based" : "device_component",
       "en" : "device component"
     },
-    "subClasses" : [ "15" ],
+    "subClasses" : [ "13" ],
     "id" : "51",
     "superClasses" : [ "78" ]
   }, {
@@ -799,7 +799,7 @@
       "IRI-based" : "diagnostic_port"
     },
     "id" : "81",
-    "superClasses" : [ "63" ]
+    "superClasses" : [ "61" ]
   }, {
     "iri" : "http://w3id.org/fuel/neutronics",
     "baseIri" : "http://w3id.org/fuel",
@@ -898,8 +898,8 @@
     "label" : {
       "IRI-based" : "edge_plasma"
     },
-    "id" : "35",
-    "superClasses" : [ "33" ]
+    "id" : "33",
+    "superClasses" : [ "31" ]
   }, {
     "iri" : "http://w3id.org/fuel/blanket",
     "baseIri" : "http://w3id.org/fuel",
@@ -923,7 +923,7 @@
       "en" : "blanket"
     },
     "id" : "89",
-    "superClasses" : [ "63" ]
+    "superClasses" : [ "61" ]
   }, {
     "iri" : "http://w3id.org/fuel/fusion_facility",
     "baseIri" : "http://w3id.org/fuel",
@@ -968,8 +968,17 @@
     "label" : {
       "IRI-based" : "ECRHSystem"
     },
-    "id" : "65",
+    "id" : "63",
     "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://w3id.org/fuel/sputtered_impurity",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "sputtered_impurity"
+    },
+    "id" : "98",
+    "superClasses" : [ "99" ]
   }, {
     "iri" : "http://w3id.org/fuel/edge_region",
     "baseIri" : "http://w3id.org/fuel",
@@ -978,17 +987,8 @@
       "IRI-based" : "edge_region",
       "en" : "edge region"
     },
-    "id" : "98",
+    "id" : "100",
     "superClasses" : [ "45" ]
-  }, {
-    "iri" : "http://w3id.org/fuel/sputtered_impurity",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "sputtered_impurity"
-    },
-    "id" : "99",
-    "superClasses" : [ "100" ]
   }, {
     "iri" : "http://w3id.org/fuel/electric_field",
     "baseIri" : "http://w3id.org/fuel",
@@ -1006,7 +1006,7 @@
       "IRI-based" : "turbulence_process"
     },
     "id" : "104",
-    "superClasses" : [ "41" ]
+    "superClasses" : [ "40" ]
   }, {
     "iri" : "http://w3id.org/fuel/stability",
     "baseIri" : "http://w3id.org/fuel",
@@ -1019,7 +1019,7 @@
       "undefined" : "consider reusing http://purl.obolibrary.org/obo/PATO_0015026"
     },
     "id" : "9",
-    "superClasses" : [ "13" ]
+    "superClasses" : [ "22" ]
   }, {
     "iri" : "http://w3id.org/fuel/inner_core_region",
     "baseIri" : "http://w3id.org/fuel",
@@ -1028,7 +1028,18 @@
       "IRI-based" : "inner_core_region"
     },
     "id" : "109",
-    "superClasses" : [ "62" ]
+    "superClasses" : [ "65" ]
+  }, {
+    "iri" : "http://w3id.org/fuel/core_region",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "core_region",
+      "en" : "core region"
+    },
+    "subClasses" : [ "109", "64" ],
+    "id" : "65",
+    "superClasses" : [ "45" ]
   }, {
     "iri" : "http://w3id.org/fuel/field",
     "baseIri" : "http://w3id.org/fuel",
@@ -1039,17 +1050,6 @@
     "subClasses" : [ "69", "102" ],
     "id" : "70"
   }, {
-    "iri" : "http://w3id.org/fuel/core_region",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "core_region",
-      "en" : "core region"
-    },
-    "subClasses" : [ "109", "61" ],
-    "id" : "62",
-    "superClasses" : [ "45" ]
-  }, {
     "iri" : "http://w3id.org/fuel/toroidal_field_coil",
     "baseIri" : "http://w3id.org/fuel",
     "instances" : 0,
@@ -1058,7 +1058,7 @@
       "en" : "toroidal field coil"
     },
     "id" : "110",
-    "superClasses" : [ "32" ]
+    "superClasses" : [ "35" ]
   }, {
     "iri" : "http://w3id.org/fuel/material_entity",
     "baseIri" : "http://w3id.org/fuel",
@@ -1066,7 +1066,7 @@
     "label" : {
       "IRI-based" : "material_entity"
     },
-    "subClasses" : [ "30", "93", "49", "100", "27", "107", "51" ],
+    "subClasses" : [ "27", "93", "49", "99", "29", "107", "51" ],
     "comment" : {
       "undefined" : "Consider reusing to BFO:material_entity\nhttp://purl.obolibrary.org/obo/BFO_0000040"
     },
@@ -1078,11 +1078,11 @@
     "label" : {
       "IRI-based" : "quality"
     },
-    "subClasses" : [ "12", "9" ],
+    "subClasses" : [ "21", "9" ],
     "comment" : {
       "undefined" : "consider reusing to BFO:quality \nhttp://purl.obolibrary.org/obo/BFO_0000019"
     },
-    "id" : "13"
+    "id" : "22"
   }, {
     "iri" : "http://w3id.org/fuel/thermocouple",
     "baseIri" : "http://w3id.org/fuel",
@@ -1091,17 +1091,17 @@
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "thermo couple",
-        "type" : "label"
-      }, {
-        "identifier" : "altLabel",
-        "language" : "en",
         "value" : "thermoelectrical thermometer",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
         "language" : "es",
         "value" : "termocupla",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "thermo couple",
         "type" : "label"
       } ],
       "source" : [ {
@@ -1138,6 +1138,11 @@
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
+        "language" : "es",
+        "value" : "reactor de fusión nuclear",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
         "language" : "en",
         "value" : "fusion device",
         "type" : "label"
@@ -1145,11 +1150,6 @@
         "identifier" : "altLabel",
         "language" : "en",
         "value" : "nuclear fusion reactor",
-        "type" : "label"
-      }, {
-        "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "reactor de fusión nuclear",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
@@ -1186,7 +1186,7 @@
     },
     "subClasses" : [ "91" ],
     "id" : "92",
-    "superClasses" : [ "41" ]
+    "superClasses" : [ "40" ]
   }, {
     "iri" : "http://w3id.org/fuel/scrape_off_layer",
     "baseIri" : "http://w3id.org/fuel",
@@ -1226,7 +1226,18 @@
       "en" : "plasma wall interaction process"
     },
     "id" : "131",
-    "superClasses" : [ "41" ]
+    "superClasses" : [ "40" ]
+  }, {
+    "iri" : "http://w3id.org/fuel/fusion_device_component",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "fusion_device_component",
+      "en" : "fusion device component"
+    },
+    "subClasses" : [ "12", "61", "35" ],
+    "id" : "13",
+    "superClasses" : [ "51" ]
   }, {
     "iri" : "http://w3id.org/fuel/injected_neutral_particle_population",
     "baseIri" : "http://w3id.org/fuel",
@@ -1236,18 +1247,7 @@
     },
     "subClasses" : [ "10" ],
     "id" : "11",
-    "superClasses" : [ "26" ]
-  }, {
-    "iri" : "http://w3id.org/fuel/fusion_device_component",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "fusion_device_component",
-      "en" : "fusion device component"
-    },
-    "subClasses" : [ "14", "63", "32" ],
-    "id" : "15",
-    "superClasses" : [ "51" ]
+    "superClasses" : [ "28" ]
   }, {
     "iri" : "http://w3id.org/fuel/MHDInstabilityProcess",
     "baseIri" : "http://w3id.org/fuel",
@@ -1265,9 +1265,9 @@
       "IRI-based" : "magnet_system",
       "en" : "magnetic system"
     },
-    "subClasses" : [ "31", "110", "132" ],
-    "id" : "32",
-    "superClasses" : [ "15" ]
+    "subClasses" : [ "34", "110", "132" ],
+    "id" : "35",
+    "superClasses" : [ "13" ]
   }, {
     "iri" : "http://w3id.org/fuel/campaign",
     "baseIri" : "http://w3id.org/fuel",
@@ -1289,8 +1289,8 @@
       "en" : "A set of connected experiments that are run across a time period.",
       "es" : "Un conjunto de experimentos conectados que se ejecutan durante un período específico de tiempo"
     },
-    "id" : "40",
-    "superClasses" : [ "39" ]
+    "id" : "39",
+    "superClasses" : [ "38" ]
   }, {
     "iri" : "http://w3id.org/fuel/MHDstability",
     "baseIri" : "http://w3id.org/fuel",
@@ -1317,8 +1317,17 @@
     "label" : {
       "IRI-based" : "Thomson_Scattering_system"
     },
-    "id" : "18",
-    "superClasses" : [ "14" ]
+    "id" : "16",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "http://w3id.org/fuel/desorbed_gas",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "desorbed_gas"
+    },
+    "id" : "133",
+    "superClasses" : [ "99" ]
   }, {
     "iri" : "http://w3id.org/fuel/spherical_tokamak",
     "baseIri" : "http://w3id.org/fuel",
@@ -1348,15 +1357,6 @@
     "id" : "3",
     "superClasses" : [ "1" ]
   }, {
-    "iri" : "http://w3id.org/fuel/desorbed_gas",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "desorbed_gas"
-    },
-    "id" : "133",
-    "superClasses" : [ "100" ]
-  }, {
     "iri" : "http://w3id.org/fuel/alpha_particle_population",
     "baseIri" : "http://w3id.org/fuel",
     "instances" : 0,
@@ -1373,7 +1373,7 @@
       "IRI-based" : "plasma_region",
       "en" : "plasma region"
     },
-    "subClasses" : [ "128", "87", "44", "62", "98" ],
+    "subClasses" : [ "128", "87", "44", "65", "100" ],
     "id" : "45",
     "superClasses" : [ "145" ]
   }, {
@@ -1383,8 +1383,8 @@
     "label" : {
       "IRI-based" : "bolometer"
     },
-    "id" : "22",
-    "superClasses" : [ "14" ]
+    "id" : "20",
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "http://w3id.org/fuel/limiter",
     "baseIri" : "http://w3id.org/fuel",
@@ -1393,7 +1393,7 @@
       "IRI-based" : "limiter"
     },
     "id" : "142",
-    "superClasses" : [ "63" ]
+    "superClasses" : [ "61" ]
   }, {
     "iri" : "http://w3id.org/fuel/recycled_neutral_population",
     "baseIri" : "http://w3id.org/fuel",
@@ -1401,8 +1401,8 @@
     "label" : {
       "IRI-based" : "recycled_neutral_population"
     },
-    "id" : "28",
-    "superClasses" : [ "26" ]
+    "id" : "30",
+    "superClasses" : [ "28" ]
   }, {
     "iri" : "http://w3id.org/fuel/MHD_instability",
     "baseIri" : "http://w3id.org/fuel",
@@ -1430,8 +1430,8 @@
       "en" : "tokamak component"
     },
     "subClasses" : [ "89", "149", "147", "6", "137", "142", "81" ],
-    "id" : "63",
-    "superClasses" : [ "15" ]
+    "id" : "61",
+    "superClasses" : [ "13" ]
   }, {
     "iri" : "http://w3id.org/fuel/physics_process",
     "baseIri" : "http://w3id.org/fuel",
@@ -1441,8 +1441,8 @@
       "undefined" : "physics process"
     },
     "subClasses" : [ "92", "131", "130", "104" ],
-    "id" : "41",
-    "superClasses" : [ "39" ]
+    "id" : "40",
+    "superClasses" : [ "38" ]
   }, {
     "iri" : "http://w3id.org/fuel/core_plasma",
     "baseIri" : "http://w3id.org/fuel",
@@ -1450,8 +1450,8 @@
     "label" : {
       "IRI-based" : "core_plasma"
     },
-    "id" : "34",
-    "superClasses" : [ "33" ]
+    "id" : "32",
+    "superClasses" : [ "31" ]
   }, {
     "iri" : "http://w3id.org/fuel/divertor",
     "baseIri" : "http://w3id.org/fuel",
@@ -1472,7 +1472,7 @@
       "en" : "In magnetic confinement fusion, a divertor is a device which extracts heat and ash from fusion plasmas by averting direct contact between the confined plasma and the main chamber wall (plasma-wall interactions)."
     },
     "id" : "149",
-    "superClasses" : [ "63" ]
+    "superClasses" : [ "61" ]
   }, {
     "iri" : "http://w3id.org/fuel/vacuum_vessel",
     "baseIri" : "http://w3id.org/fuel",
@@ -1495,7 +1495,7 @@
       "IRI-based" : "vacuum_vessel"
     },
     "id" : "147",
-    "superClasses" : [ "63" ]
+    "superClasses" : [ "61" ]
   }, {
     "iri" : "https://schema.org/Person",
     "baseIri" : "https://schema.org",
@@ -1529,7 +1529,7 @@
       "en" : "first wall"
     },
     "id" : "137",
-    "superClasses" : [ "63" ]
+    "superClasses" : [ "61" ]
   }, {
     "iri" : "http://w3id.org/fuel/ion_population",
     "baseIri" : "http://w3id.org/fuel",
@@ -1562,22 +1562,12 @@
       "en" : "plasma",
       "es" : "plasma"
     },
-    "subClasses" : [ "33", "73", "126", "29" ],
+    "subClasses" : [ "31", "73", "126", "26" ],
     "comment" : {
       "en" : "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."
     },
-    "id" : "30",
+    "id" : "27",
     "superClasses" : [ "78" ]
-  }, {
-    "iri" : "http://w3id.org/fuel/non_thermal_particle_population",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "non_thermal_particle_population"
-    },
-    "subClasses" : [ "23", "25", "139" ],
-    "id" : "24",
-    "superClasses" : [ "27" ]
   }, {
     "iri" : "http://w3id.org/fuel/region",
     "baseIri" : "http://w3id.org/fuel",
@@ -1590,6 +1580,16 @@
       "undefined" : "a spatial extent"
     },
     "id" : "145"
+  }, {
+    "iri" : "http://w3id.org/fuel/non_thermal_particle_population",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "non_thermal_particle_population"
+    },
+    "subClasses" : [ "23", "25", "139" ],
+    "id" : "24",
+    "superClasses" : [ "29" ]
   }, {
     "iri" : "http://www.w3.org/ns/sosa/Sensor",
     "baseIri" : "http://www.w3.org/ns/sosa",
@@ -1607,8 +1607,8 @@
     "label" : {
       "IRI-based" : "optical_diagnostic_system"
     },
-    "id" : "17",
-    "superClasses" : [ "14" ]
+    "id" : "15",
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "http://w3id.org/fuel/neutron_diagnostics",
     "baseIri" : "http://w3id.org/fuel",
@@ -1616,8 +1616,8 @@
     "label" : {
       "IRI-based" : "neutron_diagnostics"
     },
-    "id" : "19",
-    "superClasses" : [ "14" ]
+    "id" : "17",
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "http://w3id.org/fuel/scrape_off_layer_plasma",
     "baseIri" : "http://w3id.org/fuel",
@@ -1626,7 +1626,7 @@
       "IRI-based" : "scrape_off_layer_plasma"
     },
     "id" : "126",
-    "superClasses" : [ "30" ]
+    "superClasses" : [ "27" ]
   }, {
     "iri" : "http://w3id.org/fuel/transport_process",
     "baseIri" : "http://w3id.org/fuel",
@@ -1635,7 +1635,7 @@
       "IRI-based" : "transport_process"
     },
     "id" : "130",
-    "superClasses" : [ "41" ]
+    "superClasses" : [ "40" ]
   }, {
     "iri" : "http://w3id.org/fuel/impurity_population",
     "baseIri" : "http://w3id.org/fuel",
@@ -1652,8 +1652,8 @@
     "label" : {
       "IRI-based" : "magnetic_probe"
     },
-    "id" : "16",
-    "superClasses" : [ "14" ]
+    "id" : "14",
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "http://w3id.org/fuel/ICRHSystem",
     "baseIri" : "http://w3id.org/fuel",
@@ -1661,8 +1661,17 @@
     "label" : {
       "IRI-based" : "ICRHSystem"
     },
-    "id" : "64",
+    "id" : "62",
     "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://w3id.org/fuel/interferometer",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "interferometer"
+    },
+    "id" : "18",
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "http://w3id.org/fuel/central_solenoid",
     "baseIri" : "http://w3id.org/fuel",
@@ -1686,16 +1695,7 @@
       "en" : "central solenoid"
     },
     "id" : "132",
-    "superClasses" : [ "32" ]
-  }, {
-    "iri" : "http://w3id.org/fuel/interferometer",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "interferometer"
-    },
-    "id" : "20",
-    "superClasses" : [ "14" ]
+    "superClasses" : [ "35" ]
   }, {
     "iri" : "http://w3id.org/fuel/divertor_tokamak",
     "baseIri" : "http://w3id.org/fuel",
@@ -1714,8 +1714,8 @@
     "label" : {
       "IRI-based" : "wall_released_species"
     },
-    "subClasses" : [ "133", "99" ],
-    "id" : "100",
+    "subClasses" : [ "133", "98" ],
+    "id" : "99",
     "superClasses" : [ "78" ]
   } ],
   "property" : [ {
@@ -1984,12 +1984,12 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "42"
   }, {
-    "range" : "27",
-    "domain" : "26",
+    "range" : "29",
+    "domain" : "28",
     "attributes" : [ "object", "anonymous" ],
     "id" : "46"
   }, {
-    "range" : "27",
+    "range" : "29",
     "domain" : "24",
     "attributes" : [ "object", "anonymous" ],
     "id" : "47"
@@ -2000,7 +2000,7 @@
     "id" : "48"
   }, {
     "range" : "51",
-    "domain" : "15",
+    "domain" : "13",
     "attributes" : [ "object", "anonymous" ],
     "id" : "50"
   }, {
@@ -2014,7 +2014,7 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "55"
   }, {
-    "range" : "27",
+    "range" : "29",
     "domain" : "54",
     "attributes" : [ "object", "anonymous" ],
     "id" : "57"
@@ -2025,7 +2025,7 @@
     "id" : "58"
   }, {
     "range" : "6",
-    "domain" : "64",
+    "domain" : "62",
     "attributes" : [ "object", "anonymous" ],
     "id" : "67"
   }, {
@@ -2035,17 +2035,17 @@
     "id" : "68"
   }, {
     "range" : "6",
-    "domain" : "65",
+    "domain" : "63",
     "attributes" : [ "object", "anonymous" ],
     "id" : "71"
   }, {
-    "range" : "39",
-    "domain" : "40",
+    "range" : "38",
+    "domain" : "39",
     "attributes" : [ "object", "anonymous" ],
     "id" : "72"
   }, {
-    "range" : "33",
-    "domain" : "35",
+    "range" : "31",
+    "domain" : "33",
     "attributes" : [ "object", "anonymous" ],
     "id" : "74"
   }, {
@@ -2054,38 +2054,38 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "75"
   }, {
-    "range" : "39",
-    "domain" : "41",
+    "range" : "38",
+    "domain" : "40",
     "attributes" : [ "object", "anonymous" ],
     "id" : "76"
   }, {
-    "range" : "26",
-    "domain" : "28",
+    "range" : "28",
+    "domain" : "30",
     "attributes" : [ "object", "anonymous" ],
     "id" : "77"
   }, {
-    "range" : "33",
-    "domain" : "34",
+    "range" : "31",
+    "domain" : "32",
     "attributes" : [ "object", "anonymous" ],
     "id" : "80"
   }, {
-    "range" : "26",
+    "range" : "28",
     "domain" : "11",
     "attributes" : [ "object", "anonymous" ],
     "id" : "82"
   }, {
-    "range" : "15",
-    "domain" : "63",
+    "range" : "13",
+    "domain" : "35",
     "attributes" : [ "object", "anonymous" ],
     "id" : "83"
   }, {
-    "range" : "32",
-    "domain" : "31",
+    "range" : "35",
+    "domain" : "34",
     "attributes" : [ "object", "anonymous" ],
     "id" : "84"
   }, {
-    "range" : "15",
-    "domain" : "32",
+    "range" : "11",
+    "domain" : "10",
     "attributes" : [ "object", "anonymous" ],
     "id" : "85"
   }, {
@@ -2099,18 +2099,18 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "94"
   }, {
-    "range" : "15",
-    "domain" : "14",
+    "range" : "13",
+    "domain" : "61",
     "attributes" : [ "object", "anonymous" ],
     "id" : "95"
   }, {
-    "range" : "11",
-    "domain" : "10",
+    "range" : "13",
+    "domain" : "12",
     "attributes" : [ "object", "anonymous" ],
     "id" : "96"
   }, {
-    "range" : "13",
-    "domain" : "12",
+    "range" : "22",
+    "domain" : "21",
     "attributes" : [ "object", "anonymous" ],
     "id" : "97"
   }, {
@@ -2124,7 +2124,7 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "103"
   }, {
-    "range" : "13",
+    "range" : "22",
     "domain" : "9",
     "attributes" : [ "object", "anonymous" ],
     "id" : "105"
@@ -2135,22 +2135,22 @@
     "id" : "106"
   }, {
     "range" : "78",
-    "domain" : "27",
+    "domain" : "29",
     "attributes" : [ "object", "anonymous" ],
     "id" : "108"
   }, {
     "range" : "78",
-    "domain" : "100",
+    "domain" : "99",
     "attributes" : [ "object", "anonymous" ],
     "id" : "111"
   }, {
     "range" : "78",
-    "domain" : "30",
+    "domain" : "27",
     "attributes" : [ "object", "anonymous" ],
     "id" : "112"
   }, {
-    "range" : "62",
-    "domain" : "61",
+    "range" : "70",
+    "domain" : "102",
     "attributes" : [ "object", "anonymous" ],
     "id" : "113"
   }, {
@@ -2164,8 +2164,8 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "115"
   }, {
-    "range" : "70",
-    "domain" : "69",
+    "range" : "65",
+    "domain" : "109",
     "attributes" : [ "object", "anonymous" ],
     "id" : "116"
   }, {
@@ -2174,87 +2174,87 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "119"
   }, {
-    "range" : "62",
-    "domain" : "109",
+    "range" : "70",
+    "domain" : "69",
     "attributes" : [ "object", "anonymous" ],
     "id" : "121"
   }, {
-    "range" : "70",
-    "domain" : "102",
+    "range" : "65",
+    "domain" : "64",
     "attributes" : [ "object", "anonymous" ],
     "id" : "122"
   }, {
-    "range" : "30",
-    "domain" : "33",
+    "range" : "27",
+    "domain" : "31",
     "attributes" : [ "object", "anonymous" ],
     "id" : "123"
   }, {
-    "range" : "41",
+    "range" : "40",
     "domain" : "104",
     "attributes" : [ "object", "anonymous" ],
     "id" : "124"
   }, {
-    "range" : "30",
+    "range" : "27",
     "domain" : "126",
     "attributes" : [ "object", "anonymous" ],
     "id" : "125"
   }, {
-    "range" : "30",
+    "range" : "27",
     "domain" : "73",
     "attributes" : [ "object", "anonymous" ],
     "id" : "127"
   }, {
-    "range" : "41",
+    "range" : "40",
     "domain" : "130",
     "attributes" : [ "object", "anonymous" ],
     "id" : "129"
   }, {
-    "range" : "41",
+    "range" : "40",
     "domain" : "131",
     "attributes" : [ "object", "anonymous" ],
     "id" : "134"
   }, {
-    "range" : "41",
+    "range" : "40",
     "domain" : "92",
     "attributes" : [ "object", "anonymous" ],
     "id" : "135"
   }, {
-    "range" : "63",
+    "range" : "61",
     "domain" : "137",
     "attributes" : [ "object", "anonymous" ],
     "id" : "136"
   }, {
-    "range" : "63",
+    "range" : "61",
     "domain" : "6",
     "attributes" : [ "object", "anonymous" ],
     "id" : "138"
   }, {
-    "range" : "63",
+    "range" : "61",
     "domain" : "81",
     "attributes" : [ "object", "anonymous" ],
     "id" : "140"
   }, {
-    "range" : "63",
+    "range" : "61",
     "domain" : "142",
     "attributes" : [ "object", "anonymous" ],
     "id" : "141"
   }, {
-    "range" : "63",
+    "range" : "61",
     "domain" : "89",
     "attributes" : [ "object", "anonymous" ],
     "id" : "143"
   }, {
     "range" : "45",
-    "domain" : "98",
+    "domain" : "100",
     "attributes" : [ "object", "anonymous" ],
     "id" : "144"
   }, {
-    "range" : "63",
+    "range" : "61",
     "domain" : "147",
     "attributes" : [ "object", "anonymous" ],
     "id" : "146"
   }, {
-    "range" : "63",
+    "range" : "61",
     "domain" : "149",
     "attributes" : [ "object", "anonymous" ],
     "id" : "148"
@@ -2270,16 +2270,16 @@
     "id" : "151"
   }, {
     "range" : "45",
-    "domain" : "62",
+    "domain" : "65",
     "attributes" : [ "object", "anonymous" ],
     "id" : "152"
   }, {
-    "range" : "32",
+    "range" : "35",
     "domain" : "132",
     "attributes" : [ "object", "anonymous" ],
     "id" : "153"
   }, {
-    "range" : "32",
+    "range" : "35",
     "domain" : "110",
     "attributes" : [ "object", "anonymous" ],
     "id" : "154"
@@ -2299,49 +2299,49 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "157"
   }, {
-    "range" : "14",
-    "domain" : "16",
+    "range" : "12",
+    "domain" : "14",
     "attributes" : [ "object", "anonymous" ],
     "id" : "158"
   }, {
-    "range" : "14",
-    "domain" : "17",
+    "range" : "12",
+    "domain" : "15",
     "attributes" : [ "object", "anonymous" ],
     "id" : "159"
   }, {
-    "range" : "14",
-    "domain" : "18",
+    "range" : "12",
+    "domain" : "16",
     "attributes" : [ "object", "anonymous" ],
     "id" : "160"
   }, {
-    "range" : "14",
-    "domain" : "19",
+    "range" : "12",
+    "domain" : "17",
     "attributes" : [ "object", "anonymous" ],
     "id" : "161"
   }, {
-    "range" : "14",
-    "domain" : "20",
+    "range" : "12",
+    "domain" : "18",
     "attributes" : [ "object", "anonymous" ],
     "id" : "162"
   }, {
-    "range" : "14",
-    "domain" : "21",
+    "range" : "12",
+    "domain" : "19",
     "attributes" : [ "object", "anonymous" ],
     "id" : "163"
   }, {
-    "range" : "14",
-    "domain" : "22",
+    "range" : "12",
+    "domain" : "20",
     "attributes" : [ "object", "anonymous" ],
     "id" : "164"
   }, {
     "iri" : "http://w3id.org/fuel/hasComponent",
     "baseIri" : "http://w3id.org/fuel",
-    "range" : "63",
+    "range" : "61",
     "label" : {
       "IRI-based" : "hasComponent"
     },
     "domain" : "1",
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "165"
   }, {
     "range" : "1",
@@ -2349,12 +2349,12 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "166"
   }, {
-    "range" : "100",
-    "domain" : "99",
+    "range" : "99",
+    "domain" : "98",
     "attributes" : [ "object", "anonymous" ],
     "id" : "167"
   }, {
-    "range" : "100",
+    "range" : "99",
     "domain" : "133",
     "attributes" : [ "object", "anonymous" ],
     "id" : "168"
@@ -2364,28 +2364,28 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "169"
   }, {
-    "range" : "145",
-    "domain" : "45",
+    "range" : "24",
+    "domain" : "139",
     "attributes" : [ "object", "anonymous" ],
     "id" : "170"
   }, {
-    "range" : "24",
-    "domain" : "23",
+    "range" : "145",
+    "domain" : "45",
     "attributes" : [ "object", "anonymous" ],
     "id" : "171"
   }, {
-    "range" : "30",
-    "domain" : "29",
+    "range" : "27",
+    "domain" : "26",
     "attributes" : [ "object", "anonymous" ],
     "id" : "172"
   }, {
     "range" : "24",
-    "domain" : "139",
+    "domain" : "25",
     "attributes" : [ "object", "anonymous" ],
     "id" : "173"
   }, {
     "range" : "24",
-    "domain" : "25",
+    "domain" : "23",
     "attributes" : [ "object", "anonymous" ],
     "id" : "174"
   } ]
