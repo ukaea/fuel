@@ -85,7 +85,12 @@ def generate_ontospy_docs(outdir):
 def generate_widoco_docs(outdir, onto_dir, onto_file, version="1.4.25"):
     widoco_dir = os.path.join(outdir, "widoco")
     if os.path.exists(widoco_dir):
+        print(f"{widoco_dir} already exists, clearing it for fresh Widoco output.")
         rmtree(widoco_dir)
+        try:
+            rmtree(widoco_dir)
+        except Exception as e:
+            print(e)    
     os.makedirs(widoco_dir, exist_ok=True)
     widoco_jar = os.path.join(widoco_dir, "widoco.jar")
 
