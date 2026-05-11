@@ -75,6 +75,9 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # http://purl.org/vocab/vann/preferredNamespaceUri
 <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://schema.org/image
+<http://schema.org/image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://www.w3.org/2004/02/skos/core#altLabel
 <http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -144,6 +147,9 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # http://w3id.org/fuel/hasComponent
 <http://w3id.org/fuel/hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
+# http://w3id.org/fuel/usesCoordinateConvention
+<http://w3id.org/fuel/usesCoordinateConvention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
 # 
 # 
 # #################################################################
@@ -153,6 +159,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # #################################################################
 # 
 # 
+# http://w3id.org/fuel/COCOSconvention
+<http://w3id.org/fuel/COCOSconvention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/COCOSconvention> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/Tokamak_Coordinate_Conventions> .
+<http://w3id.org/fuel/COCOSconvention> <http://purl.org/dc/terms/source> "https://wpcd-workflows.github.io/conventions.html"@en .
+<http://w3id.org/fuel/COCOSconvention> <http://www.w3.org/2000/01/rdf-schema#label> "COordinate COnventionS"@en .
+<http://w3id.org/fuel/COCOSconvention> <http://www.w3.org/2004/02/skos/core#altLabel> "COCOS conventions"@en .
+# 
 # http://w3id.org/fuel/ECRHSystem
 <http://w3id.org/fuel/ECRHSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel/ECRHSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/heating_system> .
@@ -160,6 +173,15 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # http://w3id.org/fuel/ICRHSystem
 <http://w3id.org/fuel/ICRHSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel/ICRHSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/heating_system> .
+# 
+# http://w3id.org/fuel/Langmuir_probe
+<http://w3id.org/fuel/Langmuir_probe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/Langmuir_probe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma_diagnostics> .
+<http://w3id.org/fuel/Langmuir_probe> <http://purl.org/dc/terms/source> "https://en.wikipedia.org/wiki/Langmuir_probe"@en .
+<http://w3id.org/fuel/Langmuir_probe> <http://schema.org/image> <https://en.wikipedia.org/wiki/Langmuir_probe#/media/File:Rosetta_Langmuir_Probe.jpg> .
+<http://w3id.org/fuel/Langmuir_probe> <http://www.w3.org/2000/01/rdf-schema#comment> "A Langmuir probe is a device used to determine the electron temperature, electron density, and electric potential of a plasma. It works by inserting one or more electrodes into a plasma, with a constant or time-varying electric potential between the various electrodes or between them and the surrounding vessel. The measured currents and potentials in this system allow the determination of the physical properties of the plasma."@en .
+<http://w3id.org/fuel/Langmuir_probe> <http://www.w3.org/2000/01/rdf-schema#label> "Langmuir probe"@en .
+<http://w3id.org/fuel/Langmuir_probe> <http://www.w3.org/2004/02/skos/core#definition> "A Langmuir probe is a device used to determine the electron temperature, electron density, and electric potential of a plasma. It works by inserting one or more electrodes into a plasma, with a constant or time-varying electric potential between the various electrodes or between them and the surrounding vessel. The measured currents and potentials in this system allow the determination of the physical properties of the plasma."@en .
 # 
 # http://w3id.org/fuel/LowerHybridSystem
 <http://w3id.org/fuel/LowerHybridSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -183,7 +205,17 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # 
 # http://w3id.org/fuel/Thomson_Scattering_system
 <http://w3id.org/fuel/Thomson_Scattering_system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel/Thomson_Scattering_system> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/diagnostics> .
+<http://w3id.org/fuel/Thomson_Scattering_system> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma_diagnostics> .
+<http://w3id.org/fuel/Thomson_Scattering_system> <http://purl.org/dc/terms/source> "https://en.wikipedia.org/wiki/Thomson_scattering"@en .
+<http://w3id.org/fuel/Thomson_Scattering_system> <http://www.w3.org/2000/01/rdf-schema#label> "Thomson scattering"@en .
+<http://w3id.org/fuel/Thomson_Scattering_system> <http://www.w3.org/2004/02/skos/core#altLabel> "Thomson Scattering system"@en .
+<http://w3id.org/fuel/Thomson_Scattering_system> <http://www.w3.org/2004/02/skos/core#altLabel> "Thomson scattering diagnostic"@en .
+<http://w3id.org/fuel/Thomson_Scattering_system> <http://www.w3.org/2004/02/skos/core#definition> "Thomson scattering is the elastic scattering of electromagnetic radiation by a free charged particle, as described by classical electromagnetism."@en .
+# 
+# http://w3id.org/fuel/Tokamak_Coordinate_Conventions
+<http://w3id.org/fuel/Tokamak_Coordinate_Conventions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/Tokamak_Coordinate_Conventions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/representation_convention> .
+<http://w3id.org/fuel/Tokamak_Coordinate_Conventions> <http://www.w3.org/2000/01/rdf-schema#label> "Tokamak Coordinate Conventions"@en .
 # 
 # http://w3id.org/fuel/alpha_particle_population
 <http://w3id.org/fuel/alpha_particle_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -198,7 +230,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 # 
 # http://w3id.org/fuel/bolometer
 <http://w3id.org/fuel/bolometer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel/bolometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/diagnostics> .
+<http://w3id.org/fuel/bolometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma_diagnostics> .
+<http://w3id.org/fuel/bolometer> <http://purl.org/dc/terms/source> "https://en.wikipedia.org/wiki/Bolometer"@en .
+<http://w3id.org/fuel/bolometer> <http://schema.org/image> <https://en.wikipedia.org/wiki/Bolometer#/media/File:Bolometer_conceptual_schematic.svg> .
+<http://w3id.org/fuel/bolometer> <http://www.w3.org/2000/01/rdf-schema#comment> "A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance."@en .
+<http://w3id.org/fuel/bolometer> <http://www.w3.org/2000/01/rdf-schema#label> "bolometer"@en .
+<http://w3id.org/fuel/bolometer> <http://www.w3.org/2004/02/skos/core#definition> "A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance."@en .
+<http://w3id.org/fuel/bolometer> <http://www.w3.org/2004/02/skos/core#editorialNote> "Bolometers play a pivotal role in monitoring radiation in fusion plasmas. https://en.wikipedia.org/wiki/Bolometer"@en .
 # 
 # http://w3id.org/fuel/campaign
 <http://w3id.org/fuel/campaign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -224,6 +262,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foa
 <http://w3id.org/fuel/core_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel/core_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma_region> .
 <http://w3id.org/fuel/core_region> <http://www.w3.org/2000/01/rdf-schema#label> "core region"@en .
+# 
+# http://w3id.org/fuel/density
+<http://w3id.org/fuel/density> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/density> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/physical_quality> .
 # 
 # http://w3id.org/fuel/desorbed_gas
 <http://w3id.org/fuel/desorbed_gas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -287,9 +329,18 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <http://w3id.org/fuel/electric_field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel/electric_field> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/field> .
 # 
+# http://w3id.org/fuel/electron_density
+<http://w3id.org/fuel/electron_density> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/electron_density> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/density> .
+# 
 # http://w3id.org/fuel/electron_population
 <http://w3id.org/fuel/electron_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel/electron_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/thermal_particle_population> .
+# 
+# http://w3id.org/fuel/electron_temperature
+<http://w3id.org/fuel/electron_temperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/electron_temperature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/temperature> .
+<http://w3id.org/fuel/electron_temperature> <http://purl.org/dc/terms/source> "https://en.wikipedia.org/wiki/Plasma_parameters#Electron_temperature"@en .
 # 
 # http://w3id.org/fuel/fast_ion_population
 <http://w3id.org/fuel/fast_ion_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -346,6 +397,11 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <http://w3id.org/fuel/impurity_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel/impurity_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/thermal_particle_population> .
 # 
+# http://w3id.org/fuel/information_contennt_entity
+<http://w3id.org/fuel/information_contennt_entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/information_contennt_entity> <http://www.w3.org/2000/01/rdf-schema#comment> "from IAO - http://purl.obolibrary.org/obo/IAO_0000030" .
+<http://w3id.org/fuel/information_contennt_entity> <http://www.w3.org/2000/01/rdf-schema#label> "information content entity" .
+# 
 # http://w3id.org/fuel/injected_neutral_particle_population
 <http://w3id.org/fuel/injected_neutral_particle_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel/injected_neutral_particle_population> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/neutral_particule_population> .
@@ -356,7 +412,7 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # 
 # http://w3id.org/fuel/interferometer
 <http://w3id.org/fuel/interferometer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel/interferometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/diagnostics> .
+<http://w3id.org/fuel/interferometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma_diagnostics> .
 # 
 # http://w3id.org/fuel/ion_population
 <http://w3id.org/fuel/ion_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -407,7 +463,7 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # 
 # http://w3id.org/fuel/magnetic_probe
 <http://w3id.org/fuel/magnetic_probe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel/magnetic_probe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/diagnostics> .
+<http://w3id.org/fuel/magnetic_probe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma_diagnostics> .
 # 
 # http://w3id.org/fuel/material_entity
 <http://w3id.org/fuel/material_entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -429,7 +485,7 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # 
 # http://w3id.org/fuel/neutron_diagnostics
 <http://w3id.org/fuel/neutron_diagnostics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel/neutron_diagnostics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/diagnostics> .
+<http://w3id.org/fuel/neutron_diagnostics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma_diagnostics> .
 # 
 # http://w3id.org/fuel/neutronics
 <http://w3id.org/fuel/neutronics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -459,7 +515,7 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # 
 # http://w3id.org/fuel/optical_diagnostic_system
 <http://w3id.org/fuel/optical_diagnostic_system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/fuel/optical_diagnostic_system> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/diagnostics> .
+<http://w3id.org/fuel/optical_diagnostic_system> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma_diagnostics> .
 # 
 # http://w3id.org/fuel/outer_core_region
 <http://w3id.org/fuel/outer_core_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -472,6 +528,10 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # http://w3id.org/fuel/pedestal_region
 <http://w3id.org/fuel/pedestal_region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel/pedestal_region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/plasma_region> .
+# 
+# http://w3id.org/fuel/physical_quality
+<http://w3id.org/fuel/physical_quality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/physical_quality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/quality> .
 # 
 # http://w3id.org/fuel/physics_process
 <http://w3id.org/fuel/physics_process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -486,6 +546,11 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <http://w3id.org/fuel/plasma> <http://www.w3.org/2000/01/rdf-schema#label> "plasma"@en .
 <http://w3id.org/fuel/plasma> <http://www.w3.org/2000/01/rdf-schema#label> "plasma"@es .
 <http://w3id.org/fuel/plasma> <http://www.w3.org/2004/02/skos/core#definition> "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."@en .
+# 
+# http://w3id.org/fuel/plasma_diagnostics
+<http://w3id.org/fuel/plasma_diagnostics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/plasma_diagnostics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/diagnostics> .
+<http://w3id.org/fuel/plasma_diagnostics> <http://purl.org/dc/terms/source> "https://en.wikipedia.org/wiki/Plasma_diagnostics"@en .
 # 
 # http://w3id.org/fuel/plasma_instability_process
 <http://w3id.org/fuel/plasma_instability_process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -522,6 +587,10 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # http://w3id.org/fuel/region
 <http://w3id.org/fuel/region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3id.org/fuel/region> <http://www.w3.org/2000/01/rdf-schema#comment> "a spatial extent" .
+# 
+# http://w3id.org/fuel/representation_convention
+<http://w3id.org/fuel/representation_convention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/representation_convention> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/information_contennt_entity> .
 # 
 # http://w3id.org/fuel/runaway_electron_population
 <http://w3id.org/fuel/runaway_electron_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -577,6 +646,10 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 <http://w3id.org/fuel/stellarator> <http://purl.org/dc/terms/source> <https://www.energyencyclopedia.com/en/glossary/stellarator> .
 <http://w3id.org/fuel/stellarator> <http://www.w3.org/2000/01/rdf-schema#comment> "A device for thermonuclear fusion research that uses a combination of differently shaped coils which together create a desired helical magnetic field to confine the hot plasma. To hold the particles in the donut-shaped magnetic container, they must circulate in spirals, once on the inside and once on the outside of the torus. The stellarator creates a suitable magnetic field by combining helical, toroidal and poloidal coils. There are many variations that use different combinations and shapes of coils (classical, heliac, heliotron, torsatron, and helias). In the most modern modular stellarators, an assembly of specially twisted coils creates the magnetic field."@en .
 <http://w3id.org/fuel/stellarator> <http://www.w3.org/2000/01/rdf-schema#label> "stellarator"@en .
+# 
+# http://w3id.org/fuel/temperature
+<http://w3id.org/fuel/temperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/fuel/temperature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/physical_quality> .
 # 
 # http://w3id.org/fuel/thermal_particle_population
 <http://w3id.org/fuel/thermal_particle_population> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -648,5 +721,86 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://schema.org/Person
 <https://schema.org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://schema.org/Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/fuel/material_entity> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://w3id.org/fuel/COCOS_1
+<http://w3id.org/fuel/COCOS_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fuel/COCOS_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/fuel/COCOSconvention> .
+# 
+# http://w3id.org/fuel/COCOS_10
+<http://w3id.org/fuel/COCOS_10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fuel/COCOS_10> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/fuel/COCOSconvention> .
+# 
+# http://w3id.org/fuel/COCOS_11
+<http://w3id.org/fuel/COCOS_11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fuel/COCOS_11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/fuel/COCOSconvention> .
+# 
+# http://w3id.org/fuel/COCOS_12
+<http://w3id.org/fuel/COCOS_12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fuel/COCOS_12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/fuel/COCOSconvention> .
+# 
+# http://w3id.org/fuel/COCOS_13
+<http://w3id.org/fuel/COCOS_13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fuel/COCOS_13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/fuel/COCOSconvention> .
+# 
+# http://w3id.org/fuel/COCOS_14
+<http://w3id.org/fuel/COCOS_14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fuel/COCOS_14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/fuel/COCOSconvention> .
+# 
+# http://w3id.org/fuel/COCOS_15
+<http://w3id.org/fuel/COCOS_15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fuel/COCOS_15> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/fuel/COCOSconvention> .
+# 
+# http://w3id.org/fuel/COCOS_16
+<http://w3id.org/fuel/COCOS_16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fuel/COCOS_16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/fuel/COCOSconvention> .
+# 
+# http://w3id.org/fuel/COCOS_17
+<http://w3id.org/fuel/COCOS_17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fuel/COCOS_17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/fuel/COCOSconvention> .
+# 
+# http://w3id.org/fuel/COCOS_18
+<http://w3id.org/fuel/COCOS_18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fuel/COCOS_18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/fuel/COCOSconvention> .
+# 
+# http://w3id.org/fuel/COCOS_2
+<http://w3id.org/fuel/COCOS_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fuel/COCOS_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/fuel/COCOSconvention> .
+# 
+# http://w3id.org/fuel/COCOS_3
+<http://w3id.org/fuel/COCOS_3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fuel/COCOS_3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/fuel/COCOSconvention> .
+# 
+# http://w3id.org/fuel/COCOS_4
+<http://w3id.org/fuel/COCOS_4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fuel/COCOS_4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/fuel/COCOSconvention> .
+# 
+# http://w3id.org/fuel/COCOS_5
+<http://w3id.org/fuel/COCOS_5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fuel/COCOS_5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/fuel/COCOSconvention> .
+# 
+# http://w3id.org/fuel/COCOS_6
+<http://w3id.org/fuel/COCOS_6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fuel/COCOS_6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/fuel/COCOSconvention> .
+# 
+# http://w3id.org/fuel/COCOS_7
+<http://w3id.org/fuel/COCOS_7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fuel/COCOS_7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/fuel/COCOSconvention> .
+# 
+# http://w3id.org/fuel/COCOS_8
+<http://w3id.org/fuel/COCOS_8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fuel/COCOS_8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/fuel/COCOSconvention> .
+# 
+# http://w3id.org/fuel/COCOS_9
+<http://w3id.org/fuel/COCOS_9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/fuel/COCOS_9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/fuel/COCOSconvention> .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

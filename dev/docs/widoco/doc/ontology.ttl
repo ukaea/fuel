@@ -92,6 +92,10 @@ _:genid1 rdf:type <http://xmlns.com/foaf/0.1/Person> ,
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
+###  http://schema.org/image
+<http://schema.org/image> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#altLabel
 <http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
 
@@ -168,9 +172,21 @@ xsd:date rdf:type rdfs:Datatype .
 :hasComponent rdf:type owl:ObjectProperty .
 
 
+###  http://w3id.org/fuel/usesCoordinateConvention
+:usesCoordinateConvention rdf:type owl:ObjectProperty .
+
+
 #################################################################
 #    Classes
 #################################################################
+
+###  http://w3id.org/fuel/COCOSconvention
+:COCOSconvention rdf:type owl:Class ;
+                 rdfs:subClassOf :Tokamak_Coordinate_Conventions ;
+                 <http://purl.org/dc/terms/source> "https://wpcd-workflows.github.io/conventions.html"@en ;
+                 rdfs:label "COordinate COnventionS"@en ;
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "COCOS conventions"@en .
+
 
 ###  http://w3id.org/fuel/ECRHSystem
 :ECRHSystem rdf:type owl:Class ;
@@ -180,6 +196,16 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://w3id.org/fuel/ICRHSystem
 :ICRHSystem rdf:type owl:Class ;
             rdfs:subClassOf :heating_system .
+
+
+###  http://w3id.org/fuel/Langmuir_probe
+:Langmuir_probe rdf:type owl:Class ;
+                rdfs:subClassOf :plasma_diagnostics ;
+                <http://purl.org/dc/terms/source> "https://en.wikipedia.org/wiki/Langmuir_probe"@en ;
+                <http://schema.org/image> <https://en.wikipedia.org/wiki/Langmuir_probe#/media/File:Rosetta_Langmuir_Probe.jpg> ;
+                rdfs:comment "A Langmuir probe is a device used to determine the electron temperature, electron density, and electric potential of a plasma. It works by inserting one or more electrodes into a plasma, with a constant or time-varying electric potential between the various electrodes or between them and the surrounding vessel. The measured currents and potentials in this system allow the determination of the physical properties of the plasma."@en ;
+                rdfs:label "Langmuir probe"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A Langmuir probe is a device used to determine the electron temperature, electron density, and electric potential of a plasma. It works by inserting one or more electrodes into a plasma, with a constant or time-varying electric potential between the various electrodes or between them and the surrounding vessel. The measured currents and potentials in this system allow the determination of the physical properties of the plasma."@en .
 
 
 ###  http://w3id.org/fuel/LowerHybridSystem
@@ -208,7 +234,18 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://w3id.org/fuel/Thomson_Scattering_system
 :Thomson_Scattering_system rdf:type owl:Class ;
-                           rdfs:subClassOf :diagnostics .
+                           rdfs:subClassOf :plasma_diagnostics ;
+                           <http://purl.org/dc/terms/source> "https://en.wikipedia.org/wiki/Thomson_scattering"@en ;
+                           rdfs:label "Thomson scattering"@en ;
+                           <http://www.w3.org/2004/02/skos/core#altLabel> "Thomson Scattering system"@en ,
+                                                                          "Thomson scattering diagnostic"@en ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "Thomson scattering is the elastic scattering of electromagnetic radiation by a free charged particle, as described by classical electromagnetism."@en .
+
+
+###  http://w3id.org/fuel/Tokamak_Coordinate_Conventions
+:Tokamak_Coordinate_Conventions rdf:type owl:Class ;
+                                rdfs:subClassOf :representation_convention ;
+                                rdfs:label "Tokamak Coordinate Conventions"@en .
 
 
 ###  http://w3id.org/fuel/alpha_particle_population
@@ -226,7 +263,13 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://w3id.org/fuel/bolometer
 :bolometer rdf:type owl:Class ;
-           rdfs:subClassOf :diagnostics .
+           rdfs:subClassOf :plasma_diagnostics ;
+           <http://purl.org/dc/terms/source> "https://en.wikipedia.org/wiki/Bolometer"@en ;
+           <http://schema.org/image> <https://en.wikipedia.org/wiki/Bolometer#/media/File:Bolometer_conceptual_schematic.svg> ;
+           rdfs:comment "A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance."@en ;
+           rdfs:label "bolometer"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance."@en ;
+           <http://www.w3.org/2004/02/skos/core#editorialNote> "Bolometers play a pivotal role in monitoring radiation in fusion plasmas. https://en.wikipedia.org/wiki/Bolometer"@en .
 
 
 ###  http://w3id.org/fuel/campaign
@@ -256,6 +299,11 @@ xsd:date rdf:type rdfs:Datatype .
 :core_region rdf:type owl:Class ;
              rdfs:subClassOf :plasma_region ;
              rdfs:label "core region"@en .
+
+
+###  http://w3id.org/fuel/density
+:density rdf:type owl:Class ;
+         rdfs:subClassOf :physical_quality .
 
 
 ###  http://w3id.org/fuel/desorbed_gas
@@ -326,9 +374,20 @@ xsd:date rdf:type rdfs:Datatype .
                 rdfs:subClassOf :field .
 
 
+###  http://w3id.org/fuel/electron_density
+:electron_density rdf:type owl:Class ;
+                  rdfs:subClassOf :density .
+
+
 ###  http://w3id.org/fuel/electron_population
 :electron_population rdf:type owl:Class ;
                      rdfs:subClassOf :thermal_particle_population .
+
+
+###  http://w3id.org/fuel/electron_temperature
+:electron_temperature rdf:type owl:Class ;
+                      rdfs:subClassOf :temperature ;
+                      <http://purl.org/dc/terms/source> "https://en.wikipedia.org/wiki/Plasma_parameters#Electron_temperature"@en .
 
 
 ###  http://w3id.org/fuel/fast_ion_population
@@ -395,6 +454,12 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:subClassOf :thermal_particle_population .
 
 
+###  http://w3id.org/fuel/information_contennt_entity
+:information_contennt_entity rdf:type owl:Class ;
+                             rdfs:comment "from IAO - http://purl.obolibrary.org/obo/IAO_0000030" ;
+                             rdfs:label "information content entity" .
+
+
 ###  http://w3id.org/fuel/injected_neutral_particle_population
 :injected_neutral_particle_population rdf:type owl:Class ;
                                       rdfs:subClassOf :neutral_particule_population .
@@ -407,7 +472,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://w3id.org/fuel/interferometer
 :interferometer rdf:type owl:Class ;
-                rdfs:subClassOf :diagnostics .
+                rdfs:subClassOf :plasma_diagnostics .
 
 
 ###  http://w3id.org/fuel/ion_population
@@ -471,7 +536,7 @@ In thermonuclear fusion research, a strong magnetic field is used to confine hot
 
 ###  http://w3id.org/fuel/magnetic_probe
 :magnetic_probe rdf:type owl:Class ;
-                rdfs:subClassOf :diagnostics .
+                rdfs:subClassOf :plasma_diagnostics .
 
 
 ###  http://w3id.org/fuel/material_entity
@@ -499,7 +564,7 @@ http://purl.obolibrary.org/obo/BFO_0000040""" .
 
 ###  http://w3id.org/fuel/neutron_diagnostics
 :neutron_diagnostics rdf:type owl:Class ;
-                     rdfs:subClassOf :diagnostics .
+                     rdfs:subClassOf :plasma_diagnostics .
 
 
 ###  http://w3id.org/fuel/neutronics
@@ -534,7 +599,7 @@ http://purl.obolibrary.org/obo/BFO_0000040""" .
 
 ###  http://w3id.org/fuel/optical_diagnostic_system
 :optical_diagnostic_system rdf:type owl:Class ;
-                           rdfs:subClassOf :diagnostics .
+                           rdfs:subClassOf :plasma_diagnostics .
 
 
 ###  http://w3id.org/fuel/outer_core_region
@@ -552,6 +617,11 @@ http://purl.obolibrary.org/obo/BFO_0000040""" .
                  rdfs:subClassOf :plasma_region .
 
 
+###  http://w3id.org/fuel/physical_quality
+:physical_quality rdf:type owl:Class ;
+                  rdfs:subClassOf :quality .
+
+
 ###  http://w3id.org/fuel/physics_process
 :physics_process rdf:type owl:Class ;
                  rdfs:subClassOf :process ;
@@ -566,6 +636,12 @@ http://purl.obolibrary.org/obo/BFO_0000040""" .
         rdfs:label "plasma"@en ,
                    "plasma"@es ;
         <http://www.w3.org/2004/02/skos/core#definition> "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."@en .
+
+
+###  http://w3id.org/fuel/plasma_diagnostics
+:plasma_diagnostics rdf:type owl:Class ;
+                    rdfs:subClassOf :diagnostics ;
+                    <http://purl.org/dc/terms/source> "https://en.wikipedia.org/wiki/Plasma_diagnostics"@en .
 
 
 ###  http://w3id.org/fuel/plasma_instability_process
@@ -611,6 +687,11 @@ http://purl.obolibrary.org/obo/BFO_0000019""" .
 ###  http://w3id.org/fuel/region
 :region rdf:type owl:Class ;
         rdfs:comment "a spatial extent" .
+
+
+###  http://w3id.org/fuel/representation_convention
+:representation_convention rdf:type owl:Class ;
+                           rdfs:subClassOf :information_contennt_entity .
 
 
 ###  http://w3id.org/fuel/runaway_electron_population
@@ -676,6 +757,11 @@ http://purl.obolibrary.org/obo/BFO_0000019""" .
              <http://purl.org/dc/terms/source> <https://www.energyencyclopedia.com/en/glossary/stellarator> ;
              rdfs:comment "A device for thermonuclear fusion research that uses a combination of differently shaped coils which together create a desired helical magnetic field to confine the hot plasma. To hold the particles in the donut-shaped magnetic container, they must circulate in spirals, once on the inside and once on the outside of the torus. The stellarator creates a suitable magnetic field by combining helical, toroidal and poloidal coils. There are many variations that use different combinations and shapes of coils (classical, heliac, heliotron, torsatron, and helias). In the most modern modular stellarators, an assembly of specially twisted coils creates the magnetic field."@en ;
              rdfs:label "stellarator"@en .
+
+
+###  http://w3id.org/fuel/temperature
+:temperature rdf:type owl:Class ;
+             rdfs:subClassOf :physical_quality .
 
 
 ###  http://w3id.org/fuel/thermal_particle_population
@@ -760,6 +846,100 @@ http://purl.obolibrary.org/obo/BFO_0000019""" .
 ###  https://schema.org/Person
 <https://schema.org/Person> rdf:type owl:Class ;
                             rdfs:subClassOf :material_entity .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://w3id.org/fuel/COCOS_1
+:COCOS_1 rdf:type owl:NamedIndividual ,
+                  :COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_10
+:COCOS_10 rdf:type owl:NamedIndividual ,
+                   :COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_11
+:COCOS_11 rdf:type owl:NamedIndividual ,
+                   :COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_12
+:COCOS_12 rdf:type owl:NamedIndividual ,
+                   :COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_13
+:COCOS_13 rdf:type owl:NamedIndividual ,
+                   :COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_14
+:COCOS_14 rdf:type owl:NamedIndividual ,
+                   :COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_15
+:COCOS_15 rdf:type owl:NamedIndividual ,
+                   :COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_16
+:COCOS_16 rdf:type owl:NamedIndividual ,
+                   :COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_17
+:COCOS_17 rdf:type owl:NamedIndividual ,
+                   :COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_18
+:COCOS_18 rdf:type owl:NamedIndividual ,
+                   :COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_2
+:COCOS_2 rdf:type owl:NamedIndividual ,
+                  :COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_3
+:COCOS_3 rdf:type owl:NamedIndividual ,
+                  :COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_4
+:COCOS_4 rdf:type owl:NamedIndividual ,
+                  :COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_5
+:COCOS_5 rdf:type owl:NamedIndividual ,
+                  :COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_6
+:COCOS_6 rdf:type owl:NamedIndividual ,
+                  :COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_7
+:COCOS_7 rdf:type owl:NamedIndividual ,
+                  :COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_8
+:COCOS_8 rdf:type owl:NamedIndividual ,
+                  :COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_9
+:COCOS_9 rdf:type owl:NamedIndividual ,
+                  :COCOSconvention .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

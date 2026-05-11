@@ -3,6 +3,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix fuel: <http://w3id.org/fuel/> .
 @prefix mod: <https://w3id.org/mod#> .
+@prefix ns1: <http://schema.org/> .
 @prefix omv: <http://omv.ontoware.org/2005/05/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -37,6 +38,8 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
 
 vann:preferredNamespaceUri a owl:AnnotationProperty .
 
+ns1:image a owl:AnnotationProperty .
+
 fuel: a owl:Ontology ;
     rdfs:label "FUsion Energy Lexicon"@en,
         "Léxico de energía de fusión"@es ;
@@ -68,11 +71,73 @@ fuel: a owl:Ontology ;
     mod:prefLabelProperty rdfs:label ;
     mod:status "active" .
 
+fuel:COCOS_1 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_10 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_11 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_12 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_13 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_14 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_15 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_16 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_17 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_18 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_2 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_3 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_4 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_5 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_6 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_7 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_8 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_9 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
 fuel:ECRHSystem a owl:Class ;
     rdfs:subClassOf fuel:heating_system .
 
 fuel:ICRHSystem a owl:Class ;
     rdfs:subClassOf fuel:heating_system .
+
+fuel:Langmuir_probe a owl:Class ;
+    rdfs:label "Langmuir probe"@en ;
+    dcterms:source "https://en.wikipedia.org/wiki/Langmuir_probe"@en ;
+    ns1:image <https://en.wikipedia.org/wiki/Langmuir_probe#/media/File:Rosetta_Langmuir_Probe.jpg> ;
+    rdfs:comment "A Langmuir probe is a device used to determine the electron temperature, electron density, and electric potential of a plasma. It works by inserting one or more electrodes into a plasma, with a constant or time-varying electric potential between the various electrodes or between them and the surrounding vessel. The measured currents and potentials in this system allow the determination of the physical properties of the plasma."@en ;
+    rdfs:subClassOf fuel:plasma_diagnostics ;
+    skos:definition "A Langmuir probe is a device used to determine the electron temperature, electron density, and electric potential of a plasma. It works by inserting one or more electrodes into a plasma, with a constant or time-varying electric potential between the various electrodes or between them and the surrounding vessel. The measured currents and potentials in this system allow the determination of the physical properties of the plasma."@en .
 
 fuel:LowerHybridSystem a owl:Class ;
     rdfs:subClassOf fuel:heating_system .
@@ -86,7 +151,12 @@ fuel:MHD_instability a owl:Class ;
     skos:definition "Instabilities driven by the energy of the magnetic field and by the momentum of charged particles in the plasma. Small displacements of plasma density from the equilibrium position can reinforce that displacement until a further compensating force counteracts that reinforcement or the plasma equilibrium configuration is disrupted. Various modes of such displacement in the toroidal and poloidal planes can be stabilised so that the bulk plasma remains in position."@en .
 
 fuel:Thomson_Scattering_system a owl:Class ;
-    rdfs:subClassOf fuel:diagnostics .
+    rdfs:label "Thomson scattering"@en ;
+    dcterms:source "https://en.wikipedia.org/wiki/Thomson_scattering"@en ;
+    rdfs:subClassOf fuel:plasma_diagnostics ;
+    skos:altLabel "Thomson Scattering system"@en,
+        "Thomson scattering diagnostic"@en ;
+    skos:definition "Thomson scattering is the elastic scattering of electromagnetic radiation by a free charged particle, as described by classical electromagnetism."@en .
 
 fuel:alpha_particle_population a owl:Class ;
     rdfs:subClassOf fuel:non_thermal_particle_population .
@@ -98,7 +168,13 @@ fuel:blanket a owl:Class ;
     skos:definition "The lining of the inner wall of the tokamak vessel that will be in direct contact with the hot plasma. The blanket is usually made of modules (from stainless steel, or copper), on which can be mounted replaceable first-wall panels (made from beryllium, tungsten, molybdenum, or carbon in case of older tokamaks), able to withstand high temperatures. The blanket protects the chamber wall and the magnetic coils from high-energy neutrons. These slowdown in the blanket material and transform their energy into thermal energy."@en .
 
 fuel:bolometer a owl:Class ;
-    rdfs:subClassOf fuel:diagnostics .
+    rdfs:label "bolometer"@en ;
+    dcterms:source "https://en.wikipedia.org/wiki/Bolometer"@en ;
+    ns1:image <https://en.wikipedia.org/wiki/Bolometer#/media/File:Bolometer_conceptual_schematic.svg> ;
+    rdfs:comment "A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance."@en ;
+    rdfs:subClassOf fuel:plasma_diagnostics ;
+    skos:definition "A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance."@en ;
+    skos:editorialNote "Bolometers play a pivotal role in monitoring radiation in fusion plasmas. https://en.wikipedia.org/wiki/Bolometer"@en .
 
 fuel:campaign a owl:Class ;
     rdfs:label "campaign"@en,
@@ -143,8 +219,15 @@ fuel:edge_region a owl:Class ;
 fuel:electric_field a owl:Class ;
     rdfs:subClassOf fuel:field .
 
+fuel:electron_density a owl:Class ;
+    rdfs:subClassOf fuel:density .
+
 fuel:electron_population a owl:Class ;
     rdfs:subClassOf fuel:thermal_particle_population .
+
+fuel:electron_temperature a owl:Class ;
+    dcterms:source "https://en.wikipedia.org/wiki/Plasma_parameters#Electron_temperature"@en ;
+    rdfs:subClassOf fuel:temperature .
 
 fuel:fast_ion_population a owl:Class ;
     rdfs:subClassOf fuel:non_thermal_particle_population .
@@ -174,7 +257,7 @@ fuel:inner_core_region a owl:Class ;
     rdfs:subClassOf fuel:core_region .
 
 fuel:interferometer a owl:Class ;
-    rdfs:subClassOf fuel:diagnostics .
+    rdfs:subClassOf fuel:plasma_diagnostics .
 
 fuel:ion_population a owl:Class ;
     rdfs:subClassOf fuel:thermal_particle_population .
@@ -216,7 +299,7 @@ fuel:magnetic_field_density a owl:Class ;
     rdfs:subClassOf fuel:quality .
 
 fuel:magnetic_probe a owl:Class ;
-    rdfs:subClassOf fuel:diagnostics .
+    rdfs:subClassOf fuel:plasma_diagnostics .
 
 fuel:neutral_beam a owl:Class ;
     rdfs:subClassOf fuel:injected_neutral_particle_population ;
@@ -226,7 +309,7 @@ fuel:neutral_beam_system a owl:Class ;
     rdfs:subClassOf fuel:heating_system .
 
 fuel:neutron_diagnostics a owl:Class ;
-    rdfs:subClassOf fuel:diagnostics .
+    rdfs:subClassOf fuel:plasma_diagnostics .
 
 fuel:neutronics a owl:Class ;
     rdfs:label "neutronics"@en ;
@@ -238,7 +321,7 @@ fuel:operational_stability a owl:Class ;
     rdfs:subClassOf fuel:stability .
 
 fuel:optical_diagnostic_system a owl:Class ;
-    rdfs:subClassOf fuel:diagnostics .
+    rdfs:subClassOf fuel:plasma_diagnostics .
 
 fuel:outer_core_region a owl:Class ;
     rdfs:subClassOf fuel:core_region .
@@ -319,6 +402,8 @@ fuel:transport_process a owl:Class ;
 fuel:turbulence_process a owl:Class ;
     rdfs:subClassOf fuel:physics_process .
 
+fuel:usesCoordinateConvention a owl:ObjectProperty .
+
 fuel:vacuum_vessel a owl:Class ;
     dcterms:source "https://www.iter.org/machine/vacuum-vessel" ;
     rdfs:subClassOf fuel:tokamak_component ;
@@ -361,10 +446,21 @@ fuel:MHDstability a owl:Class ;
     rdfs:subClassOf fuel:stability ;
     skos:altLabel "magnetohydrodynamic stability" .
 
+fuel:Tokamak_Coordinate_Conventions a owl:Class ;
+    rdfs:label "Tokamak Coordinate Conventions"@en ;
+    rdfs:subClassOf fuel:representation_convention .
+
+fuel:density a owl:Class ;
+    rdfs:subClassOf fuel:physical_quality .
+
 fuel:device_component a owl:Class ;
     rdfs:label "device component"@en ;
     rdfs:subClassOf fuel:material_entity ;
     skos:definition "A material entity that is a proper part of some device."@en .
+
+fuel:information_contennt_entity a owl:Class ;
+    rdfs:label "information content entity" ;
+    rdfs:comment "from IAO - http://purl.obolibrary.org/obo/IAO_0000030" .
 
 fuel:injected_neutral_particle_population a owl:Class ;
     rdfs:subClassOf fuel:neutral_particule_population .
@@ -386,6 +482,12 @@ fuel:plasma_instability_process a owl:Class ;
 fuel:region a owl:Class ;
     rdfs:comment "a spatial extent" .
 
+fuel:representation_convention a owl:Class ;
+    rdfs:subClassOf fuel:information_contennt_entity .
+
+fuel:temperature a owl:Class ;
+    rdfs:subClassOf fuel:physical_quality .
+
 sosa:Sensor a owl:Class .
 
 foaf:Person a owl:Class .
@@ -396,6 +498,13 @@ sdo:Person a owl:Class ;
 fuel:core_region a owl:Class ;
     rdfs:label "core region"@en ;
     rdfs:subClassOf fuel:plasma_region .
+
+fuel:diagnostics a owl:Class ;
+    rdfs:label "diagnostic system"@en ;
+    dcterms:source <https://www.iter.org/fusion-glossary> ;
+    rdfs:comment "Equipment for determining/monitoring the properties and behaviour of a plasma during an experiment."@en ;
+    rdfs:subClassOf fuel:fusion_device_component ;
+    skos:altLabel "diagnostics" .
 
 fuel:divertor a owl:Class ;
     rdfs:label "divertor"@en ;
@@ -423,12 +532,11 @@ fuel:neutral_particule_population a owl:Class ;
     rdfs:label "neutral particle population"@en ;
     rdfs:subClassOf fuel:particle_population .
 
+fuel:physical_quality a owl:Class ;
+    rdfs:subClassOf fuel:quality .
+
 fuel:process a owl:Class ;
     rdfs:comment "consider mapping to BFO - http://purl.obolibrary.org/obo/BFO_0000015" .
-
-fuel:quality a owl:Class ;
-    rdfs:comment """consider reusing to BFO:quality 
-http://purl.obolibrary.org/obo/BFO_0000019""" .
 
 fuel:tokamak_plasma a owl:Class ;
     rdfs:subClassOf fuel:plasma .
@@ -449,6 +557,10 @@ fuel:non_thermal_particle_population a owl:Class ;
 
 fuel:particle_population a owl:Class ;
     rdfs:subClassOf fuel:material_entity .
+
+fuel:quality a owl:Class ;
+    rdfs:comment """consider reusing to BFO:quality 
+http://purl.obolibrary.org/obo/BFO_0000019""" .
 
 fuel:thermal_particle_population a owl:Class ;
     rdfs:subClassOf fuel:particle_population .
@@ -488,18 +600,21 @@ fuel:plasma_region a owl:Class ;
     rdfs:label "plasma region"@en ;
     rdfs:subClassOf fuel:region .
 
-fuel:diagnostics a owl:Class ;
-    rdfs:label "diagnostic system"@en ;
-    dcterms:source <https://www.iter.org/fusion-glossary> ;
-    rdfs:comment "Equipment for determining/monitoring the properties and behaviour of a plasma during an experiment."@en ;
-    rdfs:subClassOf fuel:fusion_device_component ;
-    skos:altLabel "diagnostics" .
-
 fuel:material_entity a owl:Class ;
     rdfs:comment """Consider reusing to BFO:material_entity
 http://purl.obolibrary.org/obo/BFO_0000040""" .
 
+fuel:plasma_diagnostics a owl:Class ;
+    dcterms:source "https://en.wikipedia.org/wiki/Plasma_diagnostics"@en ;
+    rdfs:subClassOf fuel:diagnostics .
+
 fuel:tokamak_component a owl:Class ;
     rdfs:label "tokamak component"@en ;
     rdfs:subClassOf fuel:fusion_device_component .
+
+fuel:COCOSconvention a owl:Class ;
+    rdfs:label "COordinate COnventionS"@en ;
+    dcterms:source "https://wpcd-workflows.github.io/conventions.html"@en ;
+    rdfs:subClassOf fuel:Tokamak_Coordinate_Conventions ;
+    skos:altLabel "COCOS conventions"@en .
 

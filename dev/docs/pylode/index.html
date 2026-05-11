@@ -289,7 +289,7 @@ td {
     ],
     "https://schema.org/creator": [
       {
-        "@id": "_:n4ed63a5579014e67a79e315ecb832583b1"
+        "@id": "_:nf41cdd45390046d09a500a3c5f3dafdbb1"
       }
     ],
     "https://schema.org/dateCreated": [
@@ -337,10 +337,10 @@ td {
     ]
   },
   {
-    "@id": "_:n4ed63a5579014e67a79e315ecb832583b1",
+    "@id": "_:nf41cdd45390046d09a500a3c5f3dafdbb1",
     "https://schema.org/affiliation": [
       {
-        "@id": "_:n4ed63a5579014e67a79e315ecb832583b2"
+        "@id": "_:nf41cdd45390046d09a500a3c5f3dafdbb2"
       }
     ],
     "https://schema.org/identifier": [
@@ -355,7 +355,7 @@ td {
     ]
   },
   {
-    "@id": "_:n4ed63a5579014e67a79e315ecb832583b2"
+    "@id": "_:nf41cdd45390046d09a500a3c5f3dafdbb2"
   }
 ]
 	</script>
@@ -485,6 +485,38 @@ td {
       </div>
       <div class="section" id="classes">
         <h2>Classes</h2>
+        <div class="property entity" id="COordinateCOnventionS">
+          <h3>COordinate COnventionS
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/fuel/COCOSconvention</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
+              </th>
+              <td>
+                <a href="https://wpcd-workflows.github.io/conventions.html">https://wpcd-workflows.github.io/conventions.html</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://w3id.org/fuel/Tokamak_Coordinate_Conventions">Tokamak Coordinate Conventions</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="ECRHSystem">
           <h3>Ecrh System
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -527,6 +559,44 @@ td {
               <td>
                 <span>
                   <a href="http://w3id.org/fuel/heating_system">heating system</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="Langmuirprobe">
+          <h3>Langmuir probe
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/fuel/Langmuir_probe</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A Langmuir probe is a device used to determine the electron temperature, electron density, and electric potential of a plasma. It works by inserting one or more electrodes into a plasma, with a constant or time-varying electric potential between the various electrodes or between them and the surrounding vessel. The measured currents and potentials in this system allow the determination of the physical properties of the plasma.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
+              </th>
+              <td>
+                <a href="https://en.wikipedia.org/wiki/Langmuir_probe">https://en.wikipedia.org/wiki/Langmuir_probe</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://w3id.org/fuel/plasma_diagnostics">fuel:plasma_diagnostics</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -646,8 +716,8 @@ td {
             </tr>
           </table>
         </div>
-        <div class="property entity" id="Thomson_Scattering_system">
-          <h3>Thomson_Scattering_System
+        <div class="property entity" id="Thomsonscattering">
+          <h3>Thomson scattering
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
           </h3>
           <table>
@@ -659,11 +729,60 @@ td {
             </tr>
             <tr>
               <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>Thomson scattering is the elastic scattering of electromagnetic radiation by a free charged particle, as described by classical electromagnetism.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
+              </th>
+              <td>
+                <a href="https://en.wikipedia.org/wiki/Thomson_scattering">https://en.wikipedia.org/wiki/Thomson_scattering</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel/diagnostics">diagnostic system</a>
+                  <a href="http://w3id.org/fuel/plasma_diagnostics">fuel:plasma_diagnostics</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="TokamakCoordinateConventions">
+          <h3>Tokamak Coordinate Conventions
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/fuel/Tokamak_Coordinate_Conventions</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://w3id.org/fuel/representation_convention">fuel:representation_convention</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://w3id.org/fuel/COCOSconvention">COordinate COnventionS</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -745,11 +864,25 @@ td {
             </tr>
             <tr>
               <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance.</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
+              </th>
+              <td>
+                <a href="https://en.wikipedia.org/wiki/Bolometer">https://en.wikipedia.org/wiki/Bolometer</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel/diagnostics">diagnostic system</a>
+                  <a href="http://w3id.org/fuel/plasma_diagnostics">fuel:plasma_diagnostics</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -898,6 +1031,41 @@ td {
             </tr>
           </table>
         </div>
+        <div class="property entity" id="density">
+          <h3>density
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/fuel/density</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://w3id.org/fuel/physical_quality">fuel:physical_quality</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://w3id.org/fuel/electron_density">fuel:electron_density</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="desorbed_gas">
           <h3>desorbed_gas
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -1031,37 +1199,7 @@ td {
                 <ul>
                   <li>
                     <span>
-                      <a href="http://w3id.org/fuel/Thomson_Scattering_system">fuel:Thomson_Scattering_system</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://w3id.org/fuel/bolometer">fuel:bolometer</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://w3id.org/fuel/interferometer">fuel:interferometer</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://w3id.org/fuel/magnetic_probe">fuel:magnetic_probe</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://w3id.org/fuel/neutron_diagnostics">fuel:neutron_diagnostics</a>
-                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <a href="http://w3id.org/fuel/optical_diagnostic_system">fuel:optical_diagnostic_system</a>
+                      <a href="http://w3id.org/fuel/plasma_diagnostics">fuel:plasma_diagnostics</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -1263,6 +1401,30 @@ td {
             </tr>
           </table>
         </div>
+        <div class="property entity" id="electron_density">
+          <h3>electron_density
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/fuel/electron_density</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://w3id.org/fuel/density">fuel:density</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="electron_population">
           <h3>electron_population
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -1281,6 +1443,38 @@ td {
               <td>
                 <span>
                   <a href="http://w3id.org/fuel/thermal_particle_population">fuel:thermal_particle_population</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="electron_temperature">
+          <h3>electron_temperature
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/fuel/electron_temperature</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
+              </th>
+              <td>
+                <a href="https://en.wikipedia.org/wiki/Plasma_parameters#Electron_temperature">https://en.wikipedia.org/wiki/Plasma_parameters#Electron_temperature</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://w3id.org/fuel/temperature">fuel:temperature</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1638,6 +1832,36 @@ td {
             </tr>
           </table>
         </div>
+        <div class="property entity" id="informationcontententity">
+          <h3>information content entity
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/fuel/information_contennt_entity</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description" title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td><p>from IAO - http://purl.obolibrary.org/obo/IAO_0000030</p></td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://w3id.org/fuel/representation_convention">fuel:representation_convention</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
         <div class="property entity" id="injected_neutral_particle_population">
           <h3>injected_neutral_particle_population
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
@@ -1714,7 +1938,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel/diagnostics">diagnostic system</a>
+                  <a href="http://w3id.org/fuel/plasma_diagnostics">fuel:plasma_diagnostics</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -1990,7 +2214,7 @@ td {
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel/diagnostics">diagnostic system</a>
+                  <a href="http://w3id.org/fuel/plasma_diagnostics">fuel:plasma_diagnostics</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2178,7 +2402,7 @@ http://purl.obolibrary.org/obo/BFO_0000040</p></td>
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel/diagnostics">diagnostic system</a>
+                  <a href="http://w3id.org/fuel/plasma_diagnostics">fuel:plasma_diagnostics</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2358,7 +2582,7 @@ http://purl.obolibrary.org/obo/BFO_0000040</p></td>
               </th>
               <td>
                 <span>
-                  <a href="http://w3id.org/fuel/diagnostics">diagnostic system</a>
+                  <a href="http://w3id.org/fuel/plasma_diagnostics">fuel:plasma_diagnostics</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -2460,6 +2684,51 @@ http://purl.obolibrary.org/obo/BFO_0000040</p></td>
                   <a href="http://w3id.org/fuel/plasma_region">plasma region</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="physical_quality">
+          <h3>physical_quality
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/fuel/physical_quality</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://w3id.org/fuel/quality">fuel:quality</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="http://w3id.org/fuel/density">fuel:density</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="http://w3id.org/fuel/temperature">fuel:temperature</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                </ul>
               </td>
             </tr>
           </table>
@@ -2584,6 +2853,89 @@ http://purl.obolibrary.org/obo/BFO_0000040</p></td>
                   <li>
                     <span>
                       <a href="http://w3id.org/fuel/tokamak_plasma">fuel:tokamak_plasma</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="plasma_diagnostics">
+          <h3>plasma_diagnostics
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/fuel/plasma_diagnostics</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/source" title="A related resource from which the described resource is derived. Defined in DCMI Metadata Terms">Source</a>
+              </th>
+              <td>
+                <a href="https://en.wikipedia.org/wiki/Plasma_diagnostics">https://en.wikipedia.org/wiki/Plasma_diagnostics</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://w3id.org/fuel/diagnostics">diagnostic system</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <ul>
+                  <li>
+                    <span>
+                      <a href="http://w3id.org/fuel/Langmuir_probe">Langmuir probe</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="http://w3id.org/fuel/Thomson_Scattering_system">Thomson scattering</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="http://w3id.org/fuel/bolometer">bolometer</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="http://w3id.org/fuel/interferometer">fuel:interferometer</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="http://w3id.org/fuel/magnetic_probe">fuel:magnetic_probe</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="http://w3id.org/fuel/neutron_diagnostics">fuel:neutron_diagnostics</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="http://w3id.org/fuel/optical_diagnostic_system">fuel:optical_diagnostic_system</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -2810,6 +3162,12 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
                   </li>
                   <li>
                     <span>
+                      <a href="http://w3id.org/fuel/physical_quality">fuel:physical_quality</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
                       <a href="http://w3id.org/fuel/stability">fuel:stability</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
@@ -2867,6 +3225,41 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
               <td>
                 <span>
                   <a href="http://w3id.org/fuel/plasma_region">plasma region</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="representation_convention">
+          <h3>representation_convention
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/fuel/representation_convention</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://w3id.org/fuel/information_contennt_entity">information content entity</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://w3id.org/fuel/Tokamak_Coordinate_Conventions">Tokamak Coordinate Conventions</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -3191,6 +3584,41 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
               <td>
                 <span>
                   <a href="http://w3id.org/fuel/fusion_reactor">fusion reactor</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="temperature">
+          <h3>temperature
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/fuel/temperature</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://w3id.org/fuel/physical_quality">fuel:physical_quality</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="https://w3id.org/profile/ontdoc/superClassOf" title="Inverse of RDFS' subClassOf. Defined in Ontology Documentation Profile">Super Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://w3id.org/fuel/electron_temperature">fuel:electron_temperature</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -3726,6 +4154,19 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
             </tr>
           </table>
         </div>
+        <div class="property entity" id="usesCoordinateConvention">
+          <h3>uses coordinate convention
+            <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://w3id.org/fuel/usesCoordinateConvention</code>
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
       <div class="section" id="annotationproperties">
         <h2>Annotation Properties</h2>
@@ -3881,6 +4322,19 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
               <th>IRI</th>
               <td>
                 <code>http://purl.org/vocab/vann/preferredNamespaceUri</code>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="image">
+          <h3>image
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://schema.org/image</code>
               </td>
             </tr>
           </table>
@@ -4193,10 +4647,16 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
           </h4>
           <ul class="second">
             <li>
+              <a href="#COordinateCOnventionS">COordinate COnventionS</a>
+            </li>
+            <li>
               <a href="#ECRHSystem">Ecrh System</a>
             </li>
             <li>
               <a href="#ICRHSystem">Icrh System</a>
+            </li>
+            <li>
+              <a href="#Langmuirprobe">Langmuir probe</a>
             </li>
             <li>
               <a href="#LowerHybridSystem">Lower Hybrid System</a>
@@ -4211,7 +4671,10 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
               <a href="#MHDstability">MHD stability</a>
             </li>
             <li>
-              <a href="#Thomson_Scattering_system">Thomson_Scattering_System</a>
+              <a href="#Thomsonscattering">Thomson scattering</a>
+            </li>
+            <li>
+              <a href="#TokamakCoordinateConventions">Tokamak Coordinate Conventions</a>
             </li>
             <li>
               <a href="#alpha_particle_population">alpha_particle_population</a>
@@ -4233,6 +4696,9 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
             </li>
             <li>
               <a href="#coreregion">core region</a>
+            </li>
+            <li>
+              <a href="#density">density</a>
             </li>
             <li>
               <a href="#desorbed_gas">desorbed_gas</a>
@@ -4265,7 +4731,13 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
               <a href="#electric_field">electric_field</a>
             </li>
             <li>
+              <a href="#electron_density">electron_density</a>
+            </li>
+            <li>
               <a href="#electron_population">electron_population</a>
+            </li>
+            <li>
+              <a href="#electron_temperature">electron_temperature</a>
             </li>
             <li>
               <a href="#fast_ion_population">fast_ion_population</a>
@@ -4293,6 +4765,9 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
             </li>
             <li>
               <a href="#impurity_population">impurity_population</a>
+            </li>
+            <li>
+              <a href="#informationcontententity">information content entity</a>
             </li>
             <li>
               <a href="#injected_neutral_particle_population">injected_neutral_particle_population</a>
@@ -4370,10 +4845,16 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
               <a href="#pedestal_region">pedestal_region</a>
             </li>
             <li>
+              <a href="#physical_quality">physical_quality</a>
+            </li>
+            <li>
               <a href="#physicsprocess">physics process</a>
             </li>
             <li>
               <a href="#plasma">plasmaplasma</a>
+            </li>
+            <li>
+              <a href="#plasma_diagnostics">plasma_diagnostics</a>
             </li>
             <li>
               <a href="#plasmainstabilityprocess">plasma instability process</a>
@@ -4398,6 +4879,9 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
             </li>
             <li>
               <a href="#region">region</a>
+            </li>
+            <li>
+              <a href="#representation_convention">representation_convention</a>
             </li>
             <li>
               <a href="#runaway_electron_population">runaway_electron_population</a>
@@ -4428,6 +4912,9 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
             </li>
             <li>
               <a href="#stellarator">stellarator</a>
+            </li>
+            <li>
+              <a href="#temperature">temperature</a>
             </li>
             <li>
               <a href="#thermal_particle_population">thermal_particle_population</a>
@@ -4478,6 +4965,9 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
             <li>
               <a href="#hasComponent">has component</a>
             </li>
+            <li>
+              <a href="#usesCoordinateConvention">uses coordinate convention</a>
+            </li>
           </ul>
         </li>
         <li>
@@ -4520,6 +5010,9 @@ http://purl.obolibrary.org/obo/BFO_0000019</p></td>
             </li>
             <li>
               <a href="#preferredNamespaceUri">preferred namespace uri</a>
+            </li>
+            <li>
+              <a href="#image">image</a>
             </li>
             <li>
               <a href="#altLabel">alt label</a>

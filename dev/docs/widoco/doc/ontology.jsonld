@@ -93,6 +93,9 @@
   "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://schema.org/image",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://w3id.org/fuel/",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/abstract" : [ {
@@ -170,6 +173,132 @@
     "@value" : "active"
   } ]
 }, {
+  "@id" : "http://w3id.org/fuel/COCOS_1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://w3id.org/fuel/COCOSconvention"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/COCOS_10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://w3id.org/fuel/COCOSconvention"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/COCOS_11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://w3id.org/fuel/COCOSconvention"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/COCOS_12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://w3id.org/fuel/COCOSconvention"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/COCOS_13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://w3id.org/fuel/COCOSconvention"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/COCOS_14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://w3id.org/fuel/COCOSconvention"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/COCOS_15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://w3id.org/fuel/COCOSconvention"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/COCOS_16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://w3id.org/fuel/COCOSconvention"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/COCOS_17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://w3id.org/fuel/COCOSconvention"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/COCOS_18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://w3id.org/fuel/COCOSconvention"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/COCOS_2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://w3id.org/fuel/COCOSconvention"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/COCOS_3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://w3id.org/fuel/COCOSconvention"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/COCOS_4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://w3id.org/fuel/COCOSconvention"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/COCOS_5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://w3id.org/fuel/COCOSconvention"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/COCOS_6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://w3id.org/fuel/COCOSconvention"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/COCOS_7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://w3id.org/fuel/COCOSconvention"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/COCOS_8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://w3id.org/fuel/COCOSconvention"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/COCOS_9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://w3id.org/fuel/COCOSconvention"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/COCOSconvention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@language" : "en",
+    "@value" : "https://wpcd-workflows.github.io/conventions.html"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "COordinate COnventionS"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel/Tokamak_Coordinate_Conventions"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "COCOS conventions"
+  } ]
+}, {
   "@id" : "http://w3id.org/fuel/ECRHSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -180,6 +309,31 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/fuel/heating_system"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/Langmuir_probe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@language" : "en",
+    "@value" : "https://en.wikipedia.org/wiki/Langmuir_probe"
+  } ],
+  "http://schema.org/image" : [ {
+    "@id" : "https://en.wikipedia.org/wiki/Langmuir_probe#/media/File:Rosetta_Langmuir_Probe.jpg"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A Langmuir probe is a device used to determine the electron temperature, electron density, and electric potential of a plasma. It works by inserting one or more electrodes into a plasma, with a constant or time-varying electric potential between the various electrodes or between them and the surrounding vessel. The measured currents and potentials in this system allow the determination of the physical properties of the plasma."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Langmuir probe"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel/plasma_diagnostics"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A Langmuir probe is a device used to determine the electron temperature, electron density, and electric potential of a plasma. It works by inserting one or more electrodes into a plasma, with a constant or time-varying electric potential between the various electrodes or between them and the surrounding vessel. The measured currents and potentials in this system allow the determination of the physical properties of the plasma."
   } ]
 }, {
   "@id" : "http://w3id.org/fuel/LowerHybridSystem",
@@ -222,8 +376,37 @@
 }, {
   "@id" : "http://w3id.org/fuel/Thomson_Scattering_system",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@language" : "en",
+    "@value" : "https://en.wikipedia.org/wiki/Thomson_scattering"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Thomson scattering"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/fuel/diagnostics"
+    "@id" : "http://w3id.org/fuel/plasma_diagnostics"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Thomson Scattering system"
+  }, {
+    "@language" : "en",
+    "@value" : "Thomson scattering diagnostic"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Thomson scattering is the elastic scattering of electromagnetic radiation by a free charged particle, as described by classical electromagnetism."
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/Tokamak_Coordinate_Conventions",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tokamak Coordinate Conventions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel/representation_convention"
   } ]
 }, {
   "@id" : "http://w3id.org/fuel/alpha_particle_population",
@@ -252,8 +435,31 @@
 }, {
   "@id" : "http://w3id.org/fuel/bolometer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@language" : "en",
+    "@value" : "https://en.wikipedia.org/wiki/Bolometer"
+  } ],
+  "http://schema.org/image" : [ {
+    "@id" : "https://en.wikipedia.org/wiki/Bolometer#/media/File:Bolometer_conceptual_schematic.svg"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "bolometer"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/fuel/diagnostics"
+    "@id" : "http://w3id.org/fuel/plasma_diagnostics"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#editorialNote" : [ {
+    "@language" : "en",
+    "@value" : "Bolometers play a pivotal role in monitoring radiation in fusion plasmas. https://en.wikipedia.org/wiki/Bolometer"
   } ]
 }, {
   "@id" : "http://w3id.org/fuel/campaign",
@@ -311,6 +517,12 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/fuel/plasma_region"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/density",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel/physical_quality"
   } ]
 }, {
   "@id" : "http://w3id.org/fuel/desorbed_gas",
@@ -413,10 +625,26 @@
     "@id" : "http://w3id.org/fuel/field"
   } ]
 }, {
+  "@id" : "http://w3id.org/fuel/electron_density",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel/density"
+  } ]
+}, {
   "@id" : "http://w3id.org/fuel/electron_population",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/fuel/thermal_particle_population"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/electron_temperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@language" : "en",
+    "@value" : "https://en.wikipedia.org/wiki/Plasma_parameters#Electron_temperature"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel/temperature"
   } ]
 }, {
   "@id" : "http://w3id.org/fuel/fast_ion_population",
@@ -544,6 +772,15 @@
     "@id" : "http://w3id.org/fuel/thermal_particle_population"
   } ]
 }, {
+  "@id" : "http://w3id.org/fuel/information_contennt_entity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "from IAO - http://purl.obolibrary.org/obo/IAO_0000030"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "information content entity"
+  } ]
+}, {
   "@id" : "http://w3id.org/fuel/injected_neutral_particle_population",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -559,7 +796,7 @@
   "@id" : "http://w3id.org/fuel/interferometer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/fuel/diagnostics"
+    "@id" : "http://w3id.org/fuel/plasma_diagnostics"
   } ]
 }, {
   "@id" : "http://w3id.org/fuel/ion_population",
@@ -668,7 +905,7 @@
   "@id" : "http://w3id.org/fuel/magnetic_probe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/fuel/diagnostics"
+    "@id" : "http://w3id.org/fuel/plasma_diagnostics"
   } ]
 }, {
   "@id" : "http://w3id.org/fuel/material_entity",
@@ -705,7 +942,7 @@
   "@id" : "http://w3id.org/fuel/neutron_diagnostics",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/fuel/diagnostics"
+    "@id" : "http://w3id.org/fuel/plasma_diagnostics"
   } ]
 }, {
   "@id" : "http://w3id.org/fuel/neutronics",
@@ -771,7 +1008,7 @@
   "@id" : "http://w3id.org/fuel/optical_diagnostic_system",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/fuel/diagnostics"
+    "@id" : "http://w3id.org/fuel/plasma_diagnostics"
   } ]
 }, {
   "@id" : "http://w3id.org/fuel/outer_core_region",
@@ -790,6 +1027,12 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/fuel/plasma_region"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/physical_quality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel/quality"
   } ]
 }, {
   "@id" : "http://w3id.org/fuel/physics_process",
@@ -823,6 +1066,16 @@
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/plasma_diagnostics",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@language" : "en",
+    "@value" : "https://en.wikipedia.org/wiki/Plasma_diagnostics"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel/diagnostics"
   } ]
 }, {
   "@id" : "http://w3id.org/fuel/plasma_instability_process",
@@ -887,6 +1140,12 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "a spatial extent"
+  } ]
+}, {
+  "@id" : "http://w3id.org/fuel/representation_convention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel/information_contennt_entity"
   } ]
 }, {
   "@id" : "http://w3id.org/fuel/runaway_electron_population",
@@ -1002,6 +1261,12 @@
     "@id" : "http://w3id.org/fuel/fusion_reactor"
   } ]
 }, {
+  "@id" : "http://w3id.org/fuel/temperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://w3id.org/fuel/physical_quality"
+  } ]
+}, {
   "@id" : "http://w3id.org/fuel/thermal_particle_population",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -1104,6 +1369,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://w3id.org/fuel/physics_process"
   } ]
+}, {
+  "@id" : "http://w3id.org/fuel/usesCoordinateConvention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://w3id.org/fuel/vacuum_vessel",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],

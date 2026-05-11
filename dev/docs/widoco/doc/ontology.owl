@@ -12,7 +12,8 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:schema="https://schema.org/">
+     xmlns:schema="https://schema.org/"
+     xmlns:schema1="http://schema.org/">
     <owl:Ontology rdf:about="http://w3id.org/fuel/">
         <owl:versionIRI rdf:resource="http://w3id.org/fuel/0.0.1"/>
         <terms:abstract xml:lang="en">FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data.</terms:abstract>
@@ -147,6 +148,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://schema.org/image -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/image"/>
     
 
 
@@ -293,6 +301,13 @@
     
 
 
+    <!-- http://w3id.org/fuel/usesCoordinateConvention -->
+
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/fuel/usesCoordinateConvention"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -302,6 +317,18 @@
      -->
 
 
+    
+
+
+    <!-- http://w3id.org/fuel/COCOSconvention -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel/COCOSconvention">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/Tokamak_Coordinate_Conventions"/>
+        <terms:source xml:lang="en">https://wpcd-workflows.github.io/conventions.html</terms:source>
+        <rdfs:label xml:lang="en">COordinate COnventionS</rdfs:label>
+        <skos:altLabel xml:lang="en">COCOS conventions</skos:altLabel>
+    </owl:Class>
     
 
 
@@ -319,6 +346,20 @@
 
     <owl:Class rdf:about="http://w3id.org/fuel/ICRHSystem">
         <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/heating_system"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel/Langmuir_probe -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel/Langmuir_probe">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/plasma_diagnostics"/>
+        <terms:source xml:lang="en">https://en.wikipedia.org/wiki/Langmuir_probe</terms:source>
+        <schema1:image rdf:resource="https://en.wikipedia.org/wiki/Langmuir_probe#/media/File:Rosetta_Langmuir_Probe.jpg"/>
+        <rdfs:comment xml:lang="en">A Langmuir probe is a device used to determine the electron temperature, electron density, and electric potential of a plasma. It works by inserting one or more electrodes into a plasma, with a constant or time-varying electric potential between the various electrodes or between them and the surrounding vessel. The measured currents and potentials in this system allow the determination of the physical properties of the plasma.</rdfs:comment>
+        <rdfs:label xml:lang="en">Langmuir probe</rdfs:label>
+        <skos:definition xml:lang="en">A Langmuir probe is a device used to determine the electron temperature, electron density, and electric potential of a plasma. It works by inserting one or more electrodes into a plasma, with a constant or time-varying electric potential between the various electrodes or between them and the surrounding vessel. The measured currents and potentials in this system allow the determination of the physical properties of the plasma.</skos:definition>
     </owl:Class>
     
 
@@ -367,7 +408,22 @@
 
 
     <owl:Class rdf:about="http://w3id.org/fuel/Thomson_Scattering_system">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/diagnostics"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/plasma_diagnostics"/>
+        <terms:source xml:lang="en">https://en.wikipedia.org/wiki/Thomson_scattering</terms:source>
+        <rdfs:label xml:lang="en">Thomson scattering</rdfs:label>
+        <skos:altLabel xml:lang="en">Thomson Scattering system</skos:altLabel>
+        <skos:altLabel xml:lang="en">Thomson scattering diagnostic</skos:altLabel>
+        <skos:definition xml:lang="en">Thomson scattering is the elastic scattering of electromagnetic radiation by a free charged particle, as described by classical electromagnetism.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel/Tokamak_Coordinate_Conventions -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel/Tokamak_Coordinate_Conventions">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/representation_convention"/>
+        <rdfs:label xml:lang="en">Tokamak Coordinate Conventions</rdfs:label>
     </owl:Class>
     
 
@@ -397,7 +453,13 @@
 
 
     <owl:Class rdf:about="http://w3id.org/fuel/bolometer">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/diagnostics"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/plasma_diagnostics"/>
+        <terms:source xml:lang="en">https://en.wikipedia.org/wiki/Bolometer</terms:source>
+        <schema1:image rdf:resource="https://en.wikipedia.org/wiki/Bolometer#/media/File:Bolometer_conceptual_schematic.svg"/>
+        <rdfs:comment xml:lang="en">A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance.</rdfs:comment>
+        <rdfs:label xml:lang="en">bolometer</rdfs:label>
+        <skos:definition xml:lang="en">A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance.</skos:definition>
+        <skos:editorialNote xml:lang="en">Bolometers play a pivotal role in monitoring radiation in fusion plasmas. https://en.wikipedia.org/wiki/Bolometer</skos:editorialNote>
     </owl:Class>
     
 
@@ -443,6 +505,15 @@
     <owl:Class rdf:about="http://w3id.org/fuel/core_region">
         <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/plasma_region"/>
         <rdfs:label xml:lang="en">core region</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel/density -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel/density">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/physical_quality"/>
     </owl:Class>
     
 
@@ -558,11 +629,30 @@
     
 
 
+    <!-- http://w3id.org/fuel/electron_density -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel/electron_density">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/density"/>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/fuel/electron_population -->
 
 
     <owl:Class rdf:about="http://w3id.org/fuel/electron_population">
         <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/thermal_particle_population"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel/electron_temperature -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel/electron_temperature">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/temperature"/>
+        <terms:source xml:lang="en">https://en.wikipedia.org/wiki/Plasma_parameters#Electron_temperature</terms:source>
     </owl:Class>
     
 
@@ -666,6 +756,16 @@
     
 
 
+    <!-- http://w3id.org/fuel/information_contennt_entity -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel/information_contennt_entity">
+        <rdfs:comment>from IAO - http://purl.obolibrary.org/obo/IAO_0000030</rdfs:comment>
+        <rdfs:label>information content entity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/fuel/injected_neutral_particle_population -->
 
 
@@ -688,7 +788,7 @@
 
 
     <owl:Class rdf:about="http://w3id.org/fuel/interferometer">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/diagnostics"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/plasma_diagnostics"/>
     </owl:Class>
     
 
@@ -788,7 +888,7 @@ In thermonuclear fusion research, a strong magnetic field is used to confine hot
 
 
     <owl:Class rdf:about="http://w3id.org/fuel/magnetic_probe">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/diagnostics"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/plasma_diagnostics"/>
     </owl:Class>
     
 
@@ -836,7 +936,7 @@ http://purl.obolibrary.org/obo/BFO_0000040</rdfs:comment>
 
 
     <owl:Class rdf:about="http://w3id.org/fuel/neutron_diagnostics">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/diagnostics"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/plasma_diagnostics"/>
     </owl:Class>
     
 
@@ -891,7 +991,7 @@ http://purl.obolibrary.org/obo/BFO_0000040</rdfs:comment>
 
 
     <owl:Class rdf:about="http://w3id.org/fuel/optical_diagnostic_system">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/diagnostics"/>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/plasma_diagnostics"/>
     </owl:Class>
     
 
@@ -923,6 +1023,15 @@ http://purl.obolibrary.org/obo/BFO_0000040</rdfs:comment>
     
 
 
+    <!-- http://w3id.org/fuel/physical_quality -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel/physical_quality">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/quality"/>
+    </owl:Class>
+    
+
+
     <!-- http://w3id.org/fuel/physics_process -->
 
 
@@ -943,6 +1052,16 @@ http://purl.obolibrary.org/obo/BFO_0000040</rdfs:comment>
         <rdfs:label xml:lang="en">plasma</rdfs:label>
         <rdfs:label xml:lang="es">plasma</rdfs:label>
         <skos:definition xml:lang="en">The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel/plasma_diagnostics -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel/plasma_diagnostics">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/diagnostics"/>
+        <terms:source xml:lang="en">https://en.wikipedia.org/wiki/Plasma_diagnostics</terms:source>
     </owl:Class>
     
 
@@ -1020,6 +1139,15 @@ http://purl.obolibrary.org/obo/BFO_0000019</rdfs:comment>
 
     <owl:Class rdf:about="http://w3id.org/fuel/region">
         <rdfs:comment>a spatial extent</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel/representation_convention -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel/representation_convention">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/information_contennt_entity"/>
     </owl:Class>
     
 
@@ -1125,6 +1253,15 @@ http://purl.obolibrary.org/obo/BFO_0000019</rdfs:comment>
         <terms:source rdf:resource="https://www.energyencyclopedia.com/en/glossary/stellarator"/>
         <rdfs:comment xml:lang="en">A device for thermonuclear fusion research that uses a combination of differently shaped coils which together create a desired helical magnetic field to confine the hot plasma. To hold the particles in the donut-shaped magnetic container, they must circulate in spirals, once on the inside and once on the outside of the torus. The stellarator creates a suitable magnetic field by combining helical, toroidal and poloidal coils. There are many variations that use different combinations and shapes of coils (classical, heliac, heliotron, torsatron, and helias). In the most modern modular stellarators, an assembly of specially twisted coils creates the magnetic field.</rdfs:comment>
         <rdfs:label xml:lang="en">stellarator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/fuel/temperature -->
+
+
+    <owl:Class rdf:about="http://w3id.org/fuel/temperature">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/physical_quality"/>
     </owl:Class>
     
 
@@ -1262,6 +1399,180 @@ http://purl.obolibrary.org/obo/BFO_0000019</rdfs:comment>
     <owl:Class rdf:about="https://schema.org/Person">
         <rdfs:subClassOf rdf:resource="http://w3id.org/fuel/material_entity"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://w3id.org/fuel/COCOS_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/fuel/COCOS_1">
+        <rdf:type rdf:resource="http://w3id.org/fuel/COCOSconvention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/fuel/COCOS_10 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/fuel/COCOS_10">
+        <rdf:type rdf:resource="http://w3id.org/fuel/COCOSconvention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/fuel/COCOS_11 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/fuel/COCOS_11">
+        <rdf:type rdf:resource="http://w3id.org/fuel/COCOSconvention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/fuel/COCOS_12 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/fuel/COCOS_12">
+        <rdf:type rdf:resource="http://w3id.org/fuel/COCOSconvention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/fuel/COCOS_13 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/fuel/COCOS_13">
+        <rdf:type rdf:resource="http://w3id.org/fuel/COCOSconvention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/fuel/COCOS_14 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/fuel/COCOS_14">
+        <rdf:type rdf:resource="http://w3id.org/fuel/COCOSconvention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/fuel/COCOS_15 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/fuel/COCOS_15">
+        <rdf:type rdf:resource="http://w3id.org/fuel/COCOSconvention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/fuel/COCOS_16 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/fuel/COCOS_16">
+        <rdf:type rdf:resource="http://w3id.org/fuel/COCOSconvention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/fuel/COCOS_17 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/fuel/COCOS_17">
+        <rdf:type rdf:resource="http://w3id.org/fuel/COCOSconvention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/fuel/COCOS_18 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/fuel/COCOS_18">
+        <rdf:type rdf:resource="http://w3id.org/fuel/COCOSconvention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/fuel/COCOS_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/fuel/COCOS_2">
+        <rdf:type rdf:resource="http://w3id.org/fuel/COCOSconvention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/fuel/COCOS_3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/fuel/COCOS_3">
+        <rdf:type rdf:resource="http://w3id.org/fuel/COCOSconvention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/fuel/COCOS_4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/fuel/COCOS_4">
+        <rdf:type rdf:resource="http://w3id.org/fuel/COCOSconvention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/fuel/COCOS_5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/fuel/COCOS_5">
+        <rdf:type rdf:resource="http://w3id.org/fuel/COCOSconvention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/fuel/COCOS_6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/fuel/COCOS_6">
+        <rdf:type rdf:resource="http://w3id.org/fuel/COCOSconvention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/fuel/COCOS_7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/fuel/COCOS_7">
+        <rdf:type rdf:resource="http://w3id.org/fuel/COCOSconvention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/fuel/COCOS_8 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/fuel/COCOS_8">
+        <rdf:type rdf:resource="http://w3id.org/fuel/COCOSconvention"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://w3id.org/fuel/COCOS_9 -->
+
+
+    <owl:NamedIndividual rdf:about="http://w3id.org/fuel/COCOS_9">
+        <rdf:type rdf:resource="http://w3id.org/fuel/COCOSconvention"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
