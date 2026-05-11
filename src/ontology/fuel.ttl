@@ -18,37 +18,37 @@
 @base <http://w3id.org/fuel/> .
 
 <http://w3id.org/fuel/> rdf:type owl:Ontology ;
-                        owl:versionIRI <http://w3id.org/fuel/0.0.1> ;
-                        dcterms:abstract "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
-                        dcterms:created "2024-11-06"^^xsd:date ;
-                        dcterms:creator [ rdf:type foaf:Person ,
-                                                   sdo:Person ;
-                                          rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
-                                          foaf:homepage <https://agbeltran.github.io/> ;
-                                          foaf:name "Alejandra Gonzalez Beltran" ;
-                                          sdo:affiliation [ sdo:identifier <https://ror.org/0361bwx64>
-                                                          ] ;
-                                          sdo:identifier <https://orcid.org/0000-0003-3499-8262> ;
-                                          sdo:name "Alejandra Gonzalez Beltran"
-                                        ] ;
-                        dcterms:description "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
-                        dcterms:issued "2024-11-06"^^xsd:date ;
-                        dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                        dcterms:modified "2025-09-08"^^xsd:date ;
-                        dcterms:title "FUsion Energy Lexicon"@en ;
-                        vann:preferredNamespacePrefix "fuel" ;
-                        vann:preferredNamespaceUri "https://w3id.org/fuel/" ;
-                        rdfs:comment "FUsion Energy Lexicon (FUEL) is an OWL ontology for the interoperable description of fusion energy data, devices, plasmas, physical processes and other fusion energy concepts. FUEL provides a formal semantic framework for organizing fusion knowledge and it is intended to support consistent data annotation, integration, exchange, and reuse across fusion experiments, models, and computational workflows."@en ;
-                        rdfs:label "FUsion Energy Lexicon"@en ,
-                                   "Léxico de energía de fusión"@es ;
-                        owl:versionInfo "0.0.1" ;
-                        dcat:version "0.0.1" ;
-                        sdo:codeRepository <https://github.com/ukaea/fuel> ;
-                        mod:definitionProperty rdfs:comment ;
-                        mod:hasRepresentationLanguage omv:OWL ;
-                        mod:hasSyntax <http://www.w3.org/ns/formats/Turtle> ;
-                        mod:prefLabelProperty rdfs:label ;
-                        mod:status "active" .
+                         owl:versionIRI <http://w3id.org/fuel/0.0.1> ;
+                         dcterms:abstract "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
+                         dcterms:created "2024-11-06"^^xsd:date ;
+                         dcterms:creator [ rdf:type foaf:Person ,
+                                                    sdo:Person ;
+                                           rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
+                                           foaf:homepage <https://agbeltran.github.io/> ;
+                                           foaf:name "Alejandra Gonzalez Beltran" ;
+                                           sdo:affiliation [ sdo:identifier <https://ror.org/0361bwx64>
+                                                           ] ;
+                                           sdo:identifier <https://orcid.org/0000-0003-3499-8262> ;
+                                           sdo:name "Alejandra Gonzalez Beltran"
+                                         ] ;
+                         dcterms:description "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
+                         dcterms:issued "2024-11-06"^^xsd:date ;
+                         dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                         dcterms:modified "2025-09-08"^^xsd:date ;
+                         dcterms:title "FUsion Energy Lexicon"@en ;
+                         vann:preferredNamespacePrefix "fuel" ;
+                         vann:preferredNamespaceUri "https://w3id.org/fuel/" ;
+                         rdfs:comment "FUsion Energy Lexicon (FUEL) is an OWL ontology for the interoperable description of fusion energy data, devices, plasmas, physical processes and other fusion energy concepts. FUEL provides a formal semantic framework for organizing fusion knowledge and it is intended to support consistent data annotation, integration, exchange, and reuse across fusion experiments, models, and computational workflows."@en ;
+                         rdfs:label "FUsion Energy Lexicon"@en ,
+                                    "Léxico de energía de fusión"@es ;
+                         owl:versionInfo "0.0.1" ;
+                         dcat:version "0.0.1" ;
+                         sdo:codeRepository <https://github.com/ukaea/fuel> ;
+                         mod:definitionProperty rdfs:comment ;
+                         mod:hasRepresentationLanguage omv:OWL ;
+                         mod:hasSyntax <http://www.w3.org/ns/formats/Turtle> ;
+                         mod:prefLabelProperty rdfs:label ;
+                         mod:status "active" .
 
 #################################################################
 #    Annotation properties
@@ -100,6 +100,10 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/vocab/vann/preferredNamespaceUri
 vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/image
+<http://schema.org/image> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
@@ -178,9 +182,21 @@ xsd:date rdf:type rdfs:Datatype .
 fuel:hasComponent rdf:type owl:ObjectProperty .
 
 
+###  http://w3id.org/fuel/usesCoordinateConvention
+fuel:usesCoordinateConvention rdf:type owl:ObjectProperty .
+
+
 #################################################################
 #    Classes
 #################################################################
+
+###  http://w3id.org/fuel/COCOSconvention
+fuel:COCOSconvention rdf:type owl:Class ;
+                     rdfs:subClassOf fuel:Tokamak_Coordinate_Conventions ;
+                     dcterms:source "https://wpcd-workflows.github.io/conventions.html"@en ;
+                     rdfs:label "COordinate COnventionS"@en ;
+                     skos:altLabel "COCOS conventions"@en .
+
 
 ###  http://w3id.org/fuel/ECRHSystem
 fuel:ECRHSystem rdf:type owl:Class ;
@@ -190,6 +206,16 @@ fuel:ECRHSystem rdf:type owl:Class ;
 ###  http://w3id.org/fuel/ICRHSystem
 fuel:ICRHSystem rdf:type owl:Class ;
                 rdfs:subClassOf fuel:heating_system .
+
+
+###  http://w3id.org/fuel/Langmuir_probe
+fuel:Langmuir_probe rdf:type owl:Class ;
+                    rdfs:subClassOf fuel:plasma_diagnostics ;
+                    dcterms:source "https://en.wikipedia.org/wiki/Langmuir_probe"@en ;
+                    <http://schema.org/image> <https://en.wikipedia.org/wiki/Langmuir_probe#/media/File:Rosetta_Langmuir_Probe.jpg> ;
+                    rdfs:comment "A Langmuir probe is a device used to determine the electron temperature, electron density, and electric potential of a plasma. It works by inserting one or more electrodes into a plasma, with a constant or time-varying electric potential between the various electrodes or between them and the surrounding vessel. The measured currents and potentials in this system allow the determination of the physical properties of the plasma."@en ;
+                    rdfs:label "Langmuir probe"@en ;
+                    skos:definition "A Langmuir probe is a device used to determine the electron temperature, electron density, and electric potential of a plasma. It works by inserting one or more electrodes into a plasma, with a constant or time-varying electric potential between the various electrodes or between them and the surrounding vessel. The measured currents and potentials in this system allow the determination of the physical properties of the plasma."@en .
 
 
 ###  http://w3id.org/fuel/LowerHybridSystem
@@ -218,7 +244,18 @@ fuel:MHDstability rdf:type owl:Class ;
 
 ###  http://w3id.org/fuel/Thomson_Scattering_system
 fuel:Thomson_Scattering_system rdf:type owl:Class ;
-                               rdfs:subClassOf fuel:diagnostics .
+                               rdfs:subClassOf fuel:plasma_diagnostics ;
+                               dcterms:source "https://en.wikipedia.org/wiki/Thomson_scattering"@en ;
+                               rdfs:label "Thomson scattering"@en ;
+                               skos:altLabel "Thomson Scattering system"@en ,
+                                             "Thomson scattering diagnostic"@en ;
+                               skos:definition "Thomson scattering is the elastic scattering of electromagnetic radiation by a free charged particle, as described by classical electromagnetism."@en .
+
+
+###  http://w3id.org/fuel/Tokamak_Coordinate_Conventions
+fuel:Tokamak_Coordinate_Conventions rdf:type owl:Class ;
+                                    rdfs:subClassOf fuel:representation_convention ;
+                                    rdfs:label "Tokamak Coordinate Conventions"@en .
 
 
 ###  http://w3id.org/fuel/alpha_particle_population
@@ -236,7 +273,13 @@ fuel:blanket rdf:type owl:Class ;
 
 ###  http://w3id.org/fuel/bolometer
 fuel:bolometer rdf:type owl:Class ;
-               rdfs:subClassOf fuel:diagnostics .
+               rdfs:subClassOf fuel:plasma_diagnostics ;
+               dcterms:source "https://en.wikipedia.org/wiki/Bolometer"@en ;
+               <http://schema.org/image> <https://en.wikipedia.org/wiki/Bolometer#/media/File:Bolometer_conceptual_schematic.svg> ;
+               rdfs:comment "A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance."@en ;
+               rdfs:label "bolometer"@en ;
+               skos:definition "A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance."@en ;
+               skos:editorialNote "Bolometers play a pivotal role in monitoring radiation in fusion plasmas. https://en.wikipedia.org/wiki/Bolometer"@en .
 
 
 ###  http://w3id.org/fuel/campaign
@@ -266,6 +309,11 @@ fuel:core_plasma rdf:type owl:Class ;
 fuel:core_region rdf:type owl:Class ;
                  rdfs:subClassOf fuel:plasma_region ;
                  rdfs:label "core region"@en .
+
+
+###  http://w3id.org/fuel/density
+fuel:density rdf:type owl:Class ;
+             rdfs:subClassOf fuel:physical_quality .
 
 
 ###  http://w3id.org/fuel/desorbed_gas
@@ -336,9 +384,20 @@ fuel:electric_field rdf:type owl:Class ;
                     rdfs:subClassOf fuel:field .
 
 
+###  http://w3id.org/fuel/electron_density
+fuel:electron_density rdf:type owl:Class ;
+                      rdfs:subClassOf fuel:density .
+
+
 ###  http://w3id.org/fuel/electron_population
 fuel:electron_population rdf:type owl:Class ;
                          rdfs:subClassOf fuel:thermal_particle_population .
+
+
+###  http://w3id.org/fuel/electron_temperature
+fuel:electron_temperature rdf:type owl:Class ;
+                          rdfs:subClassOf fuel:temperature ;
+                          dcterms:source "https://en.wikipedia.org/wiki/Plasma_parameters#Electron_temperature"@en .
 
 
 ###  http://w3id.org/fuel/fast_ion_population
@@ -405,6 +464,12 @@ fuel:impurity_population rdf:type owl:Class ;
                          rdfs:subClassOf fuel:thermal_particle_population .
 
 
+###  http://w3id.org/fuel/information_contennt_entity
+fuel:information_contennt_entity rdf:type owl:Class ;
+                                 rdfs:comment "from IAO - http://purl.obolibrary.org/obo/IAO_0000030" ;
+                                 rdfs:label "information content entity" .
+
+
 ###  http://w3id.org/fuel/injected_neutral_particle_population
 fuel:injected_neutral_particle_population rdf:type owl:Class ;
                                           rdfs:subClassOf fuel:neutral_particule_population .
@@ -417,7 +482,7 @@ fuel:inner_core_region rdf:type owl:Class ;
 
 ###  http://w3id.org/fuel/interferometer
 fuel:interferometer rdf:type owl:Class ;
-                    rdfs:subClassOf fuel:diagnostics .
+                    rdfs:subClassOf fuel:plasma_diagnostics .
 
 
 ###  http://w3id.org/fuel/ion_population
@@ -481,7 +546,7 @@ fuel:magnetic_field_density rdf:type owl:Class ;
 
 ###  http://w3id.org/fuel/magnetic_probe
 fuel:magnetic_probe rdf:type owl:Class ;
-                    rdfs:subClassOf fuel:diagnostics .
+                    rdfs:subClassOf fuel:plasma_diagnostics .
 
 
 ###  http://w3id.org/fuel/material_entity
@@ -509,7 +574,7 @@ fuel:neutral_particule_population rdf:type owl:Class ;
 
 ###  http://w3id.org/fuel/neutron_diagnostics
 fuel:neutron_diagnostics rdf:type owl:Class ;
-                         rdfs:subClassOf fuel:diagnostics .
+                         rdfs:subClassOf fuel:plasma_diagnostics .
 
 
 ###  http://w3id.org/fuel/neutronics
@@ -544,7 +609,7 @@ fuel:operational_stability rdf:type owl:Class ;
 
 ###  http://w3id.org/fuel/optical_diagnostic_system
 fuel:optical_diagnostic_system rdf:type owl:Class ;
-                               rdfs:subClassOf fuel:diagnostics .
+                               rdfs:subClassOf fuel:plasma_diagnostics .
 
 
 ###  http://w3id.org/fuel/outer_core_region
@@ -562,6 +627,11 @@ fuel:pedestal_region rdf:type owl:Class ;
                      rdfs:subClassOf fuel:plasma_region .
 
 
+###  http://w3id.org/fuel/physical_quality
+fuel:physical_quality rdf:type owl:Class ;
+                      rdfs:subClassOf fuel:quality .
+
+
 ###  http://w3id.org/fuel/physics_process
 fuel:physics_process rdf:type owl:Class ;
                      rdfs:subClassOf fuel:process ;
@@ -576,6 +646,12 @@ fuel:plasma rdf:type owl:Class ;
             rdfs:label "plasma"@en ,
                        "plasma"@es ;
             skos:definition "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."@en .
+
+
+###  http://w3id.org/fuel/plasma_diagnostics
+fuel:plasma_diagnostics rdf:type owl:Class ;
+                        rdfs:subClassOf fuel:diagnostics ;
+                        dcterms:source "https://en.wikipedia.org/wiki/Plasma_diagnostics"@en .
 
 
 ###  http://w3id.org/fuel/plasma_instability_process
@@ -621,6 +697,11 @@ fuel:recycled_neutral_population rdf:type owl:Class ;
 ###  http://w3id.org/fuel/region
 fuel:region rdf:type owl:Class ;
             rdfs:comment "a spatial extent" .
+
+
+###  http://w3id.org/fuel/representation_convention
+fuel:representation_convention rdf:type owl:Class ;
+                               rdfs:subClassOf fuel:information_contennt_entity .
 
 
 ###  http://w3id.org/fuel/runaway_electron_population
@@ -686,6 +767,11 @@ fuel:stellarator rdf:type owl:Class ;
                  dcterms:source <https://www.energyencyclopedia.com/en/glossary/stellarator> ;
                  rdfs:comment "A device for thermonuclear fusion research that uses a combination of differently shaped coils which together create a desired helical magnetic field to confine the hot plasma. To hold the particles in the donut-shaped magnetic container, they must circulate in spirals, once on the inside and once on the outside of the torus. The stellarator creates a suitable magnetic field by combining helical, toroidal and poloidal coils. There are many variations that use different combinations and shapes of coils (classical, heliac, heliotron, torsatron, and helias). In the most modern modular stellarators, an assembly of specially twisted coils creates the magnetic field."@en ;
                  rdfs:label "stellarator"@en .
+
+
+###  http://w3id.org/fuel/temperature
+fuel:temperature rdf:type owl:Class ;
+                 rdfs:subClassOf fuel:physical_quality .
 
 
 ###  http://w3id.org/fuel/thermal_particle_population
@@ -770,6 +856,100 @@ foaf:Person rdf:type owl:Class .
 ###  https://schema.org/Person
 sdo:Person rdf:type owl:Class ;
            rdfs:subClassOf fuel:material_entity .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://w3id.org/fuel/COCOS_1
+fuel:COCOS_1 rdf:type owl:NamedIndividual ,
+                      fuel:COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_10
+fuel:COCOS_10 rdf:type owl:NamedIndividual ,
+                       fuel:COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_11
+fuel:COCOS_11 rdf:type owl:NamedIndividual ,
+                       fuel:COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_12
+fuel:COCOS_12 rdf:type owl:NamedIndividual ,
+                       fuel:COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_13
+fuel:COCOS_13 rdf:type owl:NamedIndividual ,
+                       fuel:COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_14
+fuel:COCOS_14 rdf:type owl:NamedIndividual ,
+                       fuel:COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_15
+fuel:COCOS_15 rdf:type owl:NamedIndividual ,
+                       fuel:COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_16
+fuel:COCOS_16 rdf:type owl:NamedIndividual ,
+                       fuel:COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_17
+fuel:COCOS_17 rdf:type owl:NamedIndividual ,
+                       fuel:COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_18
+fuel:COCOS_18 rdf:type owl:NamedIndividual ,
+                       fuel:COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_2
+fuel:COCOS_2 rdf:type owl:NamedIndividual ,
+                      fuel:COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_3
+fuel:COCOS_3 rdf:type owl:NamedIndividual ,
+                      fuel:COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_4
+fuel:COCOS_4 rdf:type owl:NamedIndividual ,
+                      fuel:COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_5
+fuel:COCOS_5 rdf:type owl:NamedIndividual ,
+                      fuel:COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_6
+fuel:COCOS_6 rdf:type owl:NamedIndividual ,
+                      fuel:COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_7
+fuel:COCOS_7 rdf:type owl:NamedIndividual ,
+                      fuel:COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_8
+fuel:COCOS_8 rdf:type owl:NamedIndividual ,
+                      fuel:COCOSconvention .
+
+
+###  http://w3id.org/fuel/COCOS_9
+fuel:COCOS_9 rdf:type owl:NamedIndividual ,
+                      fuel:COCOSconvention .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

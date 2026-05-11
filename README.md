@@ -31,7 +31,7 @@ To check the latest release documentation, visit
 
 and for the development version visit
 
-- [FUEL Development Documentation](https://ukaea.github.io/fuel/dev/docs/)
+- [FUEL Development Documentation](https://ukaea.github.io/fuel/dev/)
 
 ### License
 
