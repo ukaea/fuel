@@ -13,6 +13,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @base <http://w3id.org/fuel/> .
@@ -34,7 +35,7 @@
                          dcterms:description "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
                          dcterms:issued "2024-11-06"^^xsd:date ;
                          dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                         dcterms:modified "2025-09-08"^^xsd:date ;
+                         dcterms:modified "2026-06-01"^^xsd:date ;
                          dcterms:title "FUsion Energy Lexicon"@en ;
                          vann:preferredNamespacePrefix "fuel" ;
                          vann:preferredNamespaceUri "https://w3id.org/fuel/" ;
@@ -166,6 +167,68 @@ mod:prefLabelProperty rdf:type owl:AnnotationProperty .
 mod:status rdf:type owl:AnnotationProperty .
 
 
+###  http://w3id.org/fuel/detectedBy
+fuel:detectedBy rdf:type owl:AnnotationProperty ;
+                rdfs:label "detected by"@en ,
+                           "detectado por"@es ;
+                rdfs:comment "A diagnostic sensor type typically used to detect or measure this plasma event or condition."@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3.org/2006/time#hasBeginning
+time:hasBeginning rdf:type owl:ObjectProperty .
+
+###  http://www.w3.org/2006/time#hasEnd
+time:hasEnd rdf:type owl:ObjectProperty .
+
+###  http://w3id.org/fuel/hasDisruptionTime
+fuel:hasDisruptionTime rdf:type owl:ObjectProperty ;
+                       rdfs:domain fuel:plasma_disruption ;
+                       rdfs:range fuel:disruption_time ;
+                       rdfs:label "has disruption time"@en ;
+                       rdfs:comment "Links a plasma disruption to the time instant marking the onset of the disruption (start of the thermal quench)."@en .
+
+###  http://w3id.org/fuel/hasThermalQuenchDuration
+fuel:hasThermalQuenchDuration rdf:type owl:ObjectProperty ;
+                              rdfs:domain fuel:thermal_quench ;
+                              rdfs:range fuel:thermal_quench_duration ;
+                              rdfs:label "has thermal quench duration"@en ;
+                              rdfs:comment "Links a thermal quench event to its characteristic duration (~1 ms)."@en .
+
+###  http://w3id.org/fuel/hasCurrentQuenchDuration
+fuel:hasCurrentQuenchDuration rdf:type owl:ObjectProperty ;
+                              rdfs:domain fuel:current_quench ;
+                              rdfs:range fuel:current_quench_duration ;
+                              rdfs:label "has current quench duration"@en ;
+                              rdfs:comment "Links a current quench event to its characteristic duration (~10–100 ms)."@en .
+
+###  http://w3id.org/fuel/hasTimeRegion
+fuel:hasTimeRegion rdf:type owl:ObjectProperty ;
+                   rdfs:domain fuel:plasma_event ;
+                   rdfs:range fuel:plasma_time_region ;
+                   rdfs:label "has time region"@en ;
+                   rdfs:comment "Links an extended plasma event to its temporal region, bounded by a minimum and maximum time instant. Applicable to events such as ELMs, sawtooth oscillations, and confinement regimes."@en .
+
+###  http://w3id.org/fuel/hasTimeMin
+fuel:hasTimeMin rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf time:hasBeginning ;
+                rdfs:domain fuel:plasma_time_region ;
+                rdfs:range time:Instant ;
+                rdfs:label "has time min"@en ;
+                rdfs:comment "The earliest time instant bounding a plasma time region, representing the onset of the event."@en .
+
+###  http://w3id.org/fuel/hasTimeMax
+fuel:hasTimeMax rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf time:hasEnd ;
+                rdfs:domain fuel:plasma_time_region ;
+                rdfs:range time:Instant ;
+                rdfs:label "has time max"@en ;
+                rdfs:comment "The latest time instant bounding a plasma time region, representing the end of the event."@en .
+
+
 #################################################################
 #    Datatypes
 #################################################################
@@ -178,8 +241,66 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  http://www.w3.org/2006/time#hasBeginning
+time:hasBeginning rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2006/time#hasEnd
+time:hasEnd rdf:type owl:ObjectProperty .
+
+
 ###  http://w3id.org/fuel/hasComponent
 fuel:hasComponent rdf:type owl:ObjectProperty .
+
+
+###  http://w3id.org/fuel/hasCurrentQuenchDuration
+fuel:hasCurrentQuenchDuration rdf:type owl:ObjectProperty ;
+                              rdfs:domain fuel:current_quench ;
+                              rdfs:range fuel:current_quench_duration ;
+                              rdfs:label "has current quench duration"@en ;
+                              rdfs:comment "Links a current quench event to its characteristic duration (~10–100 ms)."@en .
+
+
+###  http://w3id.org/fuel/hasDisruptionTime
+fuel:hasDisruptionTime rdf:type owl:ObjectProperty ;
+                       rdfs:domain fuel:plasma_disruption ;
+                       rdfs:range fuel:disruption_time ;
+                       rdfs:label "has disruption time"@en ;
+                       rdfs:comment "Links a plasma disruption to the time instant marking the onset of the disruption (start of the thermal quench)."@en .
+
+
+###  http://w3id.org/fuel/hasThermalQuenchDuration
+fuel:hasThermalQuenchDuration rdf:type owl:ObjectProperty ;
+                              rdfs:domain fuel:thermal_quench ;
+                              rdfs:range fuel:thermal_quench_duration ;
+                              rdfs:label "has thermal quench duration"@en ;
+                              rdfs:comment "Links a thermal quench event to its characteristic duration (~1 ms)."@en .
+
+
+###  http://w3id.org/fuel/hasTimeMax
+fuel:hasTimeMax rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf time:hasEnd ;
+                rdfs:domain fuel:plasma_time_region ;
+                rdfs:range time:Instant ;
+                rdfs:label "has time max"@en ;
+                rdfs:comment "The latest time instant bounding a plasma time region, representing the end of the event."@en .
+
+
+###  http://w3id.org/fuel/hasTimeMin
+fuel:hasTimeMin rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf time:hasBeginning ;
+                rdfs:domain fuel:plasma_time_region ;
+                rdfs:range time:Instant ;
+                rdfs:label "has time min"@en ;
+                rdfs:comment "The earliest time instant bounding a plasma time region, representing the onset of the event."@en .
+
+
+###  http://w3id.org/fuel/hasTimeRegion
+fuel:hasTimeRegion rdf:type owl:ObjectProperty ;
+                   rdfs:domain fuel:plasma_event ;
+                   rdfs:range fuel:plasma_time_region ;
+                   rdfs:label "has time region"@en ;
+                   rdfs:comment "Links an extended plasma event to its temporal region, bounded by a minimum and maximum time instant. Applicable to events such as ELMs, sawtooth oscillations, and confinement regimes."@en .
 
 
 ###  http://w3id.org/fuel/usesCoordinateConvention
@@ -197,6 +318,21 @@ fuel:COCOSconvention rdf:type owl:Class ;
                      rdfs:label "COordinate COnventionS"@en ;
                      skos:altLabel "COCOS conventions"@en .
 
+### OWL-Time external classes
+### http://www.w3.org/2006/time#TemporalEntity
+time:TemporalEntity rdf:type owl:Class .
+
+### http://www.w3.org/2006/time#Instant
+time:Instant rdf:type owl:Class ;
+             rdfs:subClassOf time:TemporalEntity .
+
+### http://www.w3.org/2006/time#Duration
+time:Duration rdf:type owl:Class ;
+              rdfs:subClassOf time:TemporalEntity .
+
+### http://www.w3.org/2006/time#Interval
+time:Interval rdf:type owl:Class ;
+              rdfs:subClassOf time:TemporalEntity .
 
 ###  http://w3id.org/fuel/ECRHSystem
 fuel:ECRHSystem rdf:type owl:Class ;
@@ -244,11 +380,15 @@ fuel:MHDstability rdf:type owl:Class ;
 
 ###  http://w3id.org/fuel/Thomson_Scattering_system
 fuel:Thomson_Scattering_system rdf:type owl:Class ;
-                               rdfs:subClassOf fuel:plasma_diagnostics ;
+                               rdfs:subClassOf fuel:plasma_diagnostics ,
+                                               sosa:Sensor ;
                                dcterms:source "https://en.wikipedia.org/wiki/Thomson_scattering"@en ;
-                               rdfs:label "Thomson scattering"@en ;
+                               rdfs:comment "A diagnostic system that measures the electron temperature (Te) and electron density (ne) profiles of a plasma by analysing the spectrum and intensity of laser light scattered by free electrons. Thomson scattering systems provide accurate local measurements along spatial chords and are used to characterise the pedestal, internal transport barriers, and thermal quench dynamics."@en ;
+                               rdfs:label "Thomson scattering"@en ,
+                                          "dispersión de Thomson"@es ;
                                skos:altLabel "Thomson Scattering system"@en ,
-                                             "Thomson scattering diagnostic"@en ;
+                                             "Thomson scattering diagnostic"@en ,
+                                             "LIDAR Thomson scattering"@en ;
                                skos:definition "Thomson scattering is the elastic scattering of electromagnetic radiation by a free charged particle, as described by classical electromagnetism."@en .
 
 
@@ -273,11 +413,16 @@ fuel:blanket rdf:type owl:Class ;
 
 ###  http://w3id.org/fuel/bolometer
 fuel:bolometer rdf:type owl:Class ;
-               rdfs:subClassOf fuel:plasma_diagnostics ;
+               rdfs:subClassOf fuel:plasma_diagnostics ,
+                               sosa:Sensor ;
                dcterms:source "https://en.wikipedia.org/wiki/Bolometer"@en ;
                <http://schema.org/image> <https://en.wikipedia.org/wiki/Bolometer#/media/File:Bolometer_conceptual_schematic.svg> ;
-               rdfs:comment "A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance."@en ;
-               rdfs:label "bolometer"@en ;
+               rdfs:comment "A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance."@en ,
+                            "A diagnostic device that measures the total power radiated by the plasma across a broad spectral range, including line radiation, bremsstrahlung, and cyclotron radiation. Bolometers monitor the radiated power fraction and detect radiation-driven disruption precursors such as MARFEs and radiative collapses."@en ;
+               rdfs:label "bolometer"@en ,
+                          "bolómetro"@es ;
+               skos:altLabel "radiation bolometer"@en ,
+                             "plasma bolometer"@en ;
                skos:definition "A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance."@en ;
                skos:editorialNote "Bolometers play a pivotal role in monitoring radiation in fusion plasmas. https://en.wikipedia.org/wiki/Bolometer"@en .
 
@@ -482,7 +627,14 @@ fuel:inner_core_region rdf:type owl:Class ;
 
 ###  http://w3id.org/fuel/interferometer
 fuel:interferometer rdf:type owl:Class ;
-                    rdfs:subClassOf fuel:plasma_diagnostics .
+                    rdfs:subClassOf fuel:plasma_diagnostics ,
+                                    sosa:Sensor ;
+                    dcterms:source "https://en.wikipedia.org/wiki/Interferometry"@en ;
+                    rdfs:comment "A diagnostic system that measures the line-integrated electron density of a plasma by detecting the phase shift of a beam of electromagnetic radiation (typically microwave or infrared) passed through the plasma. Interferometers are used to measure average electron density, monitor the approach to the Greenwald density limit, and detect density-related disruption precursors."@en ;
+                    rdfs:label "interferometer"@en ,
+                               "interferómetro"@es ;
+                    skos:altLabel "plasma interferometer"@en ,
+                                  "microwave interferometer"@en .
 
 
 ###  http://w3id.org/fuel/ion_population
@@ -849,6 +1001,25 @@ fuel:wall_released_species rdf:type owl:Class ;
 sosa:Sensor rdf:type owl:Class .
 
 
+###  http://www.w3.org/2006/time#TemporalEntity
+time:TemporalEntity rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#Instant
+time:Instant rdf:type owl:Class ;
+             rdfs:subClassOf time:TemporalEntity .
+
+
+###  http://www.w3.org/2006/time#Duration
+time:Duration rdf:type owl:Class ;
+              rdfs:subClassOf time:TemporalEntity .
+
+
+###  http://www.w3.org/2006/time#Interval
+time:Interval rdf:type owl:Class ;
+              rdfs:subClassOf time:TemporalEntity .
+
+
 ###  http://xmlns.com/foaf/0.1/Person
 foaf:Person rdf:type owl:Class .
 
@@ -856,6 +1027,637 @@ foaf:Person rdf:type owl:Class .
 ###  https://schema.org/Person
 sdo:Person rdf:type owl:Class ;
            rdfs:subClassOf fuel:material_entity .
+
+
+#################################################################
+#    Diagnostic Sensors
+#################################################################
+
+###  http://w3id.org/fuel/magnetic_sensor
+fuel:magnetic_sensor rdf:type owl:Class ;
+                     rdfs:subClassOf fuel:plasma_diagnostics ,
+                                     sosa:Sensor ;
+                     rdfs:label "magnetic sensor"@en ,
+                                "sensor magnético"@es ;
+                     rdfs:comment "A diagnostic device that measures magnetic field quantities in and around a plasma, used to detect MHD modes, plasma current, position, and other magnetically observable plasma phenomena."@en .
+
+
+###  http://w3id.org/fuel/magnetic_pickup_coil
+fuel:magnetic_pickup_coil rdf:type owl:Class ;
+                          rdfs:subClassOf fuel:magnetic_sensor ;
+                          rdfs:label "magnetic pickup coil"@en ;
+                          rdfs:comment "A small inductive coil used to measure the time derivative of the magnetic field (dB/dt) at the plasma boundary or vessel wall, enabling detection of magnetic fluctuations associated with MHD modes and disruptions."@en ;
+                          skos:altLabel "pickup coil"@en ,
+                                        "inductive magnetic sensor"@en .
+
+
+###  http://w3id.org/fuel/mirnov_coil
+fuel:mirnov_coil rdf:type owl:Class ;
+                 rdfs:subClassOf fuel:magnetic_pickup_coil ;
+                 rdfs:label "Mirnov coil"@en ;
+                 rdfs:comment "A magnetic pickup coil arranged in poloidal and/or toroidal arrays around the plasma vessel to measure magnetic field fluctuations. Mirnov coils detect and characterise rotating MHD modes, their toroidal and poloidal mode numbers, and rotation frequency. They are the primary diagnostic for NTMs, rotating MHD activity, and are also used to monitor mode locking."@en ;
+                 skos:altLabel "Mirnov coils"@en .
+
+
+###  http://w3id.org/fuel/saddle_coil
+fuel:saddle_coil rdf:type owl:Class ;
+                 rdfs:subClassOf fuel:magnetic_pickup_coil ;
+                 rdfs:label "saddle coil"@en ;
+                 rdfs:comment "A magnetic sensor that measures the magnetic flux through a saddle-shaped area around the plasma, sensitive to non-rotating (locked) MHD perturbations that are invisible to standard pickup coils due to their zero rotation frequency. Saddle coils are the primary diagnostic for locked modes and are used in disruption protection systems at JET and other tokamaks."@en ;
+                 skos:altLabel "saddle loop"@en .
+
+
+###  http://w3id.org/fuel/rogowski_coil
+fuel:rogowski_coil rdf:type owl:Class ;
+                   rdfs:subClassOf fuel:magnetic_sensor ;
+                   rdfs:label "Rogowski coil"@en ;
+                   rdfs:comment "A toroidal inductive coil wound around the plasma that measures the total plasma current by integrating the toroidal magnetic field around the plasma cross-section. Rogowski coils monitor the plasma current during normal operation and during the current quench phase of a disruption."@en ;
+                   skos:altLabel "Rogowski sensor"@en .
+
+
+###  http://w3id.org/fuel/soft_x_ray_detector
+fuel:soft_x_ray_detector rdf:type owl:Class ;
+                         rdfs:subClassOf fuel:plasma_diagnostics ,
+                                         sosa:Sensor ;
+                         rdfs:label "soft X-ray detector"@en ;
+                         rdfs:comment "A diagnostic system that measures the soft X-ray emission from the plasma, sensitive to electron temperature and impurity content. Soft X-ray systems provide chord-integrated or tomographically reconstructed views of the plasma core and are used to detect sawteeth, internal kink modes, MHD activity, and the thermal quench during disruptions."@en ;
+                         skos:altLabel "SXR detector"@en ,
+                                       "SXR"@en .
+
+
+###  http://w3id.org/fuel/electron_cyclotron_emission_radiometer
+fuel:electron_cyclotron_emission_radiometer rdf:type owl:Class ;
+                                            rdfs:subClassOf fuel:plasma_diagnostics ,
+                                                            sosa:Sensor ;
+                                            rdfs:label "electron cyclotron emission radiometer"@en ;
+                                            rdfs:comment "A diagnostic system that measures the electron cyclotron emission (ECE) from the plasma to obtain the electron temperature profile with high temporal and spatial resolution. ECE radiometers are used to detect sawtooth oscillations, neoclassical tearing modes, and electron temperature perturbations from MHD activity."@en ;
+                                            skos:altLabel "ECE radiometer"@en ,
+                                                          "ECE"@en ,
+                                                          "electron cyclotron emission diagnostic"@en .
+
+
+###  http://w3id.org/fuel/balmer_alpha_monitor
+fuel:balmer_alpha_monitor rdf:type owl:Class ;
+                          rdfs:subClassOf fuel:plasma_diagnostics ,
+                                          sosa:Sensor ;
+                          rdfs:label "Balmer-alpha monitor"@en ;
+                          rdfs:comment "A spectroscopic diagnostic that measures the intensity of the Balmer-alpha line emission from hydrogen isotopes in the plasma (H-alpha at 656.3 nm for hydrogen, D-alpha at 656.1 nm for deuterium). Balmer-alpha monitors are used to detect plasma-wall interactions, recycling, fuelling events, and edge-localized modes."@en ;
+                          skos:altLabel "Balmer alpha monitor"@en ,
+                                        "alpha monitor"@en .
+
+
+###  http://w3id.org/fuel/h_alpha_monitor
+fuel:h_alpha_monitor rdf:type owl:Class ;
+                     rdfs:subClassOf fuel:balmer_alpha_monitor ;
+                     rdfs:label "H-alpha monitor"@en ;
+                     rdfs:comment "A spectroscopic diagnostic measuring the H-alpha Balmer-alpha line emission at 656.3 nm from hydrogen atoms in the plasma edge and divertor. H-alpha monitors detect recycling, fuelling, and plasma-wall interaction events in hydrogen plasmas."@en ;
+                     skos:altLabel "Hα monitor"@en ,
+                                   "H-alpha detector"@en .
+
+
+###  http://w3id.org/fuel/d_alpha_monitor
+fuel:d_alpha_monitor rdf:type owl:Class ;
+                     rdfs:subClassOf fuel:balmer_alpha_monitor ;
+                     rdfs:label "D-alpha monitor"@en ;
+                     rdfs:comment "A spectroscopic diagnostic measuring the D-alpha Balmer-alpha line emission at 656.1 nm from deuterium atoms in the plasma edge and divertor. D-alpha monitors are the standard diagnostic for detecting ELMs in deuterium tokamak plasmas, as ELMs produce characteristic bursts of D-alpha emission from the divertor."@en ;
+                     skos:altLabel "Dα monitor"@en ,
+                                   "D-alpha detector"@en .
+
+
+#################################################################
+#    Plasma Event (parent concept)
+#################################################################
+
+###  http://w3id.org/fuel/plasma_event
+fuel:plasma_event rdf:type owl:Class ;
+                  rdfs:label "plasma event"@en ,
+                             "evento de plasma"@es ;
+                  rdfs:comment "A physical event or phenomenon occurring in a magnetically confined plasma, typically in the context of a fusion device."@en ,
+                               "Un evento o fenómeno físico que ocurre en un plasma magnéticamente confinado, típicamente en el contexto de un dispositivo de fusión."@es ;
+                  dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+#################################################################
+#    Plasma Disruption and phases
+#################################################################
+
+###  http://w3id.org/fuel/plasma_disruption
+fuel:plasma_disruption rdf:type owl:Class ;
+                       rdfs:subClassOf fuel:plasma_event ;
+                       rdfs:label "plasma disruption"@en ,
+                                  "disrupción de plasma"@es ;
+                       rdfs:comment "A sudden, uncontrolled termination of a plasma discharge in a tokamak, resulting from a loss of plasma stability and/or confinement. Disruptions release the plasma thermal and electromagnetic energy on short timescales, inducing strong electromagnetic forces and large thermal loads on surrounding components. The disruption process typically consists of a thermal quench followed by a current quench."@en ,
+                                    "Una terminación repentina e incontrolada de una descarga de plasma en un tokamak, resultado de una pérdida de estabilidad y/o confinamiento del plasma."@es ;
+                       dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+###  http://w3id.org/fuel/thermal_quench
+fuel:thermal_quench rdf:type owl:Class ;
+                    rdfs:subClassOf fuel:plasma_disruption ;
+                    rdfs:label "thermal quench"@en ,
+                               "apagón térmico"@es ;
+                    rdfs:comment "The first phase of a plasma disruption, characterised by a rapid loss of thermal energy from the plasma on a timescale of approximately 1 ms. The fast energy quench is followed by a quenching of the plasma current that terminates the tokamak discharge."@en ;
+                    skos:altLabel "energy quench"@en ,
+                                  "TQ"@en ;
+                    dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                    fuel:detectedBy fuel:soft_x_ray_detector ,
+                                    fuel:Thomson_Scattering_system ,
+                                    fuel:bolometer .
+
+
+###  http://w3id.org/fuel/current_quench
+fuel:current_quench rdf:type owl:Class ;
+                    rdfs:subClassOf fuel:plasma_disruption ;
+                    rdfs:label "current quench"@en ,
+                               "apagón de corriente"@es ;
+                    rdfs:comment "The second phase of a plasma disruption, in which the plasma current decays rapidly following the thermal quench, terminating the tokamak discharge. The current quench typically occurs on a timescale of 10–100 ms and can induce large electromagnetic forces via halo currents in surrounding structures."@en ;
+                    skos:altLabel "CQ"@en ;
+                    dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                    fuel:detectedBy fuel:rogowski_coil ,
+                                    fuel:magnetic_pickup_coil .
+
+
+#################################################################
+#    MHD Instabilities
+#################################################################
+
+###  http://w3id.org/fuel/mhd_instability
+fuel:mhd_instability rdf:type owl:Class ;
+                     rdfs:subClassOf fuel:plasma_event ,
+                                     fuel:MHDInstabilityProcess ;
+                     rdfs:label "MHD instability"@en ,
+                                "inestabilidad MHD"@es ;
+                     rdfs:comment "A magnetohydrodynamic instability in a magnetically confined plasma. MHD instabilities, including tearing modes and magnetic islands, are often observed as precursors to plasma disruptions. The growth of such modes can be the destructive force of tokamak confinement that leads to disruptions."@en ;
+                     skos:altLabel "magnetohydrodynamic instability"@en ;
+                     dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+###  http://w3id.org/fuel/mhd_mode
+fuel:mhd_mode rdf:type owl:Class ;
+              rdfs:subClassOf fuel:mhd_instability ;
+              rdfs:label "MHD mode"@en ,
+                         "modo MHD"@es ;
+              rdfs:comment "A general rotating magnetohydrodynamic mode of toroidal mode number n=1 or n=2, manifesting as a tearing mode or magnetic island rotating with the plasma fluid. Such rotating modes are often observed as precursors to disruptions in tokamak plasmas."@en ;
+              skos:altLabel "rotating MHD mode"@en ,
+                            "tearing mode"@en ,
+                            "magnetic island"@en ,
+                            "MHD"@en ;
+              dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+              fuel:detectedBy fuel:mirnov_coil .
+
+
+###  http://w3id.org/fuel/neoclassical_tearing_mode
+fuel:neoclassical_tearing_mode rdf:type owl:Class ;
+                               rdfs:subClassOf fuel:mhd_instability ;
+                               rdfs:label "neoclassical tearing mode"@en ,
+                                          "modo de desgarro neoclásico"@es ;
+                               rdfs:comment "A tearing mode driven by a perturbation of the bootstrap current in plasmas with high normalised pressure (β). The presence of a magnetic island leads to local flattening of the pressure and a reduction in bootstrap current, which supports further island growth. An initial seed island, often supplied by a sawtooth crash (~86% of cases at JET) or an ELM (~7%), is required to start the growth. NTMs are the most common root cause of unintentional disruptions at JET."@en ;
+                               skos:altLabel "NTM"@en ;
+                               dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                               fuel:detectedBy fuel:mirnov_coil ,
+                                               fuel:electron_cyclotron_emission_radiometer .
+
+
+###  http://w3id.org/fuel/internal_kink_mode
+fuel:internal_kink_mode rdf:type owl:Class ;
+                        rdfs:subClassOf fuel:mhd_instability ;
+                        rdfs:label "internal kink mode"@en ,
+                                   "modo kink interno"@es ;
+                        rdfs:comment "An MHD kink instability localised near the q=1 magnetic surface inside the plasma. Internal kink modes are typically associated with sawtooth oscillations and can cause disruptions in plasmas with strongly peaked pressure profiles, such as those that form internal transport barriers."@en ;
+                        skos:altLabel "KNK"@en ,
+                                      "q=1 kink"@en ;
+                        dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                        fuel:detectedBy fuel:soft_x_ray_detector ,
+                                        fuel:electron_cyclotron_emission_radiometer .
+
+
+###  http://w3id.org/fuel/locked_mode
+fuel:locked_mode rdf:type owl:Class ;
+                 rdfs:subClassOf fuel:mhd_instability ;
+                 rdfs:label "locked mode"@en ,
+                            "modo bloqueado"@es ;
+                 rdfs:comment "An MHD perturbation, often a tearing mode or magnetic island, that does not rotate with the plasma fluid. A rotating MHD mode slows due to friction from eddy currents in the vessel wall and intrinsic error fields, eventually locking to the tokamak rest-frame, after which the mode can grow on a timescale set by the wall resistivity. Mode locking is responsible for 20.1% of the final steps in unintentional disruptions at JET."@en ,
+                              "Una perturbación MHD que no rota con el fluido del plasma. El bloqueo del modo es un precursor común de las disrupciones en tokamaks."@es ;
+                 skos:altLabel "mode lock"@en ,
+                               "ML"@en ;
+                 dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                 fuel:detectedBy fuel:saddle_coil ,
+                                 fuel:mirnov_coil .
+
+
+###  http://w3id.org/fuel/sawtooth_oscillation
+fuel:sawtooth_oscillation rdf:type owl:Class ;
+                          rdfs:subClassOf fuel:mhd_instability ;
+                          rdfs:label "sawtooth oscillation"@en ,
+                                     "oscilación en diente de sierra"@es ;
+                          rdfs:comment "A periodic MHD instability in the core of a tokamak plasma characterised by a slow rise and fast crash in the core electron temperature and density, driven by the internal kink mode at the q=1 surface. Large sawtooth crashes trigger approximately 86% of neoclassical tearing modes at JET and are a common disruption precursor."@en ;
+                          skos:altLabel "SAW"@en ,
+                                        "sawtooth"@en ,
+                                        "sawtooth crash"@en ;
+                          dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                          fuel:detectedBy fuel:soft_x_ray_detector ,
+                                          fuel:electron_cyclotron_emission_radiometer .
+
+
+###  http://w3id.org/fuel/edge_localized_mode
+fuel:edge_localized_mode rdf:type owl:Class ;
+                         rdfs:subClassOf fuel:mhd_instability ;
+                         rdfs:label "edge-localized mode"@en ,
+                                    "modo localizado en el borde"@es ;
+                         rdfs:comment "A periodic MHD instability occurring at the edge of a plasma in high-confinement (H-mode) operation, manifesting as a collapse of the edge transport barrier. ELMs cause rapid energy and particle losses from the plasma edge and can seed neoclassical tearing modes; approximately 7% of NTMs at JET are triggered by ELMs."@en ,
+                                      "Una inestabilidad MHD periódica que ocurre en el borde del plasma en operación de alto confinamiento, manifestándose como un colapso de la barrera de transporte de borde."@es ;
+                         skos:altLabel "ELM"@en ,
+                                       "edge localized mode"@en ;
+                         dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                         fuel:detectedBy fuel:d_alpha_monitor ,
+                                         fuel:mirnov_coil ,
+                                         fuel:Thomson_Scattering_system .
+
+
+###  http://w3id.org/fuel/elm_type_i
+fuel:elm_type_i rdf:type owl:Class ;
+                rdfs:subClassOf fuel:edge_localized_mode ;
+                rdfs:label "Type I ELM"@en ;
+                rdfs:comment "A large, low-frequency edge-localized mode occurring in high-power H-mode operation well above the L-H threshold. Type I ELMs are driven by peeling-ballooning instabilities and are characterised by large energy loss per event and a frequency that increases with heating power."@en ;
+                skos:altLabel "type I ELM"@en ,
+                              "large ELM"@en ;
+                dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                fuel:detectedBy fuel:d_alpha_monitor ,
+                                fuel:mirnov_coil .
+
+
+###  http://w3id.org/fuel/elm_type_ii
+fuel:elm_type_ii rdf:type owl:Class ;
+                 rdfs:subClassOf fuel:edge_localized_mode ;
+                 rdfs:label "Type II ELM"@en ;
+                 rdfs:comment "A small, high-frequency edge-localized mode occurring at high plasma triangularity and density, typically between the Type I and Type III regimes. Type II ELMs (also called grassy ELMs) have smaller energy loss per event than Type I ELMs and are considered less damaging to plasma-facing components."@en ;
+                 skos:altLabel "type II ELM"@en ,
+                               "grassy ELM"@en ;
+                 dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                 fuel:detectedBy fuel:d_alpha_monitor ,
+                                 fuel:mirnov_coil .
+
+
+###  http://w3id.org/fuel/elm_type_iii
+fuel:elm_type_iii rdf:type owl:Class ;
+                  rdfs:subClassOf fuel:edge_localized_mode ;
+                  rdfs:label "Type III ELM"@en ;
+                  rdfs:comment "A small, high-frequency edge-localized mode occurring near the L-H power threshold, at heating powers only slightly above the threshold. Type III ELMs are characterised by high repetition frequency and small energy loss per event; their frequency decreases with increasing heating power, in contrast to Type I ELMs."@en ;
+                  skos:altLabel "type III ELM"@en ;
+                  dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                  fuel:detectedBy fuel:d_alpha_monitor ,
+                                  fuel:mirnov_coil .
+
+
+###  http://w3id.org/fuel/magnetic_reconnection
+fuel:magnetic_reconnection rdf:type owl:Class ;
+                           rdfs:subClassOf fuel:mhd_instability ;
+                           rdfs:label "magnetic reconnection"@en ,
+                                      "reconexión magnética"@es ;
+                           rdfs:comment "A process in which magnetic field lines break and reconnect, converting magnetic energy into kinetic and thermal energy of the plasma. In tokamaks, magnetic reconnection can occur at two separate regions with the same rational q value, where magnetic islands grow and short-circuit transport, causing minor or major collapses of plasma confinement."@en ;
+                           skos:altLabel "REC"@en ;
+                           dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                           fuel:detectedBy fuel:mirnov_coil ,
+                                           fuel:soft_x_ray_detector .
+
+
+###  http://w3id.org/fuel/vertical_displacement_event
+fuel:vertical_displacement_event rdf:type owl:Class ;
+                                 rdfs:subClassOf fuel:mhd_instability ;
+                                 rdfs:label "vertical displacement event"@en ,
+                                            "evento de desplazamiento vertical"@es ;
+                                 rdfs:comment "An instability of the vertical position of an elongated tokamak plasma that develops when fast vertical position feedback control is lost. VDEs have growth rates up to ~500 s⁻¹ in JET and induce the largest halo currents and electromagnetic forces on surrounding structures. They are responsible for 3.9% of unintentional disruption final steps at JET."@en ,
+                                              "Una inestabilidad de la posición vertical de un plasma de tokamak elongado que genera grandes fuerzas electromagnéticas."@es ;
+                                 skos:altLabel "VDE"@en ;
+                                 dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                                 fuel:detectedBy fuel:magnetic_pickup_coil ,
+                                                 fuel:rogowski_coil .
+
+
+###  http://w3id.org/fuel/long_lived_mode
+fuel:long_lived_mode rdf:type owl:Class ;
+                     rdfs:subClassOf fuel:mhd_instability ;
+                     rdfs:label "long-lived mode"@en ;
+                     rdfs:comment "A persistent rotating MHD mode that survives over many energy confinement times in a plasma. Long-lived modes are particularly associated with spherical tokamak operation, where they can persist throughout a discharge and are associated with saturation of plasma performance."@en ;
+                     skos:altLabel "LLM"@en ,
+                                   "long lived mode"@en ;
+                     dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                     fuel:detectedBy fuel:mirnov_coil ,
+                                     fuel:saddle_coil .
+
+
+###  http://w3id.org/fuel/internal_reconnection_event
+fuel:internal_reconnection_event rdf:type owl:Class ;
+                                 rdfs:subClassOf fuel:mhd_instability ;
+                                 rdfs:label "internal reconnection event"@en ;
+                                 rdfs:comment "A sudden magnetic reconnection in the core of a spherical tokamak plasma, analogous in some respects to a major disruption in a conventional tokamak. Internal reconnection events are associated with a rapid collapse of the core thermal energy and can lead to significant loss of plasma confinement."@en ;
+                                 skos:altLabel "IRE"@en ;
+                                 fuel:detectedBy fuel:mirnov_coil ,
+                                                 fuel:soft_x_ray_detector .
+
+
+#################################################################
+#    Radiation Instabilities
+#################################################################
+
+###  http://w3id.org/fuel/radiation_instability
+fuel:radiation_instability rdf:type owl:Class ;
+                           rdfs:subClassOf fuel:plasma_event ,
+                                           fuel:plasma_instability_process ;
+                           rdfs:label "radiation instability"@en ,
+                                      "inestabilidad de radiación"@es ;
+                           rdfs:comment "A plasma instability driven by excessive radiation from impurities or high-density plasma, which can lead to a radiative collapse when radiated power exceeds input power, destabilising MHD modes and causing disruptions. Edge radiation instabilities are responsible for 51.8% of the final steps in unintentional disruptions at JET."@en ;
+                           dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+###  http://w3id.org/fuel/radiative_collapse
+fuel:radiative_collapse rdf:type owl:Class ;
+                        rdfs:subClassOf fuel:radiation_instability ;
+                        rdfs:label "radiative collapse"@en ,
+                                   "colapso radiativo"@es ;
+                        rdfs:comment "A disruption scenario in which the total radiated power from the plasma exceeds the input heating power (Prad > Pin), leading to plasma cooling and destabilisation of MHD modes. Radiative collapses are associated with high impurity content or excessive density, and are the most common final step in unintentional disruptions at JET (51.8%)."@en ;
+                        skos:altLabel "RC"@en ,
+                                      "radiation collapse"@en ;
+                        dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                        fuel:detectedBy fuel:bolometer .
+
+
+###  http://w3id.org/fuel/marfe
+fuel:marfe rdf:type owl:Class ;
+           rdfs:subClassOf fuel:radiation_instability ;
+           rdfs:label "MARFE"@en ;
+           rdfs:comment "A poloidally asymmetric radiation instability that develops on the high-field side or near the X-point of a diverted tokamak plasma. The electron temperature inside the MARFE drops to a few eV while density becomes very high. MARFE onset is strongly connected to plasma-wall interaction, recycling neutral flux, and heat flow from the core to the edge. MARFEs often precede a radiative collapse and disruption."@en ;
+           skos:altLabel "multifaceted asymmetric radiation from the edge"@en ,
+                         "MAR"@en ;
+           dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+           fuel:detectedBy fuel:bolometer ,
+                           fuel:interferometer .
+
+
+#################################################################
+#    Plasma-Wall Interaction Events
+#################################################################
+
+###  http://w3id.org/fuel/plasma_wall_interaction_event
+fuel:plasma_wall_interaction_event rdf:type owl:Class ;
+                                   rdfs:subClassOf fuel:plasma_event ,
+                                                   fuel:plasma_wall_interaction_process ;
+                                   rdfs:label "plasma-wall interaction event"@en ,
+                                              "evento de interacción plasma-pared"@es ;
+                                   rdfs:comment "An event involving interaction between the plasma and the surrounding wall or plasma-facing components, which can introduce impurities into the plasma and potentially trigger a disruption."@en ;
+                                   dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+###  http://w3id.org/fuel/unidentified_flying_object
+fuel:unidentified_flying_object rdf:type owl:Class ;
+                                rdfs:subClassOf fuel:plasma_wall_interaction_event ;
+                                rdfs:label "unidentified flying object"@en ;
+                                rdfs:comment "An object that enters the plasma from plasma-facing components, typically a flake or fragment from deposited wall layers or the components themselves. In JET terminology, these are called unidentified flying objects (UFOs). UFOs introduce impurities causing radiative collapses and account for approximately 2.3% of unintentional disruptions at JET."@en ;
+                                skos:altLabel "UFO"@en ,
+                                              "plasma flake"@en ,
+                                              "flying object"@en ;
+                                dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                                fuel:detectedBy fuel:bolometer ,
+                                                fuel:soft_x_ray_detector .
+
+
+#################################################################
+#    Plasma Operational Conditions
+#################################################################
+
+###  http://w3id.org/fuel/plasma_operational_condition
+fuel:plasma_operational_condition rdf:type owl:Class ;
+                                  rdfs:label "plasma operational condition"@en ;
+                                  rdfs:comment "A physics state, profile condition, or operational boundary of a tokamak plasma that affects its stability and proximity to disruption. Operational conditions can act as root causes or contributing factors in the chain of events leading to a disruption."@en ;
+                                  dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+###  http://w3id.org/fuel/operational_limit
+fuel:operational_limit rdf:type owl:Class ;
+                       rdfs:subClassOf fuel:plasma_operational_condition ;
+                       rdfs:label "operational limit"@en ,
+                                  "límite operacional"@es ;
+                       rdfs:comment "A physics-based boundary that constrains the achievable operating space of a tokamak plasma. Approaching or exceeding an operational limit significantly increases the risk of disruption."@en ;
+                       dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+###  http://w3id.org/fuel/greenwald_limit
+fuel:greenwald_limit rdf:type owl:Class ;
+                     rdfs:subClassOf fuel:operational_limit ;
+                     rdfs:label "Greenwald limit"@en ,
+                                "límite de Greenwald"@es ;
+                     rdfs:comment "An empirical upper limit on the line-averaged electron density in a tokamak plasma, given by nGW = Ip/(πa²), where Ip is the plasma current and a is the minor radius. The Greenwald limit is thought to be linked to edge plasma properties including the H-mode pedestal and the onset of MARFEs. Operating near or above this limit greatly increases disruption risk."@en ;
+                     skos:altLabel "GWL"@en ,
+                                   "density limit"@en ;
+                     dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                     fuel:detectedBy fuel:interferometer .
+
+
+###  http://w3id.org/fuel/low_q_limit
+fuel:low_q_limit rdf:type owl:Class ;
+                 rdfs:subClassOf fuel:operational_limit ;
+                 rdfs:label "low-q limit"@en ;
+                 rdfs:comment "An operational limit corresponding to the edge safety factor q95 approaching a value of 2. When q approaches 2, the plasma becomes unstable to external n=1 kink modes which can lead to disruption. This limit constrains the maximum plasma current that can be safely sustained for a given toroidal field and plasma geometry."@en ;
+                 skos:altLabel "LOQ"@en ,
+                               "q=2 limit"@en ,
+                               "Kruskal-Shafranov limit"@en ;
+                 dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+###  http://w3id.org/fuel/edge_rational_q
+fuel:edge_rational_q rdf:type owl:Class ;
+                     rdfs:subClassOf fuel:operational_limit ;
+                     rdfs:label "edge rational q"@en ;
+                     rdfs:comment "A condition in which the edge safety factor approaches a rational value greater than 2. Surface kink modes localised near the plasma edge can develop when q passes through a rational value during the current ramp-up, and may evolve into a large locked mode that disrupts the plasma."@en ;
+                     skos:altLabel "QED"@en ,
+                                   "rational surface crossing"@en ;
+                     dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+###  http://w3id.org/fuel/density_condition
+fuel:density_condition rdf:type owl:Class ;
+                       rdfs:subClassOf fuel:plasma_operational_condition ;
+                       rdfs:label "density condition"@en ;
+                       rdfs:comment "A plasma operational condition characterised by an abnormal or boundary-approaching electron density, which can affect radiation levels, MHD stability, and disruption risk."@en ;
+                       dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+###  http://w3id.org/fuel/high_density_operation
+fuel:high_density_operation rdf:type owl:Class ;
+                            rdfs:subClassOf fuel:density_condition ;
+                            rdfs:label "high density operation"@en ;
+                            rdfs:comment "Operation of a tokamak plasma at electron densities near the Greenwald limit, increasing the risk of radiation-driven instabilities, MARFEs, and radiative collapses. Shut-down of auxiliary heating at high density is a common disruption trigger at JET."@en ;
+                            skos:altLabel "HD"@en ;
+                            dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                            fuel:detectedBy fuel:interferometer .
+
+
+###  http://w3id.org/fuel/low_density_operation
+fuel:low_density_operation rdf:type owl:Class ;
+                           rdfs:subClassOf fuel:density_condition ;
+                           rdfs:label "low density operation"@en ;
+                           rdfs:comment "Operation of a tokamak plasma at too low an electron density combined with low q, which lowers the threshold for error-field penetration and excites non-rotating tearing modes that can disrupt the plasma before the onset of a q=2 kink mode."@en ;
+                           skos:altLabel "LON"@en ;
+                           dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                           fuel:detectedBy fuel:interferometer .
+
+
+###  http://w3id.org/fuel/density_peaking
+fuel:density_peaking rdf:type owl:Class ;
+                     rdfs:subClassOf fuel:density_condition ;
+                     rdfs:label "density peaking"@en ;
+                     rdfs:comment "A condition of strong central peaking of the electron density profile, which can increase core radiation, modify the current profile, and contribute to disruption risk."@en ;
+                     skos:altLabel "NPK"@en ,
+                                   "strong density peaking"@en ;
+                     dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                     fuel:detectedBy fuel:interferometer ,
+                                     fuel:Thomson_Scattering_system .
+
+
+###  http://w3id.org/fuel/pressure_condition
+fuel:pressure_condition rdf:type owl:Class ;
+                        rdfs:subClassOf fuel:plasma_operational_condition ;
+                        rdfs:label "pressure condition"@en ;
+                        rdfs:comment "A plasma operational condition characterised by an abnormal pressure profile, including strongly peaked or transport-barrier configurations, that can destabilise ideal MHD modes."@en ;
+                        dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+###  http://w3id.org/fuel/internal_transport_barrier
+fuel:internal_transport_barrier rdf:type owl:Class ;
+                                rdfs:subClassOf fuel:pressure_condition ;
+                                rdfs:label "internal transport barrier"@en ,
+                                           "barrera de transporte interna"@es ;
+                                rdfs:comment "A region of reduced turbulent transport inside the plasma that results in a strongly peaked pressure profile and high stored energy. While beneficial for plasma performance, too strong an internal transport barrier can trigger internal kink modes and cause fast disruptions with little warning time. ITB disruptions account for 5.1% of unintentional disruptions at JET and are associated with the highest plasma energies at the time of disruption."@en ;
+                                skos:altLabel "ITB"@en ;
+                                dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                                fuel:detectedBy fuel:Thomson_Scattering_system ,
+                                                fuel:electron_cyclotron_emission_radiometer ,
+                                                fuel:interferometer .
+
+
+###  http://w3id.org/fuel/pressure_profile_peaking
+fuel:pressure_profile_peaking rdf:type owl:Class ;
+                              rdfs:subClassOf fuel:pressure_condition ;
+                              rdfs:label "pressure profile peaking"@en ;
+                              rdfs:comment "A condition of strongly centralised pressure profile in a tokamak plasma. Peaked pressure profiles lower the ideal β-limit and can trigger internal kink modes, potentially leading to disruption."@en ;
+                              skos:altLabel "PRP"@en ,
+                                            "strong pressure profile peaking"@en ;
+                              dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                              fuel:detectedBy fuel:Thomson_Scattering_system .
+
+
+###  http://w3id.org/fuel/current_condition
+fuel:current_condition rdf:type owl:Class ;
+                       rdfs:subClassOf fuel:plasma_operational_condition ;
+                       rdfs:label "current condition"@en ;
+                       rdfs:comment "A plasma operational condition characterised by an abnormal current or safety-factor profile, including hollow or reversed shear configurations."@en ;
+                       dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+###  http://w3id.org/fuel/negative_central_magnetic_shear
+fuel:negative_central_magnetic_shear rdf:type owl:Class ;
+                                     rdfs:subClassOf fuel:current_condition ;
+                                     rdfs:label "negative central magnetic shear"@en ;
+                                     rdfs:comment "A plasma configuration in which the central safety factor has a minimum away from the plasma axis, creating a hollow or reversed shear q-profile. Negative magnetic shear can trigger double tearing modes at two separate rational q surfaces, causing minor or major collapses of plasma confinement."@en ;
+                                     skos:altLabel "MSH"@en ,
+                                                   "reversed magnetic shear"@en ,
+                                                   "hollow q-profile"@en ;
+                                     dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+###  http://w3id.org/fuel/confinement_transition
+fuel:confinement_transition rdf:type owl:Class ;
+                            rdfs:subClassOf fuel:plasma_operational_condition ;
+                            rdfs:label "confinement transition"@en ;
+                            rdfs:comment "A transition between different plasma confinement regimes, such as from H-mode to L-mode, which can affect plasma stability and disruptivity."@en ;
+                            dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+###  http://w3id.org/fuel/h_to_l_transition
+fuel:h_to_l_transition rdf:type owl:Class ;
+                       rdfs:subClassOf fuel:confinement_transition ;
+                       rdfs:label "H-to-L transition"@en ;
+                       rdfs:comment "A back-transition from the high-confinement mode (H-mode) to the low-confinement mode (L-mode), typically caused by a reduction in heating power below the L-H power threshold. The transition causes a collapse of the edge transport barrier and increased edge density, which can trigger MARFE onset or radiative collapse. It is identified as a disruption precursor near the Greenwald density limit."@en ;
+                       skos:altLabel "HL"@en ,
+                                     "H-L transition"@en ,
+                                     "H-to-L back-transition"@en ;
+                       dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> ;
+                       fuel:detectedBy fuel:d_alpha_monitor ,
+                                       fuel:mirnov_coil .
+
+
+#################################################################
+#    Confinement Modes
+#################################################################
+
+###  http://w3id.org/fuel/confinement_mode
+fuel:confinement_mode rdf:type owl:Class ;
+                      rdfs:subClassOf fuel:plasma_event ;
+                      rdfs:label "confinement mode"@en ,
+                                 "modo de confinamiento"@es ;
+                      rdfs:comment "An operational regime of a magnetically confined plasma characterised by its level of energy confinement. Different confinement modes exhibit different edge transport properties, stability boundaries, and susceptibility to plasma events including ELMs and disruptions."@en ;
+                      dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+###  http://w3id.org/fuel/l_mode
+fuel:l_mode rdf:type owl:Class ;
+            rdfs:subClassOf fuel:confinement_mode ;
+            rdfs:label "L-mode"@en ;
+            rdfs:comment "The low-confinement mode, the baseline operational regime of a tokamak plasma without an edge transport barrier. In L-mode, the edge temperature gradient is limited by turbulent transport and energy confinement is relatively low. L-mode is the default regime below the L-H power threshold."@en ;
+            skos:altLabel "low-confinement mode"@en ,
+                          "low confinement mode"@en ;
+            dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+###  http://w3id.org/fuel/h_mode
+fuel:h_mode rdf:type owl:Class ;
+            rdfs:subClassOf fuel:confinement_mode ;
+            rdfs:label "H-mode"@en ;
+            rdfs:comment "The high-confinement mode of a tokamak plasma, characterised by the formation of an edge transport barrier (pedestal) when the heating power exceeds the L-H power threshold. H-mode provides significantly improved energy confinement relative to L-mode, but is associated with edge-localized modes (ELMs). The H-to-L back-transition is a recognised disruption precursor near the Greenwald density limit."@en ,
+                         "El modo de alto confinamiento del plasma, caracterizado por la formación de una barrera de transporte de borde cuando la potencia de calentamiento supera el umbral L-H."@es ;
+            skos:altLabel "high-confinement mode"@en ,
+                          "high confinement mode"@en ;
+            dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+#################################################################
+#    Temporal Concepts
+#################################################################
+
+###  http://w3id.org/fuel/disruption_time
+fuel:disruption_time rdf:type owl:Class ;
+                     rdfs:subClassOf time:Instant ;
+                     rdfs:label "disruption time"@en ,
+                                "tiempo de disrupción"@es ;
+                     skos:altLabel "t_dis"@en ;
+                     rdfs:comment "The time instant marking the onset of a plasma disruption, defined as the start of the thermal quench. This is the primary reference time point for disruption event databases and prediction systems."@en ;
+                     dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+###  http://w3id.org/fuel/thermal_quench_duration
+fuel:thermal_quench_duration rdf:type owl:Class ;
+                             rdfs:subClassOf time:Duration ;
+                             rdfs:label "thermal quench duration"@en ;
+                             skos:altLabel "t_TQ"@en ;
+                             rdfs:comment "The characteristic duration of the thermal quench phase of a plasma disruption, representing the time over which the plasma thermal energy is rapidly lost. Typically on the order of 1 ms in JET-scale devices."@en ;
+                             dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+###  http://w3id.org/fuel/current_quench_duration
+fuel:current_quench_duration rdf:type owl:Class ;
+                             rdfs:subClassOf time:Duration ;
+                             rdfs:label "current quench duration"@en ;
+                             skos:altLabel "t_CQ"@en ;
+                             rdfs:comment "The characteristic duration of the current quench phase of a plasma disruption, representing the time over which the plasma current decays following the thermal quench. Typically in the range 10–100 ms in JET-scale devices. The normalised current quench time (Δt/S, where S is the plasma cross-sectional area) is used for cross-machine comparison."@en ;
+                             dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
+
+
+###  http://w3id.org/fuel/plasma_time_region
+fuel:plasma_time_region rdf:type owl:Class ;
+                        rdfs:subClassOf time:Interval ;
+                        rdfs:label "plasma time region"@en ;
+                        rdfs:comment "A temporal interval associated with an extended plasma event, bounded by a minimum time instant (fuel:hasTimeMin) and a maximum time instant (fuel:hasTimeMax). Used to represent the temporal extent of events such as edge-localized modes, sawtooth oscillations, and confinement regimes. The start instant (hasTimeMin) represents the event onset; the end instant (hasTimeMax) represents the event termination."@en ;
+                        dcterms:source <https://doi.org/10.1088/0029-5515/51/5/053018> .
 
 
 #################################################################
