@@ -184,35 +184,35 @@ time:hasBeginning rdf:type owl:ObjectProperty .
 ###  http://www.w3.org/2006/time#hasEnd
 time:hasEnd rdf:type owl:ObjectProperty .
 
-###  http://w3id.org/fuel#hasDisruptionTime
+###  http://w3id.org/fuel/hasDisruptionTime
 fuel:hasDisruptionTime rdf:type owl:ObjectProperty ;
                        rdfs:domain fuel:plasma_disruption ;
                        rdfs:range fuel:disruption_time ;
                        rdfs:label "has disruption time"@en ;
                        rdfs:comment "Links a plasma disruption to the time instant marking the onset of the disruption (start of the thermal quench)."@en .
 
-###  http://w3id.org/fuel#hasThermalQuenchDuration
+###  http://w3id.org/fuel/hasThermalQuenchDuration
 fuel:hasThermalQuenchDuration rdf:type owl:ObjectProperty ;
                               rdfs:domain fuel:thermal_quench ;
                               rdfs:range fuel:thermal_quench_duration ;
                               rdfs:label "has thermal quench duration"@en ;
                               rdfs:comment "Links a thermal quench event to its characteristic duration (~1 ms)."@en .
 
-###  http://w3id.org/fuel#hasCurrentQuenchDuration
+###  http://w3id.org/fuel/hasCurrentQuenchDuration
 fuel:hasCurrentQuenchDuration rdf:type owl:ObjectProperty ;
                               rdfs:domain fuel:current_quench ;
                               rdfs:range fuel:current_quench_duration ;
                               rdfs:label "has current quench duration"@en ;
                               rdfs:comment "Links a current quench event to its characteristic duration (~10–100 ms)."@en .
 
-###  http://w3id.org/fuel#hasTimeRegion
+###  http://w3id.org/fuel/hasTimeRegion
 fuel:hasTimeRegion rdf:type owl:ObjectProperty ;
                    rdfs:domain fuel:plasma_event ;
                    rdfs:range fuel:plasma_time_region ;
                    rdfs:label "has time region"@en ;
                    rdfs:comment "Links an extended plasma event to its temporal region, bounded by a minimum and maximum time instant. Applicable to events such as ELMs, sawtooth oscillations, and confinement regimes."@en .
 
-###  http://w3id.org/fuel#hasTimeMin
+###  http://w3id.org/fuel/hasTimeMin
 fuel:hasTimeMin rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf time:hasBeginning ;
                 rdfs:domain fuel:plasma_time_region ;
@@ -220,7 +220,7 @@ fuel:hasTimeMin rdf:type owl:ObjectProperty ;
                 rdfs:label "has time min"@en ;
                 rdfs:comment "The earliest time instant bounding a plasma time region, representing the onset of the event."@en .
 
-###  http://w3id.org/fuel#hasTimeMax
+###  http://w3id.org/fuel/hasTimeMax
 fuel:hasTimeMax rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf time:hasEnd ;
                 rdfs:domain fuel:plasma_time_region ;
