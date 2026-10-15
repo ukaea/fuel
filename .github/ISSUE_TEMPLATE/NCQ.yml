@@ -29,8 +29,8 @@ body:
     label: context
     description: "In what context this question is asked?"
     placeholder: "I want to train an ML model to predict disruption events."
-    validations:
-      required: true
+  validations:
+    required: true
 - type: input
   id: submitter
   attributes:
