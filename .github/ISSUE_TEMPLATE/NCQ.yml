@@ -1,0 +1,51 @@
+---
+name: New competency question request form
+description: "Request to consider a new competency question."
+title: "[NCQ]: "
+labels: competency_question
+body: 
+- type: markdown
+  attributes: 
+    value: "## Thanks for suggesting a new competency question!"
+- type: textarea
+  id: competencyQuestion
+  attributes: 
+    label: suggested competency question
+    description: "Competency question in natural language" 
+    placeholder: "Select Shots from MAST-U where a Disruption Event was detected and return their associated datasets."
+  validations:
+    required: true
+- type: textarea
+  id: answer
+  attributes:
+    label: indicativeAnswer
+    description: "Indicative answer to the question"
+    placeholder: "Shot ID=42"
+  validations:
+    required: true
+- type: textarea
+  id: context
+  attributes:
+    label: context
+    description: "In what context this question is asked?"
+    placeholder: "I want to train an ML model to predict disruption events."
+  validations:
+    required: true
+- type: input
+  id: submitter
+  attributes:
+    label: submitter name
+    description: "the name of the submitter of the new term request"
+    placeholder: "full name"
+- type: input
+  id: submitterURI
+  attributes: 
+    label: an identifier for the submitter (e.g. ORCID)
+    description: "URI for the submitter"
+    placeholder: "URI"
+- type: textarea
+  id: comment
+  attributes:
+    label: "additional information"
+    description: "comment"
+    placeholder: comment
