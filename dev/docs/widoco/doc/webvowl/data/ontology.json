@@ -32,16 +32,16 @@
         "value" : "2024-11-06",
         "type" : "label"
       } ],
-      "abstract" : [ {
-        "identifier" : "abstract",
-        "language" : "en",
-        "value" : "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data.",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "0.0.1",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data.",
         "type" : "label"
       } ],
       "title" : [ {
@@ -98,17 +98,17 @@
         "value" : "2025-09-08",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://w3id.org/fuel/",
-        "type" : "label"
-      } ],
       "codeRepository" : [ {
         "identifier" : "codeRepository",
         "language" : "undefined",
         "value" : "https://github.com/ukaea/fuel",
         "type" : "iri"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fuel/",
+        "type" : "label"
       } ],
       "issued" : [ {
         "identifier" : "issued",
@@ -141,7 +141,7 @@
     "id" : "9",
     "type" : "owl:Class"
   }, {
-    "id" : "11",
+    "id" : "12",
     "type" : "owl:Class"
   }, {
     "id" : "14",
@@ -153,7 +153,7 @@
     "id" : "19",
     "type" : "owl:Class"
   }, {
-    "id" : "20",
+    "id" : "22",
     "type" : "owl:Class"
   }, {
     "id" : "23",
@@ -171,7 +171,7 @@
     "id" : "31",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
+    "id" : "10",
     "type" : "owl:Class"
   }, {
     "id" : "35",
@@ -198,13 +198,13 @@
     "id" : "30",
     "type" : "owl:Class"
   }, {
-    "id" : "32",
-    "type" : "owl:Class"
-  }, {
-    "id" : "48",
-    "type" : "owl:Class"
-  }, {
     "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
     "type" : "owl:Class"
   }, {
     "id" : "49",
@@ -237,7 +237,7 @@
     "id" : "38",
     "type" : "owl:Class"
   }, {
-    "id" : "13",
+    "id" : "11",
     "type" : "owl:Class"
   }, {
     "id" : "36",
@@ -264,16 +264,16 @@
     "id" : "76",
     "type" : "owl:Class"
   }, {
-    "id" : "78",
+    "id" : "77",
     "type" : "owl:Class"
   }, {
-    "id" : "77",
+    "id" : "84",
     "type" : "owl:Class"
   }, {
     "id" : "85",
     "type" : "owl:Class"
   }, {
-    "id" : "82",
+    "id" : "81",
     "type" : "owl:Class"
   }, {
     "id" : "4",
@@ -285,10 +285,10 @@
     "id" : "86",
     "type" : "owl:Class"
   }, {
-    "id" : "88",
+    "id" : "26",
     "type" : "owl:Class"
   }, {
-    "id" : "26",
+    "id" : "88",
     "type" : "owl:Class"
   }, {
     "id" : "89",
@@ -339,7 +339,7 @@
     "id" : "68",
     "type" : "owl:Class"
   }, {
-    "id" : "47",
+    "id" : "48",
     "type" : "owl:Class"
   }, {
     "id" : "93",
@@ -372,10 +372,10 @@
     "id" : "18",
     "type" : "owl:Class"
   }, {
-    "id" : "21",
+    "id" : "20",
     "type" : "owl:Class"
   }, {
-    "id" : "81",
+    "id" : "80",
     "type" : "owl:Class"
   }, {
     "id" : "3",
@@ -387,7 +387,7 @@
     "id" : "154",
     "type" : "owl:Class"
   }, {
-    "id" : "84",
+    "id" : "83",
     "type" : "owl:Class"
   }, {
     "id" : "72",
@@ -396,13 +396,13 @@
     "id" : "101",
     "type" : "owl:Class"
   }, {
-    "id" : "83",
+    "id" : "82",
     "type" : "owl:Class"
   }, {
     "id" : "46",
     "type" : "owl:Class"
   }, {
-    "id" : "22",
+    "id" : "21",
     "type" : "owl:Class"
   }, {
     "id" : "62",
@@ -414,16 +414,16 @@
     "id" : "52",
     "type" : "owl:Class"
   }, {
-    "id" : "8",
+    "id" : "13",
     "type" : "owl:Class"
   }, {
-    "id" : "10",
+    "id" : "8",
     "type" : "owl:Class"
   }, {
     "id" : "167",
     "type" : "owl:Thing"
   }, {
-    "id" : "80",
+    "id" : "79",
     "type" : "owl:Class"
   }, {
     "id" : "144",
@@ -432,7 +432,7 @@
     "id" : "105",
     "type" : "owl:Class"
   }, {
-    "id" : "79",
+    "id" : "78",
     "type" : "owl:Class"
   }, {
     "id" : "148",
@@ -529,6 +529,17 @@
     "id" : "7",
     "superClasses" : [ "8" ]
   }, {
+    "iri" : "http://w3id.org/fuel/neutral_particule_population",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "neutral_particule_population",
+      "en" : "neutral particle population"
+    },
+    "subClasses" : [ "11", "6" ],
+    "id" : "9",
+    "superClasses" : [ "10" ]
+  }, {
     "iri" : "http://w3id.org/fuel/laser_induced_plasma",
     "baseIri" : "http://w3id.org/fuel",
     "instances" : 0,
@@ -559,19 +570,8 @@
     "comment" : {
       "en" : "Laser induced plasma (LIP) is defined as a product of the complex interaction between a focused, high peak power laser beam and a target material, resulting in processes such as absorption of laser energy, vaporization, and ejection of atomic and molecular species, followed by plasma expansion and shock wave production."
     },
-    "id" : "9",
-    "superClasses" : [ "10" ]
-  }, {
-    "iri" : "http://w3id.org/fuel/neutral_particule_population",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "neutral_particule_population",
-      "en" : "neutral particle population"
-    },
-    "subClasses" : [ "13", "6" ],
-    "id" : "11",
-    "superClasses" : [ "12" ]
+    "id" : "12",
+    "superClasses" : [ "13" ]
   }, {
     "iri" : "http://w3id.org/fuel/tokamak_plasma",
     "baseIri" : "http://w3id.org/fuel",
@@ -581,7 +581,7 @@
     },
     "subClasses" : [ "15", "16" ],
     "id" : "14",
-    "superClasses" : [ "10" ]
+    "superClasses" : [ "13" ]
   }, {
     "iri" : "http://w3id.org/fuel/poloidal_field_coil",
     "baseIri" : "http://w3id.org/fuel",
@@ -592,6 +592,18 @@
     },
     "id" : "17",
     "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://w3id.org/fuel/process",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "process"
+    },
+    "subClasses" : [ "20", "21" ],
+    "comment" : {
+      "undefined" : "consider mapping to BFO - http://purl.obolibrary.org/obo/BFO_0000015"
+    },
+    "id" : "19"
   }, {
     "iri" : "http://w3id.org/fuel/shot",
     "baseIri" : "http://w3id.org/fuel",
@@ -611,19 +623,7 @@
     "comment" : {
       "undefined" : "A “shot” is any kind of experiment conducted on a test machine following defined parameters. It could be many actual firings of the machine following a variation in the parameters. So one or more “shots” make up an experiment."
     },
-    "id" : "19"
-  }, {
-    "iri" : "http://w3id.org/fuel/process",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "process"
-    },
-    "subClasses" : [ "21", "22" ],
-    "comment" : {
-      "undefined" : "consider mapping to BFO - http://purl.obolibrary.org/obo/BFO_0000015"
-    },
-    "id" : "20"
+    "id" : "22"
   }, {
     "iri" : "http://w3id.org/fuel/neutral_beam_system",
     "baseIri" : "http://w3id.org/fuel",
@@ -692,8 +692,8 @@
     "label" : {
       "IRI-based" : "particle_population"
     },
-    "subClasses" : [ "34", "8", "11" ],
-    "id" : "12",
+    "subClasses" : [ "34", "8", "9" ],
+    "id" : "10",
     "superClasses" : [ "33" ]
   }, {
     "iri" : "http://w3id.org/fuel/diagnostic_port",
@@ -772,7 +772,7 @@
       "IRI-based" : "turbulence_process"
     },
     "id" : "43",
-    "superClasses" : [ "22" ]
+    "superClasses" : [ "21" ]
   }, {
     "iri" : "http://w3id.org/fuel/stability",
     "baseIri" : "http://w3id.org/fuel",
@@ -787,24 +787,6 @@
     "id" : "30",
     "superClasses" : [ "44" ]
   }, {
-    "iri" : "http://w3id.org/fuel/field",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "field"
-    },
-    "subClasses" : [ "31", "47" ],
-    "id" : "32"
-  }, {
-    "iri" : "http://w3id.org/fuel/inner_core_region",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "inner_core_region"
-    },
-    "id" : "48",
-    "superClasses" : [ "28" ]
-  }, {
     "iri" : "http://w3id.org/fuel/core_region",
     "baseIri" : "http://w3id.org/fuel",
     "instances" : 0,
@@ -812,9 +794,27 @@
       "IRI-based" : "core_region",
       "en" : "core region"
     },
-    "subClasses" : [ "48", "27" ],
+    "subClasses" : [ "47", "27" ],
     "id" : "28",
     "superClasses" : [ "38" ]
+  }, {
+    "iri" : "http://w3id.org/fuel/inner_core_region",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "inner_core_region"
+    },
+    "id" : "47",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "http://w3id.org/fuel/field",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "field"
+    },
+    "subClasses" : [ "31", "48" ],
+    "id" : "32"
   }, {
     "iri" : "http://w3id.org/fuel/toroidal_field_coil",
     "baseIri" : "http://w3id.org/fuel",
@@ -832,7 +832,7 @@
     "label" : {
       "IRI-based" : "material_entity"
     },
-    "subClasses" : [ "10", "50", "51", "42", "12", "52", "53" ],
+    "subClasses" : [ "13", "50", "51", "42", "10", "52", "53" ],
     "comment" : {
       "undefined" : "Consider reusing to BFO:material_entity\nhttp://purl.obolibrary.org/obo/BFO_0000040"
     },
@@ -844,8 +844,13 @@
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "dispositivo de fusión",
+        "language" : "en",
+        "value" : "fusion device",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "nuclear fusion reactor",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
@@ -854,13 +859,8 @@
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "fusion device",
-        "type" : "label"
-      }, {
-        "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "nuclear fusion reactor",
+        "language" : "es",
+        "value" : "dispositivo de fusión",
         "type" : "label"
       } ],
       "source" : [ {
@@ -971,8 +971,8 @@
     "label" : {
       "IRI-based" : "recycled_neutral_population"
     },
-    "id" : "13",
-    "superClasses" : [ "11" ]
+    "id" : "11",
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "http://w3id.org/fuel/tokamak_component",
     "baseIri" : "http://w3id.org/fuel",
@@ -1078,15 +1078,6 @@
     "id" : "76",
     "superClasses" : [ "77" ]
   }, {
-    "iri" : "http://w3id.org/fuel/scrape_off_layer_plasma",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "scrape_off_layer_plasma"
-    },
-    "id" : "78",
-    "superClasses" : [ "10" ]
-  }, {
     "iri" : "http://w3id.org/fuel/plasma_diagnostics",
     "baseIri" : "http://w3id.org/fuel",
     "instances" : 0,
@@ -1101,9 +1092,18 @@
     "label" : {
       "IRI-based" : "plasma_diagnostics"
     },
-    "subClasses" : [ "79", "80", "81", "76", "82", "83", "84" ],
+    "subClasses" : [ "78", "79", "80", "76", "81", "82", "83" ],
     "id" : "77",
     "superClasses" : [ "26" ]
+  }, {
+    "iri" : "http://w3id.org/fuel/scrape_off_layer_plasma",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "scrape_off_layer_plasma"
+    },
+    "id" : "84",
+    "superClasses" : [ "13" ]
   }, {
     "iri" : "http://w3id.org/fuel/ICRHSystem",
     "baseIri" : "http://w3id.org/fuel",
@@ -1120,7 +1120,7 @@
     "label" : {
       "IRI-based" : "interferometer"
     },
-    "id" : "82",
+    "id" : "81",
     "superClasses" : [ "77" ]
   }, {
     "iri" : "http://w3id.org/fuel/divertor_tokamak",
@@ -1153,16 +1153,6 @@
     "id" : "86",
     "superClasses" : [ "24" ]
   }, {
-    "iri" : "http://w3id.org/fuel/magnetic_field_density",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "magnetic_field_density",
-      "en" : "magnetic field density"
-    },
-    "id" : "88",
-    "superClasses" : [ "44" ]
-  }, {
     "iri" : "http://w3id.org/fuel/diagnostics",
     "baseIri" : "http://w3id.org/fuel",
     "instances" : 0,
@@ -1190,6 +1180,16 @@
     },
     "id" : "26",
     "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://w3id.org/fuel/magnetic_field_density",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "magnetic_field_density",
+      "en" : "magnetic field density"
+    },
+    "id" : "88",
+    "superClasses" : [ "44" ]
   }, {
     "iri" : "http://w3id.org/fuel/runaway_electron_population",
     "baseIri" : "http://w3id.org/fuel",
@@ -1228,7 +1228,7 @@
     },
     "subClasses" : [ "73", "104", "105" ],
     "id" : "34",
-    "superClasses" : [ "12" ]
+    "superClasses" : [ "10" ]
   }, {
     "iri" : "http://w3id.org/fuel/electron_population",
     "baseIri" : "http://w3id.org/fuel",
@@ -1246,7 +1246,7 @@
       "IRI-based" : "divertor_plasma"
     },
     "id" : "110",
-    "superClasses" : [ "10" ]
+    "superClasses" : [ "13" ]
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Person",
     "baseIri" : "http://xmlns.com/foaf/0.1",
@@ -1349,13 +1349,13 @@
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "nuclear fission reactor",
+        "language" : "es",
+        "value" : "reactor de fisión nuclear",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "reactor de fisión nuclear",
+        "language" : "en",
+        "value" : "nuclear fission reactor",
         "type" : "label"
       } ],
       "source" : [ {
@@ -1384,13 +1384,13 @@
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "instalación de investigación de fusión",
+        "language" : "en",
+        "value" : "fusion research facility",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "fusion research facility",
+        "language" : "es",
+        "value" : "instalación de investigación de fusión",
         "type" : "label"
       } ]
     },
@@ -1431,7 +1431,7 @@
     "label" : {
       "IRI-based" : "electric_field"
     },
-    "id" : "47",
+    "id" : "48",
     "superClasses" : [ "32" ]
   }, {
     "iri" : "http://w3id.org/fuel/Tokamak_Coordinate_Conventions",
@@ -1527,22 +1527,16 @@
         "IRI-based" : "COCOS_8"
       }
     }, {
-      "iri" : "http://w3id.org/fuel/COCOS_5",
-      "baseIri" : "http://w3id.org/fuel",
-      "labels" : {
-        "IRI-based" : "COCOS_5"
-      }
-    }, {
       "iri" : "http://w3id.org/fuel/COCOS_10",
       "baseIri" : "http://w3id.org/fuel",
       "labels" : {
         "IRI-based" : "COCOS_10"
       }
     }, {
-      "iri" : "http://w3id.org/fuel/COCOS_11",
+      "iri" : "http://w3id.org/fuel/COCOS_5",
       "baseIri" : "http://w3id.org/fuel",
       "labels" : {
-        "IRI-based" : "COCOS_11"
+        "IRI-based" : "COCOS_5"
       }
     }, {
       "iri" : "http://w3id.org/fuel/COCOS_6",
@@ -1551,16 +1545,22 @@
         "IRI-based" : "COCOS_6"
       }
     }, {
-      "iri" : "http://w3id.org/fuel/COCOS_12",
+      "iri" : "http://w3id.org/fuel/COCOS_11",
       "baseIri" : "http://w3id.org/fuel",
       "labels" : {
-        "IRI-based" : "COCOS_12"
+        "IRI-based" : "COCOS_11"
       }
     }, {
       "iri" : "http://w3id.org/fuel/COCOS_3",
       "baseIri" : "http://w3id.org/fuel",
       "labels" : {
         "IRI-based" : "COCOS_3"
+      }
+    }, {
+      "iri" : "http://w3id.org/fuel/COCOS_12",
+      "baseIri" : "http://w3id.org/fuel",
+      "labels" : {
+        "IRI-based" : "COCOS_12"
       }
     }, {
       "iri" : "http://w3id.org/fuel/COCOS_4",
@@ -1601,13 +1601,13 @@
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "thermoelectrical thermometer",
+        "language" : "es",
+        "value" : "termocupla",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "termocupla",
+        "language" : "en",
+        "value" : "thermoelectrical thermometer",
         "type" : "label"
       } ],
       "source" : [ {
@@ -1647,7 +1647,7 @@
     },
     "subClasses" : [ "56" ],
     "id" : "57",
-    "superClasses" : [ "22" ]
+    "superClasses" : [ "21" ]
   }, {
     "iri" : "http://w3id.org/fuel/scrape_off_layer",
     "baseIri" : "http://w3id.org/fuel",
@@ -1687,7 +1687,7 @@
       "en" : "plasma wall interaction process"
     },
     "id" : "146",
-    "superClasses" : [ "22" ]
+    "superClasses" : [ "21" ]
   }, {
     "iri" : "http://w3id.org/fuel/injected_neutral_particle_population",
     "baseIri" : "http://w3id.org/fuel",
@@ -1697,7 +1697,7 @@
     },
     "subClasses" : [ "5" ],
     "id" : "6",
-    "superClasses" : [ "11" ]
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "http://w3id.org/fuel/magnet_system",
     "baseIri" : "http://w3id.org/fuel",
@@ -1730,8 +1730,8 @@
       "en" : "A set of connected experiments that are run across a time period.",
       "es" : "Un conjunto de experimentos conectados que se ejecutan durante un período específico de tiempo"
     },
-    "id" : "21",
-    "superClasses" : [ "20" ]
+    "id" : "20",
+    "superClasses" : [ "19" ]
   }, {
     "iri" : "http://w3id.org/fuel/Thomson_Scattering_system",
     "baseIri" : "http://w3id.org/fuel",
@@ -1740,12 +1740,12 @@
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "Thomson scattering diagnostic",
+        "value" : "Thomson Scattering system",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "Thomson Scattering system",
+        "value" : "Thomson scattering diagnostic",
         "type" : "label"
       } ],
       "definition" : [ {
@@ -1765,7 +1765,7 @@
       "IRI-based" : "Thomson_Scattering_system",
       "en" : "Thomson scattering"
     },
-    "id" : "81",
+    "id" : "80",
     "superClasses" : [ "77" ]
   }, {
     "iri" : "http://w3id.org/fuel/spherical_tokamak",
@@ -1858,7 +1858,7 @@
     "comment" : {
       "en" : "A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance."
     },
-    "id" : "84",
+    "id" : "83",
     "superClasses" : [ "77" ]
   }, {
     "iri" : "http://w3id.org/fuel/limiter",
@@ -1910,7 +1910,7 @@
     "comment" : {
       "en" : "A Langmuir probe is a device used to determine the electron temperature, electron density, and electric potential of a plasma. It works by inserting one or more electrodes into a plasma, with a constant or time-varying electric potential between the various electrodes or between them and the surrounding vessel. The measured currents and potentials in this system allow the determination of the physical properties of the plasma."
     },
-    "id" : "83",
+    "id" : "82",
     "superClasses" : [ "77" ]
   }, {
     "iri" : "http://w3id.org/fuel/MHD_instability",
@@ -1939,8 +1939,8 @@
       "undefined" : "physics process"
     },
     "subClasses" : [ "57", "146", "144", "43" ],
-    "id" : "22",
-    "superClasses" : [ "20" ]
+    "id" : "21",
+    "superClasses" : [ "19" ]
   }, {
     "iri" : "http://w3id.org/fuel/electron_density",
     "baseIri" : "http://w3id.org/fuel",
@@ -1985,16 +1985,6 @@
     "id" : "52",
     "superClasses" : [ "33" ]
   }, {
-    "iri" : "http://w3id.org/fuel/non_thermal_particle_population",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "non_thermal_particle_population"
-    },
-    "subClasses" : [ "7", "89", "154" ],
-    "id" : "8",
-    "superClasses" : [ "12" ]
-  }, {
     "iri" : "http://w3id.org/fuel/plasma",
     "baseIri" : "http://w3id.org/fuel",
     "instances" : 0,
@@ -2017,12 +2007,22 @@
       "en" : "plasma",
       "es" : "plasma"
     },
-    "subClasses" : [ "14", "110", "78", "9" ],
+    "subClasses" : [ "14", "110", "84", "12" ],
     "comment" : {
       "en" : "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."
     },
-    "id" : "10",
+    "id" : "13",
     "superClasses" : [ "33" ]
+  }, {
+    "iri" : "http://w3id.org/fuel/non_thermal_particle_population",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "non_thermal_particle_population"
+    },
+    "subClasses" : [ "7", "89", "154" ],
+    "id" : "8",
+    "superClasses" : [ "10" ]
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
@@ -2037,7 +2037,7 @@
     "label" : {
       "IRI-based" : "optical_diagnostic_system"
     },
-    "id" : "80",
+    "id" : "79",
     "superClasses" : [ "77" ]
   }, {
     "iri" : "http://w3id.org/fuel/transport_process",
@@ -2047,7 +2047,7 @@
       "IRI-based" : "transport_process"
     },
     "id" : "144",
-    "superClasses" : [ "22" ]
+    "superClasses" : [ "21" ]
   }, {
     "iri" : "http://w3id.org/fuel/impurity_population",
     "baseIri" : "http://w3id.org/fuel",
@@ -2064,7 +2064,7 @@
     "label" : {
       "IRI-based" : "magnetic_probe"
     },
-    "id" : "79",
+    "id" : "78",
     "superClasses" : [ "77" ]
   }, {
     "iri" : "http://w3id.org/fuel/central_solenoid",
@@ -2377,317 +2377,317 @@
   "propertyAttribute" : [ {
     "range" : "30",
     "domain" : "40",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "87"
   }, {
     "range" : "30",
     "domain" : "46",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "90"
   }, {
     "range" : "30",
     "domain" : "45",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "91"
   }, {
     "range" : "64",
     "domain" : "93",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "92"
   }, {
     "range" : "61",
     "domain" : "60",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "94"
   }, {
     "range" : "93",
     "domain" : "96",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "95"
   }, {
     "range" : "51",
     "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "97"
   }, {
-    "range" : "12",
-    "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "10",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "98"
   }, {
-    "range" : "12",
+    "range" : "10",
     "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "99"
   }, {
     "range" : "61",
     "domain" : "101",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "100"
   }, {
     "range" : "53",
     "domain" : "55",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "102"
   }, {
     "range" : "34",
     "domain" : "105",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "106"
   }, {
     "range" : "34",
     "domain" : "104",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "107"
   }, {
-    "range" : "12",
+    "range" : "10",
     "domain" : "34",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "108"
   }, {
     "range" : "24",
     "domain" : "85",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "109"
   }, {
     "range" : "24",
     "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "111"
   }, {
     "range" : "34",
     "domain" : "73",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "112"
   }, {
     "range" : "24",
     "domain" : "103",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "113"
   }, {
-    "range" : "20",
-    "domain" : "21",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "19",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "114"
   }, {
     "range" : "24",
     "domain" : "86",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "116"
   }, {
-    "range" : "20",
-    "domain" : "22",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "19",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "117"
   }, {
     "range" : "55",
-    "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "118"
   }, {
-    "range" : "55",
-    "domain" : "18",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "6",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "119"
   }, {
     "range" : "55",
-    "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "120"
   }, {
     "range" : "2",
     "domain" : "54",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "122"
   }, {
     "range" : "2",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "123"
   }, {
-    "range" : "6",
-    "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "55",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "124"
   }, {
     "range" : "57",
     "domain" : "56",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "125"
   }, {
     "range" : "44",
     "domain" : "61",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "126"
   }, {
     "range" : "33",
     "domain" : "53",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "127"
   }, {
     "range" : "44",
     "domain" : "30",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "128"
   }, {
     "range" : "44",
     "domain" : "88",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "129"
   }, {
     "range" : "33",
     "domain" : "52",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "130"
   }, {
     "range" : "33",
-    "domain" : "12",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "131"
   }, {
     "range" : "33",
     "domain" : "42",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "132"
   }, {
     "range" : "33",
-    "domain" : "10",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "133"
   }, {
-    "range" : "28",
-    "domain" : "27",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "32",
+    "domain" : "48",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "134"
   }, {
     "range" : "33",
     "domain" : "51",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "135"
   }, {
     "range" : "33",
     "domain" : "50",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "136"
   }, {
-    "range" : "32",
-    "domain" : "31",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "28",
+    "domain" : "47",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "137"
   }, {
     "range" : "30",
     "domain" : "29",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "138"
   }, {
-    "range" : "28",
-    "domain" : "48",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "32",
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "139"
   }, {
-    "range" : "32",
-    "domain" : "47",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "28",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "140"
   }, {
-    "range" : "22",
+    "range" : "21",
     "domain" : "57",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "141"
   }, {
     "range" : "36",
     "domain" : "35",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "142"
   }, {
-    "range" : "22",
+    "range" : "21",
     "domain" : "144",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "143"
   }, {
-    "range" : "22",
+    "range" : "21",
     "domain" : "146",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "145"
   }, {
     "range" : "36",
     "domain" : "72",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "147"
   }, {
     "range" : "36",
     "domain" : "71",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "150"
   }, {
     "range" : "36",
     "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "151"
   }, {
     "range" : "36",
     "domain" : "39",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "152"
   }, {
     "range" : "101",
     "domain" : "149",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "153"
   }, {
     "range" : "36",
     "domain" : "70",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "155"
   }, {
     "range" : "36",
     "domain" : "69",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "156"
   }, {
     "range" : "38",
     "domain" : "67",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "157"
   }, {
     "range" : "38",
     "domain" : "37",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "158"
   }, {
     "range" : "38",
     "domain" : "68",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "159"
   }, {
     "range" : "38",
     "domain" : "28",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "160"
   }, {
     "range" : "63",
     "domain" : "64",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "161"
   }, {
     "range" : "60",
     "domain" : "62",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "162"
   }, {
     "range" : "38",
     "domain" : "66",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "163"
   }, {
     "range" : "18",
     "domain" : "49",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "164"
   }, {
     "range" : "18",
     "domain" : "17",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "165"
   }, {
     "iri" : "http://w3id.org/fuel/usesCoordinateConvention",
@@ -2702,72 +2702,72 @@
   }, {
     "range" : "45",
     "domain" : "58",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "168"
   }, {
     "range" : "18",
     "domain" : "148",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "169"
   }, {
     "range" : "42",
     "domain" : "41",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "170"
   }, {
     "range" : "77",
-    "domain" : "83",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "82",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "171"
   }, {
     "range" : "42",
     "domain" : "59",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "172"
   }, {
     "range" : "77",
-    "domain" : "84",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "83",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "173"
   }, {
     "range" : "1",
     "domain" : "3",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "174"
   }, {
     "range" : "1",
     "domain" : "4",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "175"
   }, {
     "range" : "26",
     "domain" : "25",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "176"
   }, {
     "range" : "26",
     "domain" : "77",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "177"
   }, {
-    "range" : "11",
-    "domain" : "13",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "9",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "178"
   }, {
-    "range" : "11",
+    "range" : "9",
     "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "179"
   }, {
     "range" : "14",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "180"
   }, {
     "range" : "14",
     "domain" : "16",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "181"
   }, {
     "iri" : "http://w3id.org/fuel/hasComponent",
@@ -2777,82 +2777,82 @@
       "IRI-based" : "hasComponent"
     },
     "domain" : "1",
-    "attributes" : [ "someValues", "object" ],
+    "attributes" : [ "object", "someValues" ],
     "id" : "182"
   }, {
     "range" : "77",
-    "domain" : "81",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "80",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "183"
   }, {
     "range" : "77",
-    "domain" : "80",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "79",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "184"
   }, {
     "range" : "77",
-    "domain" : "82",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "81",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "185"
   }, {
     "range" : "77",
     "domain" : "76",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "186"
   }, {
     "range" : "65",
     "domain" : "38",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "187"
   }, {
-    "range" : "10",
-    "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "8",
+    "domain" : "154",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "188"
   }, {
     "range" : "77",
-    "domain" : "79",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "78",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "189"
   }, {
     "range" : "74",
     "domain" : "75",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "190"
-  }, {
-    "range" : "10",
-    "domain" : "78",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "191"
-  }, {
-    "range" : "10",
-    "domain" : "110",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "192"
-  }, {
-    "range" : "10",
-    "domain" : "14",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "193"
-  }, {
-    "range" : "8",
-    "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "194"
-  }, {
-    "range" : "22",
-    "domain" : "43",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "195"
-  }, {
-    "range" : "8",
-    "domain" : "154",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "196"
   }, {
     "range" : "8",
     "domain" : "89",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "191"
+  }, {
+    "range" : "8",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "192"
+  }, {
+    "range" : "13",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "193"
+  }, {
+    "range" : "13",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "194"
+  }, {
+    "range" : "21",
+    "domain" : "43",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "195"
+  }, {
+    "range" : "13",
+    "domain" : "84",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "196"
+  }, {
+    "range" : "13",
+    "domain" : "110",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "197"
   } ]
 }
