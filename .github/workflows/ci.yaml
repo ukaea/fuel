@@ -11,7 +11,7 @@ on:
       - main     
 
 env:
-  ONTO_DIR: src
+  ONTO_DIR: src/ontology
   ONTO_FILE: fuel.ttl
   ONTO_ABBREV: fuel
   DOCS_DIR: docs
@@ -30,7 +30,7 @@ jobs:
       - name: Check version
         id: check
         run: |
-          VERSION=$(grep -oP 'owl:versionInfo\s+"\K[^"]+' src/fuel.ttl || echo "")
+          VERSION=$(grep -oP 'owl:versionInfo\s+"\K[^"]+' src/ontology/fuel.ttl || echo "")
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           if [ "${{ github.ref_name }}" != "main" ] || [ -z "$VERSION" ]; then
             echo "is_new=false" >> $GITHUB_OUTPUT
@@ -72,10 +72,15 @@ jobs:
           curl -sL https://raw.githubusercontent.com/ontodev/robot/master/bin/robot > robot
           chmod +x robot
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
       - name: Install Python packages
         run: |
           python -m pip install --upgrade pip
-          pip install rdflib dotenv pylode
+          pip install rdflib dotenv pylode==3.2.1 "ontospy[HTML]"
 
       - name: Validate ontology profile
         id: profile
@@ -147,7 +152,9 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          keep_files: true
+          # keep_files is true to enable generating either dev or release-specific pages without deleting the other version
+          keep_files: true 
+
 
   create-release:
     needs: [check-version, deploy]

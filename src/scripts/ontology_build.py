@@ -18,10 +18,11 @@ CURRENT_VERSION = os.environ.get('CURRENT_VERSION', '')
 
 g = Graph()
 g.parse(os.path.join(ONTO_DIR, ONTO_FILE))
-target_fmts = [("ttl","turtle"),("jsonld","json-ld"),("nt","nt"),("owl","xml")]
+target_fmts = [("ttl","turtle"),("jsonld","json-ld"),("nt","nt"),("owl","xml"),("n3","n3"),("trig","trig")]
       
 # function to generate the ontology syntaxes
 def generate_syntaxes(outdir):
+    g.bind("fuel", "http://w3id.org/fuel/")
     os.makedirs(outdir, exist_ok=True)
     for ext, fmt in target_fmts:
         g.serialize(
@@ -34,15 +35,62 @@ def generate_syntaxes(outdir):
 def generate_pylode_docs(outdir):
     pylode_outdir = os.path.join(outdir, "pylode")
     os.makedirs(pylode_outdir, exist_ok=True)
-    subprocess.run([
-        "pylode",
-        "-o", os.path.join(pylode_outdir, "index"),
-        os.path.join(ONTO_DIR, ONTO_FILE)
+    try:
+        subprocess.run([
+            "pylode",
+            "-o", os.path.join(pylode_outdir, "index"),
+            os.path.join(ONTO_DIR, ONTO_FILE)
         ], check=True)
+        print(f"Pylode documentation generated at {pylode_outdir}")
+    except FileNotFoundError:
+        print("Warning: pylode executable not found; skipping pylode docs.")
+    except subprocess.CalledProcessError as e:
+        print(f"Warning: pylode exited with code {e.returncode}; skipping pylode docs.")
+        print(str(e))
+        print("If this is pylode 3.4.x, pin pylode==3.2.1 in CI or requirements.")
+        return
+        
+# function to create the documentation with ontospy
+def generate_ontospy_docs(outdir):
+    ontospy_outdir = os.path.join(outdir, "ontospy")
+    os.makedirs(ontospy_outdir, exist_ok=True)
+    index_file = os.path.join(ontospy_outdir, "index.html")
+    try:
+        subprocess.run([
+            "python",
+            "-c",
+            "import sys, configparser; configparser.SafeConfigParser = getattr(configparser, 'SafeConfigParser', configparser.ConfigParser); sys.argv=['ontospy','gendocs','-o','{}','--nobrowser','{}']; from ontospy.cli import main_cli; main_cli()".format(ontospy_outdir, os.path.join(ONTO_DIR, ONTO_FILE)),
+        ], check=True, capture_output=True)
+        print(f"Ontospy documentation generated at {ontospy_outdir}")
+    except FileNotFoundError:
+        message = "Warning: ontospy executable not found; creating fallback ontospy index."
+        print(message)
+        with open(index_file, "w", encoding="utf-8") as f:
+            f.write("<html><head><title>Ontospy docs unavailable</title></head><body>")
+            f.write("<h1>Ontospy documentation unavailable</h1>")
+            f.write(f"<p>{message}</p>")
+            f.write("<p><strong>Note:</strong> Ontospy has compatibility issues with Python 3.12+. If you need this documentation, you may need to use Python 3.11 or lower, or use the Widoco or Pylode documentation instead.</p>")
+            f.write("</body></html>")
+    except subprocess.CalledProcessError as e:
+        message = f"Warning: ontospy gendocs failed with code {e.returncode}; creating fallback ontospy index."
+        print(message)
+        with open(index_file, "w", encoding="utf-8") as f:
+            f.write("<html><head><title>Ontospy docs unavailable</title></head><body>")
+            f.write("<h1>Ontospy documentation unavailable</h1>")
+            f.write(f"<p>{message}</p>")
+            f.write("<p><strong>Note:</strong> Ontospy has compatibility issues with Python 3.12+. If you need this documentation, you may need to use Python 3.11 or lower, or use the Widoco or Pylode documentation instead.</p>")
+            f.write("</body></html>")
         
 # function to create the documentation with widoco
 def generate_widoco_docs(outdir, onto_dir, onto_file, version="1.4.25"):
     widoco_dir = os.path.join(outdir, "widoco")
+    if os.path.exists(widoco_dir):
+        print(f"{widoco_dir} already exists, clearing it for fresh Widoco output.")
+        rmtree(widoco_dir)
+        try:
+            rmtree(widoco_dir)
+        except Exception as e:
+            print(e)    
     os.makedirs(widoco_dir, exist_ok=True)
     widoco_jar = os.path.join(widoco_dir, "widoco.jar")
 
@@ -67,8 +115,8 @@ def generate_widoco_docs(outdir, onto_dir, onto_file, version="1.4.25"):
         print(f"Widoco documentation generated at {widoco_dir}")
 
         # Copy index-en.html to index.html if it exists
-        index_en = os.path.join(widoco_dir, "index-en.html")
-        index_default = os.path.join(widoco_dir, "index.html")
+        index_en = os.path.join(widoco_dir, "doc", "index-en.html")
+        index_default = os.path.join(widoco_dir, "doc", "index.html")
         if os.path.exists(index_en):
             shutil.copy(index_en, index_default)
             print("Copied index-en.html → index.html")
@@ -85,7 +133,8 @@ def generate_index(outdir, title, heading, is_root_main=False):
         f.write(f"<html><head><title>{title}</title></head><body>\n")
         f.write(f"<h1>{heading}</h1>\n<ul>\n")
         f.write('<li><a href="docs/pylode/">Pylode Documentation</a></li>\n')
-        f.write('<li><a href="docs/widoco/">Widoco Documentation</a></li>\n')
+        f.write('<li><a href="docs/widoco/doc/">Widoco Documentation</a></li>\n')
+        f.write('<li><a href="docs/ontospy/">Ontospy Documentation</a></li>\n')
         for ext, fmt in target_fmts:
             f.write(f'<li><a href="{ONTO_ABBREV}.{ext}">{ONTO_ABBREV}.{ext}</a></li>\n')
         f.write("</ul>\n")
@@ -102,6 +151,7 @@ if RELEASE_VERSION:
     release_docs_dir = os.path.join(release_dir, "docs")
     generate_pylode_docs(release_docs_dir)
     generate_widoco_docs(release_docs_dir, ONTO_DIR, ONTO_FILE)
+    generate_ontospy_docs(release_docs_dir)
 
     # Generate index for this specific release
     generate_index(
@@ -134,6 +184,7 @@ if BUILD_DIR:
     build_docs_dir = os.path.join(BUILD_DIR, "docs")
     generate_pylode_docs(build_docs_dir)
     generate_widoco_docs(build_docs_dir, ONTO_DIR, ONTO_FILE)
+    generate_ontospy_docs(build_docs_dir)
 
    # Generate build index.html
     if IS_MAIN:
