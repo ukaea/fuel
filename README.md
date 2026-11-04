@@ -33,6 +33,48 @@ and for the development version visit
 
 - [FUEL Development Documentation](https://ukaea.github.io/fuel/dev/)
 
+### Raising an issue
+
+On the [Issues](https://github.com/ukaea/fuel/issues) tab, click **New issue**. Then follow the steps for your type of issue.
+
+#### Terms and competency questions: use a form
+
+1. Choose the form that matches your request:
+
+   | Form | Description | Title starts with | Required fields |
+   |---|---|---|---|
+   | New term request form | A request for a new term to be added to the vocabulary. | `[NTR]` | new term label, definition |
+   | Term revision form | A request for an existing term to be changed or revised. | `[REV]` | existing term label |
+   | Term retirement or replacement form | A request for an existing term to be replaced or retired. | `[TR]` | existing term label, explanation |
+   | New competency question request form | Request to consider a new competency question. | `[NCQ]` | suggested competency question, indicativeAnswer, context |
+
+2. Add a title after the prefix and fill in the form. All other fields are optional.
+3. Click **Create**.
+
+#### Everything else: use a blank issue
+
+There is no form for `bug`, `documentation`, `Governance` or `Concept Modelling` issues.
+
+1. Choose **Blank issue**.
+2. Add a title and describe the issue.
+3. Under **Labels**, add the matching label from the [Labels](#labels) table below.
+4. Click **Create**.
+
+#### Labels
+
+| Label | Description |
+|---|---|
+| `bug` | Something isn't working |
+| `Competency Question` | Request to add a Competency Question |
+| `Concept Modelling` | Modelling of a Concept from the Term list. For requesting a new term see "Term Request" |
+| `documentation` | Improvements or additions to documentation |
+| `duplicate` | This issue or pull request already exists |
+| `Governance` | Governance questions |
+| `invalid` | This doesn't seem right |
+| `Term Addition` | New Term request |
+| `Term Update` | Term Update request |
+| `wontfix` | This will not be worked on |
+
 ### License
 
 The code in this repository is licensed under the [Apache License 2.0](LICENSE).
