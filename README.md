@@ -33,6 +33,35 @@ and for the development version visit
 
 - [FUEL Development Documentation](https://ukaea.github.io/fuel/dev/)
 
+### Raising an issue
+
+1. On the [Issues](https://github.com/ukaea/fuel/issues) tab, click **New issue**.
+2. Choose the form that matches your request:
+
+   | Form | Description | Title starts with |
+   |---|---|---|
+   | New term request form | A request for a new term to be added to the vocabulary. | `[NTR]` |
+   | Term revision form | A request for an existing term to be changed or revised. | `[REV]` |
+   | Term retirement or replacement form | A request for an existing term to be replaced or retired. | `[TR]` |
+   | New competency question request form | Request to consider a new competency question. | `[NCQ]` |
+
+3. Add a title after the prefix, fill in the form and click **Create**.
+
+#### Labels
+
+| Label | Description |
+|---|---|
+| `bug` | Something isn't working |
+| `Competency Question` | Request to add a Competency Question |
+| `Concept Modelling` | Modelling of a Concept from the Term list. For requesting a new term see "Term Request" |
+| `documentation` | Improvements or additions to documentation |
+| `duplicate` | This issue or pull request already exists |
+| `Governance` | Governance questions |
+| `invalid` | This doesn't seem right |
+| `Term Addition` | New Term request |
+| `Term Update` | Term Update request |
+| `wontfix` | This will not be worked on |
+
 ### License
 
 The code in this repository is licensed under the [Apache License 2.0](LICENSE).
