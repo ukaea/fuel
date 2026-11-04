@@ -1,0 +1,620 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix fuel: <http://w3id.org/fuel/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix ns1: <http://schema.org/> .
+@prefix omv: <http://omv.ontoware.org/2005/05/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dcterms:abstract a owl:AnnotationProperty .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:description a owl:AnnotationProperty .
+
+dcterms:hasPart a owl:AnnotationProperty .
+
+dcterms:issued a owl:AnnotationProperty .
+
+dcterms:license a owl:AnnotationProperty .
+
+dcterms:modified a owl:AnnotationProperty .
+
+dcterms:source a owl:AnnotationProperty .
+
+dcterms:title a owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+
+ns1:image a owl:AnnotationProperty .
+
+fuel: a owl:Ontology ;
+    rdfs:label "FUsion Energy Lexicon"@en,
+        "Léxico de energía de fusión"@es ;
+    dcterms:abstract "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
+    dcterms:created "2024-11-06"^^xsd:date ;
+    dcterms:creator [ a foaf:Person,
+                sdo:Person ;
+            rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
+            foaf:homepage <https://agbeltran.github.io/> ;
+            foaf:name "Alejandra Gonzalez Beltran" ;
+            sdo:affiliation [ sdo:identifier <https://ror.org/0361bwx64> ] ;
+            sdo:identifier <https://orcid.org/0000-0003-3499-8262> ;
+            sdo:name "Alejandra Gonzalez Beltran" ] ;
+    dcterms:description "FUEL is a vocabulary designed to facilitate the interoperability of fusion energy data."@en ;
+    dcterms:issued "2024-11-06"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified "2025-09-08"^^xsd:date ;
+    dcterms:title "FUsion Energy Lexicon"@en ;
+    vann:preferredNamespacePrefix "fuel" ;
+    vann:preferredNamespaceUri "https://w3id.org/fuel/" ;
+    rdfs:comment "FUsion Energy Lexicon (FUEL) is an OWL ontology for the interoperable description of fusion energy data, devices, plasmas, physical processes and other fusion energy concepts. FUEL provides a formal semantic framework for organizing fusion knowledge and it is intended to support consistent data annotation, integration, exchange, and reuse across fusion experiments, models, and computational workflows."@en ;
+    owl:versionIRI fuel:0.0.1 ;
+    owl:versionInfo "0.0.1" ;
+    dcat:version "0.0.1" ;
+    sdo:codeRepository <https://github.com/ukaea/fuel> ;
+    mod:definitionProperty rdfs:comment ;
+    mod:hasRepresentationLanguage omv:OWL ;
+    mod:hasSyntax <http://www.w3.org/ns/formats/Turtle> ;
+    mod:prefLabelProperty rdfs:label ;
+    mod:status "active" .
+
+fuel:COCOS_1 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_10 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_11 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_12 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_13 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_14 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_15 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_16 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_17 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_18 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_2 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_3 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_4 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_5 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_6 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_7 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_8 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:COCOS_9 a fuel:COCOSconvention,
+        owl:NamedIndividual .
+
+fuel:ECRHSystem a owl:Class ;
+    rdfs:subClassOf fuel:heating_system .
+
+fuel:ICRHSystem a owl:Class ;
+    rdfs:subClassOf fuel:heating_system .
+
+fuel:Langmuir_probe a owl:Class ;
+    rdfs:label "Langmuir probe"@en ;
+    dcterms:source "https://en.wikipedia.org/wiki/Langmuir_probe"@en ;
+    ns1:image <https://en.wikipedia.org/wiki/Langmuir_probe#/media/File:Rosetta_Langmuir_Probe.jpg> ;
+    rdfs:comment "A Langmuir probe is a device used to determine the electron temperature, electron density, and electric potential of a plasma. It works by inserting one or more electrodes into a plasma, with a constant or time-varying electric potential between the various electrodes or between them and the surrounding vessel. The measured currents and potentials in this system allow the determination of the physical properties of the plasma."@en ;
+    rdfs:subClassOf fuel:plasma_diagnostics ;
+    skos:definition "A Langmuir probe is a device used to determine the electron temperature, electron density, and electric potential of a plasma. It works by inserting one or more electrodes into a plasma, with a constant or time-varying electric potential between the various electrodes or between them and the surrounding vessel. The measured currents and potentials in this system allow the determination of the physical properties of the plasma."@en .
+
+fuel:LowerHybridSystem a owl:Class ;
+    rdfs:subClassOf fuel:heating_system .
+
+fuel:MHDInstabilityProcess a owl:Class ;
+    rdfs:subClassOf fuel:plasma_instability_process .
+
+fuel:MHD_instability a owl:Class ;
+    rdfs:label "MHD instability"@en ;
+    rdfs:subClassOf fuel:stability ;
+    skos:definition "Instabilities driven by the energy of the magnetic field and by the momentum of charged particles in the plasma. Small displacements of plasma density from the equilibrium position can reinforce that displacement until a further compensating force counteracts that reinforcement or the plasma equilibrium configuration is disrupted. Various modes of such displacement in the toroidal and poloidal planes can be stabilised so that the bulk plasma remains in position."@en .
+
+fuel:Thomson_Scattering_system a owl:Class ;
+    rdfs:label "Thomson scattering"@en ;
+    dcterms:source "https://en.wikipedia.org/wiki/Thomson_scattering"@en ;
+    rdfs:subClassOf fuel:plasma_diagnostics ;
+    skos:altLabel "Thomson Scattering system"@en,
+        "Thomson scattering diagnostic"@en ;
+    skos:definition "Thomson scattering is the elastic scattering of electromagnetic radiation by a free charged particle, as described by classical electromagnetism."@en .
+
+fuel:alpha_particle_population a owl:Class ;
+    rdfs:subClassOf fuel:non_thermal_particle_population .
+
+fuel:blanket a owl:Class ;
+    rdfs:label "blanket"@en ;
+    dcterms:source "https://www.energyencyclopedia.com/en/glossary/blanket"@en ;
+    rdfs:subClassOf fuel:tokamak_component ;
+    skos:definition "The lining of the inner wall of the tokamak vessel that will be in direct contact with the hot plasma. The blanket is usually made of modules (from stainless steel, or copper), on which can be mounted replaceable first-wall panels (made from beryllium, tungsten, molybdenum, or carbon in case of older tokamaks), able to withstand high temperatures. The blanket protects the chamber wall and the magnetic coils from high-energy neutrons. These slowdown in the blanket material and transform their energy into thermal energy."@en .
+
+fuel:bolometer a owl:Class ;
+    rdfs:label "bolometer"@en ;
+    dcterms:source "https://en.wikipedia.org/wiki/Bolometer"@en ;
+    ns1:image <https://en.wikipedia.org/wiki/Bolometer#/media/File:Bolometer_conceptual_schematic.svg> ;
+    rdfs:comment "A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance."@en ;
+    rdfs:subClassOf fuel:plasma_diagnostics ;
+    skos:definition "A bolometer is a device for measuring radiant heat by means of a material having a temperature-dependent electrical resistance."@en ;
+    skos:editorialNote "Bolometers play a pivotal role in monitoring radiation in fusion plasmas. https://en.wikipedia.org/wiki/Bolometer"@en .
+
+fuel:campaign a owl:Class ;
+    rdfs:label "campaign"@en,
+        "campaña"@es ;
+    rdfs:comment "A set of connected experiments that are run across a time period."@en,
+        "Un conjunto de experimentos conectados que se ejecutan durante un período específico de tiempo"@es ;
+    rdfs:subClassOf fuel:process ;
+    skos:altLabel "experimental campaign"@en .
+
+fuel:central_solenoid a owl:Class ;
+    rdfs:label "central solenoid"@en ;
+    dcterms:source "https://www.jt60sa.org/wp/glossary/"@en ;
+    rdfs:subClassOf fuel:magnet_system ;
+    skos:definition "The tokamak component that produces and sustains the plasma current which heats and shapes the plasma." .
+
+fuel:core_plasma a owl:Class ;
+    rdfs:subClassOf fuel:tokamak_plasma .
+
+fuel:desorbed_gas a owl:Class ;
+    rdfs:subClassOf fuel:wall_released_species .
+
+fuel:diagnostic_port a owl:Class ;
+    rdfs:subClassOf fuel:tokamak_component .
+
+fuel:divertor_plasma a owl:Class ;
+    rdfs:subClassOf fuel:plasma .
+
+fuel:divertor_tokamak a owl:Class ;
+    rdfs:subClassOf fuel:tokamak ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( fuel:tokamak [ a owl:Restriction ;
+                        owl:onProperty fuel:hasComponent ;
+                        owl:someValuesFrom fuel:divertor ] ) ] .
+
+fuel:edge_plasma a owl:Class ;
+    rdfs:subClassOf fuel:tokamak_plasma .
+
+fuel:edge_region a owl:Class ;
+    rdfs:label "edge region"@en ;
+    rdfs:subClassOf fuel:plasma_region .
+
+fuel:electric_field a owl:Class ;
+    rdfs:subClassOf fuel:field .
+
+fuel:electron_density a owl:Class ;
+    rdfs:subClassOf fuel:density .
+
+fuel:electron_population a owl:Class ;
+    rdfs:subClassOf fuel:thermal_particle_population .
+
+fuel:electron_temperature a owl:Class ;
+    dcterms:source "https://en.wikipedia.org/wiki/Plasma_parameters#Electron_temperature"@en ;
+    rdfs:subClassOf fuel:temperature .
+
+fuel:fast_ion_population a owl:Class ;
+    rdfs:subClassOf fuel:non_thermal_particle_population .
+
+fuel:first_wall a owl:Class ;
+    rdfs:label "first wall"@en ;
+    dcterms:source "https://www.jt60sa.org/wp/glossary/"@en ;
+    rdfs:subClassOf fuel:tokamak_component ;
+    skos:definition "The interior surface of a tokamak closest to the plasma"@en .
+
+fuel:fusion_facility a owl:Class ;
+    rdfs:label "fusion facility"@en,
+        "instalación de fusión"@es ;
+    rdfs:comment "A facility in which fusion experiments are conducted. Examples include the Joint European Torus (JET) in the UK, the DIII-D National Fusion Facility in the US, and the Experimental Advanced Superconducting Tokamak (EAST) in China."@en,
+        "Una instalación en la que se llevan a cabo experimentos de fusión. Ejemplos incluyen el Joint European Torus (JET) en el Reino Unido, el DIII-D National Fusion Facility en los Estados Unidos y el Experimental Advanced Superconducting Tokamak (EAST) en China."@es ;
+    rdfs:subClassOf fuel:material_entity ;
+    skos:altLabel "fusion research facility"@en,
+        "instalación de investigación de fusión"@es .
+
+fuel:ideal_kink_stability a owl:Class ;
+    rdfs:subClassOf fuel:MHDstability .
+
+fuel:impurity_population a owl:Class ;
+    rdfs:subClassOf fuel:thermal_particle_population .
+
+fuel:inner_core_region a owl:Class ;
+    rdfs:subClassOf fuel:core_region .
+
+fuel:interferometer a owl:Class ;
+    rdfs:subClassOf fuel:plasma_diagnostics .
+
+fuel:ion_population a owl:Class ;
+    rdfs:subClassOf fuel:thermal_particle_population .
+
+fuel:iter_pdm a owl:Class ;
+    rdfs:label "ITER Physics Data Model"@en ;
+    dcterms:source <https://doi.org/10.1088/0029-5515/55/12/123006> ;
+    rdfs:comment "ITER standardized data model"@en ;
+    skos:altLabel "ITER PDM"@en,
+        "PDM"@en .
+
+fuel:kinetic_stability a owl:Class ;
+    rdfs:subClassOf fuel:stability .
+
+fuel:laser_induced_plasma a owl:Class ;
+    rdfs:label "laser induced plasma"@en ;
+    dcterms:source <https://www.sciencedirect.com/topics/chemistry/laser-induced-plasma> ;
+    rdfs:comment "Laser induced plasma (LIP) is defined as a product of the complex interaction between a focused, high peak power laser beam and a target material, resulting in processes such as absorption of laser energy, vaporization, and ejection of atomic and molecular species, followed by plasma expansion and shock wave production."@en ;
+    rdfs:subClassOf fuel:plasma ;
+    skos:altLabel "LIP"@en ;
+    skos:editorialNote "industrial plasma - not a tokamak plasma"@en .
+
+fuel:limiter a owl:Class ;
+    rdfs:subClassOf fuel:tokamak_component .
+
+fuel:magnetic_field a owl:Class ;
+    rdfs:label "campo magnético",
+        "magnetic field"@en ;
+    dcterms:source "https://www.energyencyclopedia.com/en/glossary/magnetic-field" ;
+    rdfs:subClassOf fuel:field ;
+    skos:definition """A vector field showing how magnetic forces are distributed in space. A magnetic field describes how the magnetic force at a given point in space will act on a ferromagnetic object or charged particle. In a magnetic field, the Lorentz force on a charged particle is perpendicular to both the direction of the magnetic field and its velocity. Magnetic fields surround magnetized objects, are formed around conductors through which electric current flows, or at a point with a varying electric field. It is described by the quantities B and H. B is the magnetic flux density and is given in units of tesla. A common refrigerator magnet is usually 0.001 tesla. The quantity H describes the magnetic field strength and is expressed in amperes per meter.
+
+Rotating magnetic fields are used by electrical generators in power plants.
+
+In thermonuclear fusion research, a strong magnetic field is used to confine hot plasma in tokamaks and stellarators."""@en .
+
+fuel:magnetic_field_density a owl:Class ;
+    rdfs:label "magnetic field density"@en ;
+    rdfs:subClassOf fuel:quality .
+
+fuel:magnetic_probe a owl:Class ;
+    rdfs:subClassOf fuel:plasma_diagnostics .
+
+fuel:neutral_beam a owl:Class ;
+    rdfs:subClassOf fuel:injected_neutral_particle_population ;
+    skos:editorialNote "is this a subclass of injected neutral particle population?" .
+
+fuel:neutral_beam_system a owl:Class ;
+    rdfs:subClassOf fuel:heating_system .
+
+fuel:neutron_diagnostics a owl:Class ;
+    rdfs:subClassOf fuel:plasma_diagnostics .
+
+fuel:neutronics a owl:Class ;
+    rdfs:label "neutronics"@en ;
+    dcterms:source <https://www.cea.fr/english/Pages/resources/nuclear-energy-monographs/neutronics.aspx> ;
+    rdfs:comment "Neutronics (or neutron physics) is the study of neutron paths through matter, of conditions for a chain reaction, and of alterations in matter's composition induced by nuclear reactions."@en ;
+    skos:altLabel "neutron physics"@en .
+
+fuel:operational_stability a owl:Class ;
+    rdfs:subClassOf fuel:stability .
+
+fuel:optical_diagnostic_system a owl:Class ;
+    rdfs:subClassOf fuel:plasma_diagnostics .
+
+fuel:outer_core_region a owl:Class ;
+    rdfs:subClassOf fuel:core_region .
+
+fuel:pedestal_region a owl:Class ;
+    rdfs:subClassOf fuel:plasma_region .
+
+fuel:plasma_wall_interaction_process a owl:Class ;
+    rdfs:label "plasma wall interaction process"@en ;
+    rdfs:subClassOf fuel:physics_process .
+
+fuel:poloidal_field_coil a owl:Class ;
+    rdfs:label "poloidal field coil"@en ;
+    rdfs:subClassOf fuel:magnet_system .
+
+fuel:recycled_neutral_population a owl:Class ;
+    rdfs:subClassOf fuel:neutral_particule_population .
+
+fuel:runaway_electron_population a owl:Class ;
+    rdfs:subClassOf fuel:non_thermal_particle_population .
+
+fuel:scrape_off_layer a owl:Class ;
+    rdfs:label "scrape off layer"@en ;
+    dcterms:source "https://www.energyencyclopedia.com/en/glossary/scrape-off-layer-sol"@en ;
+    rdfs:subClassOf fuel:plasma_region ;
+    skos:altLabel "SOL"@en ;
+    skos:definition "A region at the edge of the plasma characterized by open magnetic lines that terminate at the inner parts of the chamber. In limiter tokamaks this region is located behind the last closed magnetic surface, in divertor tokamaks behind the separatrix. The particles in this region move by convection rather than diffusion and travel along the magnetic lines to the chamber walls or to the divertor, where they can be extracted by vacuum pumps." .
+
+fuel:scrape_off_layer_plasma a owl:Class ;
+    rdfs:subClassOf fuel:plasma .
+
+fuel:separatrix_region a owl:Class ;
+    rdfs:subClassOf fuel:plasma_region .
+
+fuel:shot a owl:Class ;
+    rdfs:label "shot"@en ;
+    dcterms:source <https://euro-fusion.org/glossary/shot/> ;
+    rdfs:comment "A “shot” is any kind of experiment conducted on a test machine following defined parameters. It could be many actual firings of the machine following a variation in the parameters. So one or more “shots” make up an experiment." .
+
+fuel:spectrometer a owl:Class ;
+    rdfs:subClassOf fuel:diagnostics .
+
+fuel:spherical_tokamak a owl:Class ;
+    rdfs:label "spherical tokamak"@en,
+        "tokamak esférico"@es ;
+    dcterms:hasPart fuel:divertor ;
+    dcterms:source <https://www.energyencyclopedia.com/en/glossary/spherical-tokamak/> ;
+    rdfs:comment "Tokamak with a low aspect ratio and a round plasma in a shape resembling a cored apple. While a conventional tokamak has a more donut-like shape with a central hole, a spherical tokamak minimizes this hole to achieve a higher compactness. A single common conductor runs through the centre of the tokamak, to which toroidal magnets in the shape of semicircles are connected. Due to its more compact shape, the spherical tokamak achieves the same plasma parameters as a conventional tokamak with a lower magnetic field. This allows it to be smaller and cheaper. Typical spherical tokamaks are the Small Tight Aspect Ratio Tokamak (START) or the Mega Ampere Spherical Tokamak (MAST)."@en ;
+    rdfs:subClassOf fuel:tokamak .
+
+fuel:sputtered_impurity a owl:Class ;
+    rdfs:subClassOf fuel:wall_released_species .
+
+fuel:stellarator a owl:Class ;
+    rdfs:label "stellarator"@en ;
+    dcterms:source <https://www.energyencyclopedia.com/en/glossary/stellarator> ;
+    rdfs:comment "A device for thermonuclear fusion research that uses a combination of differently shaped coils which together create a desired helical magnetic field to confine the hot plasma. To hold the particles in the donut-shaped magnetic container, they must circulate in spirals, once on the inside and once on the outside of the torus. The stellarator creates a suitable magnetic field by combining helical, toroidal and poloidal coils. There are many variations that use different combinations and shapes of coils (classical, heliac, heliotron, torsatron, and helias). In the most modern modular stellarators, an assembly of specially twisted coils creates the magnetic field."@en ;
+    rdfs:subClassOf fuel:fusion_reactor .
+
+fuel:thermocouple a owl:Class ;
+    rdfs:label "thermocouple"@en,
+        "termopar"@es ;
+    dcterms:source <https://www.britannica.com/technology/thermocouple> ;
+    rdfs:comment "A thermocouple is  a temperature-measuring device consisting of two wires of different metals joined at each end. One junction is placed where the temperature is to be measured, and the other is kept at a constant lower temperature. A measuring instrument is connected in the circuit. The temperature difference causes the development of an electromotive force (known as the Seebeck effect) that is approximately proportional to the difference between the temperatures of the two junctions. Temperature can be read from standard tables, or the measuring instrument can be calibrated to read temperature directly."@en,
+        "Un termopar es un dispositivo de medición de temperatura que consta de dos cables de diferentes metales unidos por cada extremo. Una unión se coloca donde se va a medir la temperatura y la otra se mantiene a una temperatura inferior constante. Se conecta un instrumento de medición al circuito. La diferencia de temperatura genera una fuerza electromotriz (conocida como efecto Seebeck) aproximadamente proporcional a la diferencia de temperatura entre las dos uniones. La temperatura puede leerse en tablas estándar o el instrumento de medición puede calibrarse para leerla directamente."@es ;
+    rdfs:subClassOf sosa:Sensor ;
+    skos:altLabel "thermo couple"@en,
+        "thermoelectrical thermometer"@en,
+        "termocupla"@es .
+
+fuel:toroidal_field_coil a owl:Class ;
+    rdfs:label "toroidal field coil"@en ;
+    rdfs:subClassOf fuel:magnet_system .
+
+fuel:transport_process a owl:Class ;
+    rdfs:subClassOf fuel:physics_process .
+
+fuel:turbulence_process a owl:Class ;
+    rdfs:subClassOf fuel:physics_process .
+
+fuel:usesCoordinateConvention a owl:ObjectProperty .
+
+fuel:vacuum_vessel a owl:Class ;
+    dcterms:source "https://www.iter.org/machine/vacuum-vessel" ;
+    rdfs:subClassOf fuel:tokamak_component ;
+    skos:definition "A hermetically sealed, double-walled steel container that houses the fusion reactions and acts as a first safety containment barrier"@en .
+
+xsd:date a rdfs:Datatype .
+
+skos:altLabel a owl:AnnotationProperty .
+
+skos:definition a owl:AnnotationProperty .
+
+skos:editorialNote a owl:AnnotationProperty .
+
+dcat:version a owl:AnnotationProperty .
+
+foaf:homepage a owl:AnnotationProperty .
+
+foaf:name a owl:AnnotationProperty .
+
+sdo:affiliation a owl:AnnotationProperty .
+
+sdo:codeRepository a owl:AnnotationProperty .
+
+sdo:identifier a owl:AnnotationProperty .
+
+sdo:name a owl:AnnotationProperty .
+
+mod:definitionProperty a owl:AnnotationProperty .
+
+mod:hasRepresentationLanguage a owl:AnnotationProperty .
+
+mod:hasSyntax a owl:AnnotationProperty .
+
+mod:prefLabelProperty a owl:AnnotationProperty .
+
+mod:status a owl:AnnotationProperty .
+
+fuel:MHDstability a owl:Class ;
+    rdfs:label "MHD stability" ;
+    rdfs:subClassOf fuel:stability ;
+    skos:altLabel "magnetohydrodynamic stability" .
+
+fuel:Tokamak_Coordinate_Conventions a owl:Class ;
+    rdfs:label "Tokamak Coordinate Conventions"@en ;
+    rdfs:subClassOf fuel:representation_convention .
+
+fuel:density a owl:Class ;
+    rdfs:subClassOf fuel:physical_quality .
+
+fuel:device_component a owl:Class ;
+    rdfs:label "device component"@en ;
+    rdfs:subClassOf fuel:material_entity ;
+    skos:definition "A material entity that is a proper part of some device."@en .
+
+fuel:information_contennt_entity a owl:Class ;
+    rdfs:label "information content entity" ;
+    rdfs:comment "from IAO - http://purl.obolibrary.org/obo/IAO_0000030" .
+
+fuel:injected_neutral_particle_population a owl:Class ;
+    rdfs:subClassOf fuel:neutral_particule_population .
+
+fuel:nuclear_reactor a owl:Class ;
+    rdfs:label "nuclear reactor"@en,
+        "reactor nuclear"@es ;
+    dcterms:source <https://www.energyencyclopedia.com/en/glossary/nuclear-reactor> ;
+    rdfs:comment "A device inside which a controlled chain fission reaction takes place. The reactor usually has the form of a metal pressure vessel, in the middle of which the nuclear fuel is arranged in a so-called core. A coolant, whether gas or liquid, circulates through the core to dissipate the heat generated by the fission reaction. The power of the reactor is controlled by control rods that are inserted or withdrawn from the core as necessary. If the reactor uses thermal neutrons for fission, it also includes a moderator, either in the form of a liquid or a solid, which slows down the neutrons. Heat, generated by a reactor, is most commonly used. Either directly for technological purposes (e.g., hydrogen production by steam reforming) or for electricity generation by a steam turbine. The reactor can also be used to produce nuclear fuel (breeder reactor), or the strong neutron fluxes produced by the reaction can be used for research purposes or for the production of radiopharmaceuticals. There are a number of types of nuclear reactors, with the most common types used for electricity generation being water-cooled PWRs and BWRs. In 2023, there were 436 nuclear reactors in operation in the world."@en,
+        "Dispositivo en el que ocurre una reacción nuclear en cadena controlada y autosostenida. Los reactores nucleares se utilizan en las centrales nucleares para la generación de electricidad y en la propulsión de barcos. El calor de la fis nuclear se transfiere a un fluido de trabajo (agua o gas), que pasa por turbinas."@es ;
+    rdfs:subClassOf fuel:material_entity ;
+    skos:altLabel "nuclear fission reactor"@en,
+        "reactor de fisión nuclear"@es .
+
+fuel:plasma_instability_process a owl:Class ;
+    rdfs:label "plasma instability process"@en ;
+    rdfs:subClassOf fuel:physics_process .
+
+fuel:region a owl:Class ;
+    rdfs:comment "a spatial extent" .
+
+fuel:representation_convention a owl:Class ;
+    rdfs:subClassOf fuel:information_contennt_entity .
+
+fuel:temperature a owl:Class ;
+    rdfs:subClassOf fuel:physical_quality .
+
+sosa:Sensor a owl:Class .
+
+foaf:Person a owl:Class .
+
+sdo:Person a owl:Class ;
+    rdfs:subClassOf fuel:material_entity .
+
+fuel:core_region a owl:Class ;
+    rdfs:label "core region"@en ;
+    rdfs:subClassOf fuel:plasma_region .
+
+fuel:diagnostics a owl:Class ;
+    rdfs:label "diagnostic system"@en ;
+    dcterms:source <https://www.iter.org/fusion-glossary> ;
+    rdfs:comment "Equipment for determining/monitoring the properties and behaviour of a plasma during an experiment."@en ;
+    rdfs:subClassOf fuel:fusion_device_component ;
+    skos:altLabel "diagnostics" .
+
+fuel:divertor a owl:Class ;
+    rdfs:label "divertor"@en ;
+    dcterms:source <https://en.wikipedia.org/wiki/Divertor> ;
+    rdfs:comment "In magnetic confinement fusion, a divertor is a device which extracts heat and ash from fusion plasmas by averting direct contact between the confined plasma and the main chamber wall (plasma-wall interactions)."@en ;
+    rdfs:subClassOf fuel:tokamak_component .
+
+fuel:field a owl:Class .
+
+fuel:fusion_reactor a owl:Class ;
+    rdfs:label "fusion reactor"@en,
+        "reactor de fusión"@es ;
+    dcterms:source <https://www.energyencyclopedia.com/en/glossary/fusion-reactor/> ;
+    rdfs:comment "A device in which controlled thermonuclear fusion takes place, either for scientific purposes or for the production of energy. Since there are different ways to achieve fusion conditions, a fusion reactor can be a tokamak, a stellarator, a fusor or any other device in which the conditions for fusion can be achieved and maintained."@en,
+        "Dispositivo en el que se produce la fusión termonuclear controlada, ya sea con fines científicos o para la producción de energía. Dado que existen diferentes maneras de lograr las condiciones de fusión, un reactor de fusión puede ser un tokamak, un stellarator, un fusor o cualquier otro dispositivo que permita alcanzar y mantener las condiciones para la fusión."@es ;
+    rdfs:subClassOf fuel:nuclear_reactor ;
+    skos:altLabel "fusion device"@en,
+        "nuclear fusion reactor"@en,
+        "dispositivo de fusión"@es,
+        "reactor de fusión nuclear"@es .
+
+fuel:hasComponent a owl:ObjectProperty .
+
+fuel:neutral_particule_population a owl:Class ;
+    rdfs:label "neutral particle population"@en ;
+    rdfs:subClassOf fuel:particle_population .
+
+fuel:physical_quality a owl:Class ;
+    rdfs:subClassOf fuel:quality .
+
+fuel:process a owl:Class ;
+    rdfs:comment "consider mapping to BFO - http://purl.obolibrary.org/obo/BFO_0000015" .
+
+fuel:tokamak_plasma a owl:Class ;
+    rdfs:subClassOf fuel:plasma .
+
+fuel:wall_released_species a owl:Class ;
+    rdfs:subClassOf fuel:material_entity .
+
+fuel:fusion_device_component a owl:Class ;
+    rdfs:label "fusion device component"@en ;
+    rdfs:subClassOf fuel:device_component .
+
+fuel:magnet_system a owl:Class ;
+    rdfs:label "magnetic system"@en ;
+    rdfs:subClassOf fuel:fusion_device_component .
+
+fuel:non_thermal_particle_population a owl:Class ;
+    rdfs:subClassOf fuel:particle_population .
+
+fuel:particle_population a owl:Class ;
+    rdfs:subClassOf fuel:material_entity .
+
+fuel:quality a owl:Class ;
+    rdfs:comment """consider reusing to BFO:quality 
+http://purl.obolibrary.org/obo/BFO_0000019""" .
+
+fuel:thermal_particle_population a owl:Class ;
+    rdfs:subClassOf fuel:particle_population .
+
+fuel:tokamak a owl:Class ;
+    rdfs:label "tokamak"@en ;
+    dcterms:source <https://www.energyencyclopedia.com/en/glossary/tokamak> ;
+    rdfs:comment "A device for magnetic confinement of plasma by a combination of a toroidal magnetic field and a current flowing through the plasma in which conditions for thermonuclear fusion ignition can be achieved. The word “tokamak” is of Russian origin and is an acronym for “TOroidalnaya KAmera i MAgnitnye Katushki” — toroidal chamber and magnetic coils. The magnetic field necessary to keep the hot plasma inside the toroidal chamber is generated as a combination of the field of the toroidal coils and the magnetic field generated by the current flowing through the plasma. Since the current in the plasma is induced on the transformer principle, the tokamak is a pulse device."@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty fuel:hasComponent ;
+            owl:someValuesFrom fuel:tokamak_component ],
+        fuel:fusion_reactor ;
+    skos:altLabel "toroidal chamber with magnetic coils"@en,
+        "cámara toroidal con bobinas magnéticas"@es .
+
+fuel:heating_system a owl:Class ;
+    rdfs:label "heating system"@en ;
+    rdfs:subClassOf fuel:tokamak_component .
+
+fuel:physics_process a owl:Class ;
+    rdfs:label "physics process" ;
+    rdfs:subClassOf fuel:process .
+
+fuel:plasma a owl:Class ;
+    rdfs:label "plasma"@en,
+        "plasma"@es ;
+    dcterms:source <https://www.iter.org/fusion-glossary> ;
+    rdfs:comment "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."@en ;
+    rdfs:subClassOf fuel:material_entity ;
+    skos:definition "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."@en .
+
+fuel:stability a owl:Class ;
+    rdfs:comment "consider reusing http://purl.obolibrary.org/obo/PATO_0015026" ;
+    rdfs:subClassOf fuel:quality .
+
+fuel:plasma_region a owl:Class ;
+    rdfs:label "plasma region"@en ;
+    rdfs:subClassOf fuel:region .
+
+fuel:material_entity a owl:Class ;
+    rdfs:comment """Consider reusing to BFO:material_entity
+http://purl.obolibrary.org/obo/BFO_0000040""" .
+
+fuel:plasma_diagnostics a owl:Class ;
+    dcterms:source "https://en.wikipedia.org/wiki/Plasma_diagnostics"@en ;
+    rdfs:subClassOf fuel:diagnostics .
+
+fuel:tokamak_component a owl:Class ;
+    rdfs:label "tokamak component"@en ;
+    rdfs:subClassOf fuel:fusion_device_component .
+
+fuel:COCOSconvention a owl:Class ;
+    rdfs:label "COordinate COnventionS"@en ;
+    dcterms:source "https://wpcd-workflows.github.io/conventions.html"@en ;
+    rdfs:subClassOf fuel:Tokamak_Coordinate_Conventions ;
+    skos:altLabel "COCOS conventions"@en .
+
