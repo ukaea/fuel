@@ -35,17 +35,30 @@ and for the development version visit
 
 ### Raising an issue
 
-1. On the [Issues](https://github.com/ukaea/fuel/issues) tab, click **New issue**.
-2. Choose the form that matches your request:
+On the [Issues](https://github.com/ukaea/fuel/issues) tab, click **New issue**. Then follow the steps for your type of issue.
 
-   | Form | Description | Title starts with |
-   |---|---|---|
-   | New term request form | A request for a new term to be added to the vocabulary. | `[NTR]` |
-   | Term revision form | A request for an existing term to be changed or revised. | `[REV]` |
-   | Term retirement or replacement form | A request for an existing term to be replaced or retired. | `[TR]` |
-   | New competency question request form | Request to consider a new competency question. | `[NCQ]` |
+#### Terms and competency questions: use a form
 
-3. Add a title after the prefix, fill in the form and click **Create**.
+1. Choose the form that matches your request:
+
+   | Form | Description | Title starts with | Required fields |
+   |---|---|---|---|
+   | New term request form | A request for a new term to be added to the vocabulary. | `[NTR]` | new term label, definition |
+   | Term revision form | A request for an existing term to be changed or revised. | `[REV]` | existing term label |
+   | Term retirement or replacement form | A request for an existing term to be replaced or retired. | `[TR]` | existing term label, explanation |
+   | New competency question request form | Request to consider a new competency question. | `[NCQ]` | suggested competency question, indicativeAnswer, context |
+
+2. Add a title after the prefix and fill in the form. All other fields are optional.
+3. Click **Create**.
+
+#### Everything else: use a blank issue
+
+There is no form for `bug`, `documentation`, `Governance` or `Concept Modelling` issues.
+
+1. Choose **Blank issue**.
+2. Add a title and describe the issue.
+3. Under **Labels**, add the matching label from the [Labels](#labels) table below.
+4. Click **Create**.
 
 #### Labels
 
