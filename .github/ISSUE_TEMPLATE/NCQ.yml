@@ -2,7 +2,7 @@
 name: New competency question request form
 description: "Request to consider a new competency question."
 title: "[NCQ]: "
-labels: competency_question
+labels: ["competency question"]
 body: 
 - type: markdown
   attributes: 

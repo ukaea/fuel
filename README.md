@@ -53,7 +53,7 @@ On the [Issues](https://github.com/ukaea/fuel/issues) tab, click **New issue**. 
 
 #### Everything else: use a blank issue
 
-There is no form for `bug`, `documentation`, `Governance` or `Concept Modelling` issues.
+There is no form for `bug`, `documentation`, `governance` or `concept modelling` issues.
 
 1. Choose **Blank issue**.
 2. Add a title and describe the issue.
@@ -65,14 +65,15 @@ There is no form for `bug`, `documentation`, `Governance` or `Concept Modelling`
 | Label | Description |
 |---|---|
 | `bug` | Something isn't working |
-| `Competency Question` | Request to add a Competency Question |
-| `Concept Modelling` | Modelling of a Concept from the Term list. For requesting a new term see "Term Request" |
+| `competency question` | Request to add a Competency Question |
+| `concept modelling` | Modelling of a Concept from the Term list. For requesting a new term see "new term request" |
 | `documentation` | Improvements or additions to documentation |
 | `duplicate` | This issue or pull request already exists |
-| `Governance` | Governance questions |
+| `governance` | Governance questions |
 | `invalid` | This doesn't seem right |
-| `Term Addition` | New Term request |
-| `Term Update` | Term Update request |
+| `new term request` | New term request |
+| `term retired` | Term retirement or replacement request |
+| `term revision` | Term revision request |
 | `wontfix` | This will not be worked on |
 
 ### License
