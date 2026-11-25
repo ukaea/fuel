@@ -80,17 +80,17 @@
         "value" : "http://omv.ontoware.org/2005/05/ontology#OWL",
         "type" : "iri"
       } ],
-      "hasSyntax" : [ {
-        "identifier" : "hasSyntax",
-        "language" : "undefined",
-        "value" : "http://www.w3.org/ns/formats/Turtle",
-        "type" : "iri"
-      } ],
       "preferredNamespacePrefix" : [ {
         "identifier" : "preferredNamespacePrefix",
         "language" : "undefined",
         "value" : "fuel",
         "type" : "label"
+      } ],
+      "hasSyntax" : [ {
+        "identifier" : "hasSyntax",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/ns/formats/Turtle",
+        "type" : "iri"
       } ],
       "modified" : [ {
         "identifier" : "modified",
@@ -98,17 +98,17 @@
         "value" : "2025-09-08",
         "type" : "label"
       } ],
-      "codeRepository" : [ {
-        "identifier" : "codeRepository",
-        "language" : "undefined",
-        "value" : "https://github.com/ukaea/fuel",
-        "type" : "iri"
-      } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
         "value" : "https://w3id.org/fuel/",
         "type" : "label"
+      } ],
+      "codeRepository" : [ {
+        "identifier" : "codeRepository",
+        "language" : "undefined",
+        "value" : "https://github.com/ukaea/fuel",
+        "type" : "iri"
       } ],
       "issued" : [ {
         "identifier" : "issued",
@@ -141,7 +141,7 @@
     "id" : "9",
     "type" : "owl:Class"
   }, {
-    "id" : "12",
+    "id" : "11",
     "type" : "owl:Class"
   }, {
     "id" : "14",
@@ -171,7 +171,7 @@
     "id" : "31",
     "type" : "owl:Class"
   }, {
-    "id" : "10",
+    "id" : "12",
     "type" : "owl:Class"
   }, {
     "id" : "35",
@@ -198,10 +198,10 @@
     "id" : "30",
     "type" : "owl:Class"
   }, {
-    "id" : "28",
+    "id" : "47",
     "type" : "owl:Class"
   }, {
-    "id" : "47",
+    "id" : "28",
     "type" : "owl:Class"
   }, {
     "id" : "32",
@@ -237,7 +237,7 @@
     "id" : "38",
     "type" : "owl:Class"
   }, {
-    "id" : "11",
+    "id" : "13",
     "type" : "owl:Class"
   }, {
     "id" : "36",
@@ -408,13 +408,13 @@
     "id" : "62",
     "type" : "owl:Class"
   }, {
-    "id" : "71",
-    "type" : "owl:Class"
-  }, {
     "id" : "52",
     "type" : "owl:Class"
   }, {
-    "id" : "13",
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
     "type" : "owl:Class"
   }, {
     "id" : "8",
@@ -446,12 +446,12 @@
       "altLabel" : [ {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "PDM",
+        "value" : "ITER PDM",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
         "language" : "en",
-        "value" : "ITER PDM",
+        "value" : "PDM",
         "type" : "label"
       } ],
       "source" : [ {
@@ -476,13 +476,13 @@
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "cámara toroidal con bobinas magnéticas",
+        "language" : "en",
+        "value" : "toroidal chamber with magnetic coils",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "toroidal chamber with magnetic coils",
+        "language" : "es",
+        "value" : "cámara toroidal con bobinas magnéticas",
         "type" : "label"
       } ],
       "source" : [ {
@@ -529,17 +529,6 @@
     "id" : "7",
     "superClasses" : [ "8" ]
   }, {
-    "iri" : "http://w3id.org/fuel/neutral_particule_population",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "neutral_particule_population",
-      "en" : "neutral particle population"
-    },
-    "subClasses" : [ "11", "6" ],
-    "id" : "9",
-    "superClasses" : [ "10" ]
-  }, {
     "iri" : "http://w3id.org/fuel/laser_induced_plasma",
     "baseIri" : "http://w3id.org/fuel",
     "instances" : 0,
@@ -570,8 +559,19 @@
     "comment" : {
       "en" : "Laser induced plasma (LIP) is defined as a product of the complex interaction between a focused, high peak power laser beam and a target material, resulting in processes such as absorption of laser energy, vaporization, and ejection of atomic and molecular species, followed by plasma expansion and shock wave production."
     },
-    "id" : "12",
-    "superClasses" : [ "13" ]
+    "id" : "9",
+    "superClasses" : [ "10" ]
+  }, {
+    "iri" : "http://w3id.org/fuel/neutral_particule_population",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "neutral_particule_population",
+      "en" : "neutral particle population"
+    },
+    "subClasses" : [ "13", "6" ],
+    "id" : "11",
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "http://w3id.org/fuel/tokamak_plasma",
     "baseIri" : "http://w3id.org/fuel",
@@ -581,7 +581,7 @@
     },
     "subClasses" : [ "15", "16" ],
     "id" : "14",
-    "superClasses" : [ "13" ]
+    "superClasses" : [ "10" ]
   }, {
     "iri" : "http://w3id.org/fuel/poloidal_field_coil",
     "baseIri" : "http://w3id.org/fuel",
@@ -692,8 +692,8 @@
     "label" : {
       "IRI-based" : "particle_population"
     },
-    "subClasses" : [ "34", "8", "9" ],
-    "id" : "10",
+    "subClasses" : [ "34", "8", "11" ],
+    "id" : "12",
     "superClasses" : [ "33" ]
   }, {
     "iri" : "http://w3id.org/fuel/diagnostic_port",
@@ -787,6 +787,15 @@
     "id" : "30",
     "superClasses" : [ "44" ]
   }, {
+    "iri" : "http://w3id.org/fuel/inner_core_region",
+    "baseIri" : "http://w3id.org/fuel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "inner_core_region"
+    },
+    "id" : "47",
+    "superClasses" : [ "28" ]
+  }, {
     "iri" : "http://w3id.org/fuel/core_region",
     "baseIri" : "http://w3id.org/fuel",
     "instances" : 0,
@@ -797,15 +806,6 @@
     "subClasses" : [ "47", "27" ],
     "id" : "28",
     "superClasses" : [ "38" ]
-  }, {
-    "iri" : "http://w3id.org/fuel/inner_core_region",
-    "baseIri" : "http://w3id.org/fuel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "inner_core_region"
-    },
-    "id" : "47",
-    "superClasses" : [ "28" ]
   }, {
     "iri" : "http://w3id.org/fuel/field",
     "baseIri" : "http://w3id.org/fuel",
@@ -832,7 +832,7 @@
     "label" : {
       "IRI-based" : "material_entity"
     },
-    "subClasses" : [ "13", "50", "51", "42", "10", "52", "53" ],
+    "subClasses" : [ "10", "50", "51", "42", "12", "52", "53" ],
     "comment" : {
       "undefined" : "Consider reusing to BFO:material_entity\nhttp://purl.obolibrary.org/obo/BFO_0000040"
     },
@@ -849,13 +849,13 @@
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "nuclear fusion reactor",
+        "language" : "es",
+        "value" : "reactor de fusión nuclear",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "reactor de fusión nuclear",
+        "language" : "en",
+        "value" : "nuclear fusion reactor",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
@@ -971,8 +971,8 @@
     "label" : {
       "IRI-based" : "recycled_neutral_population"
     },
-    "id" : "11",
-    "superClasses" : [ "9" ]
+    "id" : "13",
+    "superClasses" : [ "11" ]
   }, {
     "iri" : "http://w3id.org/fuel/tokamak_component",
     "baseIri" : "http://w3id.org/fuel",
@@ -1103,7 +1103,7 @@
       "IRI-based" : "scrape_off_layer_plasma"
     },
     "id" : "84",
-    "superClasses" : [ "13" ]
+    "superClasses" : [ "10" ]
   }, {
     "iri" : "http://w3id.org/fuel/ICRHSystem",
     "baseIri" : "http://w3id.org/fuel",
@@ -1228,7 +1228,7 @@
     },
     "subClasses" : [ "73", "104", "105" ],
     "id" : "34",
-    "superClasses" : [ "10" ]
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "http://w3id.org/fuel/electron_population",
     "baseIri" : "http://w3id.org/fuel",
@@ -1246,7 +1246,7 @@
       "IRI-based" : "divertor_plasma"
     },
     "id" : "110",
-    "superClasses" : [ "13" ]
+    "superClasses" : [ "10" ]
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Person",
     "baseIri" : "http://xmlns.com/foaf/0.1",
@@ -1349,13 +1349,13 @@
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
-        "language" : "es",
-        "value" : "reactor de fisión nuclear",
+        "language" : "en",
+        "value" : "nuclear fission reactor",
         "type" : "label"
       }, {
         "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "nuclear fission reactor",
+        "language" : "es",
+        "value" : "reactor de fisión nuclear",
         "type" : "label"
       } ],
       "source" : [ {
@@ -1527,16 +1527,16 @@
         "IRI-based" : "COCOS_8"
       }
     }, {
-      "iri" : "http://w3id.org/fuel/COCOS_10",
-      "baseIri" : "http://w3id.org/fuel",
-      "labels" : {
-        "IRI-based" : "COCOS_10"
-      }
-    }, {
       "iri" : "http://w3id.org/fuel/COCOS_5",
       "baseIri" : "http://w3id.org/fuel",
       "labels" : {
         "IRI-based" : "COCOS_5"
+      }
+    }, {
+      "iri" : "http://w3id.org/fuel/COCOS_10",
+      "baseIri" : "http://w3id.org/fuel",
+      "labels" : {
+        "IRI-based" : "COCOS_10"
       }
     }, {
       "iri" : "http://w3id.org/fuel/COCOS_6",
@@ -1551,16 +1551,16 @@
         "IRI-based" : "COCOS_11"
       }
     }, {
-      "iri" : "http://w3id.org/fuel/COCOS_3",
-      "baseIri" : "http://w3id.org/fuel",
-      "labels" : {
-        "IRI-based" : "COCOS_3"
-      }
-    }, {
       "iri" : "http://w3id.org/fuel/COCOS_12",
       "baseIri" : "http://w3id.org/fuel",
       "labels" : {
         "IRI-based" : "COCOS_12"
+      }
+    }, {
+      "iri" : "http://w3id.org/fuel/COCOS_3",
+      "baseIri" : "http://w3id.org/fuel",
+      "labels" : {
+        "IRI-based" : "COCOS_3"
       }
     }, {
       "iri" : "http://w3id.org/fuel/COCOS_4",
@@ -1596,11 +1596,6 @@
     "annotations" : {
       "altLabel" : [ {
         "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "thermo couple",
-        "type" : "label"
-      }, {
-        "identifier" : "altLabel",
         "language" : "es",
         "value" : "termocupla",
         "type" : "label"
@@ -1608,6 +1603,11 @@
         "identifier" : "altLabel",
         "language" : "en",
         "value" : "thermoelectrical thermometer",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "thermo couple",
         "type" : "label"
       } ],
       "source" : [ {
@@ -1697,7 +1697,7 @@
     },
     "subClasses" : [ "5" ],
     "id" : "6",
-    "superClasses" : [ "9" ]
+    "superClasses" : [ "11" ]
   }, {
     "iri" : "http://w3id.org/fuel/magnet_system",
     "baseIri" : "http://w3id.org/fuel",
@@ -1737,21 +1737,21 @@
     "baseIri" : "http://w3id.org/fuel",
     "instances" : 0,
     "annotations" : {
-      "altLabel" : [ {
-        "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "Thomson Scattering system",
-        "type" : "label"
-      }, {
-        "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "Thomson scattering diagnostic",
-        "type" : "label"
-      } ],
       "definition" : [ {
         "identifier" : "definition",
         "language" : "en",
         "value" : "Thomson scattering is the elastic scattering of electromagnetic radiation by a free charged particle, as described by classical electromagnetism.",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "Thomson scattering diagnostic",
+        "type" : "label"
+      }, {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "Thomson Scattering system",
         "type" : "label"
       } ],
       "source" : [ {
@@ -1826,17 +1826,17 @@
     "baseIri" : "http://w3id.org/fuel",
     "instances" : 0,
     "annotations" : {
-      "image" : [ {
-        "identifier" : "image",
-        "language" : "undefined",
-        "value" : "https://en.wikipedia.org/wiki/Bolometer#/media/File:Bolometer_conceptual_schematic.svg",
-        "type" : "iri"
-      } ],
       "editorialNote" : [ {
         "identifier" : "editorialNote",
         "language" : "en",
         "value" : "Bolometers play a pivotal role in monitoring radiation in fusion plasmas. https://en.wikipedia.org/wiki/Bolometer",
         "type" : "label"
+      } ],
+      "image" : [ {
+        "identifier" : "image",
+        "language" : "undefined",
+        "value" : "https://en.wikipedia.org/wiki/Bolometer#/media/File:Bolometer_conceptual_schematic.svg",
+        "type" : "iri"
       } ],
       "definition" : [ {
         "identifier" : "definition",
@@ -1951,6 +1951,16 @@
     "id" : "62",
     "superClasses" : [ "60" ]
   }, {
+    "iri" : "https://schema.org/Person",
+    "baseIri" : "https://schema.org",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "attributes" : [ "external" ],
+    "id" : "52",
+    "superClasses" : [ "33" ]
+  }, {
     "iri" : "http://w3id.org/fuel/first_wall",
     "baseIri" : "http://w3id.org/fuel",
     "instances" : 0,
@@ -1975,16 +1985,6 @@
     "id" : "71",
     "superClasses" : [ "36" ]
   }, {
-    "iri" : "https://schema.org/Person",
-    "baseIri" : "https://schema.org",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Person"
-    },
-    "attributes" : [ "external" ],
-    "id" : "52",
-    "superClasses" : [ "33" ]
-  }, {
     "iri" : "http://w3id.org/fuel/plasma",
     "baseIri" : "http://w3id.org/fuel",
     "instances" : 0,
@@ -2007,11 +2007,11 @@
       "en" : "plasma",
       "es" : "plasma"
     },
-    "subClasses" : [ "14", "110", "84", "12" ],
+    "subClasses" : [ "14", "110", "84", "9" ],
     "comment" : {
       "en" : "The fourth state of matter. At extreme temperatures, electrons are separated from nuclei and a gas becomes a plasma - a hot, electrically charged gas. In a star as in a fusion device, plasmas provide the environment in which light elements can fuse and yield energy. Some 99% of the known universe is in the plasma state. Examples of plasmas include the sun, fluorescent light bulbs, and other gas-discharge tubes."
     },
-    "id" : "13",
+    "id" : "10",
     "superClasses" : [ "33" ]
   }, {
     "iri" : "http://w3id.org/fuel/non_thermal_particle_population",
@@ -2022,7 +2022,7 @@
     },
     "subClasses" : [ "7", "89", "154" ],
     "id" : "8",
-    "superClasses" : [ "10" ]
+    "superClasses" : [ "12" ]
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
@@ -2410,12 +2410,12 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "97"
   }, {
-    "range" : "10",
-    "domain" : "9",
+    "range" : "12",
+    "domain" : "11",
     "attributes" : [ "anonymous", "object" ],
     "id" : "98"
   }, {
-    "range" : "10",
+    "range" : "12",
     "domain" : "8",
     "attributes" : [ "anonymous", "object" ],
     "id" : "99"
@@ -2440,7 +2440,7 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "107"
   }, {
-    "range" : "10",
+    "range" : "12",
     "domain" : "34",
     "attributes" : [ "anonymous", "object" ],
     "id" : "108"
@@ -2541,7 +2541,7 @@
     "id" : "130"
   }, {
     "range" : "33",
-    "domain" : "10",
+    "domain" : "12",
     "attributes" : [ "anonymous", "object" ],
     "id" : "131"
   }, {
@@ -2551,7 +2551,7 @@
     "id" : "132"
   }, {
     "range" : "33",
-    "domain" : "13",
+    "domain" : "10",
     "attributes" : [ "anonymous", "object" ],
     "id" : "133"
   }, {
@@ -2750,12 +2750,12 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "177"
   }, {
-    "range" : "9",
-    "domain" : "11",
+    "range" : "11",
+    "domain" : "13",
     "attributes" : [ "anonymous", "object" ],
     "id" : "178"
   }, {
-    "range" : "9",
+    "range" : "11",
     "domain" : "6",
     "attributes" : [ "anonymous", "object" ],
     "id" : "179"
@@ -2777,7 +2777,7 @@
       "IRI-based" : "hasComponent"
     },
     "domain" : "1",
-    "attributes" : [ "object", "someValues" ],
+    "attributes" : [ "someValues", "object" ],
     "id" : "182"
   }, {
     "range" : "77",
@@ -2830,12 +2830,12 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "192"
   }, {
-    "range" : "13",
-    "domain" : "12",
+    "range" : "10",
+    "domain" : "9",
     "attributes" : [ "anonymous", "object" ],
     "id" : "193"
   }, {
-    "range" : "13",
+    "range" : "10",
     "domain" : "14",
     "attributes" : [ "anonymous", "object" ],
     "id" : "194"
@@ -2845,12 +2845,12 @@
     "attributes" : [ "anonymous", "object" ],
     "id" : "195"
   }, {
-    "range" : "13",
+    "range" : "10",
     "domain" : "84",
     "attributes" : [ "anonymous", "object" ],
     "id" : "196"
   }, {
-    "range" : "13",
+    "range" : "10",
     "domain" : "110",
     "attributes" : [ "anonymous", "object" ],
     "id" : "197"
